@@ -356,6 +356,12 @@ h6 a {
   color: #000;
 }
 
+iframe {
+  aspect-ratio: 16 / 9;
+  width: 70% !important;
+}
+
+
 
 
 
