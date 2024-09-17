@@ -507,6 +507,27 @@ iframe {
   .about-me-content {
     padding: 56px 32px 20px;
   }
+
+  .info-table th.first,
+  .info-table th.second {
+    font-size: 15px;
+  }
+
+  .info-table td.first,
+  .info-table td.second {
+    font-size: 11px;
+  }
+
+  .table td,
+  .table th {
+    padding: .65rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+
+  .h3, h3 {
+    font-size: 1.5rem;
+}
 }
 
 
