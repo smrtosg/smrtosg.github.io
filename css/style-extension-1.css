@@ -450,7 +450,7 @@ iframe {
 
 }
 
-@media only screen and (min-width: 320px) and (max-width: 575px) {
+@media only screen and (min-width: 333px) and (max-width: 575px) {
   img.profile-pic {
     width: 250px;
     height: 250px;
@@ -525,9 +525,91 @@ iframe {
     border-top: 1px solid #dee2e6;
   }
 
-  .h3, h3 {
+  .h3,
+  h3 {
     font-size: 1.5rem;
+  }
 }
+
+@media only screen and (min-width: 320px) and (max-width: 332px) {
+  img.profile-pic {
+    width: 250px;
+    height: 250px;
+  }
+
+  img.logo {
+    width: 90px;
+    height: auto;
+  }
+
+  .profile-det {
+    padding: 2em;
+    padding-top: 0.5em;
+  }
+
+  .profile-link a {
+    padding: 1.0em;
+    font-size: 10px;
+  }
+
+  .footer-content .copywrite-text {
+    padding-right: 10px;
+  }
+
+  .screenS {
+    width: 100%;
+  }
+
+  .breadcrumb-area .page-title-blog {
+    color: #ffffff;
+    font-size: 35px;
+  }
+
+  .pw-btn {
+    font-size: 17px;
+    padding: 0 20px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .footer-content {
+    padding: 20px 0;
+    padding-right: 10px;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .section-heading h1 a {
+    font-size: 15px !important;
+  }
+
+  .about-me-content {
+    padding: 56px 32px 20px;
+  }
+
+  .info-table th.first,
+  .info-table th.second {
+    font-size: 15px;
+  }
+
+  .info-table td.first,
+  .info-table td.second {
+    font-size: 10px;
+  }
+
+  .table td,
+  .table th {
+    padding: .65rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+
+  .h3,
+  h3 {
+    font-size: 1.5rem;
+  }
 }
 
 
