@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>OpenBVE Releases Installation Guide (Trains) | Blog</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta property="og:image" content="https://i.imgur.com/jgRjmrt.png" />
+
+    <link rel="icon" href="../img/core-img/favicon.png">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-extension-1.css">
+
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <header class="header-area">
+
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+
+                    <nav class="classy-navbar justify-content-between" id="pwNav">
+
+                        <a class="nav-brand img-logo" href="../index.html"><img class="logo-img"
+                                src="../img/core-img/logo.png" alt="logo"></a>
+
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <div class="classy-menu">
+
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <div class="classynav">
+                                <ul id="nav">
+                                    <li><a href="../index.html">Home</a></li>
+                                    <li><a href="../about.html">About</a></li>
+                                    <li><a href="../openbve.html">OpenBVE</a></li>
+                                    <li><a href="../omsi-2.html">OMSI 2</a></li>
+                                    <li class="active"><a href="../blog.html">Blog</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="breadcrumb-area bg-img bg-overlay"
+        style="background-image: url(../img/blog/hbltrain-line.png); height: 100vh;">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content text-center">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="../index.html">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active"><a href="../blog.html">Blog</a></li>
+                            </ol>
+                        </nav>
+                        <h2 class="page-title-blog">OpenBVE Releases Installation Guide (Trains)</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="ftco-section ftco-degree-bg">
+        <div class="container container-blog">
+            <div class="row row-blog">
+
+                <p> We have previously released 4 new trains, and in this blog, we'll guide you through the process of
+                    downloading and installing the trains. <br>
+                    Links: <br>
+                    <a href="../releases/r151.html" style="color: #e96060">- Alstom R151</a><br>
+                    <a href="../releases/c151c.html" style="color: #e96060">- KSF C151C</a><br>
+                    <a href="../releases/c151b.html" style="color: #e96060">- KSF C151B</a><br>
+                    <a href="../releases/c151a.html" style="color: #e96060">- KSF C151A</a>
+                </p>
+
+                <h2 class="mb-3" style="font-size: 30px; font-weight:bold ;"><u>Downloading our Trains</u></h2>
+
+                <p> NOTE: This is applicable for the Alstom R151, KSF C151A/B/C trains only. For this tutorial, we'll be
+                    demonstrating how to do so for the R151.
+                </p>
+
+                <p> First up, download the Base Train.
+                    For the R151, the Base Train can be downloaded <a
+                        href="https://drive.google.com/file/d/19sDFWiDKr-981siRYyYDslvJockTsAtt/view"
+                        style="color: #e96060">here</a>.
+                </p>
+
+                <div class="column column-pic">
+                    <figcaption>
+                        <a href="../img/tutorials/tut1.png" class="portfolio-img"><img src="../img/tutorials/tut1.png"
+                                class="img-fluid" alt="Hero Image Section"></a>
+                        <p>R151 Base Train Contents</p>
+                    </figcaption>
+                </div>
+
+
+                <p> Once downloaded, open the folder. Select <span style="color: #e96060">'SMRT Alstom MOVIA R151
+                        (825-826) (825F)'</span>
+                    and extract it into your Train Folder (i.e. the directory where your OpenBVE trains are saved.)
+                </p>
+
+                <div>
+                    <video width="80%" height="511" controls loop>
+                        <source src="../img/tutorials/tut2.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+
+                <hr>
+
+                <h2 class="mb-3" style="font-size: 30px; font-weight:bold ;"><u>Overwriting our modifications into the
+                        Base Train</u></h2>
+
+                <p> Now that you've extracted the Base Train's folder, it's time to put our modifications in!
+                </p>
+
+                <p>We recommend using
+                    <a href="https://www.7-zip.org/download.html" style="color: #e96060">7-Zip</a> or
+
+                    <a href="https://apps.microsoft.com/detail/9n8g7tscl18r?hl=en-US&gl=US"
+                        style="color: #e96060">NanaZip</a> (we currently use this).
+                </p>
+
+
+                <br>
+
+                <div style="margin-bottom: 10px;">
+                    <video width="80%" height="511" controls loop>
+                        <source src="../img/tutorials/tut3.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <br>
+                <p> Open up the Modification zip file and extract it into your Train Folder (make sure its at the same
+                    directory where you stored your Base Trains earlier.)
+                </p>
+
+                <p>If you've done the steps correctly, the 7-Zip/NanaZip will prompt you to overwrite the Base Train's
+                    content.
+                    Select <span style="color: #e96060">'Yes to all'</span>.</p>
+
+                <p> You are now ready to use the train. These steps apply for the KSFs too! Do note that we recommend OpenBVE Version
+                    <span style="color: #e96060">1.9.27 (64-bit)</span> or higher for optimal experience.
+                </p>
+
+                <div class="column column-pic">
+                    <figcaption>
+                        <a href="../img/tutorials/tut5.png" class="portfolio-img"><img src="../img/tutorials/tut5.png"
+                                class="img-fluid" alt="Hero Image Section"></a>
+                        <p>Ready to go!</p>
+                    </figcaption>
+                </div>
+
+                <hr>
+
+                <p style="font-weight: bold;">Note: This guide is for the installation on Windows 11 only. If you are using other versions of
+                    Windows, some steps may differ from the list below. If you are on another operating system such as
+                    Mac OS, you may wish to ignore this guide.</p>
+
+
+
+    </section>
+
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-content d-flex align-items-center justify-content-between">
+
+                        <div class="copywrite-text">
+                            <p>
+                                &copy;
+                                <script>document.write(new Date().getFullYear());</script> Illustrations belong to
+                                SMRT Corp Ltd</a>
+                            </p>
+                        </div>
+
+                        <div class="social-info">
+                            <a href="https://www.facebook.com/smrtosg"><i class="fa-brands fa-facebook"
+                                    aria-hidden="true"></i></a>
+                            <a href="https://www.youtube.com/@SMRTosg"><i class="fa-brands fa-youtube"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" id="cookiebanner" src="../js/cookies-banner.js" data-position="bottom"
+        data-bg="#f2f3e5" data-fg="#000" data-font-family="Poppins, sans-serif" data-zindex="12345111111"
+        data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
+        </script>
+
+    <script src="../js/jquery.min.js"></script>
+
+    <script src="../js/popper.min.js"></script>
+
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/pw.bundle.js"></script>
+
+    <script src="../js/default-assets/active.js"></script>
+
+</body>
+
+</html>
