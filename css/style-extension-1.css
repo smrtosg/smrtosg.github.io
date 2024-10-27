@@ -361,6 +361,11 @@ iframe {
   width: 70% !important;
 }
 
+.progress-bar {
+  height: 5px;
+  background: #a52d2d;
+  width: 0%;
+}
 
 
 
