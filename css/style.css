@@ -46,7 +46,7 @@ body {
     font-size: 16px;
     position: relative;
     z-index: auto;
-    background-color: #fff;
+    background-color: #f6f7f2;
 }
 
 h1,
@@ -66,7 +66,7 @@ a,
 a:active,
 a:focus,
 a:hover {
-    color: #ffb6b9;
+    color: #e38286;
     text-decoration: none;
     -webkit-transition-duration: 500ms;
     -o-transition-duration: 500ms;
@@ -76,7 +76,7 @@ a:hover {
 }
 
 a:hover {
-    color: #ffb6b9;
+    color: #e38286;
 }
 
 li {
