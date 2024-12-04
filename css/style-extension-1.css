@@ -367,6 +367,9 @@ iframe {
   width: 0%;
 }
 
+#new-hbl {
+  scroll-margin-top: 8vh;
+}
 
 
 
