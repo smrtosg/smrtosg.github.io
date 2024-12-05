@@ -371,6 +371,11 @@ iframe {
   scroll-margin-top: 8vh;
 }
 
+.mfp-arrow {
+  top: 75%;
+}
+
+
 
 
 /* :: 21.0 Responsive_Extension CSS - Width */
