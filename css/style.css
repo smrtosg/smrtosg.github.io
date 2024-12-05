@@ -993,7 +993,7 @@ section.follow-area.clearfix {
 
 @media only screen and (max-width: 767px) {
     .footer-content .copywrite-text p {
-        font-size: 12px;
+        font-size: 11px;
     }
 }
 
@@ -1004,7 +1004,7 @@ section.follow-area.clearfix {
 
 @media only screen and (max-width: 767px) {
     .footer-content .copywrite-text p a {
-        font-size: 12px;
+        font-size: 11px;
     }
 }
 
