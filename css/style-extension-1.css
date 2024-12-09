@@ -375,6 +375,21 @@ iframe {
   top: 75%;
 }
 
+.chg-icon {
+  -webkit-transition-duration: 800ms;
+  -o-transition-duration: 800ms;
+  transition-duration: 800ms;
+  height: 76px;
+  width: 76px;
+  background-color: #da8c08;
+  text-align: center;
+  line-height: 76px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 30px;
+  top: -38px;
+
+}
 
 
 
