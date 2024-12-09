@@ -1,0 +1,66 @@
+
+const smrtMRT = document.getElementById('mkbf-smrt-mrt').getContext('2d');
+
+const linesmrt = new Chart(smrtMRT, {
+  type: 'line',
+  data: {
+    labels: ["2020", "2021", "2022", "2023", "Oct '23 - Sep '24"],
+    datasets: [{
+      label: "HBL",
+      data: [1082000, 2045000, 3075000, 3675000, 3625000],
+      borderColor: 'rgb(255, 187, 0)',
+      fill: true,
+      backgroundColor: 'rgba(207, 61, 61,0.05)',
+      borderWidth: 3
+    },
+
+    {
+      label: "CGL",
+      data: [3363000,2027000,3020000,3200000,3500000],
+      borderColor: 'rgb(0, 154, 68)',
+      fill: true,
+      backgroundColor: 'rgba(0, 154, 68,0.05)',
+      borderWidth: 3
+    },
+
+    {
+        label: "AEL",
+        data: [2365000,3420000,3802000,3721000,3804000],
+        borderColor: 'rgb(39, 39, 157)',
+        fill: true,
+        backgroundColor: 'rgba(39, 39, 157,0.05)',
+        borderWidth: 3
+      },
+
+    {
+      label: "NWL",
+      data: [1733000,1826000,1840000,1209000,1040000],
+      borderColor: 'rgb(14, 103, 44)',
+      fill: true,
+      backgroundColor: 'rgba(14, 103, 44,0.05)',
+      borderWidth: 3
+    }]//
+
+
+
+  },
+
+
+
+
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    },
+    plugins: {
+      legend: {
+        display: true
+      },
+    }
+  }
+});

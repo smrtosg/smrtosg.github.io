@@ -391,6 +391,15 @@ iframe {
 
 }
 
+.chart-mkbf {
+  padding-bottom: 20px;
+}
+
+canvas {
+  height: 221px;
+}
+
+
 
 
 /* :: 21.0 Responsive_Extension CSS - Width */
