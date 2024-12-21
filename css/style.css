@@ -62,6 +62,10 @@ h6 {
     cursor: default;
 }
 
+h4 {
+    font-size: 1.2em;
+}
+
 a,
 a:active,
 a:focus,
@@ -86,7 +90,7 @@ li {
 p {
     line-height: 1.9;
     color: #636363;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     cursor: default;
 }
@@ -557,12 +561,35 @@ section.follow-area.clearfix {
     margin: 10px;
 }
 
+.pw-btn-accord {
+    position: relative;
+    z-index: 1;
+    min-width: 163px;
+    height: 45px;
+    line-height: 40px;
+    font-size: 19px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 2px 30px;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: #e96060;
+    color: #fff;
+    border-radius: 60px;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+    margin: 10px;
+}
+
 .pw-btn.btn-2 {
     color: #fff;
 }
 
 .pw-btn:focus,
-.pw-btn:hover {
+.pw-btn:hover,
+.pw-btn-accord:focus,
+.pw-btn-accord:hover {
     font-weight: 500;
     background-color: #ffb6b9;
     color: #000;
