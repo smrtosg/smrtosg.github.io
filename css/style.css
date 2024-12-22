@@ -1709,7 +1709,7 @@ li.breadcrumb-item.active a {
 .single-portfolio-content .hover-content h4 {
     color: #fff;
     text-align: center;
-    margin-top: 2em;
+    margin-top: 1.5em;
     display: -webkit-box;
     max-width: 450px;
     -webkit-line-clamp: 2;
@@ -1719,7 +1719,7 @@ li.breadcrumb-item.active a {
     text-overflow: ellipsis;
     padding-left: 1.2em;
     padding-right: 1.2em;
-    font-size: 22px;
+    font-size: 20px;
     cursor: default;
 }
 
@@ -1744,5 +1744,5 @@ li.breadcrumb-item.active a {
 
 .single-portfolio-content:hover .hover-content a,
 .single-portfolio-content:focus .hover-content a {
-    margin-top: -12px;
+    margin-top: -27px;
 }
