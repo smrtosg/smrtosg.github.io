@@ -420,7 +420,7 @@ canvas {
 }
 
 .accordion-body:not(.collapsed) {
- background-color: #fff;
+  background-color: #fff;
 }
 
 
@@ -483,6 +483,17 @@ canvas {
 
   .about-me-content {
     padding: 56px 15px 20px;
+  }
+
+  .pw-btn {
+    min-width: 30%;
+    height: 49px;
+    line-height: 44px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 2px 30px;
+    margin: 10px;
+    margin-left: 6px;
   }
 
 }
@@ -596,6 +607,17 @@ canvas {
   h3 {
     font-size: 1.5rem;
   }
+
+  .pw-btn {
+    min-width: 100%;
+    height: 49px;
+    line-height: 44px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 2px 30px;
+    margin: 10px;
+    margin-left: 0px;
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 332px) {
@@ -676,6 +698,17 @@ canvas {
   .h3,
   h3 {
     font-size: 1.5rem;
+  }
+
+  .pw-btn {
+    min-width: 100%;
+    height: 49px;
+    line-height: 44px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 2px 30px;
+    margin: 10px;
+    margin-left: 0px;
   }
 }
 

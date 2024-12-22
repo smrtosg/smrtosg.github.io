@@ -95,6 +95,10 @@ p {
     cursor: default;
 }
 
+strong {
+    font-size: 14px;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -543,10 +547,10 @@ section.follow-area.clearfix {
 .pw-btn {
     position: relative;
     z-index: 1;
-    min-width: 244px;
-    height: 62px;
-    line-height: 54px;
-    font-size: 19px;
+    min-width: 180px;
+    height: 49px;
+    line-height: 44px;
+    font-size: 14px;
     font-weight: 500;
     display: inline-block;
     padding: 2px 30px;
@@ -558,7 +562,7 @@ section.follow-area.clearfix {
     -webkit-transition-duration: 500ms;
     -o-transition-duration: 500ms;
     transition-duration: 500ms;
-    margin: 10px;
+    margin: 5px;
 }
 
 .pw-btn-accord {
