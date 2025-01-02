@@ -41,14 +41,14 @@ const linesmrt = new Chart(smrtMRT, {
             borderWidth: 3
         },
 
-        {
-            label: "WTL",
-            data: [2322000, 2011000, 2512000, 3005000, 4503000],
-            borderColor: 'rgb(33, 116, 217)',
-            fill: true,
-            backgroundColor: 'rgba(14, 103, 44,0.05)',
-            borderWidth: 3
-        },
+        // {
+        //     label: "WTL",
+        //     data: [,,,,4503000],
+        //     borderColor: 'rgb(33, 116, 217)',
+        //     fill: true,
+        //     backgroundColor: 'rgba(14, 103, 44,0.05)',
+        //     borderWidth: 3
+        // },
 
         {
             label: "YSLRT",
