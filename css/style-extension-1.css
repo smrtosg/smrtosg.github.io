@@ -423,6 +423,10 @@ canvas {
   background-color: #fff;
 }
 
+.container-xxl {
+  max-width: 1450px;
+}
+
 
 
 /* :: 21.0 Responsive_Extension CSS - Width */
