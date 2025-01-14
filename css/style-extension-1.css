@@ -412,6 +412,8 @@ canvas {
 .accordion-button {
   font-size: 15px !important;
   background-color: #f5f6f2;
+  border: 1px solid #cccccc;
+  margin-bottom: 0px;
 }
 
 .accordion-button:not(.collapsed) {
