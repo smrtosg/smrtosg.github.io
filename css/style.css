@@ -99,6 +99,11 @@ strong {
     font-size: 14px;
 }
 
+.accordion-body .changelog {
+    font-size: 16px;
+    text-align: left;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -130,10 +135,10 @@ ul li {
     background-color: rgba(0, 0, 0, 0.773)
 }
 
-.row {
+/* .row {
     margin-right: 0px;
     margin-left: 0px;
-}
+} */
 
 
 
@@ -592,12 +597,15 @@ section.follow-area.clearfix {
 
 .pw-btn:focus,
 .pw-btn:hover,
-.pw-btn-accord:focus,
-.pw-btn-accord:hover {
+.wbnrfz_btn:focus,
+.wbnrfz_btn:hover {
     font-weight: 500;
+    -webkit-box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
+    box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
     background-color: #ffb6b9;
-    color: #000;
+    color: #ffffff;
 }
+
 
 .badges-btn {
     background-color: #ebebeb;
@@ -1101,6 +1109,20 @@ section.follow-area.clearfix {
     margin-top: 50px;
 }
 
+.about-me-stations {
+    -webkit-transition-duration: 800ms;
+    -o-transition-duration: 800ms;
+    transition-duration: 800ms;
+    background-color: #f5f6f2;
+    padding: 35px 26px 13px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
 .about-me-content .wsd-icon {
     -webkit-transition-duration: 800ms;
     -o-transition-duration: 800ms;
@@ -1331,12 +1353,24 @@ section.follow-area.clearfix {
     padding-bottom: 83px;
 }
 
+.wbnrfz-summ {
+    background-color: #f5f6f2;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
 
 /* :: 14.0 Breadcrumb CSS */
 .breadcrumb-area {
     position: relative;
     z-index: 1;
     height: 370px;
+}
+
+.breadcrumb-area-lines {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
 }
 
 @media only screen and (max-width: 767px) {
@@ -1346,6 +1380,12 @@ section.follow-area.clearfix {
 }
 
 .breadcrumb-area .page-title {
+    color: #ffffff;
+    font-size: 36px;
+    cursor: default;
+}
+
+.breadcrumb-area-lines .page-title {
     color: #ffffff;
     font-size: 36px;
     cursor: default;
