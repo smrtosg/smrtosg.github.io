@@ -139,7 +139,7 @@ ul li {
     margin-right: 0px;
     margin-left: 0px;
 } */
- 
+
 
 .container {
     width: 100%;
@@ -1627,13 +1627,13 @@ li.breadcrumb-item.active a {
 .pw-portfolio-area {
     position: relative;
     z-index: 1;
-    background-color: #f5f6f2;
+    background-color: #e9eae5;
 }
 
 .pw-portfolio-area .container-fluid {
     padding-right: 10%;
     padding-left: 10%;
-    background-color: #f5f6f2;
+    background-color: #e9eae5;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {

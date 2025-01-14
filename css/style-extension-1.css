@@ -508,7 +508,7 @@ canvas {
 .section-padding-80-0 {
   padding-top: 80px;
   padding-bottom: 80px;
-  background-color: #f6f7f2;
+  background-color: #e9eae5;
 }
 
 .row-line-diag {
@@ -590,7 +590,6 @@ h4.stn:hover {
 .stationBlockItem {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
 }
 
 
