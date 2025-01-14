@@ -139,6 +139,15 @@ ul li {
     margin-right: 0px;
     margin-left: 0px;
 } */
+ 
+
+.container {
+    width: 100%;
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 
 
