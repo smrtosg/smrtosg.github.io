@@ -30,7 +30,7 @@
 @import url(default-assets/classy-nav.css);
 @import url(owl.carousel.min.css);
 @import url(magnific-popup.css);
-@import url(font-awesome-all.min.css);
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
 @import url(default-assets/themify-icons.css);
 @import url(style.css);
 
@@ -143,8 +143,8 @@ ul li {
 
 .container {
     width: 100%;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -1402,7 +1402,7 @@ section.follow-area.clearfix {
 
 .breadcrumb-area-lines .page-title {
     color: #ffffff;
-    font-size: 36px;
+    font-size: 45px;
     cursor: default;
 }
 
@@ -1415,6 +1415,7 @@ section.follow-area.clearfix {
 .breadcrumb-content {
     position: relative;
     z-index: 1;
+    padding-top: 10px;
 }
 
 .breadcrumb-content .breadcrumb {
