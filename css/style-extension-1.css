@@ -366,6 +366,11 @@ iframe {
   width: 70% !important;
 }
 
+.iframe-banner {
+  aspect-ratio: 16 / 9;
+  width: 100% !important;
+}
+
 .progress-bar {
   height: 5px;
   background: #a52d2d;
