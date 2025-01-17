@@ -1284,24 +1284,19 @@ section.follow-area.clearfix {
     margin-left: -38px;
 }
 
+
 .timeline-content .period-date-aa {
-    -webkit-transition-duration: 800ms;
-    -o-transition-duration: 800ms;
-    transition-duration: 800ms;
-    height: 48px;
-    width: 131px;
-    background-color: #511919;
-    display: inline-block;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 30px;
-    color: #ffffff;
-    font-size: 19px;
     position: absolute;
-    top: -26px;
-    left: 43%;
-    right: 43%;
-    margin-left: -38px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #511919;
+    top: 15px;
+    left: 1.5em;
+    right: 1.5em;
+    font-weight: 500;
+    cursor: default;
 }
 
 .timeline-content .period-date-exp {
