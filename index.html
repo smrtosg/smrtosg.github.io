@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-extension-1.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
 
     <link rel="stylesheet" type="text/css"
         href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
@@ -59,7 +60,9 @@
                                     <li><a href="./openbve.html">OpenBVE</a></li>
                                     <li><a href="./omsi-2.html">OMSI 2</a></li>
                                     <li><a href="./blog.html">Blog</a></li>
-
+                                    <li><button class="wbnrfz_btn_theme" id="dark-mode-toggle"
+                                            title="Toggle Dark/Light Mode!"><i class="fa-solid fa-moon"></i></button>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -67,6 +70,11 @@
                     </nav>
                 </div>
             </div>
+                    <!-- TEMP -->
+        <div class="alert alert-do alert-dark" role="alert" style="margin: 50px; margin-top: 10px;">
+            <i class="fa-solid fa-circle-info"></i>&nbsp;<b>Dark Mode is coming! It will be progressively rolling out!</b>
+        </div>
+
         </div>
     </header>
 
@@ -110,7 +118,7 @@
 
     </section><!-- End Hero -->
 
-    <section class="about-me-area bg-gray section-padding-80-0 clearfix">
+    <section class="about-me-area section-padding-80-0 clearfix">
         <div class="container container-xxl">
             <div class="row">
                 <div class="col-12">
@@ -264,16 +272,16 @@
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3"><a href="releases/woodlands-town-line.html">
-                    <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="700ms"
-                        style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
-                        <div class="ui-icon">
-                            <i class="fa-solid fa-train"></i>
+                        <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="700ms"
+                            style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
+                            <div class="ui-icon">
+                                <i class="fa-solid fa-train"></i>
+                            </div>
+                            <h4>Woodlands Town Line</h4>
                         </div>
-                        <h4>Woodlands Town Line</h4>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
-        </div>
         </div>
     </section>
 
@@ -304,18 +312,18 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-3 single_gallery_item human mb-30 wow fadeInUp"
-                data-wow-delay="500ms">
-                <div class="single-portfolio-content">
-                    <img src="img/releases-ss/devfile-opA.png" alt>
-                    <div class="hover-content">
-                        <h4>OpenBVE Developer Files</h4>
-                        <a class="info" href="releases/dev-files-staris-cddcld-vfd.html" class="portfolio-img"><i
-                                class="fa-solid fa-download"></i></a>
-                        <a href="img/releases-ss/devfile-opA.png" class="portfolio-img"><i
-                                class="fa-solid fa-expand"></i></a>
+                    data-wow-delay="500ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/releases-ss/devfile-opA.png" alt>
+                        <div class="hover-content">
+                            <h4>OpenBVE Developer Files</h4>
+                            <a class="info" href="releases/dev-files-staris-cddcld-vfd.html" class="portfolio-img"><i
+                                    class="fa-solid fa-download"></i></a>
+                            <a href="img/releases-ss/devfile-opA.png" class="portfolio-img"><i
+                                    class="fa-solid fa-expand"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
                 <div class="col-12 col-sm-6 col-lg-3 single_gallery_item nature mb-30 wow fadeInUp"
                     data-wow-delay="700ms">
@@ -379,6 +387,18 @@
         data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
         data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
         </script>
+
+    <!-- TEMP -->
+    <script>
+        window.setTimeout(function () {
+            $(".alert-do").fadeTo(500, 0).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 6000);
+    </script>
+
+
+    <script src="js/theme.js"></script>
 
     <script src="js/jquery.min.js"></script>
 

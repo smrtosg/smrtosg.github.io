@@ -1,8 +1,54 @@
+const darkThemeOptions = {
+    scales: {
+        x: {
+            ticks: {
+                color: '#ffffff' // X-axis labels color
+            },
+            grid: {
+                color: '#444444' // X-axis grid lines color
+            }
+        },
+        y: {
+            ticks: {
+                color: '#ffffff' // Y-axis labels color
+            },
+            grid: {
+                color: '#444444' // Y-axis grid lines color
+            }
+        }
+    },
+    plugins: {
+        legend: {
+            labels: {
+                color: '#ffffff' // Legend labels color
+            }
+        },
+        tooltip: {
+            backgroundColor: '#333333', // Tooltip background color
+            titleColor: '#ffffff', // Tooltip title color
+            bodyColor: '#ffffff' // Tooltip body color
+        }
+    }
+};
 
 const smrtMRT = document.getElementById('mkbf-smrt-mrt').getContext('2d');
+const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+        y: {
+            beginAtZero: true
+        }
+    },
+    plugins: {
+        legend: {
+            display: true
+        }
+    }
+};
 
 const linesmrt = new Chart(smrtMRT, {
-    type: 'line',
+    type: 'line', // or 'bar', 'pie', etc.
     data: {
         labels: ["2020", "2021", "2022", "2023", "Oct '23 - Dec '24"],
         datasets: [{
@@ -62,23 +108,64 @@ const linesmrt = new Chart(smrtMRT, {
 
 
     },
+    options: chartOptions
+});
 
-
-
-
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-
+function updateChartOptions(chart, isDarkMode) {
+    const options = isDarkMode ? darkThemeOptions : {
         scales: {
+            x: {
+                ticks: {
+                    color: '#000000' // X-axis labels color
+                },
+                grid: {
+                    color: '#e0e0e0' // X-axis grid lines color
+                }
+            },
             y: {
-                beginAtZero: true
+                ticks: {
+                    color: '#000000' // Y-axis labels color
+                },
+                grid: {
+                    color: '#e0e0e0' // Y-axis grid lines color
+                }
             }
         },
         plugins: {
             legend: {
-                display: true
+                labels: {
+                    color: '#000000' // Legend labels color
+                }
             },
+            tooltip: {
+                backgroundColor: '#ffffff', // Tooltip background color
+                titleColor: '#000000', // Tooltip title color
+                bodyColor: '#000000' // Tooltip body color
+            }
         }
+    };
+    chart.options = {
+        ...chart.options,
+        ...options
+    };
+    chart.update();
+}
+
+// Check localStorage for dark mode preference
+if (localStorage.getItem('dark-mode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+    updateChartOptions(linesmrt, true);
+}
+
+const toggleButton = document.getElementById('dark-mode-toggle');
+toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    updateChartOptions(linesmrt, isDarkMode);
+    // Save the preference in localStorage
+    if (isDarkMode) {
+        localStorage.setItem('dark-mode', 'enabled');
+    } else {
+        localStorage.setItem('dark-mode', 'disabled');
     }
 });

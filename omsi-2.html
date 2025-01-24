@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-extension-1.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
 
 </head>
 
@@ -58,6 +59,9 @@
                                     <li><a href="./openbve.html">OpenBVE</a></li>
                                     <li class="active"><a href="./omsi-2.html">OMSI 2</a></li>
                                     <li><a href="./blog.html">Blog</a></li>
+                                    <li><button class="wbnrfz_btn_theme" id="dark-mode-toggle"
+                                            title="Toggle Dark/Light Mode!"><i class="fa-solid fa-moon"></i></button>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -88,7 +92,7 @@
         </div>
     </section>
 
-    <section class="about-me-summ section-padding-80-0 clearfix">
+    <section class="about-me-summ section-padding-80-0 gs-guides clearfix">
         <div class="container">
             <div class="accordion" id="accordGuide">
 
@@ -147,7 +151,8 @@
 
                 <div class="alert alert-danger alert-dismissible" role="alert"
                     style="margin-top: 1em; cursor: default; font-size: 14px;">
-                    Only attempt the following if you are familiar with Modifying OMSI contents, and have backed up your item. We will not assume
+                    Only attempt the following if you are familiar with Modifying OMSI contents, and have backed up your
+                    item. We will not assume
                     responsiblity should things go wrong.
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
@@ -170,7 +175,8 @@
                                     Sceneryobjects</a> (for Maps)<br>
                                 - <a href="releases/omsi-developer-files.html" style="color: #e96060"> Splines</a> (for
                                 Maps)<br>
-                                - <a href="releases/omsi-developer-files.html" style="color: #e96060"> Krueger EDS Scripts</a> (for
+                                - <a href="releases/omsi-developer-files.html" style="color: #e96060"> Krueger EDS
+                                    Scripts</a> (for
                                 Bus)<br>
                                 <br>
                             <h4>Step 1 - Downloading our Maps/Buses</h4>
@@ -352,6 +358,8 @@
         data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
         data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
         </script>
+
+    <script src="js/theme.js"></script>
 
     <script src="js/jquery.min.js"></script>
 

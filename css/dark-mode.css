@@ -1,0 +1,236 @@
+/* ------------------------------------------
+[Tables of Content]
+
+> style
+> style-breakpoints
+> dark theme (this)
+    - General
+    - 1.0 Home Page
+    - 2.0 About Page
+    - 3.0 OMSI/OpenBVE Page
+    - 4.0 Indiv Pages
+    - 5.0 Blog Page(s)
+--------------------------------------------- */
+
+/* ------------------------------------------ General ------------------------------------------ */
+/* ---- Preloader */
+body.dark-mode #preloader {
+    background-color: #1f2022;
+}
+
+/* ---- Button */
+.wbnrfz_btn_theme {
+    position: relative;
+    z-index: 1;
+    min-width: auto;
+    height: 46px;
+    line-height: 42px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0 30px;
+    margin-left: 5px;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: #444;
+    color: #fff;
+    border-radius: 60px;
+    transition-duration: 500ms;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: none;
+}
+
+body.dark-mode .wbnrfz_btn_theme {
+    background-color: #e96060;
+    color: #fff;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p {
+    color: #fff;
+}
+
+/* ---- */
+
+/* ---- Footer */
+body.dark-mode .footer-area {
+    background-color: #2e2e2e;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .footer-content .copywrite-text p {
+    color: #fff;
+}
+
+body.dark-mode .footer-content .social-info a {
+    color: #fff;
+}
+
+/* ------------------------------------------  */
+
+/* ------------------------------------------ 1.0 Home Page ------------------------------------------ */
+body.dark-mode .section-padding-80-0 {
+    background-color: #18191a;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .pw-portfolio-area {
+    background-color: #1e1e1e;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .pw-portfolio-area .container-fluid {
+    background-color: #1e1e1e;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .about-me-content {
+    background-color: #2e2e2e;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .about-me-content:hover {
+    background-color: #b75252;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .about-me-content .ui-icon {
+    background-color: #7e2929;
+}
+
+/* ------------------------------------------  */
+
+/* ------------------------------------------ 2.0 About Page ------------------------------------------ */
+body.dark-mode .about-me-summary {
+    background-color: #2e2e2e;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .timeline-content {
+    background-color: #2e2e2e;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .timeline-content .period-date-aa {
+    background-color: #7e2929;
+}
+
+/* ------------------------------------------  */
+
+/* ------------------------------------------ 3.0 OMSI/OpenBVE Page ------------------------------------------ */
+body.dark-mode .gs-guides {
+    background-color: #1e1e1e;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .accordion-button {
+    background-color: #3a3b3c;
+    transition: all 0.5s ease;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+body.dark-mode .accordion-item {
+    border: 0px solid #000;
+}
+
+body.dark-mode .accordion-body:not(.collapsed) {
+    background-color: #323232;
+    border: 1px solid #000;
+}
+
+body.dark-mode .accordion-button:not(.collapsed) {
+    background-color: #ffe2b0;
+    color: #000;
+}
+
+body.dark-mode .alert-danger {
+    background-color: #2c0b0e;
+    color: #EA868F;
+    border-color: #842029;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .alert-dismissible .btn-close {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23EA868F'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
+}
+
+body.dark-mode .accordion-button::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+body.dark-mode .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+body.dark-mode .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+/* ------------------------------------------  */
+
+/* ------------------------------------------ 4.0 Indiv Pages ------------------------------------------ */
+body.dark-mode .section-padding-80-0 {
+    background-color: #18191a;
+}
+
+body.dark-mode .wbnrfz-summ {
+    background-color: #1e1e1e;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode span,
+body.dark-mode .wbnrfz_details .details_catagory_wrap .single_catagory h4,
+body.dark-mode .wbnrfz_details .details_catagory_wrap .single_catagory .social_links a {
+    color: #fff;
+}
+
+body.dark-mode .about-me-stations {
+    background-color: #242526;
+    transition: all 0.5s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    body.dark-mode #ops-wcrto {
+        content: url('../img/core-img/wcrt-dark.png');
+    }
+
+    body.dark-mode #ops-smrtt {
+        content: url('../img/core-img/stl-dark.png');
+    }
+
+    body.dark-mode #line-wtl,
+    body.dark-mode #line-wtl-img {
+        content: url('../img/releases-ss/wtl-diag-dark.png');
+        transition: all 0.5s ease;
+    }
+}
+
+body.dark-mode .info-table td.second {
+    border: 2px solid #242526;
+    background-color: #484a4b;
+    color: #fff;
+}
+
+body.dark-mode .info-table td.first {
+    border: 2px solid #242526;
+    background-color: #2f3132;
+    color: #fff;
+}
+
+/* TEMP */
+body.dark-mode .alert-do {
+    background-color: #343a40;
+    color: #fff;
+    border-color: #495057;
+    transition: all 0.5s ease;
+}
+
+/* ------------------------------------------  */

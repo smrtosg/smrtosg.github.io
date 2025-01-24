@@ -103,6 +103,15 @@ strong {
     text-align: left;
 }
 
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -555,7 +564,7 @@ section.follow-area.clearfix {
 #scrollUp:focus,
 #scrollUp:hover {
     background-color: #ffb6b9;
-    color: #ffffff;
+    color: #000;
 }
 
 /* :: 6.0 Buttons CSS */
@@ -612,12 +621,14 @@ section.follow-area.clearfix {
 .pw-btn:focus,
 .pw-btn:hover,
 .wbnrfz_btn:focus,
-.wbnrfz_btn:hover {
+.wbnrfz_btn:hover,
+.pw-btn-accord:focus,
+.pw-btn-accord:hover {
     font-weight: 500;
     -webkit-box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
     box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
     background-color: #ffb6b9;
-    color: #ffffff;
+    color: #000;
 }
 
 
@@ -920,7 +931,7 @@ section.follow-area.clearfix {
     color: #45505b;
     margin: 15px 0 0 0;
     font-size: 26px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Onest', sans-serif;
     cursor: default;
 }
 
@@ -1152,7 +1163,7 @@ section.follow-area.clearfix {
     font-size: 30px;
     position: absolute;
     top: -38px;
-    left: 50%;
+    left: 52%;
     margin-left: -38px;
 }
 
@@ -1171,7 +1182,7 @@ section.follow-area.clearfix {
     font-size: 30px;
     position: absolute;
     top: -38px;
-    left: 50%;
+    left: 52%;
     margin-left: -38px;
 }
 

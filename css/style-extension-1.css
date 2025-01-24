@@ -596,11 +596,16 @@ h4.stn:hover {
 
 .stationBlockItem {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px,334px));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 334px));
 }
 
 .line-strip {
   margin-right: 5px;
+}
+
+#line-wtl,
+#line-wtl-img {
+    content: url('../img/releases-ss/wtl-diag.png');
 }
 
 
@@ -850,7 +855,7 @@ h4.stn:hover {
 
   .wbnrfz_btn {
     min-width: 100%;
-}
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 332px) {
