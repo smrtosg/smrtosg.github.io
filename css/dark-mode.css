@@ -61,6 +61,11 @@ body.dark-mode p {
     color: #fff;
 }
 
+body.dark-mode .breakpoint-on .classynav>ul>li>a {
+    background-color: #1f2022;
+    color: #fff;
+}
+
 /* ---- */
 
 /* ---- Footer */
@@ -77,6 +82,15 @@ body.dark-mode .footer-content .copywrite-text p {
 body.dark-mode .footer-content .social-info a {
     color: #fff;
 }
+
+/* ---- */
+
+/* ---- Mobile Nav Bar */
+body.dark-mode .breakpoint-on .classy-navbar .classy-menu {
+    background-color: #1f2022;
+    transition: all 0.5s ease;
+}
+
 
 /* ------------------------------------------  */
 

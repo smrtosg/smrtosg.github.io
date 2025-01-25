@@ -633,6 +633,11 @@ h4.stn:hover {
     padding: 1.0em;
     font-size: 10px;
   }
+
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -682,9 +687,39 @@ h4.stn:hover {
     height: 35vh;
   }
 
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .wbnrfz_btn_theme,
+  body.dark-mode .wbnrfz_btn_theme {
+    margin-left: 15px !important;
+    margin-top: 15px !important;
+  }
+
+  body.dark-mode .classy-nav-container .classy-navbar .classynav ul li a {
+    background-color: #1f2022;
+    color: #fff;
+  }
+
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+  .classy-nav-container .classy-navbar .classynav ul li a {
+    font-size: 14px;
+    color: #252525;
+  }
+
+  .classy-nav-container .classy-navbar .classynav ul li a:hover,
+  .classy-nav-container .classy-navbar .classynav ul li a:focus {
+    color: #80a8cc;
+  }
+
+  .classynav ul li.active a::before {
+    display: none;
+  }
+
   img.profile-pic {
     width: 280px;
     height: 280px;
@@ -715,6 +750,22 @@ h4.stn:hover {
     color: #ffffff;
     font-size: 35px;
     cursor: default;
+  }
+
+  .col-sm-4 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  body.dark-mode .classy-nav-container .classy-navbar .classynav ul li a {
+    background-color: #1f2022;
+    color: #fff;
+  }
+
+  .wbnrfz_btn_theme,
+  body.dark-mode .wbnrfz_btn_theme {
+    margin-left: 15px !important;
+    margin-top: 15px !important;
   }
 
 }
@@ -851,6 +902,17 @@ h4.stn:hover {
   .wbnrfz_btn {
     min-width: 100%;
   }
+
+  body.dark-mode .classy-nav-container .classy-navbar .classynav ul li a {
+    background-color: #1f2022;
+    color: #fff;
+  }
+
+  .wbnrfz_btn_theme,
+  body.dark-mode .wbnrfz_btn_theme {
+    margin-left: 15px !important;
+    margin-top: 15px !important;
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 332px) {
@@ -965,7 +1027,7 @@ h4.stn:hover {
   }
 }
 
-@media only screen and (min-width: 100px) and (max-width: 319px) {
+@media only screen and (max-width: 319px) {
   .breadcrumb-area-lines {
     position: relative;
     z-index: 1;
@@ -983,6 +1045,17 @@ h4.stn:hover {
   .wbnrfz_details .details_catagory_wrap {
     display: block;
     margin-bottom: 40px;
+  }
+
+  body.dark-mode .classy-nav-container .classy-navbar .classynav ul li a {
+    background-color: #1f2022;
+    color: #fff;
+  }
+
+  .wbnrfz_btn_theme,
+  body.dark-mode .wbnrfz_btn_theme {
+    margin-left: 15px !important;
+    margin-top: 15px !important;
   }
 }
 
