@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/style-extension-1.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
 
   <link rel="stylesheet" href="../css/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/glightbox.min.css">
@@ -57,6 +58,9 @@
                   <li class="active"><a href="../openbve.html">OpenBVE</a></li>
                   <li><a href="../omsi-2.html">OMSI 2</a></li>
                   <li><a href="../blog.html">Blog</a></li>
+                  <li><button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!"><i
+                        class="fa-solid fa-moon"></i></button>
+                  </li>
                 </ul>
               </div>
 
@@ -109,7 +113,7 @@
 
           <div class="col-sm-4 single_catagory">
             <span>Owned By</span>
-            <img class="logo-operator" src="../img/core-img/stl.png" alt="smrt" width="170px">
+            <img class="logo-operator" src="../img/core-img/stl.png" id="ops-smrtt" alt="smrt" width="170px">
           </div>
 
           <div class="col-sm-4 single_catagory">
@@ -133,7 +137,7 @@
     </div>
   </section>
 
-  <section class="about-me-summ bg-gray section-padding-80-0 clearfix">
+  <section class="about-me-summ section-padding-80-0 clearfix">
     <div class="wbnrfz_details wow fadeInUp" data-wow-delay="100ms">
       <div class="container container-xxl">
 
@@ -145,7 +149,8 @@
                 <div class="col-lg-12">
                   <div class="info justify-content-center">
                     <p style="text-align: center;">The Airport Express Line is a fictional line mainly based on
-                      Singapore and New York. The route has been created using Routebuilder, by Nickgoh45. Upgrades are done
+                      Singapore and New York. The route has been created using Routebuilder, by Nickgoh45. Upgrades are
+                      done
                       in-house by SMRTO Studios.<br><br>
                     </p>
                   </div>
@@ -161,7 +166,7 @@
                 <tbody>
                   <tr class="info-det">
                     <td class="first">Incumbent Operator</td>
-                    <td class="second"><img src="../img/core-img/stl.png" alt="smrt" class="logo"></td>
+                    <td class="second"><img src="../img/core-img/stl.png" id="ops-smrtt" alt="smrt" class="logo"></td>
                   </tr>
                   <tr class="info-det">
                     <td class="first">Train Depot</td>
@@ -175,8 +180,9 @@
             <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="300ms">
               <h3 class="ld-s-title">Line Diagram</h3>
               <div class="row row-line-diag justify-content-center">
-                <a href="../img/releases-ss/ael-diag.png" class="portfolio-img"><img
-                    src="../img/releases-ss/ael-diag.png" class="img-fluid" alt="cover-page"></a>
+                <a href="../img/releases-ss/ael-diag.png" id="line-ael" class="portfolio-img">
+                  <img src="../img/releases-ss/ael-diag.png" id="line-ael-img" class="img-fluid" alt="cover-page">
+                </a>
               </div>
             </div>
 
@@ -277,7 +283,7 @@
                 style="margin-top: 1em; cursor: default; font-size: 14px;">
                 The support for the legacy C651/A/B/C/D has been deprecated. Download <b>Version 1.0</b> to use it for
                 the <b>Legacy Trains</b>.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="button" class="btn-close cls-warning" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
 
               <h3 class="ld-s-title"><i class="fa-solid fa-download"></i>&nbsp;Routes</h3>
@@ -297,7 +303,7 @@
                         <h3 class="changelog">
                           - Tweaked Announcements to include missing Evergreen Fields Line towards East Harbour
                         </h3> <br><br>
-  
+
                         <a href="https://github.com/smrtosg/main/releases/download/v081224/Railway.-.AEL.v2.2.7z"
                           class="btn pw-btn btn-2 mt-15" target="_blank">
                           <i class="fa-solid fa-download"></i>&nbsp;&nbsp;Route</a>
@@ -306,8 +312,8 @@
                   </div>
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="heading2.1">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2.1"
-                        aria-expanded="false" aria-controls="collapse2.1">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2.1" aria-expanded="false" aria-controls="collapse2.1">
                         Version 2.1 - 09/12/24
                       </button>
                     </h2>
@@ -334,7 +340,7 @@
                         <h3 class="changelog">
                           - Initial Release
                         </h3> <br><br>
-  
+
                         <a href="https://github.com/smrtosg/main/releases/download/v110924/Railway.-.AEL.Legacy.7z"
                           class="btn pw-btn btn-2 mt-15" target="_blank">
                           <i class="fa-solid fa-download"></i>&nbsp;&nbsp;Route (Legacy)</a>
@@ -350,7 +356,8 @@
 
               <h3 class="ld-s-title"><i class="fa-solid fa-download"></i>&nbsp;Trains</h3>
               <div class="row justify-content-center">
-                <div class="accordion" id="accordTrains">                  <div class="accordion-item">
+                <div class="accordion" id="accordTrains">
+                  <div class="accordion-item">
                     <h2 class="accordion-header" id="heading151C">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapse151C" aria-expanded="false" aria-controls="collapse151C">
@@ -363,7 +370,7 @@
                         <a href="../releases/c151c.html" class="btn pw-btn btn-2 mt-15" target="_blank">
                           <i class="fa-solid fa-download"></i>&nbsp;&nbsp;C151C</a>
                       </div>
-  
+
                     </div>
                   </div>
                   <div class="accordion-item">
@@ -421,8 +428,7 @@
                     <div id="collapseLeg" class="accordion-collapse collapse" aria-labelledby="headingLeg"
                       data-bs-parent="#accordTrains">
                       <div class="accordion-body">
-                        <a href="../releases/c651s-leg.html" class="btn pw-btn btn-2 mt-15"
-                          target="_blank">
+                        <a href="../releases/c651s-leg.html" class="btn pw-btn btn-2 mt-15" target="_blank">
                           <i class="fa-solid fa-download"></i>&nbsp;&nbsp;C651/A/B/C/D</a>
                       </div>
                     </div>
@@ -502,6 +508,41 @@
     data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
     data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
     </script>
+
+     <!-- Dark Mode Functionality for Individual Pages -->
+  <script>
+    // Check localStorage for dark mode preference
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-mode');
+      updateHrefForDarkMode();
+    }
+
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      // Save the preference in localStorage
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('dark-mode', 'enabled');
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+      }
+      updateHrefForDarkMode();
+    });
+
+    function updateHrefForDarkMode() {
+      const link = document.getElementById('line-ael');
+      const img = document.getElementById('line-ael-img');
+      const isDarkMode = document.body.classList.contains('dark-mode');
+
+      if (isDarkMode) {
+        link.href = '../img/releases-ss/ael-diag-dark.png';
+        img.src = '../img/releases-ss/ael-diag-dark.png';
+      } else {
+        link.href = '../img/releases-ss/ael-diag.png';
+        img.src = '../img/releases-ss/ael-diag.png';
+      }
+    }
+  </script>
 
   <script src="../js/jquery.min.js"></script>
 

@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/style-extension-1.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
 
   <link rel="stylesheet" href="../css/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/glightbox.min.css">
@@ -57,6 +58,9 @@
                   <li class="active"><a href="../openbve.html">OpenBVE</a></li>
                   <li><a href="../omsi-2.html">OMSI 2</a></li>
                   <li><a href="../blog.html">Blog</a></li>
+                  <li><button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!"><i
+                        class="fa-solid fa-moon"></i></button>
+                  </li>
                 </ul>
               </div>
 
@@ -109,7 +113,7 @@
 
           <div class="col-sm-4 single_catagory">
             <span>Owned By</span>
-            <img class="logo-operator" src="../img/core-img/stl.png" alt="smrt" width="170px">
+            <img class="logo-operator" src="../img/core-img/stl.png" id="ops-smrtt" alt="smrt" width="170px">
           </div>
 
           <div class="col-sm-4 single_catagory">
@@ -133,7 +137,7 @@
     </div>
   </section>
 
-  <section class="about-me-summ bg-gray section-padding-80-0 clearfix">
+  <section class="about-me-summ section-padding-80-0 clearfix">
     <div class="wbnrfz_details wow fadeInUp" data-wow-delay="100ms">
       <div class="container container-xxl">
 
@@ -162,7 +166,7 @@
                 <tbody>
                   <tr class="info-det">
                     <td class="first">Incumbent Operator</td>
-                    <td class="second"><img src="../img/core-img/stl.png" alt="smrt" class="logo"></td>
+                    <td class="second"><img src="../img/core-img/stl.png" id="ops-smrtt" alt="smrt" class="logo"></td>
                   </tr>
                   <tr class="info-det">
                     <td class="first">Train Depot</td>
@@ -176,8 +180,9 @@
             <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="300ms">
               <h3 class="ld-s-title">Line Diagram</h3>
               <div class="row row-line-diag justify-content-center">
-                <a href="../img/releases-ss/ys-diag.png" class="portfolio-img"><img src="../img/releases-ss/ys-diag.png"
-                    class="img-fluid" alt="cover-page"></a>
+                <a href="../img/releases-ss/ys-diag.png" id="line-ys" class="portfolio-img">
+                  <img src="../img/releases-ss/ys-diag.png" id="line-ys-img" class="img-fluid" alt="cover-page">
+                </a>
               </div>
             </div>
 
@@ -422,11 +427,11 @@
           <!-- Downloads -->
           <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="900ms">
             <div class="alert alert-warning alert-dismissible wow fadeInUp" data-wow-delay="900ms" role="alert"
-            style="margin-top: 1em; cursor: default; font-size: 14px;">
-            The support for the legacy YL150/A/B has been deprecated. Download <b>Version 1.0</b> to use it for
-            the <b>Legacy Trains</b>.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
+              style="margin-top: 1em; cursor: default; font-size: 14px;">
+              The support for the legacy YL150/A/B has been deprecated. Download <b>Version 1.0</b> to use it for
+              the <b>Legacy Trains</b>.
+              <button type="button" class="btn-close cls-warning" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
 
             <h3 class="ld-s-title"><i class="fa-solid fa-download"></i>&nbsp;Routes</h3>
             <div class="row justify-content-center">
@@ -516,8 +521,7 @@
                   <div id="collapseLeg" class="accordion-collapse collapse" aria-labelledby="headingLeg"
                     data-bs-parent="#accordTrains">
                     <div class="accordion-body">
-                      <a href="../releases/yl150a-b.html" class="btn pw-btn btn-2 mt-15"
-                        target="_blank">
+                      <a href="../releases/yl150a-b.html" class="btn pw-btn btn-2 mt-15" target="_blank">
                         <i class="fa-solid fa-download"></i>&nbsp;&nbsp;YL150A/B</a>
                     </div>
                   </div>
@@ -531,9 +535,9 @@
 
           <div class="banner text-center wow fadeInUp" data-wow-delay="150ms">
             <iframe class="iframe-banner" src="https://www.youtube.com/embed/6OrqgdxrTRs?si=_wQlREkzqcYY5LPU"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
 
           <!-- Screenshots -->
@@ -603,6 +607,41 @@
     data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
     data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
     </script>
+
+  <!-- Dark Mode Functionality for Individual Pages -->
+  <script>
+    // Check localStorage for dark mode preference
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      document.body.classList.add('dark-mode');
+      updateHrefForDarkMode();
+    }
+
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      // Save the preference in localStorage
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('dark-mode', 'enabled');
+      } else {
+        localStorage.setItem('dark-mode', 'disabled');
+      }
+      updateHrefForDarkMode();
+    });
+
+    function updateHrefForDarkMode() {
+      const link = document.getElementById('line-ys');
+      const img = document.getElementById('line-ys-img');
+      const isDarkMode = document.body.classList.contains('dark-mode');
+
+      if (isDarkMode) {
+        link.href = '../img/releases-ss/ys-diag-dark.png';
+        img.src = '../img/releases-ss/ys-diag-dark.png';
+      } else {
+        link.href = '../img/releases-ss/ys-diag.png';
+        img.src = '../img/releases-ss/ys-diag.png';
+      }
+    }
+  </script>
 
   <script src="../js/jquery.min.js"></script>
 

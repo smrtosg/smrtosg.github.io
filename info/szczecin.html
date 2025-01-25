@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/style-extension-1.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
 
   <link rel="stylesheet" href="../css/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/glightbox.min.css">
@@ -57,6 +58,9 @@
                   <li><a href="../openbve.html">OpenBVE</a></li>
                   <li class="active"><a href="../omsi-2.html">OMSI 2</a></li>
                   <li><a href="../blog.html">Blog</a></li>
+                  <li><button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!"><i
+                        class="fa-solid fa-moon"></i></button>
+                  </li>
                 </ul>
               </div>
 
@@ -68,7 +72,8 @@
   </header>
 
 
-  <section class="breadcrumb-area-lines bg-img bg-overlay" style="background-image: url(https://i.imgur.com/KWT3KyD.jpeg)">
+  <section class="breadcrumb-area-lines bg-img bg-overlay"
+    style="background-image: url(https://i.imgur.com/KWT3KyD.jpeg)">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-12">
@@ -128,7 +133,8 @@
             </div>
           </div>
           <div class="single_catagory">
-            <a class="btn wbnrfz_btn" href="https://omsiworld.com/?feature=downloadsystem&fileid=projektszczecin&req=info"><i
+            <a class="btn wbnrfz_btn"
+              href="https://omsiworld.com/?feature=downloadsystem&fileid=projektszczecin&req=info"><i
                 class="fa-solid fa-external-link"></i>&nbsp; Download Map </a>
           </div>
         </div>
@@ -137,7 +143,7 @@
     </div>
   </section>
 
-  <section class="about-me-summ bg-gray section-padding-80-0 clearfix">
+  <section class="about-me-summ section-padding-80-0 clearfix">
     <div class="wbnrfz_details wow fadeInUp" data-wow-delay="100ms">
       <div class="container container-xxl">
 
@@ -163,7 +169,7 @@
                 <tbody>
                   <tr class="info-det">
                     <td class="first">Incumbent</td>
-                    <td class="second"><img src="../img/core-img/smb.png" alt="smrt" class="logo"></td>
+                    <td class="second"><img src="../img/core-img/smb.png" id="ops-smrtb" alt="smrt" class="logo"></td>
                   </tr>
                   <tr class="info-det">
                     <td class="first">Present Contract Term</td>
@@ -230,7 +236,7 @@
                       <td class="second">Kołłątaja ⇔ Krucza Dom Kombatanta</td>
                       <td class="first">Trunk</td>
                     </tr>
-    
+
                     <tr class="info-det">
                       <td class="first">522</td>
                       <td class="second">Warszewo ⇔ Kołłątaja, Kormoranów ⇔ Kołłątaja</td>
@@ -278,26 +284,26 @@
               <div class="row">
                 <div class="col-lg-6 col-md-6">
                   <div class="thumb">
-                    <a href="https://i.imgur.com/prc9Hx0.jpeg" class="portfolio-img"><img src="https://i.imgur.com/prc9Hx0.jpeg"
-                        class="img-fluid" alt="HOH-1"></a>
+                    <a href="https://i.imgur.com/prc9Hx0.jpeg" class="portfolio-img"><img
+                        src="https://i.imgur.com/prc9Hx0.jpeg" class="img-fluid" alt="HOH-1"></a>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <div class="thumb">
-                    <a href="https://i.imgur.com/pt1DIVg.jpeg" class="portfolio-img"><img src="https://i.imgur.com/pt1DIVg.jpeg"
-                        class="img-fluid" alt="HOH-2"></a>
+                    <a href="https://i.imgur.com/pt1DIVg.jpeg" class="portfolio-img"><img
+                        src="https://i.imgur.com/pt1DIVg.jpeg" class="img-fluid" alt="HOH-2"></a>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <div class="thumb">
-                    <a href="https://i.imgur.com/NnuN87t.jpeg" class="portfolio-img"><img src="https://i.imgur.com/NnuN87t.jpeg"
-                        class="img-fluid" alt="HOH-3"></a>
+                    <a href="https://i.imgur.com/NnuN87t.jpeg" class="portfolio-img"><img
+                        src="https://i.imgur.com/NnuN87t.jpeg" class="img-fluid" alt="HOH-3"></a>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <div class="thumb">
-                    <a href="https://i.imgur.com/KWT3KyD.jpeg" class="portfolio-img"><img src="https://i.imgur.com/KWT3KyD.jpeg"
-                        class="img-fluid" alt="HOH-4"></a>
+                    <a href="https://i.imgur.com/KWT3KyD.jpeg" class="portfolio-img"><img
+                        src="https://i.imgur.com/KWT3KyD.jpeg" class="img-fluid" alt="HOH-4"></a>
                   </div>
                 </div>
               </div>
@@ -340,6 +346,8 @@
     data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
     data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
     </script>
+
+  <script src="../js/theme.js"></script>
 
   <script src="../js/jquery.min.js"></script>
 

@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/style-extension-1.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
 
   <link rel="stylesheet" href="../css/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/glightbox.min.css">
@@ -57,6 +58,9 @@
                   <li><a href="../openbve.html">OpenBVE</a></li>
                   <li class="active"><a href="../omsi-2.html">OMSI 2</a></li>
                   <li><a href="../blog.html">Blog</a></li>
+                  <li><button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!"><i
+                        class="fa-solid fa-moon"></i></button>
+                  </li>
                 </ul>
               </div>
 
@@ -133,7 +137,7 @@
     </div>
   </section>
 
-  <section class="about-me-summ bg-gray section-padding-80-0 clearfix">
+  <section class="about-me-summ section-padding-80-0 clearfix">
     <div class="wbnrfz_details wow fadeInUp" data-wow-delay="100ms">
       <div class="container container-xxl">
 
@@ -159,7 +163,7 @@
                 <tbody>
                   <tr class="info-det">
                     <td class="first">Incumbent Operator</td>
-                    <td class="second"><img src="../img/core-img/smb.png" alt="smrt" class="logo"></td>
+                    <td class="second"><img src="../img/core-img/smb.png" id="ops-smrtb" alt="smrt" class="logo"></td>
                   </tr>
                   <tr class="info-det">
                     <td class="first">Present Contract Term</td>
@@ -325,7 +329,7 @@
                 The Default Buses in the AI Lists are the <a href="../releases/vdl-clle.html">VDL Citea 12m</a> and <a
                   href="../releases/solaris-urbino-18.html.html">Solaris Urbino 18</a>. You may change to your
                 own buses via ailists.cfg
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="button" class="btn-close cls-warning" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
 
               <h3 class="ld-s-title"><i class="fa-solid fa-download"></i>&nbsp;Routes</h3>
@@ -418,26 +422,26 @@
               <div class="row">
                 <div class="col-lg-6 col-md-6">
                   <div class="thumb">
-                    <a href="https://i.imgur.com/jGRaShY.jpeg" class="portfolio-img"><img src="https://i.imgur.com/jGRaShY.jpeg"
-                        class="img-fluid" alt="HT-1"></a>
+                    <a href="https://i.imgur.com/jGRaShY.jpeg" class="portfolio-img"><img
+                        src="https://i.imgur.com/jGRaShY.jpeg" class="img-fluid" alt="HT-1"></a>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <div class="thumb">
-                    <a href="https://i.imgur.com/XmPzUWz.jpeg" class="portfolio-img"><img src="https://i.imgur.com/XmPzUWz.jpeg"
-                        class="img-fluid" alt="HT-2"></a>
+                    <a href="https://i.imgur.com/XmPzUWz.jpeg" class="portfolio-img"><img
+                        src="https://i.imgur.com/XmPzUWz.jpeg" class="img-fluid" alt="HT-2"></a>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <div class="thumb">
-                    <a href="https://i.imgur.com/UJDJ1jy.jpeg" class="portfolio-img"><img src="https://i.imgur.com/UJDJ1jy.jpeg"
-                        class="img-fluid" alt="HT-3"></a>
+                    <a href="https://i.imgur.com/UJDJ1jy.jpeg" class="portfolio-img"><img
+                        src="https://i.imgur.com/UJDJ1jy.jpeg" class="img-fluid" alt="HT-3"></a>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <div class="thumb">
-                    <a href="https://i.imgur.com/hISWCUg.jpeg" class="portfolio-img"><img src="https://i.imgur.com/hISWCUg.jpeg"
-                        class="img-fluid" alt="HT-4"></a>
+                    <a href="https://i.imgur.com/hISWCUg.jpeg" class="portfolio-img"><img
+                        src="https://i.imgur.com/hISWCUg.jpeg" class="img-fluid" alt="HT-4"></a>
                   </div>
                 </div>
               </div>
@@ -480,6 +484,8 @@
     data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
     data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
     </script>
+
+  <script src="../js/theme.js"></script>
 
   <script src="../js/jquery.min.js"></script>
 

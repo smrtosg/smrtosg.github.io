@@ -373,7 +373,8 @@ iframe {
 
 .progress-bar {
   height: 5px;
-  background: #a52d2d;
+  background: linear-gradient(90deg, #da8c08 0%, #a52d2d 45%, #e96060 100%);
+
   width: 0%;
 }
 
@@ -544,9 +545,8 @@ h4.stn {
 }
 
 h4.stn:hover {
-  color: #6b91b5;
-  -webkit-transition-duration: 500ms;
-  -o-transition-duration: 500ms;
+  color: #ffb6b9;
+  transition-duration: 500ms;
   cursor: pointer;
 }
 
@@ -601,11 +601,6 @@ h4.stn:hover {
 
 .line-strip {
   margin-right: 5px;
-}
-
-#line-wtl,
-#line-wtl-img {
-    content: url('../img/releases-ss/wtl-diag.png');
 }
 
 

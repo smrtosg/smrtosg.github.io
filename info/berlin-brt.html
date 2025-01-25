@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/style-extension-1.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
 
   <link rel="stylesheet" href="../css/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/glightbox.min.css">
@@ -57,6 +58,9 @@
                   <li><a href="../openbve.html">OpenBVE</a></li>
                   <li class="active"><a href="../omsi-2.html">OMSI 2</a></li>
                   <li><a href="../blog.html">Blog</a></li>
+                  <li><button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!"><i
+                        class="fa-solid fa-moon"></i></button>
+                  </li>
                 </ul>
               </div>
 
@@ -68,8 +72,7 @@
   </header>
 
 
-  <section class="breadcrumb-area-lines bg-img bg-overlay"
-    style="background-image: url(../img/releases-ss/brt3.jpg)">
+  <section class="breadcrumb-area-lines bg-img bg-overlay" style="background-image: url(../img/releases-ss/brt3.jpg)">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-12">
@@ -128,8 +131,7 @@
             </div>
           </div>
           <div class="single_catagory">
-            <a class="btn wbnrfz_btn"
-              href="https://store.steampowered.com/app/1357070/OMSI_2_AddOn_Berlin_BRT/"><i
+            <a class="btn wbnrfz_btn" href="https://store.steampowered.com/app/1357070/OMSI_2_AddOn_Berlin_BRT/"><i
                 class="fa-solid fa-external-link"></i>&nbsp; Download DLC </a>
           </div>
         </div>
@@ -138,7 +140,7 @@
     </div>
   </section>
 
-  <section class="about-me-summ bg-gray section-padding-80-0 clearfix">
+  <section class="about-me-summ section-padding-80-0 clearfix">
     <div class="wbnrfz_details wow fadeInUp" data-wow-delay="100ms">
       <div class="container container-xxl">
 
@@ -164,7 +166,7 @@
                 <tbody>
                   <tr class="info-det">
                     <td class="first">Incumbent Operator</td>
-                    <td class="second"><img src="../img/core-img/smb.png" alt="smrt" class="logo"></td>
+                    <td class="second"><img src="../img/core-img/smb.png" id="ops-smrtb" alt="smrt" class="logo"></td>
                   </tr>
                   <tr class="info-det">
                     <td class="first">Present Contract Term</td>
@@ -172,7 +174,8 @@
                   </tr>
                   <tr class="info-det">
                     <td class="first">Bus Services</td>
-                    <td class="second">X1, X10, 110, 115, 285, 601, 620, 621, 623, 625, 626, M19, M29, N10, N12, N13 & N84. <br> [17
+                    <td class="second">X1, X10, 110, 115, 285, 601, 620, 621, 623, 625, 626, M19, M29, N10, N12, N13 &
+                      N84. <br> [17
                       bus routes]</td>
                   </tr>
                   <tr class="info-det">
@@ -325,6 +328,8 @@
     data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
     data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
     </script>
+
+<script src="../js/theme.js"></script>
 
   <script src="../js/jquery.min.js"></script>
 

@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/style-extension-1.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
 
   <link rel="stylesheet" href="../css/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/glightbox.min.css">
@@ -57,6 +58,9 @@
                   <li class="active"><a href="../openbve.html">OpenBVE</a></li>
                   <li><a href="../omsi-2.html">OMSI 2</a></li>
                   <li><a href="../blog.html">Blog</a></li>
+                  <li><button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!"><i
+                        class="fa-solid fa-moon"></i></button>
+                  </li>
                 </ul>
               </div>
 
@@ -128,7 +132,7 @@
     </div>
   </section>
 
-  <section class="about-me-summ bg-gray section-padding-80-0 clearfix">
+  <section class="about-me-summ section-padding-80-0 clearfix">
     <div class="wbnrfz_details wow fadeInUp" data-wow-delay="100ms">
       <div class="container container-xxl">
 
@@ -153,7 +157,7 @@
                 style="margin-top: 1em; cursor: default; font-size: 14px;">
                 This train is only meant for use on routes with the old PSD. Click <a
                   href="../blog/hlbf-t.html"><b>here</b></a> to learn more.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="button" class="btn-close cls-warning" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
 
 
@@ -172,9 +176,9 @@
                     <div id="collapse1.0.2" class="accordion-collapse collapse show" aria-labelledby="heading1.0.2"
                       data-bs-parent="#accordTrains">
                       <div class="accordion-body">
-                        <strong>
+                        <h3 class="changelog">
                           - Compatibility for new Announcement Trigger update
-                        </strong> <br><br>
+                        </h3> <br><br>
 
                         <a href="https://github.com/smrtosg/main/releases/download/v110924/Train.-.HLCG.Legacy.7z"
                           class="btn pw-btn btn-2 mt-15" target="_blank">
@@ -193,8 +197,9 @@
                     <div id="collapse1.0" class="accordion-collapse collapse" aria-labelledby="heading2.0"
                       data-bs-parent="#accordTrains">
                       <div class="accordion-body">
-                        <strong>
+                        <h3 class="changelog">
                           - Initial Release
+                          </h3>
                       </div>
                     </div>
                   </div>
@@ -210,14 +215,14 @@
               <div class="row">
                 <div class="col-lg-6 col-md-6">
                   <div class="thumb">
-                    <a href="../img/releases-ss/651D.png" class="portfolio-img"><img
-                        src="../img/releases-ss/651D.png" class="img-fluid" alt="651D"></a>
+                    <a href="../img/releases-ss/651D.png" class="portfolio-img"><img src="../img/releases-ss/651D.png"
+                        class="img-fluid" alt="651D"></a>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <div class="thumb">
-                    <a href="../img/releases-ss/651b.jpeg" class="portfolio-img"><img
-                        src="../img/releases-ss/651b.jpeg" class="img-fluid" alt="651B"></a>
+                    <a href="../img/releases-ss/651b.jpeg" class="portfolio-img"><img src="../img/releases-ss/651b.jpeg"
+                        class="img-fluid" alt="651B"></a>
                   </div>
                 </div>
               </div>
@@ -260,6 +265,8 @@
     data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
     data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
     </script>
+
+  <script src="../js/theme.js"></script>
 
   <script src="../js/jquery.min.js"></script>
 
