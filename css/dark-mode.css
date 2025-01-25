@@ -95,6 +95,13 @@ body.dark-mode .breakpoint-on .classy-navbar .classy-menu {
 /* ------------------------------------------  */
 
 /* ------------------------------------------ 1.0 Home Page ------------------------------------------ */
+body.dark-mode .profile-desc {
+    color: #da8c08;
+    font-size: 20px;
+    font-weight: normal;
+    cursor: default;
+}
+
 body.dark-mode .section-padding-80-0 {
     background-color: #18191a;
     transition: all 0.5s ease;
