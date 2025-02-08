@@ -83,6 +83,11 @@ body.dark-mode .footer-content .social-info a {
     color: #fff;
 }
 
+body.dark-mode .cookiebanner span {
+    color: #000;
+}
+
+
 /* ---- */
 
 /* ---- Mobile Nav Bar */
