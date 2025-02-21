@@ -347,7 +347,7 @@ body.dark-mode .fleet-table th {
     border: 2px solid #242526;
     background-color: #b1b1b1;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 body.dark-mode .fleet-table .manu {
@@ -356,16 +356,17 @@ body.dark-mode .fleet-table .manu {
     background-color: transparent;
     border: 2px solid #242526;
     color: #fff;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 body.dark-mode .fleet-table .model {
     font-weight: bold;
     text-align: center;
+    width: 15%;
     background-color: transparent;
     border: 2px solid #242526;
     color: #fff;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 body.dark-mode .fleet-table .type {
@@ -374,7 +375,8 @@ body.dark-mode .fleet-table .type {
     background-color: transparent;
     border: 2px solid #242526;
     color: #fff;
-    vertical-align: middle;
+    vertical-align: top;
+    width: 15%;
 }
 
 body.dark-mode .fleet-table .cat {
@@ -383,7 +385,17 @@ body.dark-mode .fleet-table .cat {
     background-color: transparent;
     border: 2px solid #242526;
     color: #fff;
-    vertical-align: middle;
+    vertical-align: top;
+}
+
+body.dark-mode .fleet-table .dev {
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid #242526;
+    color: #fff;
+    vertical-align: top;
+    width: 15%;
 }
 
 body.dark-mode .fleet-table .disp {
@@ -392,13 +404,13 @@ body.dark-mode .fleet-table .disp {
     background-color: transparent;
     border: 2px solid #242526;
     color: #fff;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 body.dark-mode .fleet-table .rego {
     font-weight: bold;
-    text-align: left;
-    width: 50%;
+    text-align: center;
+    width: 40%;
     background-color: transparent;
     border: 2px solid #242526;
     color: #fff;
@@ -416,8 +428,47 @@ body.dark-mode .fleet-table tbody tr:nth-child(even) {
     border: 2px solid #242526;
 }
 
+body.dark-mode .tab-content {
+    padding-top: 20px;
+}
+
+body.dark-mode .nav-tabs {
+    border-bottom: none !important;
+    border-radius: 20px !important;
+}
+
+body.dark-mode .nav-item {
+    border-radius: 20px !important;
+    margin: 5px;
+}
+
+body.dark-mode .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    background-color: #6ac144 !important;
+    border: none;
+    border-radius: 20px !important;
+}
+
+body.dark-mode .nav-tabs .nav-link {
+    color: #fff !important;
+    border: none;
+    border-radius: 20px !important;
+}
+
+body.dark-mode .nav-tabs .nav-link:hover {
+    background-color: #ffb6b9 !important;
+    color: #000 !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 20px !important;
+}
+
+body.dark-mode .nav-tabs .nav-link.active {
+    color: #000 !important;
+}
+
 
 @media (max-width: 768px) {
+
     body.dark-mode .fleet-table th,
     body.dark-mode .fleet-table td {
         white-space: nowrap;

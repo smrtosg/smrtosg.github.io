@@ -72,8 +72,7 @@
   </header>
 
 
-  <section class="breadcrumb-area-lines bg-img bg-overlay"
-    style="background-image: url(../img/releases-ss/nlc-bb.jpg)">
+  <section class="breadcrumb-area-lines bg-img bg-overlay" style="background-image: url(../img/releases-ss/nlc-bb.jpg)">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-12">
@@ -106,11 +105,6 @@
         </div>
 
         <div class="details_catagory_wrap">
-          <!-- <div class="col-sm-4 single_catagory ">
-            <span>Developer(s)</span>
-            <h4><i class="fa-solid fa-circle-user"></i> 3D Transport Studio</h4>
-          </div> -->
-
           <div class="col-sm-4 single_catagory">
             <span>Operated By:</span>
             <h4>SMRTO Buses</h4>
@@ -121,7 +115,7 @@
             <div class="social_links">
               <a href="https://www.facebook.com/sharer/sharer.php?u=https://smrtosg.github.io/main/info/gg2.html"
                 title="Facebook">
-                <i class="fa-brands fa-facebook"></i> </a>
+                <i class="fa-brands fa-facebook"></i></a>
               <a href="https://x.com/intent/post?url=https://smrtosg.github.io/main/info/gg2.html&text=Great Grundorf BP"
                 title="X (Twitter)">
                 <i class="fa-brands fa-x-twitter"></i></a>
@@ -131,218 +125,570 @@
               </a>
             </div>
           </div>
-          <!-- <div class="single_catagory">
-            <a class="btn wbnrfz_btn"
-              href="https://omsiworld.com/?feature=downloadsystem&fileid=greatgrundorf&req=info"><i
-                class="fa-solid fa-external-link"></i>&nbsp; Download Map </a>
-          </div> -->
         </div>
       </div>
       <div style="background-color: #6ac144; width: 100%; height: 20px;"></div>
     </div>
   </section>
 
-  <section class="about-me-summ section-padding-80-0 clearfix">
-    <div class="wbnrfz_details wow fadeInUp" data-wow-delay="100ms">
-      <div class="container container-xxl">
+  <!-- Fleet List Tabs -->
+  <div class="container mt-5">
+    <ul class="nav nav-tabs" id="busTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button"
+          role="tab" aria-controls="tab1" aria-selected="true">MAN NLC</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab"
+          aria-controls="tab2" aria-selected="false">MAN A23</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab"
+          aria-controls="tab3" aria-selected="false">MB Citaro C2G</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab4-tab" data-bs-toggle="tab" data-bs-target="#tab4" type="button" role="tab"
+          aria-controls="tab4" aria-selected="false">MB eCitaro G</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab5-tab" data-bs-toggle="tab" data-bs-target="#tab5" type="button" role="tab"
+          aria-controls="tab5" aria-selected="false">MB Citaro C1G</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab6-tab" data-bs-toggle="tab" data-bs-target="#tab6" type="button" role="tab"
+          aria-controls="tab6" aria-selected="false">Volvo 7900H</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="busTabContent">
 
-        <!-- Description -->
-        <div class="row justify-content-center">
-          <div class="col-lg-12">
-            <!-- <div class="details_info">
-              <div class="row justify-content-center">
-                <div class="col-lg-12">
-                  <div class="info justify-content-center">
-                    <p style="text-align: center;">The Great Grundorf 2 Bus Package is one of seven bus
-                      packages under the SMRTO (SMV).<br>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div> -->
+      <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+        <!-- Table 1 content -->
+        <div class="table-responsive">
+          <table id="busTable1" class="fleet-table table">
+            <thead>
+              <tr>
+                <th onclick="sortTable(0, 'busTable1')">Manufacturer</th>
+                <th onclick="sortTable(1, 'busTable1')">Model</th>
+                <th onclick="sortTable(2, 'busTable1')">Type</th>
+                <th onclick="sortTable(3, 'busTable1')">Category</th>
+                <th onclick="sortTable(4, 'busTable1')">Developer</th>
+                <th onclick="sortTable(5, 'busTable1')">Display Type (EDS)</th>
+                <th onclick="sortTable(6, 'busTable1')">Registration Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- MAN NLC 18m -->
+              <!-- Batch 1 -->
+              <tr>
+                <td class="manu">MAN</td>
+                <td class="model">NLC</td>
+                <td class="type">18m Bendy Bus</td>
+                <td class="cat">LHD</td>
+                <td class="dev">Halycon Media</td>
+                <td class="disp">K++</td>
+                <td class="rego">
+                  Batch 1:<br>
+                  <span style="font-weight: normal;">
+                    SG8600D <br>
+                    SG8789T <br>
+                    SG8790M <br>
+                    SG8791K <br>
+                    SG8792H <br>
+                    SG8793E <br>
+                    SG8794C <br>
+                    SG8795A <br>
+                    SG8801R <br>
+                    (Pixel Livery - 3 Door) <br><br>
+                    SG8796Y <br>
+                    SG8797U <br>
+                    SG8798S <br>
+                    SG8799P <br>
+                    SG8800T <br>
+                    (Lush Green 4 Door)
+                  </span>
+                </td>
+              </tr>
 
-            <!-- Bus Fleets -->
-            <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="500ms">
-              <div class="filter-inputs">
-                <input class="form-control search-input" type="text" id="manufacturerFilter" onkeyup="filterTable()"
-                  placeholder="Search by Manufacturer..">
-                <input class="form-control search-input" type="text" id="categoryFilter" onkeyup="filterTable()"
-                  placeholder="Search by Category..">
-              </div>
+              <!-- Batch 2 -->
+              <tr>
+                <td class="manu">MAN</td>
+                <td class="model">NLC</td>
+                <td class="type">18m Bendy Bus</td>
+                <td class="cat">LHD</td>
+                <td class="dev">Halycon Media</td>
+                <td class="disp">K++</td>
+                <td class="rego">
+                  Batch 2:<br>
+                  <span style="font-weight: normal;">
+                    SG8802M <br>
+                    SG8803K <br>
+                    SG8804H <br>
+                    SG8805E <br>
+                    SG8806C <br>
+                    SG8807A <br>
+                    (Pixel Livery - 3 Door)
+                  </span>
+                </td>
+              </tr>
 
-              <div class="row justify-content-center">
-                <div class="table-responsive">
-                  <table id="busTable" class="fleet-table table">
-                    <thead>
-                      <tr>
-                        <th onclick="sortTable(0)">Manufacturer</th>
-                        <th onclick="sortTable(1)">Model</th>
-                        <th onclick="sortTable(2)">Type</th>
-                        <th onclick="sortTable(3)">Category</th>
-                        <th onclick="sortTable(4)">Display Type (EDS)</th>
-                        <th onclick="sortTable(5)">Registration Number</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <!-- MAN NLC 18m -->
-                      <tr>
-                        <td class="manu">MAN</td>
-                        <td class="model">NLC</td>
-                        <td class="type">18m BB</td>
-                        <td class="cat">LHD</td>
-                        <td class="disp">K++</td>
-                        <td class="rego">
-                          Batch 1:
-                          <span style="font-weight: normal;">
-                            SG8600D, SG8789T - SG8795A,
-                            SG8801R
-                            (Pixel Livery - 3 Door) <br>
-                            SG8796Y - SG8800T
-                            (Lush Green 4 Door)
-                          </span>
-                          <hr>
-                          Batch 2:
-                          <span style="font-weight: normal;">
-                            SG8802K - SG8807Y
-                            (Pixel Livery - 3 Door)
-                          </span>
-                          <hr>
-                          Batch 3:
-                          <span style="font-weight: normal;">
-                            SMB8100C - SMB8110Z
-                            (Pixel Livery - 3 Door)
-                          </span>
-                        </td>
-                      </tr>
+              <!-- Batch 3 -->
+              <tr>
+                <td class="manu">MAN</td>
+                <td class="model">NLC</td>
+                <td class="type">18m Bendy Bus</td>
+                <td class="cat">LHD</td>
+                <td class="dev">Halycon Media</td>
+                <td class="disp">K++</td>
+                <td class="rego">
+                  Batch 3:<br>
+                  <span style="font-weight: normal;">
+                    SMB8100C <br>
+                    SMB8101A <br>
+                    SMB8102Y <br>
+                    SMB8103U <br>
+                    SMB8104S <br>
+                    SMB8105P <br>
+                    SMB8106L <br>
+                    SMB8107J <br>
+                    SMB8108G <br>
+                    SMB8109D <br>
+                    SMB8110Z <br>
+                    (Pixel Livery - 3 Door)
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-                      <!-- MAN A23 -->
-                      <tr>
-                        <td class="manu">MAN</td>
-                        <td class="model">A23</td>
-                        <td class="type">18m BB</td>
-                        <td class="cat">LHD</td>
-                        <td class="disp">K++</td>
-                        <td class="rego">
-                          Batch 1 (Non-FL):
-                          <span style="font-weight: normal;">
-                            SMB8011B, SMB8012Z,
-                            SMB8019E - SMB8024P,
-                            SMB8026J - SMB8029B,
-                            SMB8032R - SMB8035H, SMB8039Y
-                            (Pixel Livery - 3 Door)
-                          </span>
-                          <hr>
-                          Batch 2 (FL):
-                          <span style="font-weight: normal;">
-                            SG8740H - SG8787Z
-                            (Lush Green - 3 Door)
-                          </span>
-                          <hr>
-                          Batch 3 (FL):
-                          <span style="font-weight: normal;">
-                            SG8906Y - SG8918M
-                            (Lush Green - 3 Door)
-                          </span>
-                        </td>
-                      </tr>
+      <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+        <!-- Table 2 content -->
+        <div class="table-responsive">
+          <table id="busTable2" class="fleet-table table">
+            <thead>
+              <tr>
+                <th onclick="sortTable(0, 'busTable2')">Manufacturer</th>
+                <th onclick="sortTable(1, 'busTable2')">Model</th>
+                <th onclick="sortTable(2, 'busTable2')">Type</th>
+                <th onclick="sortTable(3, 'busTable2')">Category</th>
+                <th onclick="sortTable(4, 'busTable2')">Developer</th>
+                <th onclick="sortTable(5, 'busTable2')">Display Type (EDS)</th>
+                <th onclick="sortTable(6, 'busTable2')">Registration Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- MAN A23 -->
+              <!-- Batch 1 -->
+              <tr>
+                <td class="manu">MAN</td>
+                <td class="model">A23 (Non-Facelift)</td>
+                <td class="type">18m Bendy Bus</td>
+                <td class="cat">LHD</td>
+                <td class="dev">Halycon Media</td>
+                <td class="disp">K++</td>
+                <td class="rego">
+                  Batch 1:<br>
+                  <span style="font-weight: normal;">
+                    SMB8011B <br>
+                    SMB8012Z <br>
+                    SMB8019E <br>
+                    SMB8020A <br>
+                    SMB8021Y <br>
+                    SMB8022U <br>
+                    SMB8023S <br>
+                    SMB8024P <br>
+                    SMB8026J <br>
+                    SMB8027G <br>
+                    SMB8028D <br>
+                    SMB8029B <br>
+                    SMB8032R <br>
+                    SMB8033M <br>
+                    SMB8034K <br>
+                    SMB8035H <br>
+                    SMB8039Y <br>
+                    (Pixel Livery - 3 Door)
+                  </span>
+                </td>
+              </tr>
 
-                      <!-- MB C2G -->
-                      <tr>
-                        <td class="manu">MB</td>
-                        <td class="model">Citaro C2G</td>
-                        <td class="type">18m BB</td>
-                        <td class="cat">LHD</td>
-                        <td class="disp">K++</td>
-                        <td class="rego">
-                          Batch 1 (Mx.Dsgn):
-                          <span style="font-weight: normal;">
-                            SMB8071C - SMB8080B
-                            (Pixel Livery - 3 Door)
-                          </span>
-                          <hr>
-                          Batch 2 (Halycon):
-                          <span style="font-weight: normal;">
-                            SMB8081Z - SMB8099Z
-                            (Pixel Livery - 3 Door)
-                          </span>
-                        </td>
-                      </tr>
+              <!-- Batch 2 -->
+              <tr>
+                <td class="manu">MAN</td>
+                <td class="model">A23 (Facelift)</td>
+                <td class="type">18m Bendy Bus</td>
+                <td class="cat">LHD</td>
+                <td class="dev">Halycon Media</td>
+                <td class="disp">K++</td>
+                <td class="rego">
+                  Batch 2:<br>
+                  <span style="font-weight: normal;">
+                    SG8740H <br>
+                    SG8741E <br>
+                    SG8742C <br>
+                    SG8743S <br>
+                    SG8744Y <br>
+                    SG8745U <br>
+                    SG8746S <br>
+                    SG8747P <br>
+                    SG8748L <br>
+                    SG8749J <br>
+                    SG8750D <br>
+                    SG8751B <br>
+                    SG8752Z <br>
+                    SG8753X <br>
+                    SG8754T <br>
+                    SG8755R <br>
+                    SG8756M <br>
+                    SG8757K <br>
+                    SG8758H <br>
+                    SG8759E <br>
+                    SG8760A <br>
+                    SG8761Y <br>
+                    SG8762U <br>
+                    SG8763S <br>
+                    SG8764P <br>
+                    SG8765L <br>
+                    SG8766J <br>
+                    SG8767G <br>
+                    SG8768D <br>
+                    SG8769B <br>
+                    SG8770X <br>
+                    SG8771T <br>
+                    SG8772R <br>
+                    SG8773M <br>
+                    SG8774K <br>
+                    SG8775H <br>
+                    SG8776E <br>
+                    SG8777C <br>
+                    SG8778A <br>
+                    SG8779Y <br>
+                    SG8780S <br>
+                    SG8781P <br>
+                    SG8782L <br>
+                    SG8783J <br>
+                    SG8784G <br>
+                    SG8785D <br>
+                    SG8786B <br>
+                    SG8787Z <br>
+                    (Lush Green - 3 Door)
+                  </span>
+                </td>
+              </tr>
 
-                      <!-- MB C1_RHD Demo -->
-                      <tr>
-                        <td class="manu">MB</td>
-                        <td class="model">Citaro O530G (C1G)</td>
-                        <td class="type">18m BB</td>
-                        <td class="cat">RHD</td>
-                        <td class="disp">K++</td>
-                        <td class="rego">
-                          Demonstrator:
-                          <span style="font-weight: normal;">
-                            SG4002G
-                            (Lush Green - 3 Door)
-                          </span>
-                          <hr>
-                          Batch 1:
-                          <span style="font-weight: normal;">
-                            SG8890H - SG8905A
-                            (Pixel Livery - 3 Door)
-                          </span>
-                        </td>
-                      </tr>
+              <!-- Batch 3 -->
+              <tr>
+                <td class="manu">MAN</td>
+                <td class="model">A23 (Non-Facelift)</td>
+                <td class="type">18m Bendy Bus</td>
+                <td class="cat">LHD</td>
+                <td class="dev">Halycon Media</td>
+                <td class="disp">K++</td>
+                <td class="rego">
+                  Batch 3: <br>
+                  <span style="font-weight: normal;">
+                    SG8906Y <br>
+                    SG8907U <br>
+                    SG8908S <br>
+                    SG8909P <br>
+                    SG8910J <br>
+                    SG8911G <br>
+                    SG8912D <br>
+                    SG8913B <br>
+                    SG8914Z <br>
+                    SG8915X <br>
+                    SG8916T <br>
+                    SG8917R <br>
+                    SG8918M <br>
+                    (Lush Green - 3 Door)
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-                      <!-- MB eCitaro G -->
-                      <tr>
-                        <td class="manu">MB</td>
-                        <td class="model">eCitaro G</td>
-                        <td class="type">18m BB</td>
-                        <td class="cat">LHD</td>
-                        <td class="disp">K++</td>
-                        <td class="rego">
-                          Batch 1:
-                          <span style="font-weight: normal;">
-                            SG6369K - SG6383T
-                            (Pixel Livery - 3 Door)
-                          </span>
-                          <hr>
-                          Batch 2:
-                          <span style="font-weight: normal;">
-                            SMB8053E - SMB8070E
-                            (Pixel Livery - 3 Door)
-                          </span>
-                        </td>
-                      </tr>
+      <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+        <!-- Table 3 content -->
+        <div class="table-responsive">
+          <table id="busTable3" class="fleet-table table">
+            <thead>
+              <tr>
+                <th onclick="sortTable(0, 'busTable3')">Manufacturer</th>
+                <th onclick="sortTable(1, 'busTable3')">Model</th>
+                <th onclick="sortTable(2, 'busTable3')">Type</th>
+                <th onclick="sortTable(3, 'busTable3')">Category</th>
+                <th onclick="sortTable(4, 'busTable3')">Developer</th>
+                <th onclick="sortTable(5, 'busTable3')">Display Type (EDS)</th>
+                <th onclick="sortTable(6, 'busTable3')">Registration Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- MB C2G -->
+              <!-- Batch 1 -->
+              <tr>
+                <td class="manu">MB</td>
+                <td class="model">Citaro C2G</td>
+                <td class="type">18m Bendy Bus</td>
+                <td class="cat">LHD</td>
+                <td class="dev">Mx.Dsgn</td>
+                <td class="disp">K++</td>
+                <td class="rego">
+                  Batch 1:<br>
+                  <span style="font-weight: normal;">
+                    SMB8071C <br>
+                    SMB8072A <br>
+                    SMB8073Y <br>
+                    SMB8074U <br>
+                    SMB8075S <br>
+                    SMB8076P <br>
+                    SMB8077L <br>
+                    SMB8078J <br>
+                    SMB8079G <br>
+                    SMB8080B <br>
+                    (Pixel Livery - 3 Door)
+                  </span>
+                </td>
+              </tr>
 
-                      <!-- Volvo 7900H_18m -->
-                      <tr>
-                        <td class="manu">Volvo</td>
-                        <td class="model">7900H</td>
-                        <td class="type">18m BB</td>
-                        <td class="cat">LHD</td>
-                        <td class="disp">K++</td>
-                        <td class="rego">
-                          Batch 1:
-                          <span style="font-weight: normal;">
-                            SG8808Y - SG8809U
-                            (Lush Green Livery - 3 Door) <br>
-                            SG8810P
-                            (Pixel Livery - 3 Door)
-                          </span>
-                        </td>
-                      </tr>
+              <!-- Batch 2 -->
+              <tr>
+                <td class="manu">MB</td>
+                <td class="model">Citaro C2G</td>
+                <td class="type">18m Bendy Bus</td>
+                <td class="cat">LHD</td>
+                <td class="dev">Halycon Media</td>
+                <td class="disp">K++</td>
+                <td class="rego">
+                  Batch 2:<br>
+                  <span style="font-weight: normal;">
+                    SMB8081Z <br>
+                    SMB8082X <br>
+                    SMB8083T <br>
+                    SMB8084R <br>
+                    SMB8085M <br>
+                    SMB8086K <br>
+                    SMB8087H <br>
+                    SMB8088E <br>
+                    SMB8089C <br>
+                    SMB8090Y <br>
+                    SMB8091U <br>
+                    SMB8092S <br>
+                    SMB8093P <br>
+                    SMB8094L <br>
+                    SMB8095J <br>
+                    SMB8096G <br>
+                    SMB8097D <br>
+                    SMB8098B <br>
+                    SMB8099Z <br>
+                    (Pixel Livery - 3 Door)
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
+      <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+        <!-- Table 4 content -->
+        <div class="table-responsive">
+          <table id="busTable4" class="fleet-table table">
+            <thead>
+              <tr>
+                <th onclick="sortTable(0, 'busTable4')">Manufacturer</th>
+                <th onclick="sortTable(1, 'busTable4')">Model</th>
+                <th onclick="sortTable(2, 'busTable4')">Type</th>
+                <th onclick="sortTable(3, 'busTable4')">Category</th>
+                <th onclick="sortTable(4, 'busTable4')">Developer</th>
+                <th onclick="sortTable(5, 'busTable4')">Display Type (EDS)</th>
+                <th onclick="sortTable(6, 'busTable4')">Registration Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- MB eCitaro G -->
+              <!-- Batch 1 -->
+              <tr>
+                <td class="manu">MB</td>
+                <td class="model">eCitaro G</td>
+                <td class="type">18m Bendy Bus</td>
+                <td class="cat">LHD</td>
+                <td class="dev">Aerosoft/Darius Bode</td>
+                <td class="disp">K++</td>
+                <td class="rego">
+                  Batch 1:<br>
+                  <span style="font-weight: normal;">
+                    SG6369K <br>
+                    SG6370E <br>
+                    SG6371C <br>
+                    SG6372A <br>
+                    SG6371C <br>
+                    SG6374U <br>
+                    SG6375S <br>
+                    SG6376P <br>
+                    SG6377L <br>
+                    SG6378J <br>
+                    SG6379G <br>
+                    SG6380B <br>
+                    SG6381Z <br>
+                    SG6382X <br>
+                    SG6383T <br>
+                    (Pixel Livery - 3 Door)
+                  </span>
+                </td>
+              </tr>
 
+              <!-- Batch 2 -->
+              <tr>
+                <td class="manu">MB</td>
+                <td class="model">eCitaro G</td>
+                <td class="type">18m Bendy Bus</td>
+                <td class="cat">LHD</td>
+                <td class="dev">Aerosoft/Darius Bode</td>
+                <td class="disp">K++</td>
+                <td class="rego">
+                  Batch 2:<br>
+                  <span style="font-weight: normal;">
+                    SMB8053E <br>
+                    SMB8054C <br>
+                    SMB8055A <br>
+                    SMB8056Y <br>
+                    SMB8057U <br>
+                    SMB8058S <br>
+                    SMB8059P <br>
+                    SMB8060J <br>
+                    SMB8061G <br>
+                    SMB8062D <br>
+                    SMB8063B <br>
+                    SMB8064Z <br>
+                    SMB8065X <br>
+                    SMB8066T <br>
+                    SMB8067R <br>
+                    SMB8068M <br>
+                    SMB8069K <br>
+                    SMB8070E <br>
+                    (Pixel Livery - 3 Door)
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-          </div>
+      <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
+        <!-- Table 5 content -->
+        <div class="table-responsive">
+          <table id="busTable5" class="fleet-table table">
+            <thead>
+              <tr>
+                <th onclick="sortTable(0, 'busTable5')">Manufacturer</th>
+                <th onclick="sortTable(1, 'busTable5')">Model</th>
+                <th onclick="sortTable(2, 'busTable5')">Type</th>
+                <th onclick="sortTable(3, 'busTable5')">Category</th>
+                <th onclick="sortTable(4, 'busTable5')">Developer</th>
+                <th onclick="sortTable(5, 'busTable5')">Display Type (EDS)</th>
+                <th onclick="sortTable(6, 'busTable5')">Registration Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- MB eCitaro G -->
+              <!-- Demo -->
+              <tr>
+                <td class="manu">MB</td>
+                <td class="model">Citaro O530G (C1G)</td>
+                <td class="type">18m Bendy Bus</td>
+                <td class="cat">RHD</td>
+                <td class="dev">Helvete 3D Design/Alterr</td>
+                <td class="disp">K++</td>
+                <td class="rego">
+                  Demonstrator:<br>
+                  <span style="font-weight: normal;">
+                    SG4002G <br>
+                    (Lush Green - 3 Door)
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Batch 1 -->
+              <tr>
+                <td class="manu">MB</td>
+                <td class="model">Citaro O530G (C1G)</td>
+                <td class="type">18m Bendy Bus</td>
+                <td class="cat">RHD</td>
+                <td class="dev">Helvete 3D Design/Alterr</td>
+                <td class="disp">K++</td>
+                <td class="rego">
+                  Batch 1:<br>
+                  <span style="font-weight: normal;">
+                    SG8890H <br>
+                    SG8891E <br>
+                    SG8892C <br>
+                    SG8893A <br>
+                    SG8894Y <br>
+                    SG8895U <br>
+                    SG8896S <br>
+                    SG8897P <br>
+                    SG8898L <br>
+                    SG8899J <br>
+                    SG8900M <br>
+                    SG8901K <br>
+                    SG8902H <br>
+                    SG8903E <br>
+                    SG8904C <br>
+                    SG8905A <br>
+                    (Pixel Livery - 3 Door)
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="tab6" role="tabpanel" aria-labelledby="tab6-tab">
+        <!-- Table 6 content -->
+        <div class="table-responsive">
+          <table id="busTable6" class="fleet-table table">
+            <thead>
+              <tr>
+                <th onclick="sortTable(0, 'busTable6')">Manufacturer</th>
+                <th onclick="sortTable(1, 'busTable6')">Model</th>
+                <th onclick="sortTable(2, 'busTable6')">Type</th>
+                <th onclick="sortTable(3, 'busTable6')">Category</th>
+                <th onclick="sortTable(4, 'busTable6')">Developer</th>
+                <th onclick="sortTable(5, 'busTable6')">Display Type (EDS)</th>
+                <th onclick="sortTable(6, 'busTable6')">Registration Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Volvo 7900H_18m -->
+              <!-- Batch 1 -->
+              <tr>
+                <td class="manu">Volvo</td>
+                <td class="model">7900H</td>
+                <td class="type">18m Bendy Bus</td>
+                <td class="cat">LHD</td>
+                <td class="dev">Aerosoft/Darius Bode</td>
+                <td class="disp">K++</td>
+                <td class="rego">
+                  Batch 1:<br>
+                  <span style="font-weight: normal;">
+                    SG8808Y <br>
+                    SG8809U <br>
+                    (Lush Green Livery - 3 Door) <br><br>
+                    SG8810P <br>
+                    (Pixel Livery - 3 Door)
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
-  </section>
-
+  </div>
 
   <footer class="footer-area">
     <div class="container container-xxl">
@@ -399,33 +745,11 @@
 
   <script src="../js/copy-to-clipboard.js"></script>
 
+  <!-- Update the sortTable function to accept table ID -->
   <script>
-    function filterTable() {
-      var manufacturerInput, categoryInput, filterManufacturer, filterCategory, table, tr, td, i, txtValue;
-      manufacturerInput = document.getElementById("manufacturerFilter");
-      categoryInput = document.getElementById("categoryFilter");
-      filterManufacturer = manufacturerInput.value.toUpperCase();
-      filterCategory = categoryInput.value.toUpperCase();
-      table = document.getElementById("busTable");
-      tr = table.getElementsByTagName("tr");
-
-      for (i = 1; i < tr.length; i++) {
-        tr[i].style.display = "none";
-        td = tr[i].getElementsByTagName("td");
-        if (td) {
-          var matchManufacturer = td[0].textContent || td[0].innerText;
-          var matchCategory = td[3].textContent || td[3].innerText;
-          if (matchManufacturer.toUpperCase().indexOf(filterManufacturer) > -1 &&
-            matchCategory.toUpperCase().indexOf(filterCategory) > -1) {
-            tr[i].style.display = "";
-          }
-        }
-      }
-    }
-
-    function sortTable(n) {
+    function sortTable(n, tableId) {
       var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-      table = document.getElementById("busTable");
+      table = document.getElementById(tableId);
       switching = true;
       dir = "asc";
       while (switching) {
