@@ -643,7 +643,7 @@ h4.stn:hover {
   border: 2px solid #b3b3b3;
   background-color: #b1b1b1;
   text-align: center;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .fleet-table .manu {

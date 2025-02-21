@@ -106,11 +106,6 @@
         </div>
 
         <div class="details_catagory_wrap">
-          <!-- <div class="col-sm-4 single_catagory ">
-            <span>Developer(s)</span>
-            <h4><i class="fa-solid fa-circle-user"></i> 3D Transport Studio</h4>
-          </div> -->
-
           <div class="col-sm-4 single_catagory">
             <span>Operated By:</span>
             <h4>SMRTO Buses</h4>
@@ -131,126 +126,224 @@
               </a>
             </div>
           </div>
-          <!-- <div class="single_catagory">
-            <a class="btn wbnrfz_btn"
-              href="https://omsiworld.com/?feature=downloadsystem&fileid=greatgrundorf&req=info"><i
-                class="fa-solid fa-external-link"></i>&nbsp; Download Map </a>
-          </div> -->
         </div>
       </div>
       <div style="background-color: #6ac144; width: 100%; height: 20px;"></div>
     </div>
   </section>
 
-  <section class="about-me-summ section-padding-80-0 clearfix">
-    <div class="wbnrfz_details wow fadeInUp" data-wow-delay="100ms">
-      <div class="container container-xxl">
+  <!-- Fleet List Tabs -->
+  <div class="container mt-5">
+    <ul class="nav nav-tabs" id="busTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button"
+          role="tab" aria-controls="tab1" aria-selected="true">ADL E500 MMC FL</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab"
+          aria-controls="tab2" aria-selected="false">ADL E500 MMC Non-FL</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab"
+          aria-controls="tab3" aria-selected="false">Volvo B5LH</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="busTabContent">
 
-        <!-- Description -->
-        <div class="row justify-content-center">
-          <div class="col-lg-12">
-            <!-- <div class="details_info">
-              <div class="row justify-content-center">
-                <div class="col-lg-12">
-                  <div class="info justify-content-center">
-                    <p style="text-align: center;">The Great Grundorf 2 Bus Package is one of seven bus
-                      packages under the SMRTO (SMV).<br>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div> -->
+      <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+        <!-- Table 1 content -->
+        <div class="table-responsive">
+          <table id="busTable1" class="fleet-table table">
+            <thead>
+              <tr>
+                <th onclick="sortTable(0, 'busTable1')">Manufacturer</th>
+                <th onclick="sortTable(1, 'busTable1')">Model</th>
+                <th onclick="sortTable(2, 'busTable1')">Type</th>
+                <th onclick="sortTable(3, 'busTable1')">Category</th>
+                <th onclick="sortTable(4, 'busTable1')">Developer</th>
+                <th onclick="sortTable(5, 'busTable1')">Display Type (EDS)</th>
+                <th onclick="sortTable(6, 'busTable1')">Registration Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- ADL Enviro500 MMC Facelift -->
+              <!-- Demonstrator -->
+              <tr>
+                <td class="manu">ADL</td>
+                <td class="model">Enviro500 MMC Facelift</td>
+                <td class="type">12.8m DD (3 Axle)</td>
+                <td class="cat">RHD</td>
+                <td class="dev">Winsome 3D Studio</td>
+                <td class="disp">Hanover (Custom)</td>
+                <td class="rego">
+                  Demonstrator:<br>
+                  <span style="font-weight: normal;">
+                    SG6666C <br>
+                    SG6667A <br>
+                    (Lush Green Livery - 2 Door)
+                  </span>
+                </td>
+              </tr>
 
-            <!-- Bus Fleets -->
-            <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="500ms">
-              <div class="filter-inputs">
-                <input class="form-control search-input" type="text" id="manufacturerFilter" onkeyup="filterTable()"
-                  placeholder="Search by Manufacturer..">
-                <input class="form-control search-input" type="text" id="categoryFilter" onkeyup="filterTable()"
-                  placeholder="Search by Category..">
-              </div>
+              <!-- Batch 1 -->
+              <tr>
+                <td class="manu">ADL</td>
+                <td class="model">Enviro500 MMC Facelift</td>
+                <td class="type">12.8m DD (3 Axle)</td>
+                <td class="cat">RHD</td>
+                <td class="dev">Winsome 3D Studio</td>
+                <td class="disp">Hanover (Custom)</td>
+                <td class="rego">
+                  Batch 1:<br>
+                  <span style="font-weight: normal;">
+                    SG6340S <br>
+                    SG6345D <br>
+                    SG6346B <br>
+                    SG6349T <br>
+                    SG6350M <br>
+                    (Pixel Livery - 2 Door)
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-              <div class="row justify-content-center">
-                <div class="table-responsive">
-                  <table id="busTable" class="fleet-table table">
-                    <thead>
-                      <tr>
-                        <th onclick="sortTable(0)">Manufacturer</th>
-                        <th onclick="sortTable(1)">Model</th>
-                        <th onclick="sortTable(2)">Type</th>
-                        <th onclick="sortTable(3)">Category</th>
-                        <th onclick="sortTable(4)">Display Type (EDS)</th>
-                        <th onclick="sortTable(5)">Registration Number</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <!-- ADL Enviro500 MMC Facelift -->
-                      <tr>
-                        <td class="manu">ADL</td>
-                        <td class="model">Enviro500 MMC Facelift</td>
-                        <td class="type">12.8m DD (3 Axle)</td>
-                        <td class="cat">RHD</td>
-                        <td class="disp">Hanover (Custom)</td>
-                        <td class="rego">
-                          Batch 1:
-                          <span style="font-weight: normal;">
-                            SG6340S - SG6350M
-                            (Lush Green Livery - 2 Door)
-                          </span>
-                        </td>
-                      </tr>
+      <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+        <!-- Table 2 content -->
+        <div class="table-responsive">
+          <table id="busTable2" class="fleet-table table">
+            <thead>
+              <tr>
+                <th onclick="sortTable(0, 'busTable2')">Manufacturer</th>
+                <th onclick="sortTable(1, 'busTable2')">Model</th>
+                <th onclick="sortTable(2, 'busTable2')">Type</th>
+                <th onclick="sortTable(3, 'busTable2')">Category</th>
+                <th onclick="sortTable(4, 'busTable2')">Developer</th>
+                <th onclick="sortTable(5, 'busTable2')">Display Type (EDS)</th>
+                <th onclick="sortTable(6, 'busTable2')">Registration Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- ADL Enviro500 MMC Non-Facelift -->
+              <!-- Batch 1 -->
+              <tr>
+                <td class="manu">ADL</td>
+                <td class="model">Enviro500 MMC</td>
+                <td class="type">12m DD (3 Axle)</td>
+                <td class="cat">RHD</td>
+                <td class="dev">Winsome 3D Studios</td>
+                <td class="disp">Hanover (Custom)</td>
+                <td class="rego">
+                  Batch 1:<br>
+                  <span style="font-weight: normal;">
+                    SMB3540Z <br>
+                    SMB3544M <br>
+                    SMB3545K <br>
+                    SMB3547E <br>
+                    SMB3548C <br>
+                    SMB3549A <br>
+                    SMB3559X <br>
+                    SMB3572G <br>
+                    SMB3575Z <br>
+                    SMB3576X <br>
+                    SMB3583A <br>
+                    SMB3584Y <br>
+                    SMB3587P <br>
+                    SMB3588L <br>
+                    SMB3592Z <br>
+                    SMB3593X <br>
+                    SMB3595R <br>
+                    SMB3597K <br>
+                    SMB3598H <br>
+                    SMB3599E <br>
+                    SMB3602D <br>
+                    SMB3604Z <br>
+                    SMB3605X <br>
+                    SMB3606T <br>
+                    SMB3607R <br>
+                    SMB3610E <br>
+                    SMB3611C <br>
+                    SMB3613Y <br>
+                    SMB3614U <br>
+                    SMB3615S <br>
+                    SMB3616P <br>
+                    (Pixel Livery - 2 Door)
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-
-                      <!-- ADL Enviro500 MMC Non-Facelift -->
-                      <tr>
-                        <td class="manu">ADL</td>
-                        <td class="model">Enviro500 MMC</td>
-                        <td class="type">12m DD (3 Axle)</td>
-                        <td class="cat">RHD</td>
-                        <td class="disp">Hanover (Custom)</td>
-                        <td class="rego">
-                          Batch 1:
-                          <span style="font-weight: normal;">
-                            SMB3540Z, SMB3544M - SMB3545K, SMB3547E - SMB3549A, SMB3559X, SMB3572G, SMB3575Z - SMB3576X,
-                            SMB3583A - SMB3584Y, SMB3587P - SMB3588L, SMB3592Z - SMB3593X, SMB3595R, SMB3597K - SMB3602D, 
-                            SMB3604Z - SMB3607R, SMB3610E - SMB3611C, SMB3613Y - SMB3616P
-                            (Pixel Livery - 2 Door)
-                          </span>
-                        </td>
-                      </tr>
-
-
-                      <!-- Volvo 7900H_18m -->
-                      <tr>
-                        <td class="manu">Volvo</td>
-                        <td class="model">B5LH</td>
-                        <td class="type">12m DD (2 Axle)</td>
-                        <td class="cat">RHD</td>
-                        <td class="disp">Mobitec (Custom)</td>
-                        <td class="rego">
-                          Batch 1:
-                          <span style="font-weight: normal;">
-                            SG6400C - SG6425G
-                            (Pixel Livery - 2 Door) <br>
-                            SG6426D
-                            (Lush Green Livery - 2 Door)
-                          </span>
-                        </td>
-                      </tr>
-
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
+      <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+        <!-- Table 3 content -->
+        <div class="table-responsive">
+          <table id="busTable3" class="fleet-table table">
+            <thead>
+              <tr>
+                <th onclick="sortTable(0, 'busTable3')">Manufacturer</th>
+                <th onclick="sortTable(1, 'busTable3')">Model</th>
+                <th onclick="sortTable(2, 'busTable3')">Type</th>
+                <th onclick="sortTable(3, 'busTable3')">Category</th>
+                <th onclick="sortTable(4, 'busTable3')">Developer</th>
+                <th onclick="sortTable(5, 'busTable3')">Display Type (EDS)</th>
+                <th onclick="sortTable(6, 'busTable3')">Registration Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Volvo 7900H_18m -->
+              <!-- Batch 1 -->
+              <tr>
+                <td class="manu">Volvo</td>
+                <td class="model">B5LH</td>
+                <td class="type">12m DD (2 Axle)</td>
+                <td class="cat">RHD</td>
+                <td class="dev">Masterswitch Studios</td>
+                <td class="disp">Mobitec (Custom)</td>
+                <td class="rego">
+                  Batch 1:<br>
+                  <span style="font-weight: normal;">
+                    SG6400C <br>
+                    SG6401A <br>
+                    SG6402Y <br>
+                    SG6403U <br>
+                    SG6404S <br>
+                    SG6405P <br>
+                    SG6406L <br>
+                    SG6407J <br>
+                    SG6408G <br>
+                    SG6409D <br>
+                    SG6410Z <br>
+                    SG6411X <br>
+                    SG6412T <br>
+                    SG6413R <br>
+                    SG6414M <br>
+                    SG6415K <br>
+                    SG6416H <br>
+                    SG6417E <br>
+                    SG6418C <br>
+                    SG6419A <br>
+                    SG6420U <br>
+                    SG6421S <br>
+                    SG6422P <br>
+                    SG6423L <br>
+                    SG6424J <br>
+                    SG6425G <br>
+                    (Pixel Livery - 2 Door) <br><br>
+                    SG6426D <br>
+                    (Lush Green Livery - 2 Door)
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
-  </section>
-
+  </div>
 
   <footer class="footer-area">
     <div class="container container-xxl">
@@ -307,33 +400,11 @@
 
   <script src="../js/copy-to-clipboard.js"></script>
 
+  <!-- Update the sortTable function to accept table ID -->
   <script>
-    function filterTable() {
-      var manufacturerInput, categoryInput, filterManufacturer, filterCategory, table, tr, td, i, txtValue;
-      manufacturerInput = document.getElementById("manufacturerFilter");
-      categoryInput = document.getElementById("categoryFilter");
-      filterManufacturer = manufacturerInput.value.toUpperCase();
-      filterCategory = categoryInput.value.toUpperCase();
-      table = document.getElementById("busTable");
-      tr = table.getElementsByTagName("tr");
-
-      for (i = 1; i < tr.length; i++) {
-        tr[i].style.display = "none";
-        td = tr[i].getElementsByTagName("td");
-        if (td) {
-          var matchManufacturer = td[0].textContent || td[0].innerText;
-          var matchCategory = td[3].textContent || td[3].innerText;
-          if (matchManufacturer.toUpperCase().indexOf(filterManufacturer) > -1 &&
-            matchCategory.toUpperCase().indexOf(filterCategory) > -1) {
-            tr[i].style.display = "";
-          }
-        }
-      }
-    }
-
-    function sortTable(n) {
+    function sortTable(n, tableId) {
       var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-      table = document.getElementById("busTable");
+      table = document.getElementById(tableId);
       switching = true;
       dir = "asc";
       while (switching) {

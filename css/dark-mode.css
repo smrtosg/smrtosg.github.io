@@ -347,7 +347,8 @@ body.dark-mode .fleet-table th {
     border: 2px solid #242526;
     background-color: #b1b1b1;
     text-align: center;
-    vertical-align: top;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
 body.dark-mode .fleet-table .manu {
