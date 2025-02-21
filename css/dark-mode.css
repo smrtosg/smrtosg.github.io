@@ -319,3 +319,116 @@ body.dark-mode hr {
 }
 
 /* ------------------------------------------  */
+
+/* ------------------------------------------ 6.0 Fleets Pages ------------------------------------------ */
+body.dark-mode #manufacturerFilter,
+body.dark-mode #categoryFilter {
+    background-color: #2e2e2e;
+    color: #fff;
+}
+
+.search-input {
+    height: 50px;
+    border-radius: 30px;
+    padding-left: 35px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    width: 30%;
+}
+
+body.dark-mode .search-input::placeholder {
+    color: #fff;
+}
+
+body.dark-mode .fleet-table th {
+    font-weight: bold;
+    width: 9%;
+    border: 2px solid #242526;
+    background-color: #b1b1b1;
+    text-align: center;
+    vertical-align: middle;
+}
+
+body.dark-mode .fleet-table .manu {
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid #242526;
+    color: #fff;
+    vertical-align: middle;
+}
+
+body.dark-mode .fleet-table .model {
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid #242526;
+    color: #fff;
+    vertical-align: middle;
+}
+
+body.dark-mode .fleet-table .type {
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid #242526;
+    color: #fff;
+    vertical-align: middle;
+}
+
+body.dark-mode .fleet-table .cat {
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid #242526;
+    color: #fff;
+    vertical-align: middle;
+}
+
+body.dark-mode .fleet-table .disp {
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid #242526;
+    color: #fff;
+    vertical-align: middle;
+}
+
+body.dark-mode .fleet-table .rego {
+    font-weight: bold;
+    text-align: left;
+    width: 50%;
+    background-color: transparent;
+    border: 2px solid #242526;
+    color: #fff;
+}
+
+body.dark-mode .fleet-table tbody tr:nth-child(odd) {
+    background-color: #2f3132;
+    /* Darker gray for dark mode */
+    border: 2px solid #242526;
+}
+
+body.dark-mode .fleet-table tbody tr:nth-child(even) {
+    background-color: #3a3b3c;
+    /* Slightly lighter gray for dark mode */
+    border: 2px solid #242526;
+}
+
+
+@media (max-width: 768px) {
+    body.dark-mode .fleet-table th,
+    body.dark-mode .fleet-table td {
+        white-space: nowrap;
+    }
+
+    body.dark-mode .filter-inputs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body.dark-mode .filter-inputs .search-input {
+        width: 66%;
+    }
+}
