@@ -408,6 +408,16 @@ body.dark-mode .fleet-table .disp {
     vertical-align: top;
 }
 
+body.dark-mode .fleet-table .livery {
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid #242526;
+    color: #fff;
+    vertical-align: top;
+    width: 9%;
+}
+
 body.dark-mode .fleet-table .rego {
     font-weight: bold;
     text-align: center;

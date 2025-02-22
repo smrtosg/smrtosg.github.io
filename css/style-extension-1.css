@@ -703,6 +703,16 @@ h4.stn:hover {
   vertical-align: top;
 }
 
+.fleet-table .livery {
+  font-weight: bold;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid #b3b3b3;
+  color: #000;
+  vertical-align: top;
+  width: 9%;
+}
+
 .fleet-table .rego {
   font-weight: bold;
   text-align: center;
@@ -711,6 +721,7 @@ h4.stn:hover {
   border: 2px solid #b3b3b3;
   color: #000;
 }
+
 
 .fleet-table tbody tr:nth-child(odd) {
   background-color: #dfdfdf;

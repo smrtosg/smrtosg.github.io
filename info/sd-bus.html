@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Single Decker Buses | SMRTO</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <meta property="og:image" content="https://i.imgur.com/jgRjmrt.png" />
+
+  <link rel="icon" href="../img/core-img/favicon.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style-extension-1.css">
+  <link rel="stylesheet" href="../css/dark-mode.css">
+
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../css/glightbox.min.css">
+</head>
+
+<body>
+
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+
+  <header class="header-area">
+    <div class="main-header-area">
+      <div class="classy-nav-container breakpoint-off">
+        <div class="container container-xxl">
+
+          <nav class="classy-navbar justify-content-between" id="pwNav">
+
+            <a class="nav-brand img-logo" href="../index.html"><img class="logo-img" src="../img/core-img/logo.png"
+                alt></a>
+
+            <div class="classy-navbar-toggler">
+              <span class="navbarToggler"><span></span><span></span><span></span></span>
+            </div>
+
+            <div class="classy-menu">
+
+              <div class="classycloseIcon">
+                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+              </div>
+
+              <div class="classynav">
+                <ul id="nav">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../about.html">About</a></li>
+                  <li><a href="../openbve.html">OpenBVE</a></li>
+                  <li class="active"><a href="../omsi-2.html">OMSI 2</a></li>
+                  <li><a href="../blog.html">Blog</a></li>
+                  <li><button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!"><i
+                        class="fa-solid fa-moon"></i></button>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="breadcrumb-area-lines bg-img bg-overlay" style="background-image: url(../img/releases-ss/nlc-sd.jpg)">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <div class="breadcrumb-content text-center">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="../index.html"> Home</a>
+                </li>
+                <li class="breadcrumb-item active"><a href="../about.html"> About</a>
+                </li>
+              </ol>
+            </nav>
+            <h2 class="page-title">Single Decker Buses</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="wbnrfz-summ clearfix">
+    <div class="wbnrfz_details wow fadeInUp" data-wow-delay="100ms">
+      <div class="container container-summary">
+        <div class="col-lg-12">
+          <div class="main-title">
+            <span style="color: #ea1c2d; cursor: default;">SMRT Buses (SMRTO)</span>
+            <h1 style="cursor: default;">
+              Fleet List (Single Decker)</h1>
+          </div>
+        </div>
+
+        <div class="details_catagory_wrap">
+          <div class="col-sm-4 single_catagory">
+            <span>Operated By:</span>
+            <h4>SMRTO Buses</h4>
+          </div>
+
+          <div class="col-sm-2 single_catagory">
+            <span>Share Project</span>
+            <div class="social_links">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://smrtosg.github.io/main/info/sd-bus.html"
+                title="Facebook">
+                <i class="fa-brands fa-facebook"></i> </a>
+              <a href="https://x.com/intent/post?url=https://smrtosg.github.io/main/info/sd-bus.html&text=Fleet List (Single Decker)"
+                title="X (Twitter)">
+                <i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="clipboard" onclick="copyToClipboard()" title="Copy Link"><i
+                  class="fa-solid fa-link"></i>
+                <p class="clipboard-copied" style="font-size: 12px;"></p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background-color: #6ac144; width: 100%; height: 20px;"></div>
+    </div>
+  </section>
+
+  <!-- Fleet List Tabs -->
+  <div class="container mt-5">
+    <ul class="nav nav-tabs" id="busTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button"
+          role="tab" aria-controls="tab1" aria-selected="true">MAN A21</button>
+      </li>
+      <!-- <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab"
+          aria-controls="tab2" aria-selected="false">MB Citaro C2</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab"
+          aria-controls="tab3" aria-selected="false">Volvo 7900</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab4-tab" data-bs-toggle="tab" data-bs-target="#tab4" type="button" role="tab"
+          aria-controls="tab4" aria-selected="false">MB Citaro C1F</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab5-tab" data-bs-toggle="tab" data-bs-target="#tab5" type="button" role="tab"
+          aria-controls="tab5" aria-selected="false">VDL Citea 12LE</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab6-tab" data-bs-toggle="tab" data-bs-target="#tab6" type="button" role="tab"
+          aria-controls="tab6" aria-selected="false">MAN LI LE</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab7-tab" data-bs-toggle="tab" data-bs-target="#tab7" type="button" role="tab"
+          aria-controls="tab7" aria-selected="false">MAN NLC</button>
+      </li> -->
+    </ul>
+    <div class="tab-content" id="busTabContent">
+
+      <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+        <!-- Table 1 content -->
+        <div class="table-responsive">
+          <table id="busTable1" class="fleet-table table">
+            <thead>
+              <tr>
+                <th onclick="sortTable(0, 'busTable1')">Manufacturer</th>
+                <th onclick="sortTable(1, 'busTable1')">Model</th>
+                <th onclick="sortTable(2, 'busTable1')">Type</th>
+                <th onclick="sortTable(3, 'busTable1')">Category</th>
+                <th onclick="sortTable(4, 'busTable1')">Developer</th>
+                <th onclick="sortTable(5, 'busTable1')">Display Type (EDS)</th>
+                <th onclick="sortTable(6, 'busTable1')">Livery</th>
+                <th onclick="sortTable(7, 'busTable1')">Registration Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- MAN A21 -->
+              <!-- ----------------------------------------------------------------------------------- -->
+              <!-- Batch 1_RW -->
+              <tr>
+                <td class="manu">MAN</td>
+                <td class="model">NL323F A21 (ZF)</td>
+                <td class="type">12m Single Deck</td>
+                <td class="cat">LHD</td>
+                <td class="dev">V3D Studios</td>
+                <td class="disp">K++</td>
+                <td class="livery">Red-White Livery<br>(2 Door)</td>
+                <td class="rego">
+                  Batch 1:<br>
+                  <span style="font-weight: normal;">
+                    SMB189A <br>
+                    SMB190U <br>
+                    SMB191S <br>
+                    SMB192P <br>
+                    SMB193L <br>
+                    SMB194J <br>
+                    SMB195G <br>
+                    SMB199X <br>
+                    SMB211T <br>
+                    SMB213M <br>
+                    SMB216E <br>
+                    SMB220S <br>
+                    SMB221P <br>
+                    SMB240J <br>
+                    SMB248M <br>
+                    SMB260B <br>
+                    SMB261Z <br>
+                    SMB262X <br>
+                    SMB263T <br>
+                    SMB264R <br>
+                    SMB265M <br>
+                    SMB266K <br>
+                    SMB267H <br>
+                    SMB268E <br>
+                    SMB269C <br>
+                    SMB270Y <br>
+                    SMB272S <br>
+                    SMB273P <br>
+                    SMB274L <br>
+                    SMB275J <br>
+                    SMB276G <br>
+                    SMB278B <br>
+                    SMB283K <br>
+                    SMB285E <br>
+                    SMB286C <br>
+                    SMB287A <br>
+                    SMB288Y <br>
+                    SMB289U <br>
+                    SMB290P <br>
+                    SMB291L <br>
+                    SMB292J <br>
+                    SMB293G <br>
+                    SMB294D <br>
+                    SMB295B <br>
+                    SMB296Z <br>
+                    SMB297X <br>
+                    SMB298T <br>
+                    SMB299R <br>
+                    SMB300U <br>
+                    SMB306D <br>
+                    SMB309X <br>
+                    SMB310R <br>
+                    SMB312K <br>
+                    SMB313H <br>
+                    SMB314E <br>
+                    SMB315C <br>
+                    SMB316A <br>
+                    SMB317Y <br>
+                    SMB318U <br>
+                    SMB319S <br>
+                    SMB321J <br>
+                    SMB322G <br>
+                    SMB323D <br>
+                    SMB324B <br>
+                    SMB326X <br>
+                    SMB327T <br>
+                    SMB328R <br>
+                    SMB329M <br>
+                    SMB333A <br>
+                    SMB336S <br>
+                    SMB337P <br>
+                    SMB338L <br>
+                    SMB339J <br>
+                    SMB340D <br>
+                    SMB342Z <br>
+                    SMB343X <br>
+                    SMB344T <br>
+                    SMB345R <br>
+                    SMB346M <br>
+                    SMB347K <br>
+                    SMB348H <br>
+                    SMB349E <br>
+                    SMB351Y <br>
+                    SMB352U <br>
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Batch 1_Pixel -->
+              <tr>
+                <td class="manu">MAN</td>
+                <td class="model">NL323F A21 (ZF)</td>
+                <td class="type">12m Single Deck</td>
+                <td class="cat">LHD</td>
+                <td class="dev">V3D Studios</td>
+                <td class="disp">K++</td>
+                <td class="livery">Pixel Livery<br>(2 Door)</td>
+                <td class="rego">
+                  Batch 1:<br>
+                  <span style="font-weight: normal;">
+                    SMB277D <br>
+                    SMB279Z <br>
+                    SMB284H <br>
+                    SMB320L <br>
+                    SMB334Y <br>
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Batch 1_LG -->
+              <tr>
+                <td class="manu">MAN</td>
+                <td class="model">NL323F A21 (ZF)</td>
+                <td class="type">12m Single Deck</td>
+                <td class="cat">LHD</td>
+                <td class="dev">V3D Studios</td>
+                <td class="disp">K++</td>
+                <td class="livery">Lush Green Livery<br>(2 Door)</td>
+                <td class="rego">
+                  Batch 1:<br>
+                  <span style="font-weight: normal;">
+                    SMB233E <br>
+                    SMB234C <br>
+                    SMB235A <br>
+                    SMB236Y <br>
+                    SMB237U <br>
+                    SMB238S <br>
+                    SMB239P <br>
+                    SMB241G <br>
+                    SMB242D <br>
+                    SMB243B <br>
+                    SMB244Z <br>
+                    SMB245X <br>
+                    SMB246T <br>
+                    SMB247R <br>
+                    SMB249K <br>
+                    SMB251C <br>
+                    SMB254U <br>
+                    SMB255S <br>
+                    SMB256P <br>
+                    SMB258J <br>
+                    SMB259G <br>
+                    SMB271U <br>
+                    SMB311M <br>
+                    SMB325Z <br>
+                    SMB350A <br>
+                  </span>
+                </td>
+              </tr>
+
+              <!-- ----------------------------------------------------------------------------------- -->
+              <!-- Batch 2_RW -->
+              <tr>
+                <td class="manu">MAN</td>
+                <td class="model">NL323F A21 (ZF)</td>
+                <td class="type">12m Single Deck</td>
+                <td class="cat">LHD</td>
+                <td class="dev">V3D Studios</td>
+                <td class="disp">K++</td>
+                <td class="livery">Pixel Livery (2 Door)</td>
+                <td class="rego">
+                  Batch 2:<br>
+                  <span style="font-weight: normal;">
+                    SMB1303E <br>
+                    SMB1304C <br>
+                    SMB1305A <br>
+                    SMB1306Y <br>
+                    SMB1307U <br>
+                    SMB1308S <br>
+                    SMB1309P <br>
+                    SMB1312D <br>
+                    SMB1313B <br>
+                    SMB1315X <br>
+                    SMB1317R <br>
+                    SMB1318M <br>
+                    SMB1319K <br>
+                    SMB1320E <br>
+                    SMB1321C <br>
+                    SMB1322A <br>
+                    SMB1323Y <br>
+                    SMB1327L <br>
+                    SMB1328J <br>
+                    SMB1340Y <br>
+                    SMB1341U <br>
+                    SMB1342S <br>
+                    SMB1343P <br>
+                    SMB1344L <br>
+                    SMB1345J <br>
+                    SMB1350T <br>
+                    SMB1351R <br>
+                    SMB1352M <br>
+                    SMB1353K <br>
+                    SMB1354H <br>
+                    SMB1355E <br>
+                    SMB1359U <br>
+                    SMB1369R <br>
+                    SMB1370K <br>
+                    SMB1371H <br>
+                    SMB1372E <br>
+                    SMB1373C <br>
+                    SMB1374A <br>
+                    SMB1375Y <br>
+                    SMB1377S <br>
+                    SMB1378P <br>
+                    SMB1380G <br>
+                    SMB1382B <br>
+                    SMB1383Z <br>
+                    SMB1384X <br>
+                    SMB1385T <br>
+                    SMB1386R <br>
+                    SMB1387M <br>
+                    SMB1388K <br>
+                    SMB1389H <br>
+                    SMB1390C <br>
+                    SMB1392Y <br>
+                    SMB1394S <br>
+                    SMB1395P <br>
+                    SMB1396L <br>
+                    SMB1397J <br>
+                    SMB1398G <br>
+                    SMB1399D <br>
+                    SMB1400H <br>
+                    SMB1401E <br>
+                    SMB1402C <br>
+                    SMB1403A <br>
+                    SMB1404Y <br>
+                    SMB1406U <br>
+                    SMB1406S <br>
+                    SMB1407P <br>
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Batch 2_Pixel -->
+              <tr>
+                <td class="manu">MAN</td>
+                <td class="model">NL323F A21 (ZF)</td>
+                <td class="type">12m Single Deck</td>
+                <td class="cat">LHD</td>
+                <td class="dev">V3D Studios</td>
+                <td class="disp">K++</td>
+                <td class="livery">Pixel Livery (2 Door)</td>
+                <td class="rego">
+                  Batch 2:<br>
+                  <span style="font-weight: normal;">
+                    SMB1314Z <br>
+                    SMB1316T <br>
+                    SMB1408L <br>
+                    SMB1409J <br>
+                    SMB1410D <br>
+                    SMB1411B <br>
+                    SMB1416M <br>
+                    SMB1417K <br>
+                    SMB1418H <br>
+                    SMB1419E <br>
+                    SMB1420A <br>
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Batch 2_LG -->
+              <tr>
+                <td class="manu">MAN</td>
+                <td class="model">NL323F A21 (ZF)</td>
+                <td class="type">12m Single Deck</td>
+                <td class="cat">LHD</td>
+                <td class="dev">V3D Studios</td>
+                <td class="disp">K++</td>
+                <td class="livery">Pixel Livery (2 Door)</td>
+                <td class="rego">
+                  Batch 2:<br>
+                  <span style="font-weight: normal;">
+                    SMB1311G <br>
+                    SMB1324U <br>
+                    SMB1376U <br>
+                  </span>
+                </td>
+              </tr>
+
+              <!-- ----------------------------------------------------------------------------------- -->
+              <!-- Batch 3_Pixel -->
+              <tr>
+                <td class="manu">MAN</td>
+                <td class="model">NL323F A21 (ZF)</td>
+                <td class="type">12m Single Deck</td>
+                <td class="cat">LHD</td>
+                <td class="dev">V3D Studios</td>
+                <td class="disp">K++</td>
+                <td class="livery">Pixel Livery<br>(2 Door)</td>
+                <td class="rego">
+                  Batch 3:<br>
+                  <span style="font-weight: normal;">
+                    SMB1422U <br>
+                    SMB1425L <br>
+                    SMB1427G <br>
+                    SMB1428D <br>
+                    SMB1431T <br>
+                    SMB1432R <br>
+                    SMB1433M <br>
+                    SMB1435H <br>
+                    SMB1436E <br>
+                    SMB1437C <br>
+                    SMB1438A <br>
+                    SMB1439Y <br>
+                    SMB1441P <br>
+                    SMB1442L <br>
+                    SMB1443J <br>
+                    SMB1445D <br>
+                    SMB1446B <br>
+                    SMB1447Z <br>
+                    SMB1449T <br>
+                    SMB1450M <br>
+                    SMB1451K <br>
+                    SMB1452H <br>
+                    SMB1453E <br>
+                    SMB1454C <br>
+                    SMB1455A <br>
+                    SMB1456Y <br>
+                    SMB1457U <br>
+                    SMB1458S <br>
+                    SMB1459P <br>
+                    SMB1460J <br>
+                    SMB1461G <br>
+                    SMB1462D <br>
+                    SMB1463B <br>
+                    SMB1464Z <br>
+                    SMB1465X <br>
+                    SMB1466T <br>
+                    SMB1467R <br>
+                    SMB1468M <br>
+                    SMB1469K <br>
+                    SMB1470E <br>
+                    SMB1471C <br>
+                    SMB1472A <br>
+                    SMB1473Y <br>
+                    SMB1474U <br>
+                    SMB1475S <br>
+                    SMB1476P <br>
+                    SMB1477L <br>
+                    SMB1480B <br>
+                    SMB1481Z <br>
+                    SMB1482X <br>
+                    SMB1485M <br>
+                    SMB1486K <br>
+                    SMB1487H <br>
+                    SMB1489C <br>
+                    SMB1491U <br>
+                    SMB1493P <br>
+                    SMB1496G <br>
+                    SMB1497D <br>
+                    SMB1498B <br>
+                    SMB1499Z <br>
+                    SMB1500C <br>
+                    SMB1501A <br>
+                    SMB1502Y <br>
+                    SMB1504S <br>
+                    SMB1507J <br>
+                    SMB1508G <br>
+                    SMB1510Z <br>
+                    SMB1511X <br>
+                    SMB1513R <br>
+                    SMB1514M <br>
+                    SMB1515K <br>
+                    SMB1516H <br>
+                    SMB1518C <br>
+                    SMB1519A <br>
+                    SMB1520U <br>
+                    SMB1521S <br>
+                    SMB1524J <br>
+                    SMB1525G <br>
+                    SMB1530R <br>
+                    SMB1533H <br>
+                    SMB1534E <br>
+                    SMB1535C <br>
+                    SMB1536A <br>
+                    SMB1537Y <br>
+                    SMB1539S <br>
+                    SMB1545Z <br>
+                    SMB1546X <br>
+                    SMB1547T <br>
+                    SMB1548R <br>
+                    SMB1550H <br>
+                    SMB1551E <br>
+                    SMB1553A <br>
+                    SMB1554Y <br>
+                    SMB1555U <br>
+                    SMB1556S <br>
+                    SMB1557P <br>
+                    SMB1559J <br>
+                    SMB1563X <br>
+                    SMB1564T <br>
+                    SMB1566M <br>
+                    SMB1569E <br>
+                    SMB1570A <br>
+                    SMB1571Y <br>
+                    SMB1572U <br>
+                    SMB1573S <br>
+                    SMB1574P <br>
+                    SMB1575L <br>
+                    SMB1576J <br>
+                    SMB1577G <br>
+                    SMB1578D <br>
+                    SMB1579B <br>
+                    SMB1580X <br>
+                    SMB1581T <br>
+                  </span>
+                </td>
+              </tr>
+
+              <!-- Batch 3_LG -->
+              <tr>
+                <td class="manu">MAN</td>
+                <td class="model">NL323F A21 (ZF)</td>
+                <td class="type">12m Single Deck</td>
+                <td class="cat">LHD</td>
+                <td class="dev">V3D Studios</td>
+                <td class="disp">K++</td>
+                <td class="livery">Lush Green Livery<br>(2 Door)</td>
+                <td class="rego">
+                  Batch 3:<br>
+                  <span style="font-weight: normal;">
+                    SMB1509D <br>
+                    SMB1512T <br>
+                    SMB1549M <br>
+                    SMB1552C <br>
+                    SMB1561B <br>
+                  </span>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+        <!-- Table 2 content -->
+        <div class="table-responsive">
+          <table id="busTable2" class="fleet-table table">
+            <thead>
+              <tr>
+                <th onclick="sortTable(0, 'busTable2')">Manufacturer</th>
+                <th onclick="sortTable(1, 'busTable2')">Model</th>
+                <th onclick="sortTable(2, 'busTable2')">Type</th>
+                <th onclick="sortTable(3, 'busTable2')">Category</th>
+                <th onclick="sortTable(4, 'busTable2')">Developer</th>
+                <th onclick="sortTable(5, 'busTable2')">Display Type (EDS)</th>
+                <th onclick="sortTable(6, 'busTable2')">Registration Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- ADL Enviro500 MMC Non-Facelift -->
+              <!-- Batch 1 -->
+              <tr>
+                <td class="manu">ADL</td>
+                <td class="model">Enviro500 MMC</td>
+                <td class="type">12m DD (3 Axle)</td>
+                <td class="cat">RHD</td>
+                <td class="dev">Winsome 3D Studios</td>
+                <td class="disp">Hanover (Custom)</td>
+                <td class="rego">
+                  Batch 1:<br>
+                  <span style="font-weight: normal;">
+                    SMB3540Z <br>
+                    SMB3544M <br>
+                    SMB3545K <br>
+                    SMB3547E <br>
+                    SMB3548C <br>
+                    SMB3549A <br>
+                    SMB3559X <br>
+                    SMB3572G <br>
+                    SMB3575Z <br>
+                    SMB3576X <br>
+                    SMB3583A <br>
+                    SMB3584Y <br>
+                    SMB3587P <br>
+                    SMB3588L <br>
+                    SMB3592Z <br>
+                    SMB3593X <br>
+                    SMB3595R <br>
+                    SMB3597K <br>
+                    SMB3598H <br>
+                    SMB3599E <br>
+                    SMB3602D <br>
+                    SMB3604Z <br>
+                    SMB3605X <br>
+                    SMB3606T <br>
+                    SMB3607R <br>
+                    SMB3610E <br>
+                    SMB3611C <br>
+                    SMB3613Y <br>
+                    SMB3614U <br>
+                    SMB3615S <br>
+                    SMB3616P <br>
+                    (Pixel Livery - 2 Door)
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+        <!-- Table 3 content -->
+        <div class="table-responsive">
+          <table id="busTable3" class="fleet-table table">
+            <thead>
+              <tr>
+                <th onclick="sortTable(0, 'busTable3')">Manufacturer</th>
+                <th onclick="sortTable(1, 'busTable3')">Model</th>
+                <th onclick="sortTable(2, 'busTable3')">Type</th>
+                <th onclick="sortTable(3, 'busTable3')">Category</th>
+                <th onclick="sortTable(4, 'busTable3')">Developer</th>
+                <th onclick="sortTable(5, 'busTable3')">Display Type (EDS)</th>
+                <th onclick="sortTable(6, 'busTable3')">Registration Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Volvo 7900H_18m -->
+              <!-- Batch 1 -->
+              <tr>
+                <td class="manu">Volvo</td>
+                <td class="model">B5LH</td>
+                <td class="type">12m DD (2 Axle)</td>
+                <td class="cat">RHD</td>
+                <td class="dev">Masterswitch Studios</td>
+                <td class="disp">Mobitec (Custom)</td>
+                <td class="rego">
+                  Batch 1:<br>
+                  <span style="font-weight: normal;">
+                    SG6400C <br>
+                    SG6401A <br>
+                    SG6402Y <br>
+                    SG6403U <br>
+                    SG6404S <br>
+                    SG6405P <br>
+                    SG6406L <br>
+                    SG6407J <br>
+                    SG6408G <br>
+                    SG6409D <br>
+                    SG6410Z <br>
+                    SG6411X <br>
+                    SG6412T <br>
+                    SG6413R <br>
+                    SG6414M <br>
+                    SG6415K <br>
+                    SG6416H <br>
+                    SG6417E <br>
+                    SG6418C <br>
+                    SG6419A <br>
+                    SG6420U <br>
+                    SG6421S <br>
+                    SG6422P <br>
+                    SG6423L <br>
+                    SG6424J <br>
+                    SG6425G <br>
+                    (Pixel Livery - 2 Door) <br><br>
+                    SG6426D <br>
+                    (Lush Green Livery - 2 Door)
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-area">
+    <div class="container container-xxl">
+      <div class="row">
+        <div class="col-12">
+          <div class="footer-content d-flex align-items-center justify-content-between">
+
+            <div class="copywrite-text">
+              <p>
+                &copy;
+                <script>document.write(new Date().getFullYear());</script> Illustrations belong to
+                SMRT
+                Corp Ltd</a>
+              </p>
+            </div>
+
+            <div class="social-info">
+              <a href="https://www.facebook.com/smrtosg"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+              <a href="https://www.youtube.com/@SMRTosg"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" id="cookiebanner" src="../js/cookies-banner.js" data-position="bottom"
+    data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
+    data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
+    </script>
+
+  <script src="../js/theme.js"></script>
+
+  <script src="../js/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+  <script src="../js/pw.bundle.js"></script>
+
+  <script src="../js/default-assets/active.js"></script>
+
+  <script src="../js/swiper-bundle.min.js"></script>
+
+  <script src="../js/glightbox.min.js"></script>
+
+  <script src="../js/isotope.pkgd.min.js"></script>
+
+  <script src="../js/portfolio-comp.js"></script>
+
+  <script src="../js/copy-to-clipboard.js"></script>
+
+  <!-- Update the sortTable function to accept table ID -->
+  <script>
+    function sortTable(n, tableId) {
+      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+      table = document.getElementById(tableId);
+      switching = true;
+      dir = "asc";
+      while (switching) {
+        switching = false;
+        rows = table.rows;
+        for (i = 1; i < (rows.length - 1); i++) {
+          shouldSwitch = false;
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+          if (dir == "asc") {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              shouldSwitch = true;
+              break;
+            }
+          } else if (dir == "desc") {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+              shouldSwitch = true;
+              break;
+            }
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          switchcount++;
+        } else {
+          if (switchcount == 0 && dir == "asc") {
+            dir = "desc";
+            switching = true;
+          }
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>
