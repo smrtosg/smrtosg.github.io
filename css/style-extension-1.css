@@ -749,7 +749,8 @@ h4.stn:hover {
   margin: 5px;
 }
 
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
   background-color: #6ac144 !important;
   border: none;
   border-radius: 20px !important;
@@ -773,6 +774,7 @@ h4.stn:hover {
 }
 
 @media (max-width: 768px) {
+
   .fleet-table th,
   .fleet-table td {
     white-space: nowrap;
@@ -782,9 +784,21 @@ h4.stn:hover {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .filter-inputs .search-input {
     width: 66%;
+  }
+
+  .fleet-table th,
+  .fleet-table .manu,
+  .fleet-table .model,
+  .fleet-table .type,
+  .fleet-table .cat,
+  .fleet-table .dev,
+  .fleet-table .disp,
+  .fleet-table .livery,
+  .fleet-table .rego {
+    font-size: 14px;
   }
 }
 
