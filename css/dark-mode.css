@@ -581,7 +581,7 @@ body.dark-mode .accordion-body:not(.collapsed) {
     border: 1px solid #000;
 }
 
-body.dark-mode .accordion-button:not(.collapsed){
+body.dark-mode .accordion-button:not(.collapsed) {
     background-color: #ffe2b0;
     color: #000;
 }
@@ -616,6 +616,11 @@ body.dark-mode .accordion-button:not(.collapsed)::after {
     body.dark-mode #ops-smrtt {
         content: url(../img/core-img/stl-dark.png);
     }
+
+    body.dark-mode #ops-wcrto {
+        content: url(../img/core-img/wcrt-dark.png);
+    }
+
 
     body.dark-mode #ops-smrtb {
         content: url(../img/core-img/smb-dark.png);
@@ -665,7 +670,8 @@ body.dark-mode .alert-dismissible .btn-close-danger {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23EA868F'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
 }
 
-body.dark-mode .info-table th.first, body.dark-mode .info-table th.second {
+body.dark-mode .info-table th.first,
+body.dark-mode .info-table th.second {
     border: 2px solid #242526;
     background-color: #b1b1b1;
     color: #000;

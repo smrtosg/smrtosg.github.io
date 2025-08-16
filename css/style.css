@@ -165,14 +165,14 @@ ul li {
 .mfp-iframe-holder .mfp-close {
     position: fixed;
     z-index: 100;
-    color: #000;
+    color: #fff;
     right: 20px;
     text-align: center;
     padding-right: 0;
     width: 100%;
     top: 20px;
     width: 30px;
-    background: #b5b69f;
+    background: #ae7356;
     height: 30px;
     line-height: 30px;
 }
@@ -2565,7 +2565,8 @@ select:focus {
 #summary,
 #tm,
 #orp,
-#obf {
+#obf,
+#maps-routes {
     scroll-margin-top: 8vh;
 }
 
