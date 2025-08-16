@@ -2423,7 +2423,7 @@ h2.page-title {
 }
 
 .portfolio-filter .btn-filter-blog {
-    width: 175px;
+    width: 185px;
     height: 40px;
     font-size: 16px;
 }
@@ -2570,8 +2570,8 @@ select:focus {
     scroll-margin-top: 8vh;
 }
 
-#psd,
-#ys {
+#dc,
+#ul {
     scroll-margin-top: 10vh;
 }
 
