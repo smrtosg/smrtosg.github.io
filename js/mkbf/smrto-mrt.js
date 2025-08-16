@@ -50,10 +50,10 @@ const chartOptions = {
 const linesmrt = new Chart(smrtMRT, {
     type: 'line', // or 'bar', 'pie', etc.
     data: {
-        labels: ["2020", "2021", "2022", "2023", "2024"],
+        labels: ["2021", "2022", "2023", "2024", "Jan - Jul 2025"],
         datasets: [{
             label: "HBL",
-            data: [1082000, 2045000, 3075000, 3675000, 4951000],
+            data: [2045000, 3075000, 3675000, 4951000, 6050000],
             borderColor: 'rgb(255, 187, 0)',
             fill: true,
             backgroundColor: 'rgba(207, 61, 61,0.05)',
@@ -62,7 +62,7 @@ const linesmrt = new Chart(smrtMRT, {
 
         {
             label: "CGL",
-            data: [3363000, 2027000, 3020000, 3200000, 4450000],
+            data: [2027000, 3020000, 3200000, 4450000, 6570000],
             borderColor: 'rgb(0, 154, 68)',
             fill: true,
             backgroundColor: 'rgba(0, 154, 68,0.05)',
@@ -71,7 +71,7 @@ const linesmrt = new Chart(smrtMRT, {
 
         {
             label: "AEL",
-            data: [2365000, 3420000, 3802000, 3721000, 4750000],
+            data: [3420000, 3802000, 3721000, 4750000, 8060000],
             borderColor: 'rgb(39, 39, 157)',
             fill: true,
             backgroundColor: 'rgba(39, 39, 157,0.05)',
@@ -80,25 +80,25 @@ const linesmrt = new Chart(smrtMRT, {
 
         {
             label: "NWL",
-            data: [1733000, 1826000, 1840000, 1209000, 3210000],
+            data: [1826000, 1840000, 1209000, 3210000, 7250000],
             borderColor: 'rgb(14, 103, 44)',
             fill: true,
             backgroundColor: 'rgba(14, 103, 44,0.05)',
             borderWidth: 3
         },
 
-        // {
-        //     label: "WTL",
-        //     data: [,,,,4503000],
-        //     borderColor: 'rgb(33, 116, 217)',
-        //     fill: true,
-        //     backgroundColor: 'rgba(14, 103, 44,0.05)',
-        //     borderWidth: 3
-        // },
+        {
+            label: "WTL",
+            data: [,,,4503000, 7980000],
+            borderColor: 'rgb(33, 116, 217)',
+            fill: true,
+            backgroundColor: 'rgba(14, 103, 44,0.05)',
+            borderWidth: 3
+        },
 
         {
             label: "YSLRT",
-            data: [1131000, 2224000, 2452000, 2482000, 4530000],
+            data: [2224000, 2452000, 2482000, 4530000, 7050000],
             borderColor: 'rgb(112, 133, 115)',
             fill: true,
             backgroundColor: 'rgba(112, 133, 115,0.05)',
@@ -151,21 +151,3 @@ function updateChartOptions(chart, isDarkMode) {
     chart.update();
 }
 
-// Check localStorage for dark mode preference
-if (localStorage.getItem('dark-mode') === 'enabled') {
-    document.body.classList.add('dark-mode');
-    updateChartOptions(linesmrt, true);
-}
-
-const toggleButton = document.getElementById('dark-mode-toggle');
-toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const isDarkMode = document.body.classList.contains('dark-mode');
-    updateChartOptions(linesmrt, isDarkMode);
-    // Save the preference in localStorage
-    if (isDarkMode) {
-        localStorage.setItem('dark-mode', 'enabled');
-    } else {
-        localStorage.setItem('dark-mode', 'disabled');
-    }
-});

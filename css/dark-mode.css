@@ -7,15 +7,21 @@
     - General
     - 1.0 Home Page
     - 2.0 About Page
-    - 3.0 OMSI/OpenBVE Page
-    - 4.0 Indiv Pages
-    - 5.0 Blog Page(s)
+    - 3.0 Indiv Pages
+    - 4.0 Blog Page(s)
+    - 5.0 EICW
 --------------------------------------------- */
 
 /* ------------------------------------------ General ------------------------------------------ */
 /* ---- Preloader */
 body.dark-mode #preloader {
     background-color: #1f2022;
+}
+
+body.dark-mode #preloader-text {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
 }
 
 /* ---- Button */
@@ -29,7 +35,7 @@ body.dark-mode #preloader {
     font-weight: 500;
     display: inline-block;
     padding: 0 30px;
-    margin-left: 5px;
+    /* margin-left: 28px; */
     text-align: center;
     text-transform: capitalize;
     background-color: #444;
@@ -41,15 +47,48 @@ body.dark-mode #preloader {
     border: none;
 }
 
+body.dark-mode .wbnrfz_btn_theme:hover {
+    background-color: #ffb6b9;
+    color: #000;
+}
+
 body.dark-mode .wbnrfz_btn_theme {
-    background-color: #e96060;
+    background-color: #da8c08;
     color: #fff;
 }
+
+body.dark-mode .portfolio-filter .btn {
+    color: #fff;
+}
+
 
 body.dark-mode {
     background-color: #18191a;
     transition: all 0.5s ease;
 }
+
+body.dark-mode #hero:before {
+    content: "";
+    background: #00000075;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+body.dark-mode .bg-overlay::after {
+    position: absolute;
+    content: "";
+    height: 101%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #000000d4;
+    backdrop-filter: blur(5px);
+}
+
 
 body.dark-mode h1,
 body.dark-mode h2,
@@ -61,25 +100,137 @@ body.dark-mode p {
     color: #fff;
 }
 
-body.dark-mode .breakpoint-on .classynav>ul>li>a {
-    background-color: #1f2022;
+body.dark-mode h4.timeline-date-aa {
     color: #fff;
 }
+
+body.dark-mode h4.timeline-date-exp {
+    color: #fff;
+}
+
+body.dark-mode hr {
+    border-color: #fff;
+}
+
+body.dark-mode #scrollUp {
+    box-shadow: 0 2px 40px 0px rgba(15, 15, 15, 0.15);
+    z-index: 12345111212;
+    animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px #8d8d8d6b;
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px #00000000;
+    }
+}
+
+body.dark-mode header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    background: #070707e8;
+    box-shadow: 0 4px 30px #0000001a;
+    backdrop-filter: blur(5px);
+    transition: all 0.5s ease;
+}
+
+
+body.dark-mode .nav-item {
+    position: relative;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: -0.13px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .nav-item:hover {
+    color: #da8c08;
+}
+
+body.dark-mode .nav-item.active {
+    font-weight: bold;
+    border-bottom: 2px solid #eb6767;
+    text-decoration: none;
+    line-height: 40px;
+    color: #eb6767;
+}
+
+body.dark-mode .nav-item-toggle {
+    position: relative;
+    line-height: 25px;
+    letter-spacing: -0.13px;
+    text-decoration: none;
+    margin-left: 2.5rem;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .nav-item-toggle:hover:after,
+body.dark-mode .nav-item-toggle::after {
+    background-color: none;
+}
+
+body.dark-mode .icons i {
+    color: #ffffff;
+}
+
+body.dark-mode #menu-icon,
+body.dark-mode #close-icon {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+body.dark-mode #check {
+    display: none;
+}
+
+
+
 
 /* ---- */
 
 /* ---- Footer */
 body.dark-mode .footer-area {
-    background-color: #2e2e2e;
+    background-color: #1e1e1e;
     color: #fff;
     transition: all 0.5s ease;
+    z-index: 999;
+}
+
+body.dark-mode .footer-area .social-info a {
+    margin: 0 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #6a6a6a;
+    border-radius: 50%;
+    transition: color 0.3s ease;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 7px;
+    text-align: center;
+    transition: all 0.3s ease;
+
+}
+
+body.dark-mode .footer-area .social-info a:hover {
+    background-color: #da8c08;
+    color: #fff !important;
 }
 
 body.dark-mode .footer-content .copywrite-text p {
-    color: #fff;
-}
-
-body.dark-mode .footer-content .social-info a {
     color: #fff;
 }
 
@@ -87,31 +238,20 @@ body.dark-mode .cookiebanner span {
     color: #000;
 }
 
+/* ---- */
+
+/* ---- Progress Bar */
+body.dark-mode .single-skill .progress {
+    background-color: #2e2e2e;
+    transition: all 0.5s ease;
+}
 
 /* ---- */
 
-/* ---- Mobile Nav Bar */
-body.dark-mode .breakpoint-on .classy-navbar .classy-menu {
-    background-color: #1f2022;
-    transition: all 0.5s ease;
-}
 
-
-/* ------------------------------------------  */
+/* ------------------------------------------ */
 
 /* ------------------------------------------ 1.0 Home Page ------------------------------------------ */
-body.dark-mode .profile-desc {
-    color: #da8c08;
-    font-size: 20px;
-    font-weight: normal;
-    cursor: default;
-}
-
-body.dark-mode .section-padding-80-0 {
-    background-color: #18191a;
-    transition: all 0.5s ease;
-}
-
 body.dark-mode .pw-portfolio-area {
     background-color: #18191a;
     transition: all 0.5s ease;
@@ -119,6 +259,34 @@ body.dark-mode .pw-portfolio-area {
 
 body.dark-mode .pw-portfolio-area .container-fluid {
     background-color: #18191a;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+
+body.dark-mode h2 {
+    color: #fff;
+}
+
+body.dark-mode .profile-link a {
+    color: #fff;
+    padding: 1.0em;
+}
+
+body.dark-mode .profile-link a:hover {
+    color: #da8c08;
+}
+
+body.dark-mode h2.profile-desc {
+    color: #a2a390;
+    font-size: 20px;
+    font-weight: normal;
+    cursor: default;
+}
+
+body.dark-mode .about-me-area {
+    background-color: #1e1e1e;
+    color: #fff;
     transition: all 0.5s ease;
 }
 
@@ -127,24 +295,53 @@ body.dark-mode .about-me-content {
     transition: all 0.5s ease;
 }
 
-body.dark-mode .about-me-content:hover {
-    background-color: #b75252;
-    transition: all 0.5s ease;
-}
-
-body.dark-mode .about-me-content .ui-icon {
-    background-color: #7e2929;
-}
-
-body.dark-mode .about-me-content:hover h4 {
+body.dark-mode .about-me-content h4,
+body.dark-mode .about-me-content p {
     color: #fff;
 }
 
-/* ------------------------------------------  */
+body.dark-mode .about-me-content:hover {
+    background-color: #b75252;
+}
+
+body.dark-mode .follow-area {
+    background-color: #18191a;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .skill-ara .single-skill .progress-count p {
+    color: #fff;
+}
+
+body.dark-mode .profile-desc {
+    color: #898a77;
+    font-size: 20px;
+    font-weight: normal;
+    cursor: default;
+}
+
+/* ------------------------------------------ */
 
 /* ------------------------------------------ 2.0 About Page ------------------------------------------ */
+body.dark-mode .about-me-summ {
+    background-color: #18191a;
+    transition: all 0.5s ease;
+    padding-bottom: 5em;
+}
+
 body.dark-mode .about-me-summary {
     background-color: #2e2e2e;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .about-me-summary:hover {
+    background-color: #7a5109;
+}
+
+body.dark-mode .about-me-area {
+    background-color: #1e1e1e !important;
     transition: all 0.5s ease;
 }
 
@@ -153,139 +350,40 @@ body.dark-mode .timeline-content {
     transition: all 0.5s ease;
 }
 
-body.dark-mode .timeline-content .period-date-aa {
-    background-color: #7e2929;
+body.dark-mode .timeline-content:hover {
+    background-color: #7a5109;
 }
 
-/* ------------------------------------------  */
+/* ------------------------------------------ */
 
-/* ------------------------------------------ 3.0 OMSI/OpenBVE Page ------------------------------------------ */
-body.dark-mode .gs-guides {
-    background-color: #1e1e1e;
+/* ------------------------------------------ 3.0 Indiv Pages ------------------------------------------ */
+/* body.dark-mode .wbnrfz-summ {
+    background-color: #181818cb;
     transition: all 0.5s ease;
-}
-
-body.dark-mode .accordion-button {
-    background-color: #3a3b3c;
-    transition: all 0.5s ease;
-    color: #fff;
-    border: 1px solid #000;
-}
-
-body.dark-mode .accordion-item {
-    border: 0px solid #000;
-}
-
-body.dark-mode .accordion-body:not(.collapsed) {
-    background-color: #323232;
-    border: 1px solid #000;
-}
-
-body.dark-mode .accordion-button:not(.collapsed) {
-    background-color: #ffe2b0;
-    color: #000;
-}
-
-body.dark-mode .alert-danger {
-    background-color: #2c0b0e;
-    color: #EA868F;
-    border-color: #842029;
-    transition: all 0.5s ease;
-}
-
-body.dark-mode .alert-dismissible .btn-close {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23EA868F'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
-}
-
-body.dark-mode .accordion-button::after {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
-}
-
-body.dark-mode .accordion-button:not(.collapsed)::after {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
-}
-
-body.dark-mode .accordion-button:not(.collapsed)::after {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
-}
-
-/* ------------------------------------------  */
-
-/* ------------------------------------------ 4.0 Indiv Pages ------------------------------------------ */
-body.dark-mode .section-padding-80-0 {
-    background-color: #18191a;
-}
-
-body.dark-mode .wbnrfz-summ {
-    background-color: #1e1e1e;
-    transition: all 0.5s ease;
-}
+    padding-top: 8em;
+    padding-bottom: 10px;
+    backdrop-filter: blur(10px);
+} */
 
 body.dark-mode span,
-body.dark-mode .wbnrfz_details .details_catagory_wrap .single_catagory h4,
-body.dark-mode .wbnrfz_details .details_catagory_wrap .single_catagory .social_links a {
+body.dark-mode .collapse .details_catagory_wrap .single_catagory h4,
+body.dark-mode .collapse .details_catagory_wrap .single_catagory .social_links a,
+body.dark-mode .collapsing .details_catagory_wrap .single_catagory h4,
+body.dark-mode .collapsing .details_catagory_wrap .single_catagory .social_links a {
     color: #fff;
 }
 
-body.dark-mode .about-me-stations {
-    background-color: #242526;
-    transition: all 0.5s ease;
+body.dark-mode .collapse .details_catagory_wrap .single_catagory .social_links a:hover {
+    color: #80a8cc;
 }
 
-@media (prefers-color-scheme: dark) {
-    body.dark-mode #ops-wcrto {
-        content: url('../img/core-img/wcrt-dark.png');
-    }
-
-    body.dark-mode #ops-smrtt {
-        content: url('../img/core-img/stl-dark.png');
-    }
-
-    body.dark-mode #ops-smrtb {
-        content: url('../img/core-img/smb-dark.png');
-    }
-}
-
-body.dark-mode .info-table td.second {
-    border: 2px solid #242526;
-    background-color: #484a4b;
+body.dark-mode .btn.show {
     color: #fff;
 }
 
-body.dark-mode .info-table td.first {
-    border: 2px solid #242526;
-    background-color: #2f3132;
-    color: #fff;
-}
+/* ------------------------------------------ */
 
-body.dark-mode .info-table th.first,
-body.dark-mode .info-table th.second {
-    border: 2px solid #242526;
-    background-color: #b1b1b1;
-    color: #000;
-}
-
-body.dark-mode .alert-primary {
-    background-color: #031633;
-    color: #6ea8fe;
-    border-color: #084298;
-    transition: all 0.5s ease;
-}
-
-body.dark-mode .alert-warning {
-    background-color: #332701;
-    color: #ffcc37;
-    border-color: #997404;
-    transition: all 0.5s ease;
-}
-
-body.dark-mode .alert-dismissible .cls-warning {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffcc37'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
-}
-
-/* ------------------------------------------  */
-
-/* ------------------------------------------ 5.0 Blog Pages ------------------------------------------ */
+/* ------------------------------------------ 4.0 Blog Page(s) ------------------------------------------ */
 body.dark-mode .ftco-section-blog {
     background-color: #18191a;
     transition: all 0.5s ease;
@@ -312,13 +410,266 @@ body.dark-mode blockquote {
     color: #fff;
 }
 
-body.dark-mode hr {
-    margin-bottom: 1rem;
-    border: 0;
-    border-top: 1px solid #fff;
+/* ------------------------------------------ */
+
+/* ------------------------------------------ 5.0 EICW ------------------------------------------ */
+body.dark-mode .wbnrfz-summ-micro {
+    background-color: #1e1e1e;
+    transition: all 0.5s ease;
+    padding-top: 8em;
+    padding-bottom: 10px;
 }
 
-/* ------------------------------------------  */
+body.dark-mode .breadcrumb-item+.breadcrumb-item::before {
+    content: '\f105';
+    color: #fff;
+    font-family: "FontAwesome";
+}
+
+body.dark-mode li.breadcrumb-item a {
+    color: #fff;
+}
+
+body.dark-mode .banner-eicw img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+body.dark-mode h2.page-title {
+    color: #fff;
+}
+
+body.dark-mode .cp-img {
+    border-radius: 20px;
+}
+
+body.dark-mode .ftco-section-otb {
+    padding: 5em 0;
+    background-color: #18191a;
+    transition: all 0.5s ease;
+}
+
+/* ------------------------------------------ */
+
+/* ------------------------------------------ xx.x Timeline ------------------------------------------ */
+body.dark-mode .timeline-item {
+    background-color: #2e2e2e;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .timeline-item:hover {
+    background-color: #7a5109;
+}
+
+/* ------------------------------------------ xx.x Portfolio Controls ------------------------------------------ */
+body.dark-mode .portfolio-sort label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+body.dark-mode .wbnrfz-summ {
+    background-color: #000000d4;
+    backdrop-filter: blur(2px);
+    padding-top: 8em;
+    padding-bottom: 10px;
+}
+
+body.dark-mode .wbnrfz-summ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000080;
+    /* backdrop-filter: blur(5px); */
+    z-index: 1;
+}
+
+body.dark-mode .wbnrfz-summ-indiv {
+    background-color: #000000d4;
+    backdrop-filter: blur(2px);
+    padding-top: 8em;
+    padding-bottom: 10px;
+}
+
+body.dark-mode .wbnrfz-summ-indiv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+body.dark-mode .wbnrfz-summ>* {
+    position: relative;
+    z-index: 2;
+}
+
+body.dark-mode .wbnrfz_details {
+    background: #0d0d0de0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    margin-top: -3.2em;
+    padding-top: 3em;
+    padding-bottom: 2em;
+    z-index: 1000000 !important;
+}
+
+body.dark-mode .wbnrfz_details_body {
+    background: #18191a;
+    margin-top: -3.2em;
+    padding-top: 3em;
+    padding-bottom: 2em;
+}
+
+body.dark-mode .wbnrfz_details_body_tchp {
+    background: #18191a;
+    margin-top: -3.2em;
+    padding-top: 0em;
+    padding-bottom: 2em;
+}
+
+body.dark-mode .wbnrfz_details_blog {
+    background: #0c0c0ce0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    margin-top: -5.2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    z-index: 1000000 !important;
+    /* mask-image: linear-gradient(to bottom, black calc(100% - 32px), transparent 100%); */
+}
+
+body.dark-mode .wbnrfz_eicw {
+    background: #18191a;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding-top: 3em;
+    padding-bottom: 2em;
+}
+
+/* ------------------------------------------ 3.0 OMSI/OpenBVE Page ------------------------------------------ */
+body.dark-mode .gs-guides {
+    background-color: #1e1e1e;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .accordion {
+    padding-bottom: 5em;
+}
+
+body.dark-mode .accordion-button {
+    background-color: #3a3b3c;
+    transition: all 0.5s ease;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+body.dark-mode .accordion-item {
+    border: 0px solid #000;
+}
+
+body.dark-mode .accordion-body:not(.collapsed) {
+    background-color: #323232;
+    border: 1px solid #000;
+}
+
+body.dark-mode .accordion-button:not(.collapsed){
+    background-color: #ffe2b0;
+    color: #000;
+}
+
+
+body.dark-mode .alert-danger {
+    background-color: #2c0b0e;
+    color: #EA868F;
+    border-color: #842029;
+    transition: all 0.5s ease;
+}
+
+
+
+body.dark-mode .alert-dismissible .btn-close {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23EA868F'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
+}
+
+body.dark-mode .accordion-button::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+body.dark-mode .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+body.dark-mode .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    body.dark-mode #ops-smrtt {
+        content: url(../img/core-img/stl-dark.png);
+    }
+
+    body.dark-mode #ops-smrtb {
+        content: url(../img/core-img/smb-dark.png);
+    }
+}
+
+body.dark-mode .about-me-stations {
+    background-color: #242526;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .info-table td.first {
+    border: 2px solid #242526;
+    background-color: #2f3132;
+    color: #fff;
+}
+
+body.dark-mode .info-table td.second {
+    border: 2px solid #242526;
+    background-color: #484a4b;
+    color: #fff;
+}
+
+body.dark-mode .alert-warning {
+    background-color: #332701;
+    color: #ffcc37;
+    border-color: #997404;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .alert-primary {
+    background-color: #031633;
+    color: #6ea8fe;
+    border-color: #084298;
+    transition: all 0.5s ease;
+}
+
+body.dark-mode .alert-dismissible .cls-warning {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffcc37'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
+}
+
+body.dark-mode .alert-dismissible .btn-close {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffcc37'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
+}
+
+body.dark-mode .alert-dismissible .btn-close-danger {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23EA868F'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
+}
+
+body.dark-mode .info-table th.first, body.dark-mode .info-table th.second {
+    border: 2px solid #242526;
+    background-color: #b1b1b1;
+    color: #000;
+}
 
 /* ------------------------------------------ 6.0 Fleets Pages ------------------------------------------ */
 body.dark-mode #manufacturerFilter,
@@ -448,11 +799,6 @@ body.dark-mode .nav-tabs {
     border-radius: 20px !important;
 }
 
-body.dark-mode .nav-item {
-    border-radius: 20px !important;
-    margin: 5px;
-}
-
 body.dark-mode .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
     background-color: #6ac144 !important;
@@ -475,22 +821,4 @@ body.dark-mode .nav-tabs .nav-link:hover {
 
 body.dark-mode .nav-tabs .nav-link.active {
     color: #000 !important;
-}
-
-
-@media (max-width: 768px) {
-
-    body.dark-mode .fleet-table th,
-    body.dark-mode .fleet-table td {
-        white-space: nowrap;
-    }
-
-    body.dark-mode .filter-inputs {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    body.dark-mode .filter-inputs .search-input {
-        width: 66%;
-    }
 }

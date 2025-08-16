@@ -123,7 +123,7 @@
     // ***********************************
     // :: 6.0 Portfolio Button Active Code
     // ***********************************
-    
+
     $('.portfolio-menu button.btn').on('click', function () {
         $('.portfolio-menu button.btn').removeClass('active');
         $(this).addClass('active');
@@ -208,3 +208,18 @@
     });
 
 })(jQuery);
+
+
+// *********************************
+// :: 15.0 Calculate Age
+// *********************************
+function calculateAge(birthday) {
+    const birthDate = new Date(birthday);
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();
+    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+}

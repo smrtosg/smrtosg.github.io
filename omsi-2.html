@@ -2,378 +2,399 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="description" content>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="google-site-verification" content="57TuruPNu5wqSSia_cUehl5t9Gh1AbxrHNPcMiFx-aQ" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>OMSI 2 | SMRTO</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    <meta property="og:image" content="https://i.imgur.com/jgRjmrt.png" />
+  <title>OMSI 2 | SMRTO</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <meta property="og:image" content="https://i.imgur.com/kMi3VsK.png" />
 
-    <link rel="icon" href="./img/core-img/favicon.png">
+  <link rel="icon" href="img/core-img/favicon.png">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-breakpoints.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style-extension-1.css">
-    <link rel="stylesheet" href="css/dark-mode.css">
 
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/glightbox.min.css">
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN76281P3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-WN76281P3Q');
+  </script>
 </head>
 
 <body>
 
-    <div id="preloader">
-        <div class="loader"></div>
+  <!-- Preloader Section -->
+  <div id="preloader">
+    <div class="loader"></div>
+    <p id="preloader-text">Just a moment...</p>
+  </div>
+
+
+  <header>
+    <a href="./index.html"><img src="./img/core-img/logo.png" alt="logo" class="logo" /></a>
+
+    <input type="checkbox" id="check" />
+    <label for="check" class="icons">
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+      <i class="fa-solid fa-xmark" id="close-icon"></i>
+    </label>
+
+    <nav class="navbar navbar-mobile">
+      <a href="./index.html" class="nav-item">Home</a>
+      <a href="./about.html" class="nav-item">About</a>
+      <a href="./openbve.html" class="nav-item">OpenBVE</a>
+      <a href="./omsi-2.html" class="nav-item active">OMSI 2</a>
+      <a href="./blog.html" class="nav-item">Blog</a>
+      <a href="#" class="nav-item">
+        <button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!">
+          <i class="fa-solid fa-moon-stars" id="theme-icon"></i>
+        </button>
+      </a>
+    </nav>
+  </header>
+
+
+  <section class="wbnrfz-summ breadcrumb-area-eicw-cover bg-img" id="cv-omsi2"
+    style="background-image: url(img/bg-img/hero-bg-omsi2.jpg); height: 100vh;">
+    <div class="wbnrfz_details_blog">
+      <div class="container">
+        <div class="portfolio-controls d-flex justify-content-between align-items-center">
+          <!-- Filter Buttons -->
+          <div class="portfolio-filter mt-3">
+            <div class="col-lg-12">
+              <div class="main-title">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html"> Home</a>
+                    </li>
+                    <li class="breadcrumb-item active"><a href="#"> OMSI 2
+                      </a>
+                    </li>
+                  </ol>
+                </nav>
+                <h1 class="brc">OMSI 2</h1>
+              </div>
+            </div>
+          </div>
+          <!-- Collapsible Header -->
+          <div class="collapsible-header" data-bs-toggle="collapse" data-bs-target="#portfolioFilter"
+            aria-expanded="false" aria-controls="portfolioFilter" style="cursor: pointer;" title="Filter/Sort">
+            <i class="fa-solid fa-chevron-down nav-chev"></i>
+          </div>
+        </div>
+        <!-- Collapsible Content -->
+        <div id="portfolioFilter" class="collapse">
+          <div class="portfolio-controls">
+            <!-- Filter Buttons -->
+            <div class="portfolio-filter">
+              <button class="btn btn-filter active" data-filter="*">All Releases</button>
+              <button class="btn btn-filter" data-filter=".rt">Maps</button>
+              <button class="btn btn-filter" data-filter=".bs">Buses</button>
+              <button class="btn btn-filter" data-filter=".rp">Repaints</button>
+              <button class="btn btn-filter" data-filter=".df">Developer Files</button>
+            </div>
+
+            <!-- Sort Dropdown -->
+            <div class="portfolio-sort">
+              <label for="sort-options">Sort By:</label>
+              <select id="sort-options">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="alphabetical">Alphabetical</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about-me-summ clearfix">
+    <div class="pw-portfolio-area" style="padding-top: 1em; padding-bottom: 2em;">
+      <div class="container-fluid">
+
+        <!-- TEMP -->
+        <div class="alert alert-warning alert-dismissible" role="alert"
+          style="margin-top: 1em; cursor: default; font-size: 14px;">
+          Website Migration is Ongoing. Some links may not work as expected.
+          <button type="button" class="btn-close btn-close-danger" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+
+        <div class="alert alert-danger alert-dismissible" role="alert"
+          style="margin-top: 1em; cursor: default; font-size: 14px;">
+          Only attempt the following if you are familiar with Modifying OMSI contents, and have backed up your
+          item. We will not assume responsiblity should things go wrong.
+          <button type="button" class="btn-close btn-close-danger" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <!-- Accordion -->
+        <div class="accordion" id="accordGuide">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingGetStarted">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseGetStarted" aria-expanded="false" aria-controls="collapseGetStarted">
+                <i class="fa-solid fa-download"></i>&nbsp;&nbsp;Get Started
+              </button>
+            </h2>
+            <div id="collapseGetStarted" class="accordion-collapse collapse" aria-labelledby="headingGetStarted"
+              data-bs-parent="#accordGuide">
+              <div class="accordion-body">
+                <h4><i class="fa-brands fa-windows"></i>&nbsp; Get OMSI 2 up and running </h1>
+                  <p>OMSI 2 is a DLC. Simply purchase OMSI 2 from Steam and you're good to go!
+
+                  <h6 style="font-size: 13px">System Requirements</h6>
+                  <p style="font-size: 13px">Operating System: Windows 7 or later<br>
+                    Processor: Pentium 4 @ 2.6GHz or better<br>
+                    Memory: 2 GB RAM<br>
+                    Graphics: GeForce or comparable AMD with minimum 512 MB<br>
+                    DirectX: Version 9.0c</p>
+
+                  <p> Note: You may require a better processor, memory and graphics card to run the game
+                    with
+                    better performance.</p>
+                  <br>
+                  <br>
+                  <h4>Step 1 - Purchase the Program from Steam</h6>
+                    <figcaption>
+                      <a href="./img/tutorials/tutom.png" class="portfolio-img"><img src="./img/tutorials/tutom.png"
+                          class="img-fluid accord-img" alt="Hero Image Section"></a>
+                      <p>
+                        <a href="https://store.steampowered.com/app/252530/OMSI_2_Steam_Edition/"
+                          class="btn pw-btn-accord btn-2 mt-15" target="_blank">
+                          <i class="fa-solid fa-download"></i>&nbsp;&nbsp;OMSI 2</a>
+                      </p>
+                    </figcaption>
+                    <br>
+                    <br>
+                    <h4>Step 2 - Familiarizing the OMSI 2 Directory</h4>
+                    <figcaption>
+                      <a href="./img/tutorials/tutom2.png" class="portfolio-img"><img src="./img/tutorials/tutom2.png"
+                          class="img-fluid accord-img" alt="Hero Image Section"></a>
+                      <p>After installing Steam, and purchasing the DLC, navigate to <b>C:\(your
+                          Directory)\steamapps\common\OMSI 2</b>. All your OMSI 2 stuffs will be
+                        housed here.
+                      </p>
+                    </figcaption>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingIGT">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseIGT" aria-expanded="false" aria-controls="collapseIGT">
+                <i class="fa-solid fa-train-subway"></i>&nbsp;&nbsp;Install Guide - Modified Buses/Maps
+              </button>
+            </h2>
+
+            <div id="collapseIGT" class="accordion-collapse collapse" aria-labelledby="headingIGT"
+              data-bs-parent="#accordGuide">
+              <div class="accordion-body">
+                <p> Our released buses are a complete package. Hence you would only need to download the
+                  following : <br>
+                  - <a href="releases/omsi-developer-files.html" style="color: #e96060"> Fonts</a> (for
+                  BOTH Bus & Maps)<br>
+                  - <a href="releases/omsi-developer-files.html" style="color: #e96060">
+                    Sceneryobjects</a> (for Maps)<br>
+                  - <a href="releases/omsi-developer-files.html" style="color: #e96060"> Splines</a> (for
+                  Maps)<br>
+                  - <a href="releases/omsi-developer-files.html" style="color: #e96060"> Krueger EDS
+                    Scripts</a> (for
+                  Bus)<br>
+                  <br>
+                <h4>Step 1 - Downloading our Maps/Buses</h4>
+                <p>NOTE: This is applicable for all released buses. For this
+                  guide, we'll be demonstrating how to do so for the Solaris Urbino 18. <br> First up,
+                  download
+                  the Bus.</p>
+                <figcaption>
+                  <a href="./img/tutorials/tutom3.png" class="portfolio-img"><img src="./img/tutorials/tutom3.png"
+                      class="img-fluid accord-img" alt="Hero Image Section"></a>
+                  <p>
+                    <a href="releases/solaris-urbino-18.html" class="btn pw-btn-accord btn-2 mt-15" target="_blank">
+                      <i class="fa-solid fa-download"></i>&nbsp;&nbsp;Bus</a>
+                  </p>
+                </figcaption>
+                </p>
+
+                <hr>
+
+                <h4>Step 2 - Extracting it into your OMSI 2 Directory</h4>
+                <p> Open the Fonts & Bus Zip file and extract the folder into the OMSI directory
+                  (<b>C:\(your
+                    Directory)\steamapps\common\OMSI 2</b>). </p>
+
+                <p>We recommend using
+                  <a href="https://www.7-zip.org/download.html" style="color: #e96060">7-Zip</a> or
+
+                  <a href="https://apps.microsoft.com/detail/9n8g7tscl18r?hl=en-US&gl=US" style="color: #e96060">NanaZip
+                    (shown in the video)</a> to extract.
+                </p>
+
+                <figcaption>
+                  <a href="./img/tutorials/tutom4.png" class="portfolio-img"><img src="./img/tutorials/tutom4.png"
+                      class="img-fluid accord-img" alt="Hero Image Section"></a>
+                  <p>This will be the same for any releases except Repaints.</p>
+                </figcaption>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- All Releases -->
+        <div class="row">
+          <div class="col-12">
+            <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
+              <h2 id="filter-title">All Releases</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row pw-portfolio">
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item rt mb-30 wow fadeInUp" data-wow-delay="100ms"
+            data-date="2025-08-16">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/ht.png" alt="ht">
+              <div class="hover-content-blog align-items-center">
+                <h4>Hillgrove Town</h4>
+                <a class="info" href="releases/hillgrove-town.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item rt mb-30 wow fadeInUp" data-wow-delay="100ms"
+            data-date="2024-03-25">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/wt.png" alt="wt">
+              <div class="hover-content-blog">
+                <h4>Woodlands Town</h4>
+                <a class="info" href="releases/woodlands-town.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item bs mb-30 wow fadeInUp" data-wow-delay="100ms"
+            data-date="2024-09-15">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/su18.png" alt="su18">
+              <div class="hover-content-blog">
+                <h4>Solaris Urbino 18</h4>
+                <a class="info" href="releases/solaris-urbino-18.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item bs mb-30 wow fadeInUp" data-wow-delay="100ms"
+            data-date="2024-09-15">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/vdl.png" alt="vdl">
+              <div class="hover-content-blog">
+                <h4>VDL Citea LLE</h4>
+                <a class="info" href="releases/vdl-clle.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item df mb-30 wow fadeInUp" data-wow-delay="300ms"
+            data-date="2024-03-25">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/dfA.png" alt="dfom">
+              <div class="hover-content-blog">
+                <h4>OMSI 2 Developer Files</h4>
+                <a class="info" href="releases/omsi-developer-files.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item bs rp mb-30 wow fadeInUp" data-wow-delay="300ms"
+            data-date="2024-09-20">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/jw.png" alt="jw">
+              <div class="hover-content-blog">
+                <h4>SMRT JW B9TL Ad</h4>
+                <a class="info" href="releases/smrt-jw-b9tl.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <header class="header-area">
+  </section>
 
-        <div class="main-header-area">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container container-xxl">
-
-                    <nav class="classy-navbar justify-content-between" id="pwNav">
-
-                        <a class="nav-brand img-logo" href="./index.html"><img src="./img/core-img/logo.png" alt></a>
-
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
-                        </div>
-
-                        <div class="classy-menu">
-
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                            </div>
-
-                            <div class="classynav">
-                                <ul id="nav">
-                                    <li><a href="./index.html">Home</a></li>
-                                    <li><a href="./about.html">About</a></li>
-                                    <li><a href="./openbve.html">OpenBVE</a></li>
-                                    <li class="active"><a href="./omsi-2.html">OMSI 2</a></li>
-                                    <li><a href="./blog.html">Blog</a></li>
-                                    <li><button class="wbnrfz_btn_theme" id="dark-mode-toggle"
-                                            title="Toggle Dark/Light Mode!"><i class="fa-solid fa-moon"></i></button>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </nav>
-                </div>
-            </div>
+  <footer class="footer-area">
+    <div class="container">
+      <div class="footer-content d-flex flex-column align-items-center text-center">
+        <!-- Social Links -->
+        <div class="social-info">
+          <a href="https://www.youtube.com/@SMRTOsg"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/SMRTVRT"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
         </div>
-    </header>
-
-
-    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-bg-small.png);">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12">
-                    <div class="breadcrumb-content text-center">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="index.html"> Home</a>
-                                </li>
-                                <li class="breadcrumb-item active" aria-current="page">Files & Releases</li>
-                            </ol>
-                        </nav>
-                        <h2 class="page-title">OMSI 2</h2>
-                    </div>
-                </div>
-            </div>
+        <!-- Copywrite Text -->
+        <div class="copywrite-text">
+          <p>&copy;
+            <script>document.write(new Date().getFullYear());</script> Illustrations belong to SMRT Corp Ltd
+          </p>
         </div>
-    </section>
+      </div>
+    </div>
+  </footer>
 
-    <section class="about-me-summ section-padding-80-0 gs-guides clearfix">
-        <div class="container">
-            <div class="accordion" id="accordGuide">
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingGetStarted">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseGetStarted" aria-expanded="false"
-                            aria-controls="collapseGetStarted">
-                            <i class="fa-solid fa-download"></i>&nbsp; Get Started
-                        </button>
-                    </h2>
-                    <div id="collapseGetStarted" class="accordion-collapse collapse" aria-labelledby="headingGetStarted"
-                        data-bs-parent="#accordGuide">
-                        <div class="accordion-body">
-                            <h4><i class="fa-brands fa-windows"></i>&nbsp; Get OMSI 2 up and running </h1>
-                                <p>OMSI 2 is a DLC. Simply purchase OMSI 2 from Steam and you're good to go!
-
-                                <h6 style="font-size: 13px">System Requirements</h6>
-                                <p style="font-size: 13px">Operating System: Windows 7 or later<br>
-                                    Processor: Pentium 4 @ 2.6GHz or better<br>
-                                    Memory: 2 GB RAM<br>
-                                    Graphics: GeForce or comparable AMD with minimum 512 MB<br>
-                                    DirectX: Version 9.0c</p>
-
-                                <p> Note: You may require a better processor, memory and graphics card to run the game
-                                    with
-                                    better performance.</p>
-                                <br>
-                                <br>
-                                <h4>Step 1 - Purchase the Program from Steam</h6>
-                                    <figcaption>
-                                        <a href="./img/tutorials/tutom.png" class="portfolio-img"><img
-                                                src="./img/tutorials/tutom.png" class="img-fluid accord-img"
-                                                alt="Hero Image Section"></a>
-                                        <p>
-                                            <a href="https://store.steampowered.com/app/252530/OMSI_2_Steam_Edition/"
-                                                class="btn pw-btn-accord btn-2 mt-15" target="_blank">
-                                                <i class="fa-solid fa-download"></i>&nbsp;&nbsp;OMSI 2</a>
-                                        </p>
-                                    </figcaption>
-                                    <br>
-                                    <br>
-                                    <h4>Step 2 - Familiarizing the OMSI 2 Directory</h4>
-                                    <figcaption>
-                                        <a href="./img/tutorials/tutom2.png" class="portfolio-img"><img
-                                                src="./img/tutorials/tutom2.png" class="img-fluid accord-img"
-                                                alt="Hero Image Section"></a>
-                                        <p>After installing Steam, and purchasing the DLC, navigate to <b>C:\(your
-                                                Directory)\steamapps\common\OMSI 2</b>. All your OMSI 2 stuffs will be
-                                            housed here.
-                                        </p>
-                                    </figcaption>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="alert alert-danger alert-dismissible" role="alert"
-                    style="margin-top: 1em; cursor: default; font-size: 14px;">
-                    Only attempt the following if you are familiar with Modifying OMSI contents, and have backed up your
-                    item. We will not assume
-                    responsiblity should things go wrong.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingIGT">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseIGT" aria-expanded="false" aria-controls="collapseIGT">
-                            <i class="fa-solid fa-train-subway"></i>&nbsp; Install Guide - Modified Buses/Maps
-                        </button>
-                    </h2>
-
-                    <div id="collapseIGT" class="accordion-collapse collapse" aria-labelledby="headingIGT"
-                        data-bs-parent="#accordGuide">
-                        <div class="accordion-body">
-                            <p> Our released buses are a complete package. Hence you would only need to download the
-                                following : <br>
-                                - <a href="releases/omsi-developer-files.html" style="color: #e96060"> Fonts</a> (for
-                                BOTH Bus & Maps)<br>
-                                - <a href="releases/omsi-developer-files.html" style="color: #e96060">
-                                    Sceneryobjects</a> (for Maps)<br>
-                                - <a href="releases/omsi-developer-files.html" style="color: #e96060"> Splines</a> (for
-                                Maps)<br>
-                                - <a href="releases/omsi-developer-files.html" style="color: #e96060"> Krueger EDS
-                                    Scripts</a> (for
-                                Bus)<br>
-                                <br>
-                            <h4>Step 1 - Downloading our Maps/Buses</h4>
-                            <p>NOTE: This is applicable for all released buses. For this
-                                guide, we'll be demonstrating how to do so for the Solaris Urbino 18. <br> First up,
-                                download
-                                the Bus.</p>
-                            <figcaption>
-                                <a href="./img/tutorials/tutom3.png" class="portfolio-img"><img
-                                        src="./img/tutorials/tutom3.png" class="img-fluid accord-img"
-                                        alt="Hero Image Section"></a>
-                                <p>
-                                    <a href="releases/solaris-urbino-18.html" class="btn pw-btn-accord btn-2 mt-15"
-                                        target="_blank">
-                                        <i class="fa-solid fa-download"></i>&nbsp;&nbsp;Bus</a>
-                                </p>
-                            </figcaption>
-                            </p>
-
-                            <hr>
-
-                            <h4>Step 2 - Extracting it into your OMSI 2 Directory</h4>
-                            <p> Open the Fonts & Bus Zip file and extract the folder into the OMSI directory
-                                (<b>C:\(your
-                                    Directory)\steamapps\common\OMSI 2</b>). </p>
-
-                            <p>We recommend using
-                                <a href="https://www.7-zip.org/download.html" style="color: #e96060">7-Zip</a> or
-
-                                <a href="https://apps.microsoft.com/detail/9n8g7tscl18r?hl=en-US&gl=US"
-                                    style="color: #e96060">NanaZip (shown in the video)</a> to extract.
-                            </p>
-
-                            <figcaption>
-                                <a href="./img/tutorials/tutom4.png" class="portfolio-img"><img
-                                        src="./img/tutorials/tutom4.png" class="img-fluid accord-img"
-                                        alt="Hero Image Section"></a>
-                                <p>This will be the same for any releases except Repaints.</p>
-                            </figcaption>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="pw-portfolio-area section-padding-80 clearfix">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-
-                        <div class="pw-projects-menu wow fadeInUp" data-wow-delay="100ms">
-                            <div class="portfolio-menu text-center">
-                                <button class="btn active" data-filter="*">All Releases</button>
-                                <button class="btn" data-filter=".rt">Routes</button>
-                                <button class="btn" data-filter=".bs">Buses</button>
-                                <button class="btn" data-filter=".rp">Repaints</button>
-                                <button class="btn" data-filter=".df">Developer Files</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row pw-portfolio">
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item rt mb-30 wow fadeInUp"
-                        data-wow-delay="100ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/ht.png" alt="thumbnail-omsi2">
-                            <div class="hover-content">
-                                <h4>Hillgrove Town</h4>
-                                <a class="info" href="releases/hillgrove-town.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/ht.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item rt mb-30 wow fadeInUp"
-                        data-wow-delay="300ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/wt.png" alt="thumbnail-omsi2">
-                            <div class="hover-content">
-                                <h4>Woodlands Town</h4>
-                                <a class="info" href="releases/woodlands-town.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/wt.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item bs mb-30 wow fadeInUp"
-                        data-wow-delay="300ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/su18.png" alt="thumbnail-omsi2">
-                            <div class="hover-content">
-                                <h4>Solaris Urbino 18</h4>
-                                <a class="info" href="releases/solaris-urbino-18.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/wt.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item bs mb-30 wow fadeInUp"
-                        data-wow-delay="300ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/vdl.png" alt="thumbnail-omsi2">
-                            <div class="hover-content">
-                                <h4>VDL Citea LLE</h4>
-                                <a class="info" href="releases/vdl-clle.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/wt.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item df mb-30 wow fadeInUp"
-                        data-wow-delay="500ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/dfA.png" alt="thumbnail-omsi2">
-                            <div class="hover-content">
-                                <h4>OMSI 2 Developer Files</h4>
-                                <a class="info" href="releases/omsi-developer-files.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/dfA.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item bs rp mb-30 wow fadeInUp"
-                        data-wow-delay="500ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/jw.png" alt="thumbnail-omsi2">
-                            <div class="hover-content">
-                                <h4>SMRT JW B9TL Ad</h4>
-                                <a class="info" href="releases/smrt-jw-b9tl.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/jw.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer-area">
-        <div class="container container-xxl">
-            <div class="row">
-                <div class="col-12">
-                    <div class="footer-content d-flex align-items-center justify-content-between">
-
-                        <div class="copywrite-text">
-                            <p>
-                                &copy;
-                                <script>document.write(new Date().getFullYear());</script> Illustrations belong to
-                                SMRT Corp Ltd</a>
-                            </p>
-                        </div>
-
-                        <div class="social-info">
-                            <a href="https://www.facebook.com/smrtosg"><i class="fa-brands fa-facebook"
-                                    aria-hidden="true"></i></a>
-                            <a href="https://www.youtube.com/@SMRTosg"><i class="fa-brands fa-youtube"
-                                    aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script type="text/javascript" id="cookiebanner" src="js/cookies-banner.js" data-position="bottom" data-bg="#f2f3e5"
-        data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
-        data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
+  <script type="text/javascript" id="cookiebanner" src="js/cookies-banner.js" data-position="bottom" data-bg="#f2f3e5"
+    data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
+    data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
     </script>
 
-    <script src="js/theme.js"></script>
+  <script src="js/theme-omsi2Page.js"></script>
 
-    <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+  <script src="js/popper.min.js"></script>
 
-    <script src="js/pw.bundle.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
-    <script src="js/default-assets/active.js"></script>
+  <script src="js/pw.bundle.js"></script>
 
+  <script src="js/default-assets/active.js"></script>
+
+  <script src="js/swiper-bundle.min.js"></script>
+
+  <script src="js/glightbox.min.js"></script>
+
+  <script src="js/isotope.pkgd.min.js"></script>
+
+  <script src="js/portFunct.js"></script>
+
+  <script src="js/copy-to-clipboard.js"></script>
+
+  <script src="js/preloader.js"></script>
 
 </body>
 

@@ -2,534 +2,543 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="description" content>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="google-site-verification" content="57TuruPNu5wqSSia_cUehl5t9Gh1AbxrHNPcMiFx-aQ" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>OpenBVE | SMRTO</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    <meta property="og:image" content="https://i.imgur.com/jgRjmrt.png" />
+  <title>OpenBVE | SMRTO</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <meta property="og:image" content="https://i.imgur.com/kMi3VsK.png" />
 
-    <link rel="icon" href="./img/core-img/favicon.png">
+  <link rel="icon" href="img/core-img/favicon.png">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style-extension-1.css">
-    <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-breakpoints.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
 
+
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/glightbox.min.css">
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN76281P3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-WN76281P3Q');
+  </script>
 </head>
 
 <body>
 
-    <div id="preloader">
-        <div class="loader"></div>
+  <!-- Preloader Section -->
+  <div id="preloader">
+    <div class="loader"></div>
+    <p id="preloader-text">Just a moment...</p>
+  </div>
+
+
+  <header>
+    <a href="./index.html"><img src="./img/core-img/logo.png" alt="logo" class="logo" /></a>
+
+    <input type="checkbox" id="check" />
+    <label for="check" class="icons">
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+      <i class="fa-solid fa-xmark" id="close-icon"></i>
+    </label>
+
+    <nav class="navbar navbar-mobile">
+      <a href="./index.html" class="nav-item">Home</a>
+      <a href="./about.html" class="nav-item">About</a>
+      <a href="./openbve.html" class="nav-item active">OpenBVE</a>
+      <a href="./omsi-2.html" class="nav-item">OMSI 2</a>
+      <a href="./blog.html" class="nav-item">Blog</a>
+      <a href="#" class="nav-item">
+        <button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!">
+          <i class="fa-solid fa-moon-stars" id="theme-icon"></i>
+        </button>
+      </a>
+    </nav>
+  </header>
+
+
+  <section class="wbnrfz-summ breadcrumb-area-eicw-cover bg-img" id="cv-omsi2"
+    style="background-image: url(img/bg-img/hero-bg-openbve.jpg); height: 100vh;">
+    <div class="wbnrfz_details_blog">
+      <div class="container">
+        <div class="portfolio-controls d-flex justify-content-between align-items-center">
+          <!-- Filter Buttons -->
+          <div class="portfolio-filter mt-3">
+            <div class="col-lg-12">
+              <div class="main-title">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html"> Home</a>
+                    </li>
+                    <li class="breadcrumb-item active"><a href="#">
+                        OpenBVE
+                      </a>
+                    </li>
+                  </ol>
+                </nav>
+                <h1 class="brc">OpenBVE</h1>
+              </div>
+            </div>
+          </div>
+          <!-- Collapsible Header -->
+          <div class="collapsible-header" data-bs-toggle="collapse" data-bs-target="#portfolioFilter"
+            aria-expanded="false" aria-controls="portfolioFilter" style="cursor: pointer;" title="Filter/Sort">
+            <i class="fa-solid fa-chevron-down nav-chev"></i>
+          </div>
+        </div>
+        <!-- Collapsible Content -->
+        <div id="portfolioFilter" class="collapse">
+          <div class="portfolio-controls">
+            <!-- Filter Buttons -->
+            <div class="portfolio-filter">
+              <button class="btn btn-filter active" data-filter="*">All Releases</button>
+              <button class="btn btn-filter" data-filter=".rt">Routes</button>
+              <button class="btn btn-filter" data-filter=".tr">Trains</button>
+              <button class="btn btn-filter" data-filter=".lg">Legacy</button>
+              <button class="btn btn-filter" data-filter=".df">Developer Files</button>
+            </div>
+
+            <!-- Sort Dropdown -->
+            <div class="portfolio-sort">
+              <label for="sort-options">Sort By:</label>
+              <select id="sort-options">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="alphabetical">Alphabetical</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="about-me-summ clearfix">
+    <div class="pw-portfolio-area" style="padding-top: 1em; padding-bottom: 2em;">
+      <div class="container-fluid">
+
+        <!-- TEMP -->
+        <div class="alert alert-warning alert-dismissible" role="alert"
+          style="margin-top: 1em; cursor: default; font-size: 14px;">
+          Website Migration is Ongoing. Some links may not work as expected.
+          <button type="button" class="btn-close btn-close-danger" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <!-- Accordion -->
+        <div class="accordion" id="accordGuide">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingGetStarted">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseGetStarted" aria-expanded="false" aria-controls="collapseGetStarted">
+                <i class="fa-solid fa-download"></i>Get Started
+              </button>
+            </h2>
+            <div id="collapseGetStarted" class="accordion-collapse collapse" aria-labelledby="headingGetStarted"
+              data-bs-parent="#accordGuide">
+              <div class="accordion-body">
+                <h4><i class="fa-brands fa-windows"></i>&nbsp; Get openBVE up and running </h1>
+                  <p>If this is your first time installing openBVE, or you are encountering issues, please
+                    follow
+                    these install instructions:
+
+                    Note: This guide is for the installation on Windows 11 only. If you are using
+                    eariler
+                    versions of Windows, some steps may differ from the list below.</p>
+
+                  <h6 style="font-size: 13px">System Requirements</h6>
+                  <p style="font-size: 13px">Operating System: Windows 7 or later<br>
+                    Processor: Pentium 4 @ 2.6GHz or better<br>
+                    Memory: At least 1GB of RAM<br>
+                    Storage: At least 500MB</p>
+
+                  <p> Note: You may require a better processor, memory and graphics card to run the game
+                    with
+                    better performance.</p>
+                  <br>
+                  <br>
+                  <h4>Step 1 - Download the Main Program</h6>
+                    <figcaption>
+                      <a href="./img/tutorials/tutdlop.png" class="portfolio-img"><img src="./img/tutorials/tutdlop.png"
+                          class="img-fluid accord-img" alt="Hero Image Section"></a>
+                      <p>We recommend downloading the latest stable version of the openBVE main
+                        program.</p>
+                      <a href="https://openbve-project.net/download/" class="btn pw-btn-accord btn-2 mt-15"
+                        target="_blank">
+                        <i class="fa-solid fa-download"></i>&nbsp;&nbsp;OpenBVE</a>
+                    </figcaption>
+                    <br>
+                    <br>
+                    <h4>Step 2 - Installing the Main Program</h4>
+                    <figcaption>
+                      <a href="./img/tutorials/tutdlop2.png" class="portfolio-img"><img
+                          src="./img/tutorials/tutdlop2.png" class="img-fluid accord-img" alt="Hero Image Section"></a>
+                      <p>Follow the installation process as shown in the installer. To facilitate
+                        easier installation of the program, check both "Create a desktop
+                        shortcut" and "Create a desktop shortcut to the openBVE Addons folder".
+                        You may change the installation folder of the main program.
+
+                        Let openBVE run for the first time after the installation is complete.
+                      </p>
+                    </figcaption>
+                    <br>
+                    <br>
+                    <h4>Staying up to date</h6>
+                      <p> Simply download the main program again and extract it to
+                        your install directory. You do not have to download the other stuff
+                        again.
+                      </p>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingIGT">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseIGT" aria-expanded="false" aria-controls="collapseIGT">
+                <i class="fa-solid fa-train-subway"></i>Install Guide -
+                Modified Trains
+              </button>
+            </h2>
+            <div id="collapseIGT" class="accordion-collapse collapse" aria-labelledby="headingIGT"
+              data-bs-parent="#accordGuide">
+              <div class="accordion-body">
+                <p> Our released trains are developed originally by SG5937C. As such, the methods of
+                  installing is slightly different for the following trains:<br>
+                  Links: <br>
+                  - <a href="releases/r151.html" style="color: #e96060"> Alstom R151</a><br>
+                  - <a href="releases/c151c.html" style="color: #e96060">KSF C151C</a><br>
+                  - <a href="releases/c151b.html" style="color: #e96060">KSF C151B</a><br>
+                  - <a href="releases/c151a.html" style="color: #e96060">KSF C151A</a>
+                  <br>
+                  <br>
+                <h4>Step 1 - Downloading our Trains</h4>
+                <figcaption>
+                  <a href="./img/tutorials/tutdlop1.png" class="portfolio-img"><img src="./img/tutorials/tutdlop1.png"
+                      class="img-fluid accord-img" alt="Hero Image Section"></a>
+                  <p>NOTE: This is applicable for the Alstom R151, KSF C151A/B/C trains only. For this
+                    guide, we'll be demonstrating how to do so for the C151A.
+
+                    First up, download the Base Train. For the C151A, the Base Train can be
+                    downloaded here.</p>
+                  <a href="https://drive.google.com/file/d/1UfX8sI7l0MxRwV0Wl5U12wOiDKZCnRhI/view"
+                    class="btn pw-btn-accord btn-2 mt-15" target="_blank">
+                    <i class="fa-solid fa-download"></i>&nbsp;&nbsp;Base Train</a>
+                </figcaption>
+                </p>
+                <p>For the Trains mentioned above, follow the steps below. For <a href="releases/ryl150.html"
+                    style="color: #e96060"> Alstom RYL150</a> or <a href="releases/harbourvale-route-trains-leg.html"
+                    style="color: #e96060"> the Legacy
+                    Trains</a>, you can
+                  skip <b>Step 2 and simply download and extract the file itself.</b></b></p>
+
+                <hr>
+
+                <h4>Step 2 - Overwriting our modifications into the Base Train</h4>
+                <p> Next, download the Modification file. Ensure both the Base Train and the
+                  Modification files are together for easier navigation, as shown below.
+                  Extract both files and rename the files accordingly, like the ones in the
+                  Modifications zip. <br>
+                  For example, <b>SMRT KSF C151C (701-702) (701F)</b> rename to <b> SMRT KSF C151A
+                    (569-570) (569F)</b>. </p>
+
+                <p>We recommend using
+                  <a href="https://www.7-zip.org/download.html" style="color: #e96060">7-Zip</a> or
+
+                  <a href="https://apps.microsoft.com/detail/9n8g7tscl18r?hl=en-US&gl=US" style="color: #e96060">NanaZip
+                    (shown in the video)</a> to extract.
+                </p>
+
+                <p> Overwrite, if asked to. <br><br>
+                  You are now ready to run the route. Do note that we recommend OpenBVE Version 1.9.27
+                  (64-bit) or higher for optimal experience. For housekeeping measures, you may remove the
+                  Zip file after extraction.</p>
+
+                <p>Refer to the video below if you are unsure. </p>
+
+                <div>
+                  <video width="80%" height="auto" controls loop>
+                    <source src="./img/tutorials/tutdlt.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <br>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingIGT">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseIGR" aria-expanded="false" aria-controls="collapseIGR">
+                <i class="fa-solid fa-route"></i>Install Guide - Modified
+                Routes
+              </button>
+            </h2>
+            <div id="collapseIGR" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-bs-parent="#accordGuide">
+              <div class="accordion-body">
+                <h4>Step 1 - Downloading the Routes</h4>
+                <figcaption>
+                  <a href="./img/tutorials/tutdlr.png" class="portfolio-img"><img src="./img/tutorials/tutdlr.png"
+                      class="img-fluid accord-img" alt="Hero Image Section"></a>
+                  <p>NOTE: This is applicable for all the released routes.
+
+                    First up, download any route File. We'll be using the North West Line for this
+                    guide.</p>
+                </figcaption>
+
+                <figcaption>
+                  <a href="./img/tutorials/tutdlr2.png" class="portfolio-img"><img src="./img/tutorials/tutdlr2.png"
+                      class="img-fluid accord-img" alt="Hero Image Section"></a>
+                  <p>Ensure the files are together for easier navigation, as shown below. Extract the
+                    file. <br>
+                  <p>You are now ready to use the route. These steps apply for the KSFs too! Do note that
+                    we recommend OpenBVE Version 1.9.27 (64-bit) or higher for optimal experience. For
+                    housekeeping measures, you may remove the Zip file after extraction.</p>
+                  </p>
+                </figcaption>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- All Releases -->
+        <div class="row">
+          <div class="col-12">
+            <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
+              <h2 id="filter-title">All Releases</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row pw-portfolio">
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item df tr mb-30 wow fadeInUp" data-wow-delay="100ms"
+            data-date="2025-01-24">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/devfile-op.png" alt="dfop">
+              <div class="hover-content-blog align-items-center">
+                <h4>Dev Files (STARiS/CDD-CLD/VFD)</h4>
+                <a class="info" href="releases/dev-files-staris-cddcld-vfd.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item rt mb-30 wow fadeInUp" data-wow-delay="100ms"
+            data-date="2025-08-10">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/nwl2.0.png" alt="nwl2.0">
+              <div class="hover-content-blog">
+                <h4>North West Line</h4>
+                <a class="info" href="releases/north-west-line.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item rt mb-30 wow fadeInUp" data-wow-delay="100ms"
+            data-date="2025-08-10">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/ael2.0.png" alt="ael2.0">
+              <div class="hover-content-blog">
+                <h4>Airport Express Line</h4>
+                <a class="info" href="releases/airport-express-line.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item tr mb-30 wow fadeInUp" data-wow-delay="100ms"
+            data-date="2024-12-06">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/ryl150.png" alt="ryl150">
+              <div class="hover-content-blog">
+                <h4>Alstom Movia RYL150</h4>
+                <a class="info" href="releases/ryl150.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item rt mb-30 wow fadeInUp" data-wow-delay="300ms"
+            data-date="2024-12-09">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/ys2.0.png" alt="ys2.0">
+              <div class="hover-content-blog">
+                <h4>Yishun LRT</h4>
+                <a class="info" href="releases/yishun-lrt.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item rt mb-30 wow fadeInUp" data-wow-delay="300ms"
+            data-date="2025-08-11">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/hbl.png" alt="hbl">
+              <div class="hover-content-blog">
+                <h4>Harbourvale Line</h4>
+                <a class="info" href="releases/harbourvale-line.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item rt mb-30 wow fadeInUp" data-wow-delay="300ms"
+            data-date="2024-09-11">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/cgl.png" alt="cgl">
+              <div class="hover-content-blog">
+                <h4>Changi Airport Line</h4>
+                <a class="info" href="releases/changi-airport-line.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item tr mb-30 wow fadeInUp" data-wow-delay="300ms"
+            data-date="2024-12-21">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/r151.png" alt="r151">
+              <div class="hover-content-blog">
+                <h4>Alstom Movia R151</h4>
+                <a class="info" href="releases/r151.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item tr mb-30 wow fadeInUp" data-wow-delay="300ms"
+            data-date="2024-12-21">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/c151c.png" alt="c151c">
+              <div class="hover-content-blog">
+                <h4>Kawasaki-CRRC Qingdao Sifang C151C</h4>
+                <a class="info" href="releases/c151c.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item tr mb-30 wow fadeInUp" data-wow-delay="300ms"
+            data-date="2024-12-21">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/c151b.png" alt="c151b">
+              <div class="hover-content-blog">
+                <h4>Kawasaki-CRRC Qingdao Sifang C151B</h4>
+                <a class="info" href="releases/c151b.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item tr mb-30 wow fadeInUp" data-wow-delay="300ms"
+            data-date="2024-12-21">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/c151a.png" alt="c151a">
+              <div class="hover-content-blog">
+                <h4>Kawasaki-CRRC Qingdao Sifang C151A</h4>
+                <a class="info" href="releases/c151a.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item tr leg mb-30 wow fadeInUp" data-wow-delay="300ms"
+            data-date="2024-03-17">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/yl150.png" alt="yl150">
+              <div class="hover-content-blog">
+                <h4>Alstom (Bombardier) Movia YL150/A/B (Legacy)</h4>
+                <a class="info" href="releases/yl150a-b.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 single_gallery_item tr leg mb-30 wow fadeInUp" data-wow-delay="300ms"
+            data-date="2024-11-03">
+            <div class="single-portfolio-content">
+              <img src="img/releases-ss/hbll.png" alt="yl150">
+              <div class="hover-content-blog">
+                <h4>C651/A/B/C/D (Legacy)</h4>
+                <a class="info" href="releases/c651s-leg.html" class="portfolio-img"><i
+                    class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
 
-    <header class="header-area">
+  </section>
 
-        <div class="main-header-area">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container container-xxl">
-
-                    <nav class="classy-navbar justify-content-between" id="pwNav">
-
-                        <a class="nav-brand img-logo" href="./index.html"><img src="./img/core-img/logo.png" alt></a>
-
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
-                        </div>
-
-                        <div class="classy-menu">
-
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                            </div>
-
-                            <div class="classynav">
-                                <ul id="nav">
-                                    <li><a href="./index.html">Home</a></li>
-                                    <li><a href="./about.html">About</a></li>
-                                    <li class="active"><a href="./openbve.html">OpenBVE</a></li>
-                                    <li><a href="./omsi-2.html">OMSI 2</a></li>
-                                    <li><a href="./blog.html">Blog</a></li>
-                                    <li><button class="wbnrfz_btn_theme" id="dark-mode-toggle"
-                                            title="Toggle Dark/Light Mode!"><i class="fa-solid fa-moon"></i></button>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </nav>
-                </div>
-            </div>
+  <footer class="footer-area">
+    <div class="container">
+      <div class="footer-content d-flex flex-column align-items-center text-center">
+        <!-- Social Links -->
+        <div class="social-info">
+          <a href="https://www.youtube.com/@SMRTOsg"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/SMRTVRT"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
         </div>
-    </header>
-
-
-    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-bg-small.png);">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12">
-                    <div class="breadcrumb-content text-center">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="index.html"> Home</a>
-                                </li>
-                                <li class="breadcrumb-item active" aria-current="page">Files & Releases</li>
-                            </ol>
-                        </nav>
-                        <h2 class="page-title">OpenBVE</h2>
-                    </div>
-                </div>
-            </div>
+        <!-- Copywrite Text -->
+        <div class="copywrite-text">
+          <p>&copy;
+            <script>document.write(new Date().getFullYear());</script> Illustrations belong to SMRT Corp Ltd
+          </p>
         </div>
-    </section>
+      </div>
+    </div>
+  </footer>
 
-
-    <section class="about-me-summ section-padding-80-0 gs-guides clearfix">
-        <div class="container">
-            <div class="accordion" id="accordGuide">
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingGetStarted">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseGetStarted" aria-expanded="false"
-                            aria-controls="collapseGetStarted">
-                            <i class="fa-solid fa-download"></i>&nbsp; Get Started
-                        </button>
-                    </h2>
-                    <div id="collapseGetStarted" class="accordion-collapse collapse" aria-labelledby="headingGetStarted"
-                        data-bs-parent="#accordGuide">
-                        <div class="accordion-body">
-                            <h4><i class="fa-brands fa-windows"></i>&nbsp; Get openBVE up and running </h1>
-                                <p>If this is your first time installing openBVE, or you are encountering issues, please
-                                    follow
-                                    these install instructions:
-
-                                    Note: This guide is for the installation on Windows 11 only. If you are using
-                                    eariler
-                                    versions of Windows, some steps may differ from the list below.</p>
-
-                                <h6 style="font-size: 13px">System Requirements</h6>
-                                <p style="font-size: 13px">Operating System: Windows 7 or later<br>
-                                    Processor: Pentium 4 @ 2.6GHz or better<br>
-                                    Memory: At least 1GB of RAM<br>
-                                    Storage: At least 500MB</p>
-
-                                <p> Note: You may require a better processor, memory and graphics card to run the game
-                                    with
-                                    better performance.</p>
-                                <br>
-                                <br>
-                                <h4>Step 1 - Download the Main Program</h6>
-                                    <figcaption>
-                                        <a href="./img/tutorials/tutdlop.png" class="portfolio-img"><img
-                                                src="./img/tutorials/tutdlop.png" class="img-fluid accord-img"
-                                                alt="Hero Image Section"></a>
-                                        <p>We recommend downloading the latest stable version of the openBVE main
-                                            program.</p>
-                                        <a href="https://openbve-project.net/download/"
-                                            class="btn pw-btn-accord btn-2 mt-15" target="_blank">
-                                            <i class="fa-solid fa-download"></i>&nbsp;&nbsp;OpenBVE</a>
-                                    </figcaption>
-                                    <br>
-                                    <br>
-                                    <h4>Step 2 - Installing the Main Program</h4>
-                                    <figcaption>
-                                        <a href="./img/tutorials/tutdlop2.png" class="portfolio-img"><img
-                                                src="./img/tutorials/tutdlop2.png" class="img-fluid accord-img"
-                                                alt="Hero Image Section"></a>
-                                        <p>Follow the installation process as shown in the installer. To facilitate
-                                            easier installation of the program, check both "Create a desktop
-                                            shortcut" and "Create a desktop shortcut to the openBVE Addons folder".
-                                            You may change the installation folder of the main program.
-
-                                            Let openBVE run for the first time after the installation is complete.
-                                        </p>
-                                    </figcaption>
-                                    <br>
-                                    <br>
-                                    <h4>Staying up to date</h6>
-                                        <p> Simply download the main program again and extract it to
-                                            your install directory. You do not have to download the other stuff
-                                            again.
-                                        </p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingIGT">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseIGT" aria-expanded="false" aria-controls="collapseIGT">
-                            <i class="fa-solid fa-train-subway"></i>&nbsp; Install Guide - Modified Trains
-                        </button>
-                    </h2>
-                    <div id="collapseIGT" class="accordion-collapse collapse" aria-labelledby="headingIGT"
-                        data-bs-parent="#accordGuide">
-                        <div class="accordion-body">
-                            <p> Our released trains are developed originally by SG5937C. As such, the methods of
-                                installing is slightly different for the following trains:<br>
-                                Links: <br>
-                                - <a href="releases/r151.html" style="color: #e96060"> Alstom R151</a><br>
-                                - <a href="releases/c151c.html" style="color: #e96060">KSF C151C</a><br>
-                                - <a href="releases/c151b.html" style="color: #e96060">KSF C151B</a><br>
-                                - <a href="releases/c151a.html" style="color: #e96060">KSF C151A</a>
-                                <br>
-                                <br>
-                            <h4>Step 1 - Downloading our Trains</h4>
-                            <figcaption>
-                                <a href="./img/tutorials/tutdlop1.png" class="portfolio-img"><img
-                                        src="./img/tutorials/tutdlop1.png" class="img-fluid accord-img"
-                                        alt="Hero Image Section"></a>
-                                <p>NOTE: This is applicable for the Alstom R151, KSF C151A/B/C trains only. For this
-                                    guide, we'll be demonstrating how to do so for the C151A.
-
-                                    First up, download the Base Train. For the C151A, the Base Train can be
-                                    downloaded here.</p>
-                                <a href="https://drive.google.com/file/d/1UfX8sI7l0MxRwV0Wl5U12wOiDKZCnRhI/view"
-                                    class="btn pw-btn-accord btn-2 mt-15" target="_blank">
-                                    <i class="fa-solid fa-download"></i>&nbsp;&nbsp;Base Train</a>
-                            </figcaption>
-                            </p>
-                            <p>For the Trains mentioned above, follow the steps below. For <a
-                                    href="releases/ryl150.html" style="color: #e96060"> Alstom RYL150</a> or <a
-                                    href="releases/harbourvale-route-trains-leg.html" style="color: #e96060"> the Legacy
-                                    Trains</a>, you can
-                                skip <b>Step 2 and simply download and extract the file itself.</b></b></p>
-
-                            <hr>
-
-                            <h4>Step 2 - Overwriting our modifications into the Base Train</h4>
-                            <p> Next, download the Modification file. Ensure both the Base Train and the
-                                Modification files are together for easier navigation, as shown below.
-                                Extract both files and rename the files accordingly, like the ones in the
-                                Modifications zip. <br>
-                                For example, <b>SMRT KSF C151C (701-702) (701F)</b> rename to <b> SMRT KSF C151A
-                                    (569-570) (569F)</b>. </p>
-
-                            <p>We recommend using
-                                <a href="https://www.7-zip.org/download.html" style="color: #e96060">7-Zip</a> or
-
-                                <a href="https://apps.microsoft.com/detail/9n8g7tscl18r?hl=en-US&gl=US"
-                                    style="color: #e96060">NanaZip (shown in the video)</a> to extract.
-                            </p>
-
-                            <p> Overwrite, if asked to. <br><br>
-                                You are now ready to run the route. Do note that we recommend OpenBVE Version 1.9.27
-                                (64-bit) or higher for optimal experience. For housekeeping measures, you may remove the
-                                Zip file after extraction.</p>
-
-                            <p>Refer to the video below if you are unsure. </p>
-
-                            <div>
-                                <video width="80%" height="auto" controls loop>
-                                    <source src="./img/tutorials/tutdlt.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingIGT">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseIGR" aria-expanded="false" aria-controls="collapseIGR">
-                            <i class="fa-solid fa-route"></i>&nbsp; Install Guide - Modified Routes
-                        </button>
-                    </h2>
-                    <div id="collapseIGR" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#accordGuide">
-                        <div class="accordion-body">
-                            <h4>Step 1 - Downloading the Routes</h4>
-                            <figcaption>
-                                <a href="./img/tutorials/tutdlr.png" class="portfolio-img"><img
-                                        src="./img/tutorials/tutdlr.png" class="img-fluid accord-img"
-                                        alt="Hero Image Section"></a>
-                                <p>NOTE: This is applicable for all the released routes.
-
-                                    First up, download any route File. We'll be using the North West Line for this
-                                    guide.</p>
-                            </figcaption>
-
-                            <figcaption>
-                                <a href="./img/tutorials/tutdlr2.png" class="portfolio-img"><img
-                                        src="./img/tutorials/tutdlr2.png" class="img-fluid accord-img"
-                                        alt="Hero Image Section"></a>
-                                <p>Ensure the files are together for easier navigation, as shown below. Extract the
-                                    file. <br>
-                                <p>You are now ready to use the route. These steps apply for the KSFs too! Do note that
-                                    we recommend OpenBVE Version 1.9.27 (64-bit) or higher for optimal experience. For
-                                    housekeeping measures, you may remove the Zip file after extraction.</p>
-                                </p>
-                            </figcaption>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="pw-portfolio-area section-padding-80 clearfix">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-
-                        <div class="pw-projects-menu wow fadeInUp" data-wow-delay="100ms">
-                            <div class="portfolio-menu text-center">
-                                <button class="btn active" data-filter="*">All Releases</button>
-                                <button class="btn" data-filter=".rt">Routes</button>
-                                <button class="btn" data-filter=".tr">Trains</button>
-                                <button class="btn" data-filter=".df">Developer Files</button>
-                                <button class="btn" data-filter=".lg">Legacy Releases</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row pw-portfolio">
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item df mb-30 wow fadeInUp"
-                        data-wow-delay="300ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/devfile-op.png" alt="thumbnail-openbve">
-                            <div class="hover-content">
-                                <h4>Dev Files (STARiS/CDD-CLD/VFD)</h4>
-                                <a class="info" href="releases/dev-files-staris-cddcld-vfd.html"
-                                    class="portfolio-img"><i class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/devfile-op.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item rt mb-30 wow fadeInUp"
-                        data-wow-delay="300ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/nwl2.0.png" alt="thumbnail-openbve">
-                            <div class="hover-content">
-                                <h4>North West Line</h4>
-                                <a class="info" href="releases/north-west-line.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/nwl2.0.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item rt mb-30 wow fadeInUp"
-                        data-wow-delay="300ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/ael2.0.png" alt="thumbnail-openbve">
-                            <div class="hover-content">
-                                <h4>Airport Express Line</h4>
-                                <a class="info" href="releases/airport-express-line.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/ael2.0.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item tr mb-30 wow fadeInUp"
-                        data-wow-delay="500ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/ryl150.png" alt="thumbnail-openbve">
-                            <div class="hover-content">
-                                <h4>Alstom Movia RYL150</h4>
-                                <a class="info" href="releases/ryl150.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/ryl150.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item rt mb-30 wow fadeInUp"
-                        data-wow-delay="300ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/ys2.0.png" alt="thumbnail-openbve">
-                            <div class="hover-content">
-                                <h4>Yishun LRT</h4>
-                                <a class="info" href="releases/yishun-lrt.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/ys2.0.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item rt mb-30 wow fadeInUp"
-                        data-wow-delay="500ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/hbl.png" alt="thumbnail-openbve">
-                            <div class="hover-content">
-                                <h4>Harbourvale Line</h4>
-                                <a class="info" href="releases/harbourvale-line.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/hbl.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item rt mb-30 wow fadeInUp"
-                        data-wow-delay="300ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/cgl.png" alt="thumbnail-openbve">
-                            <div class="hover-content">
-                                <h4>Changi Airport Line</h4>
-                                <a class="info" href="releases/changi-airport-line.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/cgl.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item tr mb-30 wow fadeInUp"
-                        data-wow-delay="100ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/r151.png" alt="thumbnail-openbve">
-                            <div class="hover-content">
-                                <h4>Alstom Movia R151</h4>
-                                <a class="info" href="releases/r151.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/r151.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item tr mb-30 wow fadeInUp"
-                        data-wow-delay="300ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/c151c.png" alt="thumbnail-openbve">
-                            <div class="hover-content">
-                                <h4>Kawasaki-CRRC Qingdao Sifang C151C</h4>
-                                <a class="info" href="releases/c151c.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/c151c.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item tr mb-30 wow fadeInUp"
-                        data-wow-delay="300ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/c151b.png" alt="thumbnail-openbve">
-                            <div class="hover-content">
-                                <h4>Kawasaki-CRRC Qingdao Sifang C151B</h4>
-                                <a class="info" href="releases/c151b.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/c151b.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item tr mb-30 wow fadeInUp"
-                        data-wow-delay="300ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/c151a.png" alt="thumbnail-openbve">
-                            <div class="hover-content">
-                                <h4>Kawasaki-CRRC Qingdao Sifang C151A</h4>
-                                <a class="info" href="releases/c151a.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/c151a.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item tr lg mb-30 wow fadeInUp"
-                        data-wow-delay="300ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/yl150.png" alt="thumbnail-openbve">
-                            <div class="hover-content">
-                                <h4>Alstom (Bombardier) Movia YL150/A/B (Legacy)</h4>
-                                <a class="info" href="releases/yl150a-b.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/yl150.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item rt tr lg mb-30 wow fadeInUp"
-                        data-wow-delay="300ms">
-                        <div class="single-portfolio-content">
-                            <img src="img/releases-ss/hbll.png" alt="thumbnail-openbve">
-                            <div class="hover-content">
-                                <h4>C651/A/B/C/D (Legacy)</h4>
-                                <a class="info" href="releases/c651s-leg.html" class="portfolio-img"><i
-                                        class="fa-solid fa-download"></i></a>
-                                <a href="img/releases-ss/hbll.png" class="portfolio-img"><i
-                                        class="fa-solid fa-expand"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-    <footer class="footer-area">
-        <div class="container container-xxl">
-            <div class="row">
-                <div class="col-12">
-                    <div class="footer-content d-flex align-items-center justify-content-between">
-
-                        <div class="copywrite-text">
-                            <p>
-                                &copy;
-                                <script>document.write(new Date().getFullYear());</script> Illustrations belong to
-                                SMRT Corp Ltd</a>
-                            </p>
-                        </div>
-
-                        <div class="social-info">
-                            <a href="https://www.facebook.com/smrtosg"><i class="fa-brands fa-facebook"
-                                    aria-hidden="true"></i></a>
-                            <a href="https://www.youtube.com/@SMRTosg"><i class="fa-brands fa-youtube"
-                                    aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script type="text/javascript" id="cookiebanner" src="js/cookies-banner.js" data-position="bottom" data-bg="#f2f3e5"
-        data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
-        data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
+  <script type="text/javascript" id="cookiebanner" src="js/cookies-banner.js" data-position="bottom" data-bg="#f2f3e5"
+    data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
+    data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
     </script>
 
-    <script src="js/theme.js"></script>
+  <script src="js/theme-openbvePage.js"></script>
 
-    <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+  <script src="js/popper.min.js"></script>
 
-    <script src="js/pw.bundle.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
-    <script src="js/default-assets/active.js"></script>
+  <script src="js/pw.bundle.js"></script>
+
+  <script src="js/default-assets/active.js"></script>
+
+  <script src="js/swiper-bundle.min.js"></script>
+
+  <script src="js/glightbox.min.js"></script>
+
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+
+  <script src="js/isotope.pkgd.min.js"></script>
+
+  <script src="js/portFunct.js"></script>
+
+  <script src="js/copy-to-clipboard.js"></script>
+
+  <script src="js/preloader.js"></script>
 
 
 </body>
