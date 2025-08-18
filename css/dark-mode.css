@@ -16,6 +16,7 @@
 /* ---- Preloader */
 body.dark-mode #preloader {
     background-color: #1f2022;
+    animation: preloaderFlashDark 0.2s linear;
 }
 
 body.dark-mode #preloader-text {
