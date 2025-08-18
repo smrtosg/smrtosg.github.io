@@ -445,12 +445,12 @@ input:required {
 
 @keyframes preloaderFlashLight {
     0%,
-    60% { background-color: #fffbe6; }
+    60% { background-color: #f8faf4; }
     100% { background-color: #f8faf4; }
 }
 @keyframes preloaderFlashDark {
     0%,
-    60% { background-color: #fffbe6; }
+    60% { background-color: #181818; }
     100% { background-color: #181818; }
 }
 
