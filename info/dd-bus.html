@@ -2,118 +2,223 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="google-site-verification" content="57TuruPNu5wqSSia_cUehl5t9Gh1AbxrHNPcMiFx-aQ" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="57TuruPNu5wqSSia_cUehl5t9Gh1AbxrHNPcMiFx-aQ" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Fleet List (Double Decker) | SMRTO</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta property="og:image" content="https://i.imgur.com/i8n9KYs.png" />
 
-  <title>Fleet List (Double Decker) | SMRTO</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-  <meta property="og:image" content="https://i.imgur.com/CmtdJvS.png" />
+    <link rel="icon" href="../img/core-img/favicon.png">
 
-  <link rel="icon" href="../img/core-img/favicon.png">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.2.0/css/all.css" />
 
-  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-mobNav.css">
+    <link rel="stylesheet" href="../css/style-breakpoints.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
 
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/style-breakpoints.css">
-  <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="css/fleet-table.css">
 
-  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="../css/glightbox.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN76281P3Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN76281P3Q"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+        gtag('config', 'G-WN76281P3Q');
+    </script>
 
-    gtag('config', 'G-WN76281P3Q');
-  </script>
 </head>
 
 <body>
-
-  <!-- Preloader Section -->
-  <div id="preloader">
-    <div class="loader"></div>
-    <p id="preloader-text">Just a moment...</p>
-  </div>
-
-
-
-  <header>
-    <a href="../index.html"><img src="../img/core-img/logo.png" alt="logo" class="logo" /></a>
-
-    <input type="checkbox" id="check" />
-    <label for="check" class="icons">
-      <i class="fa-solid fa-bars" id="menu-icon"></i>
-      <i class="fa-solid fa-xmark" id="close-icon"></i>
-    </label>
-
-    <nav class="navbar navbar-mobile">
-      <a href="../index.html" class="nav-item">Home</a>
-      <a href="../about.html" class="nav-item">About</a>
-      <a href="../openbve.html" class="nav-item">OpenBVE</a>
-      <a href="../omsi-2.html" class="nav-item active">OMSI 2</a>
-      <a href="../blog.html" class="nav-item">Blog</a>
-      <a href="#" class="nav-item">
-        <button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!">
-          <i class="fa-solid fa-moon-stars" id="theme-icon"></i>
-        </button>
-      </a>
-    </nav>
-  </header>
-
-  <section class="wbnrfz-summ breadcrumb-area-eicw-cover bg-img" id="cv-omsi2"
-    style="background-image: url(../img/bg-img/b5lh-dd.jpg); height: 100vh;">
-    <div class="wbnrfz_details_blog">
-      <div class="container">
-        <div class="portfolio-controls d-flex justify-content-between align-items-center">
-          <!-- Filter Buttons -->
-          <div class="portfolio-filter mt-3">
-            <div class="col-lg-12">
-              <div class="main-title">
-                <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../about.html"> About</a>
-                    </li>
-                    <li class="breadcrumb-item active"><a href="../about.html#obf"> Our Bus Fleets
-                      </a>
-                    </li>
-                  </ol>
-                </nav>
-                <h1 class="brc">Fleet List (Double Decker)</h1>
-              </div>
-            </div>
-          </div>
-          <!-- Collapsible Header -->
-          <div class="collapsible-header" data-bs-toggle="collapse" data-bs-target="#portfolioFilter"
-            aria-expanded="false" aria-controls="portfolioFilter" style="cursor: pointer;" title="Filter/Sort">
-            <i class="fa-solid fa-chevron-down nav-chev"></i>
-          </div>
-        </div>
-        <!-- Collapsible Content -->
-        <div id="portfolioFilter" class="collapse">
-          <div class="portfolio-controls">
-            <div class="portfolio-filter mt-3" id="busTab" role="tablist">
-              <button class="btn" data-bs-toggle="tab" data-bs-target="#tab1">ADL E500 MMC FL</button>
-              <button class="btn" data-bs-toggle="tab" data-bs-target="#tab2">ADL E500 MMC Non-FL</button>
-              <button class="btn" data-bs-toggle="tab" data-bs-target="#tab3">Volvo B5LH</button>
-              <button class="btn" data-bs-toggle="tab" data-bs-target="#tab4">Volvo B9TL</button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
+    <div class="breadcrumb-fixed-placeholder">
+        <nav aria-label="breadcrumb" style="margin-bottom:0;">
+            <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="./">
+                        <i class="fa-regular fa-house"></i>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../menu.html"><i class="fa-regular fa-bars"></i>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../about.html"><i class="fa-regular fa-circle-user"></i>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="sd-bus.html"><i class="fa-regular fa-bus"></i>
+                    </a>
+                </li>
+            </ol>
+        </nav>
     </div>
-    <div style="background-color: #6ac144; width: 100%; height: 10px;"></div>
-  </section>
 
-  <div class="container mt-5">
-    <div class="tab-content" id="busTabContent">
+    <!-- Navigation Bar -->
+    <nav class="navbar-container">
+        <div class="navbar">
+            <!-- Logo -->
+            <a href="./"><img src="../img/core-img/logo.png" alt="logo" class="logo"></a>
+
+            <!-- Navigation Links -->
+            <ul class="navbar-nav" id="navbarNav">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">
+                        <i class="fa-sharp fa-regular fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../openbve.html" class="nav-link">
+                        <i class="fa-regular fa-train"></i>
+                        <span>OpenBVE</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../omsi2.html" class="nav-link">
+                        <i class="fa-regular fa-bus"></i>
+                        <span>OMSI 2</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="../menu.html" class="nav-link active">
+                        <i class="fa-regular fa-bars"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+        <ul>
+            <li>
+                <a href="../index.html">
+                    <span class="icon">
+                        <i class="fa-sharp fa-regular fa-house"></i>
+                    </span>
+                    <span class="label">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="../openbve.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-train"></i>
+                    </span>
+                    <span class="label">OpenBVE</span>
+                </a>
+            </li>
+            <li>
+                <a href="../omsi2.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-bus"></i>
+                    </span>
+                    <span class="label">OMSI 2</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="../menu.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-bars"></i>
+                    </span>
+                    <span class="label">Menu</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!------------------------------------------------------------------------ Start of Sections ------------------------------------------------------------------------>
+    <!-- Title/Breadcrumbs -->
+    <section class="about-me-sum clearfix">
+        <div class="wbnrfz_eicw">
+            <div class="page-header-section">
+                <div class="container container-xxl container-mobile container-mobile-header">
+                    <div class="breadcrumb-wrapper">
+                        <nav aria-label="breadcrumb" class="breadcrumb-desktop" style="display:none;">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="./">
+                                        <i class="fa-regular fa-house"></i>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="../menu.html"><i class="fa-regular fa-bars"></i>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="../about.html"><i class="fa-regular fa-circle-user"></i>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="sd-bus.html"><i class="fa-regular fa-bus"></i>
+                                    </a>
+                                </li>
+                            </ol>
+                        </nav>
+                        <div class="page-title-wrapper">
+                            <div>
+                                <h1 class="page-title-single">Fleet List (Double Decker)</h1>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scrollable-tabs-container">
+                    <div class="left-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+
+                    </div>
+
+                    <ul>
+                        <li>
+                            <a href="#tab1">ADL E500 MMC FL</a>
+                        </li>
+
+                        <li>
+                            <a href="#tab2">ADL E500 MMC Non-FL</a>
+                        </li>
+
+                        <li>
+                            <a href="#tab3">Volvo B5LH</a>
+                        </li>
+
+                        <li>
+                            <a href="#tab4">Volvo B9TL</a>
+                        </li>
+                    </ul>
+
+                    <div class="right-arrow active">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Summary -->
+    <section class="about-me-summ clearfix" style="padding-top: 2em; padding-bottom: 5em;">
+        <div class="container mt-5">
+            <div class="tab-content" id="busTabContent">
 
       <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
         <!-- Table 1 content -->
@@ -399,191 +504,541 @@
           </table>
         </div>
       </div>
-    </div>
-  </div>
 
+                <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
+                    <!-- Table 4 content -->
+                    <div class="table-responsive">
+                        <table id="busTable5" class="fleet-table table">
+                            <thead>
+                                <tr>
+                                    <th onclick="sortTable(0, 'busTable5')">Manufacturer</th>
+                                    <th onclick="sortTable(1, 'busTable5')">Model</th>
+                                    <th onclick="sortTable(2, 'busTable5')">Type</th>
+                                    <th onclick="sortTable(3, 'busTable5')">Category</th>
+                                    <th onclick="sortTable(4, 'busTable5')">Developer</th>
+                                    <th onclick="sortTable(5, 'busTable5')">Display Type (EDS)</th>
+                                    <th onclick="sortTable(6, 'busTable5')">Livery</th>
+                                    <th onclick="sortTable(7, 'busTable5')">Registration Number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- VDL Citea_12m LE -->
+                                <!-- ----------------------------------------------------------------------------------- -->
+                                <!-- Batch 1_Pixel -->
+                                <tr>
+                                    <td class="manu">VDL</td>
+                                    <td class="model">Citea 12LE</td>
+                                    <td class="type">12m Single Deck</td>
+                                    <td class="cat">LHD</td>
+                                    <td class="dev">Mx.Dsgn</td>
+                                    <td class="disp">K++</td>
+                                    <td class="livery">Pixel Livery<br>(2 Door)</td>
+                                    <td class="rego">
+                                        Batch 1:<br>
+                                        <span style="font-weight: normal;">
+                                            SG2100U <br>
+                                            SG2101S <br>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-  <footer class="footer-area">
-    <div class="container">
-      <div class="footer-content d-flex flex-column align-items-center text-center">
-        <!-- Social Links -->
-        <div class="social-info">
-          <a href="https://www.youtube.com/@SMRTOsg"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-          <a href="https://www.facebook.com/SMRTVRT"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+                <div class="tab-pane fade" id="tab6" role="tabpanel" aria-labelledby="tab6-tab">
+                    <!-- Table 6 content -->
+                    <div class="table-responsive">
+                        <table id="busTable6" class="fleet-table table">
+                            <thead>
+                                <tr>
+                                    <th onclick="sortTable(0, 'busTable6')">Manufacturer</th>
+                                    <th onclick="sortTable(1, 'busTable6')">Model</th>
+                                    <th onclick="sortTable(2, 'busTable6')">Type</th>
+                                    <th onclick="sortTable(3, 'busTable6')">Category</th>
+                                    <th onclick="sortTable(4, 'busTable6')">Developer</th>
+                                    <th onclick="sortTable(5, 'busTable6')">Display Type (EDS)</th>
+                                    <th onclick="sortTable(6, 'busTable6')">Livery</th>
+                                    <th onclick="sortTable(7, 'busTable6')">Registration Number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- MAN_12m NLC IntercityLE -->
+                                <!-- ----------------------------------------------------------------------------------- -->
+                                <!-- Demonstrator_Pixel -->
+                                <tr>
+                                    <td class="manu">MAN</td>
+                                    <td class="model">12m NL IntercityLE</td>
+                                    <td class="type">12m Single Deck</td>
+                                    <td class="cat">LHD</td>
+                                    <td class="dev">Halycon Media</td>
+                                    <td class="disp">K++</td>
+                                    <td class="livery">Pixel Livery<br>(2 Door)</td>
+                                    <td class="rego">
+                                        Demonstrator:<br>
+                                        <span style="font-weight: normal;">
+                                            SMB420G <br>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="tab7" role="tabpanel" aria-labelledby="tab7-tab">
+                    <!-- Table 7 content -->
+                    <div class="table-responsive">
+                        <table id="busTable7" class="fleet-table table">
+                            <thead>
+                                <tr>
+                                    <th onclick="sortTable(0, 'busTable7')">Manufacturer</th>
+                                    <th onclick="sortTable(1, 'busTable7')">Model</th>
+                                    <th onclick="sortTable(2, 'busTable7')">Type</th>
+                                    <th onclick="sortTable(3, 'busTable7')">Category</th>
+                                    <th onclick="sortTable(4, 'busTable7')">Developer</th>
+                                    <th onclick="sortTable(5, 'busTable7')">Display Type (EDS)</th>
+                                    <th onclick="sortTable(6, 'busTable7')">Livery</th>
+                                    <th onclick="sortTable(7, 'busTable7')">Registration Number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- MAN_12m NLC -->
+                                <!-- ----------------------------------------------------------------------------------- -->
+                                <!-- Batch 1_LG 3D -->
+                                <tr>
+                                    <td class="manu">MAN</td>
+                                    <td class="model">12m NLC</td>
+                                    <td class="type">12m Single Deck</td>
+                                    <td class="cat">LHD</td>
+                                    <td class="dev">Halycon Media</td>
+                                    <td class="disp">K++</td>
+                                    <td class="livery">Lush Green Livery<br>(3 Door)</td>
+                                    <td class="rego">
+                                        Batch 1:<br>
+                                        <span style="font-weight: normal;">
+                                            SG1900J <br>
+                                            SG1901G <br>
+                                            SG1902D <br>
+                                            SG1903B <br>
+                                            SG1904Z <br>
+                                            SG1905X <br>
+                                            SG1906T <br>
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <!-- Batch 1_LG 2D -->
+                                <tr>
+                                    <td class="manu">MAN</td>
+                                    <td class="model">12m NLC</td>
+                                    <td class="type">12m Single Deck</td>
+                                    <td class="cat">LHD</td>
+                                    <td class="dev">Halycon Media</td>
+                                    <td class="disp">K++</td>
+                                    <td class="livery">Lush Green Livery<br>(2 Door)</td>
+                                    <td class="rego">
+                                        Batch 1:<br>
+                                        <span style="font-weight: normal;">
+                                            SG1907R <br>
+                                            SG1908M <br>
+                                            SG1909K <br>
+                                            SG1910E <br>
+                                            SG1911C <br>
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <!-- Batch 1_Pixel 2D -->
+                                <tr>
+                                    <td class="manu">MAN</td>
+                                    <td class="model">12m NLC</td>
+                                    <td class="type">12m Single Deck</td>
+                                    <td class="cat">LHD</td>
+                                    <td class="dev">Halycon Media</td>
+                                    <td class="disp">K++</td>
+                                    <td class="livery">Pixel Livery<br>(2 Door)</td>
+                                    <td class="rego">
+                                        Batch 1:<br>
+                                        <span style="font-weight: normal;">
+                                            SG2102P <br>
+                                            SG2103L <br>
+                                            SG2104J <br>
+                                            SG2105G <br>
+                                            SG2106D <br>
+                                            SG2107B <br>
+                                            SG2108Z <br>
+                                            SG2109X <br>
+                                            SG2110R <br>
+                                            SG2111M <br>
+                                            SG2112K <br>
+                                            SG2113H <br>
+                                            SG2114E <br>
+                                            SG2115C <br>
+                                            SG2116A <br>
+                                            SG2117Y <br>
+                                            SG2118U <br>
+                                            SG2119S <br>
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <!-- ----------------------------------------------------------------------------------- -->
+                                <!-- Batch 2_Pixel 2D -->
+                                <tr>
+                                    <td class="manu">MAN</td>
+                                    <td class="model">12m NLC</td>
+                                    <td class="type">12m Single Deck</td>
+                                    <td class="cat">LHD</td>
+                                    <td class="dev">Halycon Media</td>
+                                    <td class="disp">K++</td>
+                                    <td class="livery">Pixel Livery<br>(2 Door)</td>
+                                    <td class="rego">
+                                        Batch 2:<br>
+                                        <span style="font-weight: normal;">
+                                            SMB359B <br>
+                                            SMB360X <br>
+                                            SMB361T <br>
+                                            SMB362R <br>
+                                            SMB363M <br>
+                                            SMB364K <br>
+                                            SMB365H <br>
+                                            SMB366E <br>
+                                            SMB367C <br>
+                                            SMB368A <br>
+                                            SMB369Y <br>
+                                            SMB370S <br>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="tab8" role="tabpanel" aria-labelledby="tab8-tab">
+                    <!-- Table 8 content -->
+                    <div class="table-responsive">
+                        <table id="busTable8" class="fleet-table table">
+                            <thead>
+                                <tr>
+                                    <th onclick="sortTable(0, 'busTable8')">Manufacturer</th>
+                                    <th onclick="sortTable(1, 'busTable8')">Model</th>
+                                    <th onclick="sortTable(2, 'busTable8')">Type</th>
+                                    <th onclick="sortTable(3, 'busTable8')">Category</th>
+                                    <th onclick="sortTable(4, 'busTable8')">Developer</th>
+                                    <th onclick="sortTable(5, 'busTable8')">Display Type (EDS)</th>
+                                    <th onclick="sortTable(6, 'busTable8')">Livery</th>
+                                    <th onclick="sortTable(7, 'busTable8')">Registration Number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- MB eCitaro -->
+                                <!-- ----------------------------------------------------------------------------------- -->
+                                <!-- Batch 1_Pixel -->
+                                <tr>
+                                    <td class="manu">MB</td>
+                                    <td class="model">eCitaro</td>
+                                    <td class="type">12m Single Deck</td>
+                                    <td class="cat">LHD</td>
+                                    <td class="dev">Aerosoft/Darius Bode</td>
+                                    <td class="disp">K++</td>
+                                    <td class="livery">Lush Green Livery<br>(2 Door)</td>
+                                    <td class="rego">
+                                        Batch 1:<br>
+                                        <span style="font-weight: normal;">
+                                            SG3090H <br>
+                                            SG3091E <br>
+                                            SG3092C <br>
+                                            SG3093A <br>
+                                            SG3094Y <br>
+                                            SG3095U <br>
+                                            SG3096S <br>
+                                            SG3097P <br>
+                                            SG3098L <br>
+                                            SG3099J <br>
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <!-- ----------------------------------------------------------------------------------- -->
+                                <!-- Batch 2_Pixel -->
+                                <tr>
+                                    <td class="manu">MB</td>
+                                    <td class="model">eCitaro</td>
+                                    <td class="type">12m Single Deck</td>
+                                    <td class="cat">LHD</td>
+                                    <td class="dev">Aerosoft/Darius Bode</td>
+                                    <td class="disp">K++</td>
+                                    <td class="livery">Lush Green Livery<br>(2 Door)</td>
+                                    <td class="rego">
+                                        Batch 2:<br>
+                                        <span style="font-weight: normal;">
+                                            SG3050Z <br>
+                                            SG3051X <br>
+                                            SG3052T <br>
+                                            SG3053R <br>
+                                            SG3054M <br>
+                                            SG3055K <br>
+                                            SG3056H <br>
+                                            SG3057E <br>
+                                            SG3058C <br>
+                                            SG3059A <br>
+                                            SG3060U <br>
+                                            SG3061S <br>
+                                            SG3062P <br>
+                                            SG3063L <br>
+                                            SG3064J <br>
+                                            SG3065G <br>
+                                            SG3066D <br>
+                                            SG3067B <br>
+                                            SG3068Z <br>
+                                            SG3069X <br>
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <!-- ----------------------------------------------------------------------------------- -->
+                                <!-- Batch 3_Pixel -->
+                                <tr>
+                                    <td class="manu">MB</td>
+                                    <td class="model">eCitaro</td>
+                                    <td class="type">12m Single Deck</td>
+                                    <td class="cat">LHD</td>
+                                    <td class="dev">Aerosoft/Darius Bode</td>
+                                    <td class="disp">K++</td>
+                                    <td class="livery">Lush Green Livery<br>(3 Door)</td>
+                                    <td class="rego">
+                                        Batch 3:<br>
+                                        <span style="font-weight: normal;">
+                                            SG3237C <br>
+                                            SG3250M <br>
+                                            SG3251K <br>
+                                            SG3252H <br>
+                                            SG3253E <br>
+                                            SG3254C <br>
+                                            SG3255A <br>
+                                            SG3256Y <br>
+                                            SG3257U <br>
+                                            SG3258S <br>
+                                            SG3259P <br>
+                                            SG3260J <br>
+                                            SG3261G <br>
+                                            SG3262D <br>
+                                            SG3263B <br>
+                                            SG3264Z <br>
+                                            SG3265X <br>
+                                            SG3266T <br>
+                                            SG3267R <br>
+                                            SG3268M <br>
+                                            SG3269K <br>
+                                            SG3270E <br>
+                                            SG3271C <br>
+                                            SG3272A <br>
+                                            SG3273Y <br>
+                                            SG3274U <br>
+                                            SG3275S <br>
+                                            SG3276P <br>
+                                            SG3288E <br>
+                                            SG3289C <br>
+                                            SG3290Y <br>
+                                            SG3291U <br>
+                                            SG3292S <br>
+                                            SG3293P <br>
+                                            SG3294L <br>
+                                            SG3295J <br>
+                                            SG3296G <br>
+                                            SG3297D <br>
+                                            SG3298B <br>
+                                            SG3299Z <br>
+                                            SG3300C <br>
+                                            SG3301A <br>
+                                            SG3302Y <br>
+                                            SG3303U <br>
+                                            SG3304S <br>
+                                            SG3305P <br>
+                                            SG3306L <br>
+                                            SG3307J <br>
+                                            SG3308G <br>
+                                            SG3309D <br>
+                                            SG3310Z <br>
+                                            SG3311X <br>
+                                            SG3312T <br>
+                                            SG3313R <br>
+                                            SG3314M <br>
+                                            SG3315K <br>
+                                            SG3316H <br>
+                                            SG3317E <br>
+                                            SG3318C <br>
+                                            SG3319A <br>
+                                            SG3320U <br>
+                                            SG3321S <br>
+                                            SG3322P <br>
+                                            SG3323L <br>
+                                            SG3324J <br>
+                                            SG3325G <br>
+                                            SG3326D <br>
+                                            SG3327B <br>
+                                            SG3328Z <br>
+                                            SG3329X <br>
+                                            SG3330R <br>
+                                            SG3331M <br>
+                                            SG3332K <br>
+                                            SG3333H <br>
+                                            SG3334E <br>
+                                            SG3335C <br>
+                                            SG3336A <br>
+                                            SG3337Y <br>
+                                            SG3338U <br>
+                                            SG3339S <br>
+                                            SG3340L <br>
+                                            SG3341J <br>
+                                            SG3342G <br>
+                                            SG3343D <br>
+                                            SG3344B <br>
+                                            SG3345Z <br>
+                                            SG3346X <br>
+                                            SG3347T <br>
+                                            SG3348R <br>
+                                            SG3349M <br>
+                                            SG3350H <br>
+                                            SG3351E <br>
+                                            SG3352C <br>
+                                            SG3353A <br>
+                                            SG3354Y <br>
+                                            SG3355U <br>
+                                            SG3356S <br>
+                                            SG3357P <br>
+                                            SG3358L <br>
+                                            SG3359J <br>
+                                            SG3360D <br>
+                                            SG3361B <br>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="tab9" role="tabpanel" aria-labelledby="tab9-tab">
+                    <!-- Table 9 content -->
+                    <div class="table-responsive">
+                        <table id="busTable9" class="fleet-table table">
+                            <thead>
+                                <tr>
+                                    <th onclick="sortTable(0, 'busTable9')">Manufacturer</th>
+                                    <th onclick="sortTable(1, 'busTable9')">Model</th>
+                                    <th onclick="sortTable(2, 'busTable9')">Type</th>
+                                    <th onclick="sortTable(3, 'busTable9')">Category</th>
+                                    <th onclick="sortTable(4, 'busTable9')">Developer</th>
+                                    <th onclick="sortTable(5, 'busTable9')">Display Type (EDS)</th>
+                                    <th onclick="sortTable(6, 'busTable9')">Livery</th>
+                                    <th onclick="sortTable(7, 'busTable9')">Registration Number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Solaris Urbino 12 Electric -->
+                                <!-- ----------------------------------------------------------------------------------- -->
+                                <!-- Batch 1_Lush Green -->
+                                <tr>
+                                    <td class="manu">Solaris</td>
+                                    <td class="model">Urbino 12 FL Electric</td>
+                                    <td class="type">12m Single Deck</td>
+                                    <td class="cat">LHD</td>
+                                    <td class="dev">IWO</td>
+                                    <td class="disp">K++</td>
+                                    <td class="livery">Lush Green Livery<br>(3 Door)</td>
+                                    <td class="rego">
+                                        Batch 1:<br>
+                                        <span style="font-weight: normal;">
+                                            SG3456L <br>
+                                            SG3457J <br>
+                                            SG3459D <br>
+                                            SG3460Z <br>
+                                            ---Pending Registration---- <br>
+                                            SG3461X <br>
+                                            SG3462T <br>
+                                            SG3463R <br>
+                                            SG3464M <br>
+                                            SG3465K <br>
+                                            SG3466H <br>
+                                            SG3467E <br>
+                                            SG3468C <br>
+                                            SG3469A <br>
+                                            SG3470U <br>
+                                            SG3471S <br>
+                                            SG3472P <br>
+                                            SG3473L <br>
+                                            SG3474J <br>
+                                            SG3475G <br>
+                                            SG3476D <br>
+                                            SG3484E <br>
+                                            SG3485C <br>
+                                            SG3486A <br>
+                                            SG3487Y <br>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Copywrite Text -->
-        <div class="copywrite-text">
-          <p>&copy;
-            <script>document.write(new Date().getFullYear());</script> Illustrations belong to SMRT Corp Ltd
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <script type="text/javascript" id="cookiebanner" src="../js/cookies-banner.js" data-position="bottom"
-    data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
-    data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
+
+    <script type="text/javascript" id="cookiebanner" src="../js/cookies-banner.js" data-position="bottom"
+        data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
+        data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
+        </script>
+
+    <script src="../js/mob-navtabs.js"></script>
+
+    <script src="../js/theme-subPages.js"></script>
+
+    <script src="../js/jquery.min.js"></script>
+
+    <script src="../js/popper.min.js"></script>
+
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/pw.bundle.js"></script>
+
+    <script src="../js/default-assets/active.js"></script>
+
+    <script src="../js/dstabs.js"></script>
+
+    <script>
+        // Handle tab navigation from scrollable tabs
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabLinks = document.querySelectorAll('.scrollable-tabs-container a');
+
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const tabId = this.getAttribute('href').substring(1); // Remove the # from href
+
+                    // Hide all tab panes
+                    const tabPanes = document.querySelectorAll('.tab-pane');
+                    tabPanes.forEach(pane => {
+                        pane.classList.remove('show', 'active');
+                    });
+
+                    // Show the selected tab
+                    const selectedTab = document.getElementById(tabId);
+                    if (selectedTab) {
+                        selectedTab.classList.add('show', 'active');
+
+                        // Scroll to the tab content
+                        selectedTab.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
     </script>
 
-  <script src="../js/jquery.min.js"></script>
-
-  <script src="../js/popper.min.js"></script>
-
-  <script src="../js/bootstrap.min.js"></script>
-
-  <script src="../js/pw.bundle.js"></script>
-
-  <script src="../js/default-assets/active.js"></script>
-
-  <script src="../js/swiper-bundle.min.js"></script>
-
-  <script src="../js/glightbox.min.js"></script>
-
-  <script src="../js/isotope.pkgd.min.js"></script>
-
-  <script src="../js/portfolio-comp.js"></script>
-
-  <script src="../js/copy-to-clipboard.js"></script>
-
-  <script src="../js/preloader.js"></script>
-
-  <!-- Script for Indiv Page - Modes -->
-  <script>
-    /* Dark Mode Functionality for Individual Pages */
-
-    // Check localStorage for dark mode preference
-    if (localStorage.getItem('dark-mode') === 'enabled') {
-      document.body.classList.add('dark-mode');
-      updateThemeIcon('dark');
-    } else {
-      updateThemeIcon('light');
-    }
-
-    const toggleButton = document.getElementById('dark-mode-toggle');
-    toggleButton.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      // Save the preference in localStorage
-      if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('dark-mode', 'enabled');
-        updateThemeIcon('dark');
-      } else {
-        localStorage.setItem('dark-mode', 'disabled');
-        updateThemeIcon('light');
-      }
-    });
-
-    // Function to update the theme icon with animation
-    function updateThemeIcon(theme) {
-      const themeIcon = document.getElementById('theme-icon');
-
-      // Add animation class
-      themeIcon.classList.add('animate');
-
-      // Update the icon based on the theme
-      if (theme === 'dark') {
-        themeIcon.classList.remove('fa-sun-bright');
-        themeIcon.classList.add('fa-moon-stars');
-      } else {
-        themeIcon.classList.remove('fa-moon-stars');
-        themeIcon.classList.add('fa-sun-bright');
-      }
-
-      // Remove the animation class after the animation ends
-      setTimeout(() => {
-        themeIcon.classList.remove('animate');
-      }, 300); // Match the duration of the CSS transition
-    }
-
-  </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // select collapsible header buttons that target tabs
-      const filterBtns = document.querySelectorAll('#portfolioFilter .portfolio-filter .btn[data-bs-target]');
-
-      function activatePane(targetSelector) {
-        const pane = document.querySelector(targetSelector);
-        if (!pane) return;
-
-        // deactivate current active pane(s)
-        document.querySelectorAll('.tab-content .tab-pane.show.active').forEach(function (p) {
-          p.classList.remove('show', 'active');
-          p.setAttribute('aria-hidden', 'true');
-        });
-
-        // activate requested pane
-        pane.classList.add('show', 'active');
-        pane.setAttribute('aria-hidden', 'false');
-
-        // update any nav tab triggers (if present) to reflect active state
-        document.querySelectorAll('.nav-tabs .nav-link').forEach(function (link) {
-          const linkTarget = link.getAttribute('data-bs-target') || link.getAttribute('href');
-          const isActive = linkTarget === targetSelector;
-          link.classList.toggle('active', isActive);
-          link.setAttribute('aria-selected', isActive ? 'true' : 'false');
-        });
-      }
-
-      filterBtns.forEach(function (btn) {
-        btn.addEventListener('click', function (e) {
-          e.preventDefault(); // stop Bootstrap from trying any internal handler
-          const target = btn.getAttribute('data-bs-target');
-          if (!target) return;
-
-          // mark clicked filter button active for visual feedback
-          filterBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-
-          // show the pane
-          activatePane(target);
-
-          // optionally scroll to content
-          //const container = document.querySelector('.tab-content');
-          //if (container) container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, false);
-      });
-    });
-  </script>
-
-  <script>
-    function sortTable(n, tableId) {
-      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-      table = document.getElementById(tableId);
-      switching = true;
-      dir = "asc";
-      while (switching) {
-        switching = false;
-        rows = table.rows;
-        for (i = 1; i < (rows.length - 1); i++) {
-          shouldSwitch = false;
-          x = rows[i].getElementsByTagName("TD")[n];
-          y = rows[i + 1].getElementsByTagName("TD")[n];
-          if (dir == "asc") {
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-              shouldSwitch = true;
-              break;
-            }
-          } else if (dir == "desc") {
-            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-              shouldSwitch = true;
-              break;
-            }
-          }
-        }
-        if (shouldSwitch) {
-          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-          switching = true;
-          switchcount++;
-        } else {
-          if (switchcount == 0 && dir == "asc") {
-            dir = "desc";
-            switching = true;
-          }
-        }
-      }
-    }
-  </script>
 
 </body>
 

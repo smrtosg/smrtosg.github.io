@@ -1,0 +1,55 @@
+{
+  "harbourvale-line": {
+    "title": "Harbourvale Line",
+    "versions": {
+      "version3": {
+        "version": "3.5",
+        "date": "07/03/26",
+        "label": "pre-release",
+        "changes": [
+          "- Updated PSD signages (still ongoing)",
+          "- New Re-recorded Announcement PA sequence"
+        ],
+        "downloadUrl": [
+          "https://github.com/smrtosg/main/releases/download/v2508.1000/Railway-HBL.7z"
+        ]
+      }
+    }
+  },
+  "hillgrove-town": {
+    "title": "Hillgrove Town",
+    "versions": {
+      "version2": {
+        "version": "4.0",
+        "date": "18/08/2025",
+        "label": "pre-release",
+        "changes": [
+          "- Introduction of Hillgrove Region Line BRT",
+          "- New Adboards by Stellar Ace (selected Bus stops)."
+        ],
+        "downloads": [
+          {
+            "name": "Map",
+            "url": "https://github.com/smrtosg/main/releases/download/v2508.1001/Map_HT.7z"
+          },
+          {
+            "name": "Fonts",
+            "url": "https://smrtosg.github.io/releases/omsi-developer-files.html"
+          },
+          {
+            "name": "Sceneryobjects",
+            "url": "https://github.com/smrtosg/main/releases/download/v2508.1001/Sceneryobjects_HT.7z"
+          },
+          {
+            "name": "Splines",
+            "url": "https://github.com/smrtosg/main/releases/download/v2508.1001/Splines_HT.7z"
+          },
+          {
+            "name": "Vehicles (For Announcements/EDS)",
+            "url": "https://github.com/smrtosg/main/releases/download/v2508.1001/Vehicles_HT.7z"
+          }
+        ]
+      }
+    }
+  }
+}

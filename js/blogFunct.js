@@ -1,71 +1,70 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Initialize Isotope
-    const portfolioContainer = document.querySelector(".pw-portfolio");
-    const iso = new Isotope(portfolioContainer, {
-        itemSelector: ".single_gallery_item",
-        layoutMode: "fitRows",
-        getSortData: {
-            date: function (itemElem) {
-                // Get the data-date attribute and convert to a timestamp for accurate sorting
-                const dateStr = itemElem.getAttribute("data-date");
-                return dateStr ? Date.parse(dateStr) : 0;
-            },
-            year: "[data-year] parseInt",
-            title: ".hover-content-blog h4",
-        },
-    });
+    const filterButtons = document.querySelectorAll(".btn-filter-blog");
+    const sortDropdown = document.getElementById("sort-options");
+    const cardsContainer = document.querySelector(".wbnrfz-grid");
+    const cards = Array.from(cardsContainer.querySelectorAll(".card"));
 
     // Filter functionality
-    const filterButtons = document.querySelectorAll(".btn-filter-blog");
-    filterButtons.forEach((button) => {
-        button.addEventListener("click", function () {
-            filterButtons.forEach((btn) => btn.classList.remove("active"));
+    const filterTitle = document.getElementById("filter-title");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Remove active class from all buttons and add to the clicked one
+            filterButtons.forEach(btn => btn.classList.remove("active"));
             this.classList.add("active");
-            const filterValue = this.getAttribute("data-filter");
-            iso.arrange({ filter: filterValue });
+
+            // Update the page title to match the active filter
+            if (filterTitle) {
+                filterTitle.textContent = this.textContent.trim();
+            }
+
+            const filter = this.getAttribute("data-filter");
+
+            let visibleCards = 0;
+            cards.forEach(card => {
+                if (filter === "*" || card.classList.contains(filter.substring(1))) {
+                    card.style.display = "block";
+                    card.classList.remove("fade-out");
+                    card.classList.add("fade-in");
+                    visibleCards++;
+                } else {
+                    card.classList.remove("fade-in");
+                    card.classList.add("fade-out");
+                    setTimeout(() => {
+                        card.style.display = "none";
+                    }, 300); // Match the animation duration
+                }
+            });
+
+            // Adjust container size dynamically based on visible cards
+            if (visibleCards === 2) {
+                cardsContainer.classList.add("two-cards");
+            } else {
+                cardsContainer.classList.remove("two-cards");
+            }
         });
     });
 
     // Sort functionality
-    const sortSelect = document.getElementById("sort-options");
-    if (sortSelect) {
-        sortSelect.value = ""; // Show blank on load
+    sortDropdown.addEventListener("change", function () {
+        const sortValue = this.value;
 
-        sortSelect.addEventListener("change", function () {
-            const sortValue = this.value;
-
+        const sortedCards = [...cards].sort((a, b) => {
             if (sortValue === "newest") {
-                iso.arrange({ sortBy: "date", sortAscending: false }); // Sort by date descending
+                return new Date(b.dataset.date) - new Date(a.dataset.date);
             } else if (sortValue === "oldest") {
-                iso.arrange({ sortBy: "date", sortAscending: true }); // Sort by date ascending
+                return new Date(a.dataset.date) - new Date(b.dataset.date);
             } else if (sortValue === "alphabetical") {
-                iso.arrange({ sortBy: "title", sortAscending: true }); // Sort by title alphabetically
-            } else {
-                iso.arrange({ sortBy: "original-order" }); // Default order
+                const titleA = a.querySelector("h3").textContent.toLowerCase();
+                const titleB = b.querySelector("h3").textContent.toLowerCase();
+                return titleA.localeCompare(titleB);
             }
         });
-    }
 
-    // Recalculate Isotope layout after images load
-    imagesLoaded(portfolioContainer, function () {
-        iso.arrange();
-    });
-
-    // Recalculate Isotope layout after window resize
-    $(window).on('resize', function () {
-        iso.arrange();
-    });
-});
-
-//Dynamic Title Update
-document.addEventListener("DOMContentLoaded", function () {
-    const filterButtons = document.querySelectorAll(".btn-filter-blog");
-    const titleElement = document.getElementById("filter-title");
-
-    filterButtons.forEach((button) => {
-        button.addEventListener("click", function () {
-            const filterText = this.textContent.trim();
-            titleElement.textContent = filterText;
-        });
+        // Clear and re-append sorted cards
+        cardsContainer.innerHTML = "";
+        sortedCards.forEach(card => cardsContainer.appendChild(card));
     });
 });

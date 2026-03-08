@@ -8,21 +8,24 @@
   <meta name="google-site-verification" content="57TuruPNu5wqSSia_cUehl5t9Gh1AbxrHNPcMiFx-aQ" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Circle Line | SMRTO</title>
+  <title>Circle Line | OpenBVE</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <meta property="og:image" content="https://i.imgur.com/CmtdJvS.png" />
+  <meta property="og:image" content="https://i.imgur.com/i8n9KYs.png" />
 
   <link rel="icon" href="../img/core-img/favicon.png">
 
-  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.2.0/css/all.css" />
 
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style-mobNav.css">
   <link rel="stylesheet" href="../css/style-breakpoints.css">
   <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="../info/css/lt-ccl.css">
 
+  <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css'>
   <link rel="stylesheet" href="../css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="../css/glightbox.min.css">
+  <link rel="stylesheet" href="../css/portfolio-img.min.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN76281P3Q"></script>
@@ -35,513 +38,619 @@
   </script>
 </head>
 
-<body>
+<style>
+  #cv-tdc {
+    background-image: url('../img/releases-ss/ccl1.png');
+    height: 75vh;
+    position: relative;
+  }
 
-  <!-- Preloader Section -->
-  <div id="preloader">
-    <div class="loader"></div>
-    <p id="preloader-text">Just a moment...</p>
+  #cv-tdc::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  #changesText,
+  .version-details p {
+    text-align: left !important;
+  }
+
+  .port-summary {
+    min-height: 130px;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<body>
+  <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
+  <div class="breadcrumb-fixed-placeholder">
+    <nav aria-label="breadcrumb" style="margin-bottom:0;">
+      <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="../index.html">
+            <i class="fa-regular fa-house"></i>
+          </a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="../openbve.html"><i class="fa-regular fa-train"></i>
+          </a>
+        </li>
+      </ol>
+    </nav>
   </div>
 
+  <!-- Navigation Bar -->
+  <nav class="navbar-container">
+    <div class="navbar">
+      <!-- Logo -->
+      <a href="../index.html"><img src="../img/core-img/logo.png" alt="logo" class="logo"></a>
+
+      <!-- Navigation Links -->
+      <ul class="navbar-nav" id="navbarNav">
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link">
+            <i class="fa-sharp fa-regular fa-house"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../openbve.html" class="nav-link active">
+            <i class="fa-regular fa-train"></i>
+            <span>OpenBVE</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../omsi2.html" class="nav-link">
+            <i class="fa-regular fa-bus"></i>
+            <span>OMSI 2</span>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a href="../menu.html" class="nav-link">
+            <i class="fa-regular fa-bars"></i>
+            <span>Menu</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav class="mobile-bottom-nav">
+    <ul>
+      <li>
+        <a href="../index.html">
+          <span class="icon">
+            <i class="fa-sharp fa-regular fa-house"></i>
+          </span>
+          <span class="label">Home</span>
+        </a>
+      </li>
+      <li class="active">
+        <a href="../openbve.html">
+          <span class="icon">
+            <i class="fa-regular fa-train"></i>
+          </span>
+          <span class="label">OpenBVE</span>
+        </a>
+      </li>
+      <li>
+        <a href="../omsi2.html">
+          <span class="icon">
+            <i class="fa-regular fa-bus"></i>
+          </span>
+          <span class="label">OMSI 2</span>
+        </a>
+      </li>
+      <li>
+        <a href="../menu.html">
+          <span class="icon">
+            <i class="fa-regular fa-bars"></i>
+          </span>
+          <span class="label">Menu</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
 
-  <header>
-    <a href="../index.html"><img src="../img/core-img/logo.png" alt="logo" class="logo" /></a>
-
-    <input type="checkbox" id="check" />
-    <label for="check" class="icons">
-      <i class="fa-solid fa-bars" id="menu-icon"></i>
-      <i class="fa-solid fa-xmark" id="close-icon"></i>
-    </label>
-
-    <nav class="navbar navbar-mobile">
-      <a href="../index.html" class="nav-item">Home</a>
-      <a href="../about.html" class="nav-item">About</a>
-      <a href="../openbve.html" class="nav-item active">OpenBVE</a>
-      <a href="../omsi-2.html" class="nav-item">OMSI 2</a>
-      <a href="../blog.html" class="nav-item">Blog</a>
-      <a href="#" class="nav-item">
-        <button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!">
-          <i class="fa-solid fa-moon-stars" id="theme-icon"></i>
-        </button>
-      </a>
-    </nav>
-  </header>
-
-  <section class="wbnrfz-summ breadcrumb-area-eicw-cover bg-img parallax" id="cv-tdc"
-    style="background-image: url(../img/releases-ss/ccl1.png); height: 100vh;">
-    <div class="wbnrfz_details_blog">
-      <div class="container">
-        <div class="portfolio-controls d-flex justify-content-between align-items-center">
-          <!-- Filter Buttons -->
-          <div class="portfolio-filter mt-3">
-            <div class="col-lg-12">
-              <div class="main-title">
-                <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../index.html#maps-routes"> Info</a>
-                    </li>
-                    <li class="breadcrumb-item active"><a href="#">Routes
-                      </a>
-                    </li>
-                  </ol>
-                </nav>
-                <h1 class="brc">Circle Line</h1>
-              </div>
+  <!------------------------------------------------------------------------ Start of Sections ------------------------------------------------------------------------>
+  <!-- Title/Breadcrumbs -->
+  <section class="about-me-sum clearfix">
+    <div class="wbnrfz_eicw">
+      <div class="page-header-section">
+        <div class="container-xxl container-mobile container-mobile-header">
+          <div class="breadcrumb-wrapper">
+            <nav aria-label="breadcrumb" class="breadcrumb-desktop" style="display:none;">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="fa-regular fa-house"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="../openbve.html"><i class="fa-regular fa-train"></i>
+                  </a>
+                </li>
+              </ol>
+            </nav>
+            <div class="page-title-wrapper">
+              <h1 class="page-title-single">Circle Line</h1>
             </div>
-          </div>
-          <!-- Collapsible Header -->
-          <div class="collapsible-header" data-bs-toggle="collapse" data-bs-target="#portfolioFilter"
-            aria-expanded="false" aria-controls="portfolioFilter" style="cursor: pointer;" title="More Details">
-            <i class="fa-solid fa-chevron-down nav-chev"></i>
           </div>
         </div>
-        <!-- Collapsible Content -->
-        <div id="portfolioFilter" class="collapse">
-          <div class="details_catagory_wrap">
-            <div class="col-sm-4 single_catagory ">
-              <span>Developers</span>
-            <h4><i class="fa-solid fa-circle-user"></i> SMB142J Productions</h4>
-              <h4><i class="fa-solid fa-circle-user"></i> SMRTO Studios</h4>
-            </div>
-            <div class="col-sm-4 single_catagory">
-              <span>Owned By</span>
-              <img class="logo-operator" src="../img/core-img/wcrt.png" id="ops-wcrto" alt="wcrto" width="170px">
-            </div>
-            <div class="col-sm-4 single_catagory">
-              <span>Share Project</span>
-              <div class="social_links">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://smrtosg.github.io/main/info/circle-line.html"
-                  title="Facebook">
-                  <i class="fa-brands fa-facebook"></i> </a>
-                <a href="https://x.com/intent/post?url=https://smrtosg.github.io/main/info/circle-line.html&text=Circle Line"
-                  title="X (Twitter)">
-                  <i class="fa-brands fa-youtube"></i></a>
-                <a href="#" class="clipboard" onclick="copyToClipboard()" title="Copy Link"><i
-                    class="fa-solid fa-link"></i>
-                  <p class="clipboard-copied" style="font-size: 12px;"></p>
-                </a>
-              </div>
-            </div>
-          </div>
+
+      </div>
+    </div>
+    <hr>
+    </div>
+
+    </div>
+
+  </section>
+
+  <!-- Cover Header -->
+  <section class="breadcrumb-area-eicw-cover bg-img bg-overlay" id="cv-tdc">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
         </div>
       </div>
     </div>
-    <div style="background-color: #FC9B24; width: 100%; height: 10px;"></div>
   </section>
 
-
-
+  <!-- Details/Contents Section -->
   <section class="about-me-summ clearfix">
-    <div class="wbnrfz_details_section wow fadeIn" data-wow-delay="100ms">
+    <div class="wbnrfz_details_section wow fadeIn">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-12">
-            <div class="details_info">
-              <div class="row justify-content-center">
-                <div class="col-lg-12">
-                  <div class="info justify-content-center">
-                    <p style="text-align: center; padding-bottom: 3em; padding-top: 3em;">The Circle Line is one of the few
-                      train lines in Singapore. The route is made by SMB142J Productions. Upgrades are done in-house by SMRTO
-                      Studios. Due to the Terms of Use from the original project, the modified version will not be
-                      released.</p>
+            <!-- Summary -->
+            <div class="container container-xxl container-mobile">
+              <div class="row">
+                <div class="col-md-6 col-lg-4 box-indiv">
+                  <div class="port-summary port-cat text-center mb-80  ">
+                    <div class="summ-icon">
+                      <i class="fa-regular fa-calendar"></i>
+                    </div>
+                    <h3 style="font-size: 18px; font-weight: bolder;">Developer</h3>
+                    <h4 style="font-size: 13px;">SMB142J Productions<br>SMRTO Studios</h4>
                   </div>
                 </div>
+
+                <div class="col-md-6 col-lg-4 box-indiv">
+                  <div class="port-summary port-year text-center mb-80">
+                    <div class="summ-icon">
+                      <i class="fa-regular fa-train-subway"></i>
+                    </div>
+                    <h3 style="font-size: 18px; font-weight: bolder;">Operated By</h3>
+                    <img class="logo-operator" src="../img/core-img/stl.png" id="ops-stl" alt="smrtt" width="150px">
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 box-indiv">
+                  <div class="port-summary port-year text-center mb-80">
+                    <div class="summ-icon">
+                      <i class="fa-regular fa-share-nodes"></i>
+                    </div>
+                    <h3 style="font-size: 18px; font-weight: bolder;">Share Project</h3>
+                    <div class="social_links">
+                      <a href="https://www.facebook.com/sharer/sharer.php?u=https://smrtosg.github.io/main/releases/circle-line.html"
+                        title="Facebook">
+                        <i class="fa-brands fa-facebook"></i> </a>
+                      <a href="https://x.com/intent/post?url=https://smrtosg.github.io/main/releases/circle-line.html&text=Circle Line"
+                        title="X (Twitter)">
+                        <i class="fa-brands fa-x-twitter"></i></a>
+                      <a href="#" class="clipboard" onclick="copyToClipboard(this); return false;" title="Copy Link"><i
+                          class="fa-solid fa-link-horizontal"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
+
           </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Line Diagram Section -->
+  <section class="details-section">
+    <div class="container container-xxl container-mobile">
+      <div class="line-content-wrapper">
+
+        <!-- Line Description Box -->
+        <div class="line-description">
+          <p>The Circle Line is one of the few train lines in Singapore. The route is made by SMB142J Productions.
+            Upgrades are done in-house by SMRTO Studios. Due to the Terms of Use from the original project, the modified
+            version will not be released.
+          </p>
+
         </div>
 
-
-        <div class="banner text-center wow fadeInUp" data-wow-delay="150ms">
-          <a href="../img/releases-ss/ccl2.png" class="portfolio-img" id="ccl2"><img src="../img/releases-ss/ccl2.png"
-              class="img-fluid" id="ccl2-img" alt="ccl2-img"></a>
-        </div>
-
-        <div class="details_single_img wow fadeInUp" data-wow-delay="150ms">
-          <div class="row">
-            <div class="col-lg-6 col-md-6">
-              <div class="thumb">
-                <a href="../img/releases-ss/ccl1.png" class="portfolio-img"><img src="../img/releases-ss/ccl1.png"
-                    class="img-fluid" alt="ccl-1"></a>
+        <!-- Line Diagram -->
+        <div class="line-diagram">
+          <div class="line-container">
+            <!-- CC 1 Dhoby Ghaut -->
+            <div class="station">
+              <div class="station-dot"></div>
+              <div class="station-content">
+                <div class="station-codes">
+                  <span class="station-code">CC 1</span>
+                  <span class="interchange-badge mrt-nsl">NS 24</span>
+                  <span class="interchange-badge mrt-nel">NE 6</span>
+                </div>
+                <div class="station-name">Dhoby Ghaut</div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6">
-              <div class="thumb">
-                <a href="../img/releases-ss/ccl3.png" class="portfolio-img"><img src="../img/releases-ss/ccl3.png"
-                    class="img-fluid" alt="ccl-3"></a>
+
+            <!-- CC 2 Bras Basah -->
+            <div class="station">
+              <div class="station-dot"></div>
+              <div class="station-content">
+                <div class="station-codes station-connector">
+                  <span class="station-code">CC 2</span>
+                </div>
+                <div class="station-name">Bras Basah</div>
               </div>
+            </div>
+
+            <!-- CC 3 Esplanade -->
+            <div class="station">
+              <div class="station-dot"></div>
+              <div class="station-content">
+                <div class="station-codes">
+                  <span class="station-code">CC 3</span>
+                </div>
+                <div class="station-name">Esplanade</div>
+              </div>
+            </div>
+
+            <!-- CC 4 Promenade -->
+            <div class="station">
+              <div class="station-dot"></div>
+              <div class="station-content">
+                <div class="station-codes">
+                  <span class="station-code">CC 4</span>
+                  <span class="interchange-badge mrt-dtl">DT 15</span>
+                </div>
+                <div class="station-name">Promenade</div>
+              </div>
+            </div>
+
+            <!-- CC 5 Nicoll Highway -->
+            <div class="station">
+              <div class="station-dot"></div>
+              <div class="station-content">
+                <div class="station-codes">
+                  <span class="station-code">CC 5</span>
+                </div>
+                <div class="station-name">Nicoll Highway</div>
+              </div>
+            </div>
+
+            <!-- CC 6 Stadium -->
+            <div class="station">
+              <div class="station-dot"></div>
+              <div class="station-content">
+                <div class="station-codes">
+                  <span class="station-code">CC 6</span>
+                </div>
+                <div class="station-name">Stadium</div>
+              </div>
+            </div>
+
+            <!-- CC 7 Eunos -->
+            <div class="station">
+              <div class="station-dot"></div>
+              <div class="station-content">
+                <div class="station-codes">
+                  <span class="station-code">CC 7</span>
+                </div>
+                <div class="station-name">Mountbatten</div>
+              </div>
+            </div>
+
+            <!-- CC 8 Dakota -->
+            <div class="station">
+              <div class="station-dot"></div>
+              <div class="station-content">
+                <div class="station-codes">
+                  <span class="station-code">CC 8</span>
+                </div>
+                <div class="station-name">Dakota</div>
+              </div>
+            </div>
+
+
+            <!-- CC 9 Paya Lebar -->
+            <div id="hidden-stations">
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 9</span>
+                    <span class="interchange-badge mrt-ewl">EW 8</span>
+                  </div>
+                  <div class="station-name">Paya Lebar</div>
+                </div>
+              </div>
+
+              <!-- CC 10 MacPherson -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 10</span>
+                    <span class="interchange-badge mrt-dtl">DT 26</span>
+                  </div>
+                  <div class="station-name">MacPherson</div>
+                </div>
+              </div>
+
+              <!-- CC 11 Tai Seng -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 11</span>
+                  </div>
+                  <div class="station-name">Tai Seng</div>
+                </div>
+              </div>
+
+              <!-- CC 12 Bartley -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 12</span>
+                  </div>
+                  <div class="station-name">Bartley</div>
+                </div>
+              </div>
+
+              <!-- CC 13 Serangoon -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 13</span>
+                    <span class="interchange-badge mrt-nel">NE 12</span>
+                  </div>
+                  <div class="station-name">Serangoon</div>
+                </div>
+              </div>
+
+              <!-- CC 14 Lorong Chuan -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 14</span>
+                  </div>
+                  <div class="station-name">Lorong Chuan</div>
+                </div>
+              </div>
+
+              <!-- CC 15 Bishan -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 15</span>
+                    <span class="interchange-badge mrt-nsl">NS 17</span>
+                  </div>
+                  <div class="station-name">Bishan</div>
+                </div>
+              </div>
+
+              <!-- CC 16 Marymount -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 16</span>
+                  </div>
+                  <div class="station-name">Marymount</div>
+                </div>
+              </div>
+
+              <!-- CC 17 Caldecott -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 17</span>
+                    <span class="interchange-badge mrt-tel">TE 9</span>
+                  </div>
+                  <div class="station-name">Caldecott</div>
+                </div>
+              </div>
+
+              <!-- CC 19 Botanic Gardens -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 19</span>
+                    <span class="interchange-badge mrt-dtl">DT 9</span>
+                  </div>
+                  <div class="station-name">Queenstown</div>
+                </div>
+              </div>
+
+              <!-- CC 20 Farrer Road -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes station-connector">
+                    <span class="station-code">CC 20</span>
+                  </div>
+                  <div class="station-name">Farrer Road</div>
+                </div>
+              </div>
+
+              <!-- CC 21 Holland Village -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 21</span>
+                  </div>
+                  <div class="station-name">Holland Village</div>
+                </div>
+              </div>
+
+              <!-- EW 22 Buona Vista -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 22</span>
+                    <span class="interchange-badge mrt-ewl">EW 21</span>
+                  </div>
+                  <div class="station-name">Buona Vista</div>
+                </div>
+              </div>
+
+              <!-- CC 23 one-north -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 23</span>
+                  </div>
+                  <div class="station-name">one-north</div>
+                </div>
+              </div>
+
+              <!-- CC 24 Kent Ridge -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 24</span>
+                  </div>
+                  <div class="station-name">Kent Ridge</div>
+                </div>
+              </div>
+
+              <!-- CC 25 Haw Par Villa -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 25</span>
+                  </div>
+                  <div class="station-name">Haw Par Villa</div>
+                </div>
+              </div>
+
+              <!-- CC 26 Pasir Panjang -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 26</span>
+                  </div>
+                  <div class="station-name">Pasir Panjang</div>
+                </div>
+              </div>
+
+              <!-- CC 27 Labrador Park -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 27</span>
+                  </div>
+                  <div class="station-name">Labrador Park</div>
+                </div>
+              </div>
+
+              <!-- CC 28 Telok Blangah -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 28</span>
+                  </div>
+                  <div class="station-name">Telok Blangah</div>
+                </div>
+              </div>
+
+              <!-- CC 29 HarbourFront -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">CC 29</span>
+                    <span class="interchange-badge mrt-nel">NE 1</span>
+                  </div>
+                  <div class="station-name">HarbourFront</div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="show-more-button">
+              <button id="toggleBtn" onclick="toggleStations()">Show More</button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+  </section>
 
-
-    <!-- Operational Info -->
-    <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="300ms">
-      <h3 class="ld-s-title">Operational Info</h3>
-      <table class="info-table table">
-
-        <tbody>
-          <tr class="info-det">
-            <td class="first">Incumbent Operator</td>
-            <td class="second"><img src="../img/core-img/stl.png" id="ops-smrtt" alt="smrt" class="logo"></td>
-          </tr>
-          <tr class="info-det">
-            <td class="first">Train Depot</td>
-            <td class="second">Kim Chuan Train Depot</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Line Diagrams -->
-    <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="300ms">
-      <h3 class="ld-s-title">Line Diagram</h3>
-      <div class="row row-line-diag justify-content-center">
-        <a href="../img/releases-ss/ccl-diag.png" id="line-ccl" class="portfolio-img">
-          <img src="../img/releases-ss/ccl-diag.png" id="line-ccl-img" class="img-fluid" alt="cover-page">
+  <!-- Contents -->
+  <div class="wrapper">
+    <div class="carousel" id="delays-carousel">
+      <div class="carousel-cell">
+        <a href="../img/releases-ss/ccl1.png" class="portfolio-img" data-gallery="carousel" id="ccl1">
+          <img class="img-fluid" src="../img/releases-ss/ccl1.png" alt="ccl1-img" draggable="false" id="ccl1-img">
+        </a>
+      </div>
+      <div class="carousel-cell">
+        <a href="../img/releases-ss/ccl2.png" class="portfolio-img" data-gallery="carousel" id="ccl2">
+          <img class="img-fluid" src="../img/releases-ss/ccl2.png" alt="ccl2-img" draggable="false" id="ccl2-img">
+        </a>
+      </div>
+      <div class="carousel-cell">
+        <a href="../img/releases-ss/ccl3.png" class="portfolio-img" data-gallery="carousel" id="ccl3">
+          <img class="img-fluid" src="../img/releases-ss/ccl3.png" alt="ccl3-img" draggable="false" id="ccl3-img">
         </a>
       </div>
     </div>
-
-    <!-- Stations -->
-    <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="500ms">
-      <h3 class="ld-s-title">Stations</h3>
-      <div class="row justify-content-center">
-
-        <div class="stationBlock">
-          <div class="stationBlockItem">
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #FC9B24; color: #000;">
-                    CC 1
-                  </div>
-                  <div class="station-pill-round" style="background-color: #E22726; color: #FFF;">
-                    NS 24
-                  </div>
-                  <div class="station-pill-round" style="background-color: #8F4199; color: #FFF;">
-                    NE 6
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 123px;">Dhoby Ghaut</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 2
-                </div>
-                <h4 class="stn" style=" width: 110px;">Bras Basah</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 3
-                </div>
-                <h4 class="stn" style=" width: 100px;">Esplanade</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #FC9B24; color: #000;">
-                    CC 4
-                  </div>
-                  <div class="station-pill-round" style="background-color: #005DA8; color: #FFF;">
-                    DT 15
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 106px;">Promenade</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 5
-                </div>
-                <h4 class="stn" style=" width: 140px;">Nicoll Highway</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 6
-                </div>
-                <h4 class="stn" style=" width: 83px;">Stadium</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 7
-                </div>
-                <h4 class="stn" style=" width: 123px;">Mountbatten</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 8
-                </div>
-                <h4 class="stn" style=" width: 75px;">Dakota</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #FC9B24; color: #000;">
-                    CC 9
-                  </div>
-                  <div class="station-pill-round" style="background-color: #34AF65; color: #FFF;">
-                    EW 8
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 105px;">Paya Lebar</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #FC9B24; color: #000;">
-                    CC 10
-                  </div>
-                  <div class="station-pill-round" style="background-color: #005DA8; color: #FFF;">
-                    DT 26
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 118px;">MacPherson</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 11
-                </div>
-                <h4 class="stn" style=" width: 86px;">Tai Seng</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 12
-                </div>
-                <h4 class="stn" style=" width: 73px;">Bartley</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #FC9B24; color: #000;">
-                    CC 13
-                  </div>
-                  <div class="station-pill-round" style="background-color: #8F4199; color: #FFF;">
-                    NE 12
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 103px;">Serangoon</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 14
-                </div>
-                <h4 class="stn" style=" width: 133px;">Lorong Chuan</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #FC9B24; color: #000;">
-                    CC 15
-                  </div>
-                  <div class="station-pill-round" style="background-color: #E22726; color: #FFF;">
-                    NS 17
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 68px;">Bishan</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 16
-                </div>
-                <h4 class="stn" style=" width: 106px;">Marymount</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #FC9B24; color: #000;">
-                    CC 17
-                  </div>
-                  <div class="station-pill-round" style="background-color: #9D5B25; color: #FFF;">
-                    TE 9
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 95px;">Caldecott</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #FC9B24; color: #000;">
-                    CC 19
-                  </div>
-                  <div class="station-pill-round" style="background-color: #005DA8; color: #FFF;">
-                    DT 9
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 156px;">Botanic Gardens</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 20
-                </div>
-                <h4 class="stn" style=" width: 110px;">Farrer Road</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 21
-                </div>
-                <h4 class="stn" style=" width: 133px;">Holland Village</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #FC9B24; color: #000;">
-                    CC 22
-                  </div>
-                  <div class="station-pill-round" style="background-color: #34AF65; color: #FFF;">
-                    EW 21
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 114px;">Buona Vista</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 23
-                </div>
-                <h4 class="stn" style=" width: 99px;">one-north</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 24
-                </div>
-                <h4 class="stn" style=" width: 103px;">Kent Ridge</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 25
-                </div>
-                <h4 class="stn" style=" width: 124px;">Haw Par Villa</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 26
-                </div>
-                <h4 class="stn" style=" width: 118px;">Pasir Panjang</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 27
-                </div>
-                <h4 class="stn" style=" width: 127px;">Labrador Park</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="station-pill-round-single" style="background-color: #FC9B24; color: #000;">
-                  CC 28
-                </div>
-                <h4 class="stn" style=" width: 132px;">Telok Blangah</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #FC9B24; color: #000;">
-                    CC 29
-                  </div>
-                  <div class="station-pill-round" style="background-color: #8F4199; color: #FFF;">
-                    NE 1
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 127px;">HarbourFront</h4>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Rolling Stocks -->
-    <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="700ms">
-      <h3 class="ld-s-title">Rolling Stocks</h3>
-      <div class="row justify-content-center">
-        <table class="info-table table">
-          <tbody>
-            <tr class="info-det">
-              <td class="second">
-                Alstom Metropolis C830<br>
-              </td>
-            </tr>
-            <tr class="info-det">
-              <td class="second">
-                Alstom Metropolis C830C<br>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-  </section>
-
-
-
-  <footer class="footer-area">
-    <div class="container">
-      <div class="footer-content d-flex flex-column align-items-center text-center">
-        <!-- Social Links -->
-        <div class="social-info">
-          <a href="https://www.youtube.com/@SMRTOsg"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-          <a href="https://www.facebook.com/SMRTVRT"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
-        </div>
-        <!-- Copywrite Text -->
-        <div class="copywrite-text">
-          <p>&copy;
-            <script>document.write(new Date().getFullYear());</script> Illustrations belong to SMRT Corp Ltd
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
+  </div>
 
   <script type="text/javascript" id="cookiebanner" src="../js/cookies-banner.js" data-position="bottom"
     data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
     data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
     </script>
+
+  <script src="../js/mob-navtabs.js"></script>
 
   <script src="../js/jquery.min.js"></script>
 
@@ -555,22 +664,49 @@
 
   <script src="../js/swiper-bundle.min.js"></script>
 
-  <script src="../js/glightbox.min.js"></script>
-
   <script src="../js/isotope.pkgd.min.js"></script>
-
-  <script src="../js/portfolio-comp.js"></script>
 
   <script src="../js/copy-to-clipboard.js"></script>
 
-  <script src="../js/preloader.js"></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js'></script>
+
+  <script src="../js/dis.js"></script>
+
+  <script src="../js/dstabs.js"></script>
+
+  <script src="../js/releases-loader.js"></script>
 
   <!-- Script for Indiv Page - Modes -->
   <script>
     /* Dark Mode Functionality for Individual Pages */
 
-    // Check localStorage for dark mode preference
-    if (localStorage.getItem('dark-mode') === 'enabled') {
+    // Check for theme parameter in URL (for cross-domain sync from worksbynrfz.com)
+    (function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const themeParam = urlParams.get('theme');
+      if (themeParam && ['light', 'dark', 'system'].includes(themeParam)) {
+        localStorage.setItem('theme-preference', themeParam);
+      }
+    })();
+
+    // Use window properties if they exist from initial script, otherwise create them
+    if (typeof window._themePreference === 'undefined') {
+      window._themePreference = localStorage.getItem('theme-preference') || 'system';
+    }
+    if (typeof window._prefersDark === 'undefined') {
+      window._prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+
+    // Determine if dark mode should be active
+    function shouldBeDark() {
+      if (window._themePreference === 'dark') return true;
+      if (window._themePreference === 'light') return false;
+      if (window._themePreference === 'system') return window._prefersDark;
+      return window._prefersDark; // Default to system preference
+    }
+
+    // Apply theme on page load
+    if (shouldBeDark()) {
       document.body.classList.add('dark-mode');
       updateThemeIcon('dark');
       updateHrefForDarkMode();
@@ -578,58 +714,161 @@
       updateThemeIcon('light');
     }
 
-    const toggleButton = document.getElementById('dark-mode-toggle');
-    toggleButton.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      // Save the preference in localStorage
-      if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('dark-mode', 'enabled');
-        updateThemeIcon('dark');
-      } else {
-        localStorage.setItem('dark-mode', 'disabled');
-        updateThemeIcon('light');
+    // Listen to theme toggle clicks
+    document.addEventListener('DOMContentLoaded', function () {
+      const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+      const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+
+      function cycleTheme() {
+        const themes = ['light', 'dark', 'system'];
+        const currentTheme = window._themePreference || 'system';
+        const currentIndex = themes.indexOf(currentTheme);
+        const nextTheme = themes[(currentIndex + 1) % themes.length];
+        applyTheme(nextTheme);
       }
-      updateHrefForDarkMode();
+
+      function applyTheme(preference) {
+        localStorage.setItem('theme-preference', preference);
+        window._themePreference = preference;
+
+        if (preference === 'dark') {
+          document.body.classList.add('dark-mode');
+          updateThemeIcon('dark');
+        } else if (preference === 'light') {
+          document.body.classList.remove('dark-mode');
+          updateThemeIcon('light');
+        } else if (preference === 'system') {
+          if (window._prefersDark) {
+            document.body.classList.add('dark-mode');
+            updateThemeIcon('dark');
+          } else {
+            document.body.classList.remove('dark-mode');
+            updateThemeIcon('light');
+          }
+        }
+      }
+
+      if (themeToggleDesktop) {
+        themeToggleDesktop.addEventListener('click', (e) => {
+          e.preventDefault();
+          cycleTheme();
+        });
+      }
+
+      if (themeToggleMobile) {
+        themeToggleMobile.addEventListener('click', (e) => {
+          e.preventDefault();
+          cycleTheme();
+        });
+      }
     });
 
-    // Function to update the theme icon with animation
-    function updateThemeIcon(theme) {
-      const themeIcon = document.getElementById('theme-icon');
+    // Follow system theme changes when set to 'system' preference
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      window._prefersDark = e.matches;
+      if (localStorage.getItem('theme-preference') === 'system' || localStorage.getItem('theme-preference') === null) {
+        if (e.matches) {
+          document.body.classList.add('dark-mode');
+          updateThemeIcon('dark');
+        } else {
+          document.body.classList.remove('dark-mode');
+          updateThemeIcon('light');
+        }
+      }
+    });
 
-      // Add animation class
-      themeIcon.classList.add('animate');
+    // Get both toggle buttons (for backward compatibility with mobile views)
+    const toggleButtonDesktop = document.getElementById('dark-mode-toggle-desktop');
+    const toggleButtonMobile = document.getElementById('dark-mode-toggle-mobile');
+
+    // Function to update the theme icon and text with animation
+    function updateThemeIcon(theme) {
+      const themeIconDesktop = document.getElementById('theme-icon-desktop');
+      const themeIconMobile = document.getElementById('theme-icon-mobile');
+      const themeTextDesktop = document.getElementById('theme-text-desktop');
+      const themeTextMobile = document.getElementById('theme-text-mobile');
+      const preference = window._themePreference || 'system';
+
+      // Add animation class to both icons
+      if (themeIconDesktop) themeIconDesktop.classList.add('animate');
+      if (themeIconMobile) themeIconMobile.classList.add('animate');
 
       // Update the icon based on the theme
       if (theme === 'dark') {
-        themeIcon.classList.remove('fa-sun-bright');
-        themeIcon.classList.add('fa-moon-stars');
+        if (themeIconDesktop) {
+          themeIconDesktop.classList.remove('fa-sun-bright');
+          themeIconDesktop.classList.add('fa-moon-stars');
+        }
+        if (themeIconMobile) {
+          themeIconMobile.classList.remove('fa-sun-bright');
+          themeIconMobile.classList.add('fa-moon-stars');
+        }
       } else {
-        themeIcon.classList.remove('fa-moon-stars');
-        themeIcon.classList.add('fa-sun-bright');
+        if (themeIconDesktop) {
+          themeIconDesktop.classList.remove('fa-moon-stars');
+          themeIconDesktop.classList.add('fa-sun-bright');
+        }
+        if (themeIconMobile) {
+          themeIconMobile.classList.remove('fa-moon-stars');
+          themeIconMobile.classList.add('fa-sun-bright');
+        }
       }
+
+      // Update display text
+      let displayText = 'Display: ';
+      if (preference === 'light') {
+        displayText += 'Light';
+      } else if (preference === 'dark') {
+        displayText += 'Dark';
+      } else if (preference === 'system') {
+        displayText += 'Follow System';
+      }
+
+      if (themeTextDesktop) themeTextDesktop.textContent = displayText;
+      if (themeTextMobile) themeTextMobile.textContent = displayText;
 
       // Remove the animation class after the animation ends
       setTimeout(() => {
-        themeIcon.classList.remove('animate');
+        if (themeIconDesktop) themeIconDesktop.classList.remove('animate');
+        if (themeIconMobile) themeIconMobile.classList.remove('animate');
       }, 300); // Match the duration of the CSS transition
     }
 
+
     function updateHrefForDarkMode() {
       /* Banners */
-      const link = document.getElementById('line-ccl');
-      const img = document.getElementById('line-ccl-img');
+      const tdcPage = document.getElementById('cv-tdc');
+
       const isDarkMode = document.body.classList.contains('dark-mode');
 
-
       if (isDarkMode) {
-        link.href = '../img/releases-ss/ccl-diag-dark.png';
-        img.src = '../img/releases-ss/ccl-diag-dark.png';
+        /* Banners */
+        tdcPage.style.backgroundImage = "url('../img/releases-ss/ccl1.png')";
+
       } else {
-        link.href = '../img/releases-ss/ccl-diag.png';
-        img.src = '../img/releases-ss/ccl-diag.png';
+        /* Banners */
+        tdcPage.style.backgroundImage = "url('../img/releases-ss/ccl1.png')";
+      }
+    }
+
+  </script>
+
+  <script>
+    function toggleStations() {
+      const hiddenStations = document.getElementById('hidden-stations');
+      const toggleBtn = document.getElementById('toggleBtn');
+
+      if (hiddenStations.classList.contains('show')) {
+        hiddenStations.classList.remove('show');
+        toggleBtn.innerHTML = '<i class="fa-regular fa-chevron-down"></i> Show More';
+      } else {
+        hiddenStations.classList.add('show');
+        toggleBtn.innerHTML = '<i class="fa-regular fa-chevron-up"></i> Show Less';
       }
     }
   </script>
+
+
 
 </body>
 

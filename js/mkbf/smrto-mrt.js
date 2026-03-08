@@ -50,59 +50,65 @@ const chartOptions = {
 const linesmrt = new Chart(smrtMRT, {
     type: 'line', // or 'bar', 'pie', etc.
     data: {
-        labels: ["2021", "2022", "2023", "2024", "Jan - Jul 2025"],
+        labels: ["2022", "2023", "2024", "2025", "Jan 2026"],
         datasets: [{
             label: "HBL",
-            data: [2045000, 3075000, 3675000, 4951000, 6050000],
+            data: [3075000, 3675000, 4951000, 6050000, 6350000],
             borderColor: 'rgb(255, 187, 0)',
             fill: true,
             backgroundColor: 'rgba(207, 61, 61,0.05)',
-            borderWidth: 3
+            borderWidth: 3,
+            tension: 0.2
         },
 
         {
             label: "CGL",
-            data: [2027000, 3020000, 3200000, 4450000, 6570000],
+            data: [3020000, 3200000, 4450000, 6570000, 6800000],
             borderColor: 'rgb(0, 154, 68)',
             fill: true,
             backgroundColor: 'rgba(0, 154, 68,0.05)',
-            borderWidth: 3
+            borderWidth: 3,
+            tension: 0.2
         },
 
         {
             label: "AEL",
-            data: [3420000, 3802000, 3721000, 4750000, 8060000],
+            data: [3802000, 3721000, 4750000, 8060000, 8500000],
             borderColor: 'rgb(39, 39, 157)',
             fill: true,
             backgroundColor: 'rgba(39, 39, 157,0.05)',
-            borderWidth: 3
+            borderWidth: 3,
+            tension: 0.2
         },
 
         {
             label: "NWL",
-            data: [1826000, 1840000, 1209000, 3210000, 7250000],
+            data: [ 1840000, 1209000, 3210000, 7250000, 7500000],
             borderColor: 'rgb(14, 103, 44)',
             fill: true,
             backgroundColor: 'rgba(14, 103, 44,0.05)',
-            borderWidth: 3
+            borderWidth: 3,
+            tension: 0.2
         },
 
         {
             label: "WTL",
-            data: [,,,4503000, 7980000],
+            data: [,,4503000, 7980000, 8005000],
             borderColor: 'rgb(33, 116, 217)',
             fill: true,
             backgroundColor: 'rgba(14, 103, 44,0.05)',
-            borderWidth: 3
+            borderWidth: 3,
+            tension: 0.2
         },
 
         {
             label: "YSLRT",
-            data: [2224000, 2452000, 2482000, 4530000, 7050000],
+            data: [2452000, 2482000, 4530000, 7050000, 7200000],
             borderColor: 'rgb(112, 133, 115)',
             fill: true,
             backgroundColor: 'rgba(112, 133, 115,0.05)',
-            borderWidth: 3
+            borderWidth: 3,
+            tension: 0.2
         }]//
 
 

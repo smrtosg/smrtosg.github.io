@@ -8,21 +8,24 @@
   <meta name="google-site-verification" content="57TuruPNu5wqSSia_cUehl5t9Gh1AbxrHNPcMiFx-aQ" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>North West Line | SMRTO</title>
+  <title>North-West Line | OpenBVE</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <meta property="og:image" content="https://i.imgur.com/CmtdJvS.png" />
+  <meta property="og:image" content="https://i.imgur.com/i8n9KYs.png" />
 
   <link rel="icon" href="../img/core-img/favicon.png">
 
-  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.2.0/css/all.css" />
 
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style-mobNav.css">
   <link rel="stylesheet" href="../css/style-breakpoints.css">
   <link rel="stylesheet" href="../css/dark-mode.css">
+  <link rel="stylesheet" href="line-diagrams/nwl.css">
 
+  <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css'>
   <link rel="stylesheet" href="../css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="../css/glightbox.min.css">
+  <link rel="stylesheet" href="../css/portfolio-img.min.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN76281P3Q"></script>
@@ -35,512 +38,560 @@
   </script>
 </head>
 
-<body>
+<style>
+  #cv-tdc {
+    background-image: url('../img/releases-ss/nwl3.png');
+    height: 75vh;
+    position: relative;
+  }
 
-  <!-- Preloader Section -->
-  <div id="preloader">
-    <div class="loader"></div>
-    <p id="preloader-text">Just a moment...</p>
+  #cv-tdc::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .version-control-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .version-dropdown {
+    width: 100%;
+    padding: 15px 18px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #252525;
+    background-color: #fff;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+    padding-right: 40px;
+    border: 1px solid #2b2b2b33;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  body.dark-mode .version-dropdown {
+    background-color: #393e53;
+    color: #f0f0f0;
+    border-color: #444;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+    border: 1px solid #2b2b2b33;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.233), 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .version-dropdown:hover {
+    border-color: #6d99c0;
+    box-shadow: 0 4px 12px rgba(41, 99, 161, 0.15);
+  }
+
+  .version-dropdown:focus {
+    outline: none;
+    border-color: #6d99c0;
+    box-shadow: 0 0 0 3px rgba(109, 153, 192, 0.1);
+  }
+
+  .version-dropdown.expanded {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='18 15 12 9 6 15'%3e%3c/polyline%3e%3c/svg%3e");
+  }
+
+  body.dark-mode .version-dropdown.expanded {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='18 15 12 9 6 15'%3e%3c/polyline%3e%3c/svg%3e") !important;
+  }
+
+  .version-content {
+    margin-top: 20px;
+    animation: slideDown 0.3s ease;
+  }
+
+  .version-details {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 24px;
+    border: 1px solid #e9ecef;
+    box-shadow: 3px 0 15px -1px rgba(0, 0, 0, 0.15);
+  }
+
+  body.dark-mode .version-details {
+    background-color: #393e53;
+    border-color: #444;
+    color: #f0f0f0;
+  }
+
+  .version-details p {
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .version-details p:last-child {
+    margin-bottom: 0;
+  }
+
+  .pw-btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7e899a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .pw-btn-download:hover {
+    background-color: #6d99c0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(41, 99, 161, 0.2);
+    text-decoration: none;
+    color: #fff;
+  }
+
+  #changesText,
+  .version-details p {
+    text-align: left !important;
+  }
+
+  .port-summary {
+    min-height: 130px;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<body>
+  <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
+  <div class="breadcrumb-fixed-placeholder">
+    <nav aria-label="breadcrumb" style="margin-bottom:0;">
+      <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="../index.html">
+            <i class="fa-regular fa-house"></i>
+          </a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="../openbve.html"><i class="fa-regular fa-train"></i>
+          </a>
+        </li>
+      </ol>
+    </nav>
   </div>
 
+  <!-- Navigation Bar -->
+  <nav class="navbar-container">
+    <div class="navbar">
+      <!-- Logo -->
+      <a href="../index.html"><img src="../img/core-img/logo.png" alt="logo" class="logo"></a>
+
+      <!-- Navigation Links -->
+      <ul class="navbar-nav" id="navbarNav">
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link">
+            <i class="fa-sharp fa-regular fa-house"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../openbve.html" class="nav-link active">
+            <i class="fa-regular fa-train"></i>
+            <span>OpenBVE</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../omsi2.html" class="nav-link">
+            <i class="fa-regular fa-bus"></i>
+            <span>OMSI 2</span>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a href="../menu.html" class="nav-link">
+            <i class="fa-regular fa-bars"></i>
+            <span>Menu</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav class="mobile-bottom-nav">
+    <ul>
+      <li>
+        <a href="../index.html">
+          <span class="icon">
+            <i class="fa-sharp fa-regular fa-house"></i>
+          </span>
+          <span class="label">Home</span>
+        </a>
+      </li>
+      <li class="active">
+        <a href="../openbve.html">
+          <span class="icon">
+            <i class="fa-regular fa-train"></i>
+          </span>
+          <span class="label">OpenBVE</span>
+        </a>
+      </li>
+      <li>
+        <a href="../omsi2.html">
+          <span class="icon">
+            <i class="fa-regular fa-bus"></i>
+          </span>
+          <span class="label">OMSI 2</span>
+        </a>
+      </li>
+      <li>
+        <a href="../menu.html">
+          <span class="icon">
+            <i class="fa-regular fa-bars"></i>
+          </span>
+          <span class="label">Menu</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
 
-  <header>
-    <a href="../index.html"><img src="../img/core-img/logo.png" alt="logo" class="logo" /></a>
-
-    <input type="checkbox" id="check" />
-    <label for="check" class="icons">
-      <i class="fa-solid fa-bars" id="menu-icon"></i>
-      <i class="fa-solid fa-xmark" id="close-icon"></i>
-    </label>
-
-    <nav class="navbar navbar-mobile">
-      <a href="../index.html" class="nav-item">Home</a>
-      <a href="../about.html" class="nav-item">About</a>
-      <a href="../openbve.html" class="nav-item active">OpenBVE</a>
-      <a href="../omsi-2.html" class="nav-item">OMSI 2</a>
-      <a href="../blog.html" class="nav-item">Blog</a>
-      <a href="#" class="nav-item">
-        <button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!">
-          <i class="fa-solid fa-moon-stars" id="theme-icon"></i>
-        </button>
-      </a>
-    </nav>
-  </header>
-
-  <section class="wbnrfz-summ breadcrumb-area-eicw-cover bg-img parallax" id="cv-tdc"
-    style="background-image: url(../img/releases-ss/nwl3.png); height: 100vh;">
-    <div class="wbnrfz_details_blog">
-      <div class="container">
-        <div class="portfolio-controls d-flex justify-content-between align-items-center">
-          <!-- Filter Buttons -->
-          <div class="portfolio-filter mt-3">
-            <div class="col-lg-12">
-              <div class="main-title">
-                <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../openbve.html"> OpenBVE</a>
-                    </li>
-                    <li class="breadcrumb-item active"><a href="#">Routes
-                      </a>
-                    </li>
-                  </ol>
-                </nav>
-                <h1 class="brc">North West Line</h1>
-              </div>
+  <!------------------------------------------------------------------------ Start of Sections ------------------------------------------------------------------------>
+  <!-- Title/Breadcrumbs -->
+  <section class="about-me-sum clearfix">
+    <div class="wbnrfz_eicw">
+      <div class="page-header-section">
+        <div class="container-xxl container-mobile container-mobile-header">
+          <div class="breadcrumb-wrapper">
+            <nav aria-label="breadcrumb" class="breadcrumb-desktop" style="display:none;">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="../index.html">
+                    <i class="fa-regular fa-house"></i>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="../openbve.html"><i class="fa-regular fa-train"></i>
+                  </a>
+                </li>
+              </ol>
+            </nav>
+            <div class="page-title-wrapper">
+              <h1 class="page-title-single">North-West Line</h1>
             </div>
-          </div>
-          <!-- Collapsible Header -->
-          <div class="collapsible-header" data-bs-toggle="collapse" data-bs-target="#portfolioFilter"
-            aria-expanded="false" aria-controls="portfolioFilter" style="cursor: pointer;" title="More Details">
-            <i class="fa-solid fa-chevron-down nav-chev"></i>
           </div>
         </div>
-        <!-- Collapsible Content -->
-        <div id="portfolioFilter" class="collapse">
-          <div class="details_catagory_wrap">
-            <div class="col-sm-4 single_catagory ">
-              <span>Developers</span>
-              <h4><i class="fa-solid fa-circle-user"></i> Nickgoh45 &nbsp;</h4>
-              <h4><i class="fa-solid fa-circle-user"></i> SMRTO Studios</h4>
-            </div>
-            <div class="col-sm-4 single_catagory">
-              <span>Owned By</span>
-              <img class="logo-operator" src="../img/core-img/stl.png" id="ops-smrtt" alt="smrt" width="170px">
-            </div>
-            <div class="col-sm-4 single_catagory">
-              <span>Share Project</span>
-              <div class="social_links">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://smrtosg.github.io/main/releases/north-west-line.html"
-                  title="Facebook">
-                  <i class="fa-brands fa-facebook"></i> </a>
-                <a href="https://x.com/intent/post?url=https://smrtosg.github.io/main/releases/north-west-line.html&text=North West Line"
-                  title="X (Twitter)">
-                  <i class="fa-brands fa-youtube"></i></a>
-                <a href="#" class="clipboard" onclick="copyToClipboard()" title="Copy Link"><i
-                    class="fa-solid fa-link"></i>
-                  <p class="clipboard-copied" style="font-size: 12px;"></p>
-                </a>
-              </div>
-            </div>
-          </div>
+
+      </div>
+    </div>
+    <hr>
+    </div>
+
+    </div>
+
+  </section>
+
+  <!-- Cover Header -->
+  <section class="breadcrumb-area-eicw-cover bg-img bg-overlay" id="cv-tdc">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
         </div>
       </div>
     </div>
-    <div style="background-color: #009645; width: 100%; height: 10px;"></div>
   </section>
 
-
-
+  <!-- Details/Contents Section -->
   <section class="about-me-summ clearfix">
-    <div class="wbnrfz_details_section wow fadeIn" data-wow-delay="100ms">
+    <div class="wbnrfz_details_section wow fadeIn">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-12">
-            <div class="details_info">
-              <div class="row justify-content-center">
-                <div class="col-lg-12">
-                  <div class="info justify-content-center">
-                    <p style="text-align: center; padding-bottom: 3em; padding-top: 3em;">The North West Line is a
-                      fictional line mainly
-                      based on
-                      Singapore and New York. The route has been created using Routebuilder, by Nickgoh45. Upgrades are
-                      done
-                      in-house by SMRTO Studios.</p>
+            <!-- Summary -->
+            <div class="container container-xxl container-mobile">
+              <div class="row">
+                <div class="col-md-6 col-lg-4 box-indiv">
+                  <div class="port-summary port-cat text-center mb-80  ">
+                    <div class="summ-icon">
+                      <i class="fa-regular fa-calendar"></i>
+                    </div>
+                    <h3 style="font-size: 18px; font-weight: bolder;">Developer</h3>
+                    <h4 style="font-size: 13px;">Nickgoh45<br>SMRTO Studios</h4>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 box-indiv">
+                  <div class="port-summary port-year text-center mb-80">
+                    <div class="summ-icon">
+                      <i class="fa-regular fa-train-subway"></i>
+                    </div>
+                    <h3 style="font-size: 18px; font-weight: bolder;">Operated By</h3>
+                    <img class="logo-operator" src="../img/core-img/stl.png" id="ops-stl" alt="smrtt" width="150px">
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 box-indiv">
+                  <div class="port-summary port-year text-center mb-80">
+                    <div class="summ-icon">
+                      <i class="fa-regular fa-share-nodes"></i>
+                    </div>
+                    <h3 style="font-size: 18px; font-weight: bolder;">Share Project</h3>
+                    <div class="social_links">
+                      <a href="https://www.facebook.com/sharer/sharer.php?u=https://smrtosg.github.io/main/releases/north-west-line.html"
+                        title="Facebook">
+                        <i class="fa-brands fa-facebook"></i> </a>
+                      <a href="https://x.com/intent/post?url=https://smrtosg.github.io/main/releases/north-west-line.html&text=North-West Line"
+                        title="X (Twitter)">
+                        <i class="fa-brands fa-x-twitter"></i></a>
+                      <a href="#" class="clipboard" onclick="copyToClipboard(this); return false;" title="Copy Link"><i
+                          class="fa-solid fa-link-horizontal"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Main Downloads Section -->
+          <div class="row justify-content-center" style="margin-top: 60px;">
+            <div class="col-lg-12">
+              <div class="section-heading text-center wow fadeIn" data-wow-delay="50ms" style="margin-bottom: 30px;">
+                <h2><i class="fa-solid fa-download"></i> Downloads</h2>
+              </div>
+              <div class="version-control-container">
+                <select id="versionDropdown" class="version-dropdown">
+                  <option value="">Select a version...</option>
+                </select>
+                <div id="versionContent" class="version-content" style="display: none;">
+                  <div class="version-details">
+                    <p><strong>Release Date:</strong> <span id="releaseDate"></span></p>
+                    <p><strong>Changes:</strong> <span id="changesText"></span></p>
+                    <div style="margin-top: 20px;" id="downloadContainer">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Labs-exclusive version dropdown -->
+              <div class="version-control-container" id="labsVersionContainer" style="margin-top: 30px; display: none;">
+                <select id="labsVersionDropdown" class="version-dropdown labs">
+                  <option value="">Select a pre-release version...</option>
+                </select>
+                <div id="labsVersionContent" class="version-content" style="display: none;">
+                  <div class="version-details">
+                    <p><strong>Release Date:</strong> <span id="labsReleaseDate"></span></p>
+                    <p><strong>Changes:</strong> <span id="labsChangesText"></span></p>
+                    <div style="margin-top: 20px;" id="labsDownloadContainer">
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Line Diagram Section -->
+  <section class="details-section">
+    <div class="container container-xxl container-mobile">
+      <div class="line-content-wrapper">
+
+        <!-- Line Description Box -->
+        <div class="line-description">
+          <p>The North-West Line is a fictional line mainly based on Singapore and New York. The route has been created
+            using
+            Routebuilder, by Nickgoh45. Upgrades are done in-house by SMRTO Studios. <br><br>
+
+            The support for the legacy C651/A/B/C/D has been deprecated. Download Version 1.0 to use it for the Legacy
+            Trains.
+          </p>
+
         </div>
 
-
-        <div class="banner text-center wow fadeInUp" data-wow-delay="150ms">
-          <a href="../img/releases-ss/nwl1.png" class="portfolio-img" id="nwl1"><img src="../img/releases-ss/nwl1.png"
-              class="img-fluid" id="nwl1-img" alt="nwl1-img"></a>
-        </div>
-
-        <div class="details_single_img wow fadeInUp" data-wow-delay="150ms">
-          <div class="row">
-            <div class="col-lg-6 col-md-6">
-              <div class="thumb">
-                <a href="../img/releases-ss/nwl2.png" class="portfolio-img" id="nwl2" alt="nwl2"><img
-                    src="../img/releases-ss/nwl2.png" class="img-fluid" id="nwl2-img" alt="nwl2-img"></a>
+        <!-- Line Diagram -->
+        <div class="line-diagram">
+          <div class="line-container">
+            <!-- NW 1 South Coast -->
+            <div class="station">
+              <div class="station-dot"></div>
+              <div class="station-content">
+                <div class="station-codes">
+                  <span class="station-code">NW 1</span>
+                  <span class="interchange-badge mrt-hbl" style="color: #000;">HL 13</span>
+                </div>
+                <div class="station-name">South Coast</div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6">
-              <div class="thumb">
-                <a href="../img/releases-ss/nwl3.png" class="portfolio-img" id="nwl3" alt="nwl3"><img
-                    src="../img/releases-ss/nwl3.png" class="img-fluid" id="nwl3-img" alt="nwl3-img"></a>
+
+            <!-- NW 2 Westway -->
+            <div class="station">
+              <div class="station-dot"></div>
+              <div class="station-content">
+                <div class="station-codes">
+                  <span class="station-code">NW 2</span>
+                </div>
+                <div class="station-name">Westway</div>
               </div>
+            </div>
+
+            <!-- NW 3 Reservoir -->
+            <div class="station">
+              <div class="station-dot"></div>
+              <div class="station-content">
+                <div class="station-codes">
+                  <span class="station-code">NW 3</span>
+                </div>
+                <div class="station-name">Reservoir</div>
+              </div>
+            </div>
+
+            <!-- NW 4 Lakeview -->
+            <div class="station">
+              <div class="station-dot"></div>
+              <div class="station-content">
+                <div class="station-codes">
+                  <span class="station-code">NW 4</span>
+                </div>
+                <div class="station-name">Lakeview</div>
+              </div>
+            </div>
+
+            <!-- NW 5 District -->
+            <div class="station">
+              <div class="station-dot"></div>
+              <div class="station-content">
+                <div class="station-codes">
+                  <span class="station-code">NW 5</span>
+                </div>
+                <div class="station-name">District</div>
+              </div>
+            </div>
+
+            <!-- NW 6 World Plaza -->
+            <div id="hidden-stations">
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">NW 6</span>
+                  </div>
+                  <div class="station-name">World Plaza</div>
+                </div>
+              </div>
+
+              <!-- NW 7 Blackton South -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">NW 7</span>
+                    <span class="interchange-badge mrt-ksl">KS 7</span>
+                    <span class="interchange-badge mrt-bll">BL 10</span>
+                  </div>
+                  <div class="station-name">Blackton South</div>
+                </div>
+              </div>
+
+              <!-- NW 8 Caroye -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">NW 8</span>
+                    <span class="interchange-badge mrt-ksl">KS 8</span>
+                  </div>
+                  <div class="station-name">Caroye</div>
+                </div>
+              </div>
+
+              <!-- NW 9 Horizon -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">NW 9</span>
+                  </div>
+                  <div class="station-name">Horizon</div>
+                </div>
+              </div>
+
+              <!-- NW 10 Square Quays -->
+              <div class="station">
+                <div class="station-dot"></div>
+                <div class="station-content">
+                  <div class="station-codes">
+                    <span class="station-code">NW 10</span>
+                    <span class="interchange-badge mrt-efl" style="color: #000;">EF 15</span>
+                  </div>
+                  <div class="station-name">Square Quays</div>
+                </div>
+              </div>
+
+
+
+            </div>
+
+            <div class="show-more-button">
+              <button id="toggleBtn" onclick="toggleStations()">Show More</button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+  </section>
 
-
-    <!-- Operational Info -->
-    <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="300ms">
-      <h3 class="ld-s-title">Operational Info</h3>
-      <table class="info-table table">
-
-        <tbody>
-          <tr class="info-det">
-            <td class="first">Incumbent Operator</td>
-            <td class="second"><img src="../img/core-img/stl.png" id="ops-smrtt" alt="smrt" class="logo"></td>
-          </tr>
-          <tr class="info-det">
-            <td class="first">Train Depot</td>
-            <td class="second">Blackton Train Depot</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Line Diagrams -->
-    <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="300ms">
-      <h3 class="ld-s-title">Line Diagram</h3>
-      <div class="row row-line-diag justify-content-center">
-        <a href="../img/releases-ss/nwl-diag.png" id="line-nwl" class="portfolio-img">
-          <img src="../img/releases-ss/nwl-diag.png" id="line-nwl-img" class="img-fluid" alt="cover-page">
+  <!-- Contents -->
+  <div class="wrapper">
+    <div class="carousel" id="delays-carousel">
+      <div class="carousel-cell">
+        <a href="../img/releases-ss/nwl1.png" class="portfolio-img" data-gallery="carousel" id="nwl1">
+          <img class="img-fluid" src="../img/releases-ss/nwl1.png" alt="nwl1-img" draggable="false" id="nwl1-img">
+        </a>
+      </div>
+      <div class="carousel-cell">
+        <a href="../img/releases-ss/nwl2.png" class="portfolio-img" data-gallery="carousel" id="nwl2">
+          <img class="img-fluid" src="../img/releases-ss/nwl2.png" alt="nwl2-img" draggable="false" id="nwl2-img">
+        </a>
+      </div>
+      <div class="carousel-cell">
+        <a href="../img/releases-ss/nwl3.png" class="portfolio-img" data-gallery="carousel" id="nwl3">
+          <img class="img-fluid" src="../img/releases-ss/nwl3.png" alt="nwl3-img" draggable="false" id="nwl3-img">
         </a>
       </div>
     </div>
-
-    <!-- Stations -->
-    <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="500ms">
-      <h3 class="ld-s-title">Stations</h3>
-      <div class="row justify-content-center">
-        <div class="stationBlock">
-          <div class="stationBlockItem">
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #009645; color: #FFF;">
-                    NW 1
-                  </div>
-                  <div class="station-pill-round" style="background-color: #ffbb00; color: #000;">
-                    HL 13
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 106px;">South Coast</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #009645; color: #FFF;">
-                    NW 2
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 87px;">Westway</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #009645; color: #FFF;">
-                    NW 3
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 87px;">Reservoir</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #009645; color: #FFF;">
-                    NW 4
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 87px;">Lakeview</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #009645; color: #FFF;">
-                    NW 5
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 67px;">District</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #009645; color: #FFF;">
-                    NW 6
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 106px;">World Plaza</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #009645; color: #FFF;">
-                    NW 7
-                  </div>
-                  <div class="station-pill-round" style="background-color: #660099; color: #FFF;">
-                    KS 7
-                  </div>
-                  <div class="station-pill-round" style="background-color: #ff2a2a; color: #FFF;">
-                    BL 10
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 129px;">Blackton South</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #009645; color: #FFF;">
-                    NW 8
-                  </div>
-                  <div class="station-pill-round" style="background-color: #660099; color: #FFF;">
-                    KS 8
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 71px;">Caroye</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #009645; color: #FFF;">
-                    NW 9
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 71px;">Horizon</h4>
-              </div>
-            </a>
-            <a href="#">
-              <div class="stationBlockChildItem">
-                <div class="d-flex flex-row">
-                  <div class="station-pill-round" style="background-color: #009645; color: #FFF;">
-                    NW 10
-                  </div>
-                  <div class="station-pill-round" style="background-color: #ecb3b3; color: #000;">
-                    EF 15
-                  </div>
-                </div>
-                <h4 class="stn" style=" width: 105px;">City Square</h4>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Rolling Stocks -->
-    <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="700ms">
-      <h3 class="ld-s-title">Rolling Stocks</h3>
-      <div class="row justify-content-center">
-        <table class="info-table table">
-          <tbody>
-            <tr class="info-det">
-              <td class="second">
-                Kawasaki-CSR Qingdao Sifang C151A<br>
-              </td>
-            </tr>
-            <tr class="info-det">
-              <td class="second">
-                Kawasaki-CSR Qingdao Sifang C151B<br>
-              </td>
-            </tr>
-            <tr class="info-det">
-              <td class="second">
-                Kawasaki-CSR Qingdao Sifang C151C<br>
-              </td>
-            </tr>
-            <tr class="info-det">
-              <td class="second">
-                Alstom Movia R151<br>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Downloads -->
-    <div class="about-me-stations text-center wow fadeInUp" data-wow-delay="900ms">
-      <div class="alert alert-warning alert-dismissible wow fadeInUp" data-wow-delay="900ms" role="alert"
-        style="margin-top: 1em; cursor: default; font-size: 14px;">
-        The support for the legacy C651/A/B/C/D has been deprecated. Download <b>Version 0.8</b> to use it for
-        the <b>Legacy Trains</b>.
-        <button type="button" class="btn-close cls-warning" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-
-      <h3 class="ld-s-title"><i class="fa-solid fa-download"></i>&nbsp;Routes</h3>
-      <div class="row justify-content-center">
-
-        <div class="accordion" id="accordRoutes">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading3.6">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3.6"
-                aria-expanded="true" aria-controls="collapse3.6">
-                <b>Version 3.6 - 07/09/25</b>
-              </button>
-            </h2>
-            <div id="collapse3.6" class="accordion-collapse collapse show" aria-labelledby="heading3.6"
-              data-bs-parent="#accordRoutes">
-              <div class="accordion-body">
-                <h3 class="changelog">
-                  - Improved Announcement Trigger Points <br>
-                  - Fixed a Destination Trigger bug at NW7 <br>
-                  - Fixed the incorrect Caplets at NW8 <br>
-                </h3> <br><br>
-
-                <a href="https://github.com/smrtosg/main/releases/download/v2508.1020/Railway-NWL_3.6.7z"
-                  class="btn pw-btn btn-2 mt-15" target="_blank">
-                  <i class="fa-solid fa-download"></i>&nbsp;&nbsp;Route</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading0.8">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse0.8" aria-expanded="false" aria-controls="collapse0.8">
-                <b>Version 0.8 - 2010</b>
-              </button>
-            </h2>
-            <div id="collapse0.8" class="accordion-collapse collapse" aria-labelledby="heading0.8"
-              data-bs-parent="#accordRoutes">
-              <div class="accordion-body">
-                <h3 class="changelog">
-                  - Initial Release
-                </h3> <br><br>
-
-                <a href="https://github.com/smrtosg/main/releases/download/v2508.1000/North.West.Line.v0.8.zip"
-                  class="btn pw-btn btn-2 mt-15" target="_blank">
-                  <i class="fa-solid fa-download"></i>&nbsp;&nbsp;Route (Legacy)</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-
-      <br><br>
-
-      <h3 class="ld-s-title"><i class="fa-solid fa-download"></i>&nbsp;Trains</h3>
-      <div class="row justify-content-center">
-        <div class="accordion" id="accordTrains">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading151C">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse151C" aria-expanded="false" aria-controls="collapse151C">
-                Kawasaki-CRRC Qingdao Sifang C151C</h3>
-              </button>
-            </h2>
-            <div id="collapse151C" class="accordion-collapse collapse" aria-labelledby="heading151C"
-              data-bs-parent="#accordTrains">
-              <div class="accordion-body">
-                <a href="../releases/c151c.html" class="btn pw-btn btn-2 mt-15" target="_blank">
-                  <i class="fa-solid fa-download"></i>&nbsp;&nbsp;C151C</a>
-              </div>
-
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading151B">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse151B" aria-expanded="false" aria-controls="collapse151B">
-                Kawasaki-CRRC Qingdao Sifang C151B
-              </button>
-            </h2>
-            <div id="collapse151B" class="accordion-collapse collapse" aria-labelledby="heading151B"
-              data-bs-parent="#accordTrains">
-              <div class="accordion-body">
-                <a href="../releases/c151b.html" class="btn pw-btn btn-2 mt-15" target="_blank">
-                  <i class="fa-solid fa-download"></i>&nbsp;&nbsp;C151B</a>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading151A">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse151A" aria-expanded="false" aria-controls="collapse151A">
-                Kawasaki-CRRC Qingdao Sifang C151A
-              </button>
-            </h2>
-            <div id="collapse151A" class="accordion-collapse collapse" aria-labelledby="heading151A"
-              data-bs-parent="#accordTrains">
-              <div class="accordion-body">
-                <a href="../releases/c151a.html" class="btn pw-btn btn-2 mt-15" target="_blank">
-                  <i class="fa-solid fa-download"></i>&nbsp;&nbsp;C151A</a>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading151">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse151" aria-expanded="false" aria-controls="collapse151">
-                Alstom Movia R151
-              </button>
-            </h2>
-            <div id="collapse151" class="accordion-collapse collapse" aria-labelledby="heading151"
-              data-bs-parent="#accordTrains">
-              <div class="accordion-body">
-                <a href="../releases/r151.html" class="btn pw-btn btn-2 mt-15" target="_blank">
-                  <i class="fa-solid fa-download"></i>&nbsp;&nbsp;R151</a>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingLeg">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseLeg" aria-expanded="false" aria-controls="collapseLeg">
-                Legacy Trains - C651/A/B/C/D
-              </button>
-            </h2>
-            <div id="collapseLeg" class="accordion-collapse collapse" aria-labelledby="headingLeg"
-              data-bs-parent="#accordTrains">
-              <div class="accordion-body">
-                <a href="../releases/c651s-leg.html" class="btn pw-btn btn-2 mt-15" target="_blank">
-                  <i class="fa-solid fa-download"></i>&nbsp;&nbsp;C651/A/B/C/D</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-
-  <footer class="footer-area">
-    <div class="container">
-      <div class="footer-content d-flex flex-column align-items-center text-center">
-        <!-- Social Links -->
-        <div class="social-info">
-          <a href="https://www.youtube.com/@SMRTOsg"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-          <a href="https://www.facebook.com/SMRTVRT"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
-        </div>
-        <!-- Copywrite Text -->
-        <div class="copywrite-text">
-          <p>&copy;
-            <script>document.write(new Date().getFullYear());</script> Illustrations belong to SMRT Corp Ltd
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
+  </div>
 
   <script type="text/javascript" id="cookiebanner" src="../js/cookies-banner.js" data-position="bottom"
     data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
     data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
     </script>
+
+  <script src="../js/mob-navtabs.js"></script>
 
   <script src="../js/jquery.min.js"></script>
 
@@ -554,22 +605,49 @@
 
   <script src="../js/swiper-bundle.min.js"></script>
 
-  <script src="../js/glightbox.min.js"></script>
-
   <script src="../js/isotope.pkgd.min.js"></script>
-
-  <script src="../js/portfolio-comp.js"></script>
 
   <script src="../js/copy-to-clipboard.js"></script>
 
-  <script src="../js/preloader.js"></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js'></script>
+
+  <script src="../js/dis.js"></script>
+
+  <script src="../js/dstabs.js"></script>
+
+  <script src="../js/releases-loader.js"></script>
 
   <!-- Script for Indiv Page - Modes -->
   <script>
     /* Dark Mode Functionality for Individual Pages */
 
-    // Check localStorage for dark mode preference
-    if (localStorage.getItem('dark-mode') === 'enabled') {
+    // Check for theme parameter in URL (for cross-domain sync from worksbynrfz.com)
+    (function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const themeParam = urlParams.get('theme');
+      if (themeParam && ['light', 'dark', 'system'].includes(themeParam)) {
+        localStorage.setItem('theme-preference', themeParam);
+      }
+    })();
+
+    // Use window properties if they exist from initial script, otherwise create them
+    if (typeof window._themePreference === 'undefined') {
+      window._themePreference = localStorage.getItem('theme-preference') || 'system';
+    }
+    if (typeof window._prefersDark === 'undefined') {
+      window._prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+
+    // Determine if dark mode should be active
+    function shouldBeDark() {
+      if (window._themePreference === 'dark') return true;
+      if (window._themePreference === 'light') return false;
+      if (window._themePreference === 'system') return window._prefersDark;
+      return window._prefersDark; // Default to system preference
+    }
+
+    // Apply theme on page load
+    if (shouldBeDark()) {
       document.body.classList.add('dark-mode');
       updateThemeIcon('dark');
       updateHrefForDarkMode();
@@ -577,55 +655,308 @@
       updateThemeIcon('light');
     }
 
-    const toggleButton = document.getElementById('dark-mode-toggle');
-    toggleButton.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      // Save the preference in localStorage
-      if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('dark-mode', 'enabled');
-        updateThemeIcon('dark');
-      } else {
-        localStorage.setItem('dark-mode', 'disabled');
-        updateThemeIcon('light');
+    // Listen to theme toggle clicks
+    document.addEventListener('DOMContentLoaded', function () {
+      const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+      const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+
+      function cycleTheme() {
+        const themes = ['light', 'dark', 'system'];
+        const currentTheme = window._themePreference || 'system';
+        const currentIndex = themes.indexOf(currentTheme);
+        const nextTheme = themes[(currentIndex + 1) % themes.length];
+        applyTheme(nextTheme);
       }
-      updateHrefForDarkMode();
+
+      function applyTheme(preference) {
+        localStorage.setItem('theme-preference', preference);
+        window._themePreference = preference;
+
+        if (preference === 'dark') {
+          document.body.classList.add('dark-mode');
+          updateThemeIcon('dark');
+        } else if (preference === 'light') {
+          document.body.classList.remove('dark-mode');
+          updateThemeIcon('light');
+        } else if (preference === 'system') {
+          if (window._prefersDark) {
+            document.body.classList.add('dark-mode');
+            updateThemeIcon('dark');
+          } else {
+            document.body.classList.remove('dark-mode');
+            updateThemeIcon('light');
+          }
+        }
+      }
+
+      if (themeToggleDesktop) {
+        themeToggleDesktop.addEventListener('click', (e) => {
+          e.preventDefault();
+          cycleTheme();
+        });
+      }
+
+      if (themeToggleMobile) {
+        themeToggleMobile.addEventListener('click', (e) => {
+          e.preventDefault();
+          cycleTheme();
+        });
+      }
     });
 
-    // Function to update the theme icon with animation
-    function updateThemeIcon(theme) {
-      const themeIcon = document.getElementById('theme-icon');
+    // Follow system theme changes when set to 'system' preference
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      window._prefersDark = e.matches;
+      if (localStorage.getItem('theme-preference') === 'system' || localStorage.getItem('theme-preference') === null) {
+        if (e.matches) {
+          document.body.classList.add('dark-mode');
+          updateThemeIcon('dark');
+        } else {
+          document.body.classList.remove('dark-mode');
+          updateThemeIcon('light');
+        }
+      }
+    });
 
-      // Add animation class
-      themeIcon.classList.add('animate');
+    // Get both toggle buttons (for backward compatibility with mobile views)
+    const toggleButtonDesktop = document.getElementById('dark-mode-toggle-desktop');
+    const toggleButtonMobile = document.getElementById('dark-mode-toggle-mobile');
+
+    // Function to update the theme icon and text with animation
+    function updateThemeIcon(theme) {
+      const themeIconDesktop = document.getElementById('theme-icon-desktop');
+      const themeIconMobile = document.getElementById('theme-icon-mobile');
+      const themeTextDesktop = document.getElementById('theme-text-desktop');
+      const themeTextMobile = document.getElementById('theme-text-mobile');
+      const preference = window._themePreference || 'system';
+
+      // Add animation class to both icons
+      if (themeIconDesktop) themeIconDesktop.classList.add('animate');
+      if (themeIconMobile) themeIconMobile.classList.add('animate');
 
       // Update the icon based on the theme
       if (theme === 'dark') {
-        themeIcon.classList.remove('fa-sun-bright');
-        themeIcon.classList.add('fa-moon-stars');
+        if (themeIconDesktop) {
+          themeIconDesktop.classList.remove('fa-sun-bright');
+          themeIconDesktop.classList.add('fa-moon-stars');
+        }
+        if (themeIconMobile) {
+          themeIconMobile.classList.remove('fa-sun-bright');
+          themeIconMobile.classList.add('fa-moon-stars');
+        }
       } else {
-        themeIcon.classList.remove('fa-moon-stars');
-        themeIcon.classList.add('fa-sun-bright');
+        if (themeIconDesktop) {
+          themeIconDesktop.classList.remove('fa-moon-stars');
+          themeIconDesktop.classList.add('fa-sun-bright');
+        }
+        if (themeIconMobile) {
+          themeIconMobile.classList.remove('fa-moon-stars');
+          themeIconMobile.classList.add('fa-sun-bright');
+        }
       }
+
+      // Update display text
+      let displayText = 'Display: ';
+      if (preference === 'light') {
+        displayText += 'Light';
+      } else if (preference === 'dark') {
+        displayText += 'Dark';
+      } else if (preference === 'system') {
+        displayText += 'Follow System';
+      }
+
+      if (themeTextDesktop) themeTextDesktop.textContent = displayText;
+      if (themeTextMobile) themeTextMobile.textContent = displayText;
 
       // Remove the animation class after the animation ends
       setTimeout(() => {
-        themeIcon.classList.remove('animate');
+        if (themeIconDesktop) themeIconDesktop.classList.remove('animate');
+        if (themeIconMobile) themeIconMobile.classList.remove('animate');
       }, 300); // Match the duration of the CSS transition
     }
 
+
     function updateHrefForDarkMode() {
       /* Banners */
-      const link = document.getElementById('line-nwl');
-      const img = document.getElementById('line-nwl-img');
+      const tdcPage = document.getElementById('cv-tdc');
+
       const isDarkMode = document.body.classList.contains('dark-mode');
 
-
       if (isDarkMode) {
-        link.href = '../img/releases-ss/nwl-diag-dark.png';
-        img.src = '../img/releases-ss/nwl-diag-dark.png';
+        /* Banners */
+        tdcPage.style.backgroundImage = "url('../img/releases-ss/nwl3.png')";
+
       } else {
-        link.href = '../img/releases-ss/nwl-diag.png';
-        img.src = '../img/releases-ss/nwl-diag.png';
+        /* Banners */
+        tdcPage.style.backgroundImage = "url('../img/releases-ss/nwl3.png')";
+      }
+    }
+
+  </script>
+
+  <script>
+    function toggleStations() {
+      const hiddenStations = document.getElementById('hidden-stations');
+      const toggleBtn = document.getElementById('toggleBtn');
+
+      if (hiddenStations.classList.contains('show')) {
+        hiddenStations.classList.remove('show');
+        toggleBtn.innerHTML = '<i class="fa-regular fa-chevron-down"></i> Show More';
+      } else {
+        hiddenStations.classList.add('show');
+        toggleBtn.innerHTML = '<i class="fa-regular fa-chevron-up"></i> Show Less';
+      }
+    }
+  </script>
+
+  <!-------------------------- Releases -------------------------->
+  <script>
+    // Load labs release data from the labs JSON file
+    async function loadLabsReleaseData(lineKey) {
+      try {
+        const response = await fetch('../releases/releases-data-labs.json');
+        if (!response.ok) throw new Error('Failed to load labs releases data');
+        const data = await response.json();
+        return data[lineKey] || null;
+      } catch (error) {
+        console.error('Error loading labs release data:', error);
+        return null;
+      }
+    }
+
+    // Initialize releases on page load
+    document.addEventListener('DOMContentLoaded', function () {
+      // Check if accessed from labs.html
+      const referrer = document.referrer;
+      const isFromLabs = referrer.includes('labs.html');
+
+      if (isFromLabs) {
+        // Hide main dropdown, show only labs dropdown
+        const mainContainer = document.querySelector('.version-control-container');
+        if (mainContainer) {
+          mainContainer.style.display = 'none';
+        }
+
+        const labsContainer = document.getElementById('labsVersionContainer');
+        if (labsContainer) {
+          labsContainer.style.display = 'block';
+          initializeLabsVersionDropdown('north-west-line');
+        }
+      } else {
+        // Show main dropdown, hide labs dropdown
+        initializeVersionDropdown('north-west-line');
+
+        const labsContainer = document.getElementById('labsVersionContainer');
+        if (labsContainer) {
+          labsContainer.style.display = 'none';
+        }
+      }
+    });
+
+    // Initialize labs-exclusive version dropdown
+    async function initializeLabsVersionDropdown(lineKey) {
+      const labsVersionDropdown = document.getElementById('labsVersionDropdown');
+      const releaseData = await loadLabsReleaseData(lineKey);
+
+      if (!releaseData || !labsVersionDropdown) return;
+
+      // Clear default options first
+      labsVersionDropdown.innerHTML = '<option value="">Select a pre-release version...</option>';
+
+      // Populate dropdown options - you can add different versions or filter as needed
+      Object.entries(releaseData.versions).forEach(([key, versionInfo]) => {
+        const option = document.createElement('option');
+        option.value = key;
+
+        let label = `Version ${versionInfo.version}`;
+
+        if (versionInfo.label) {
+          if (versionInfo.label === 'latest-release') label += ' - Latest Release';
+          else if (versionInfo.label === 'legacy') label += ' - Legacy';
+          else if (versionInfo.label === 'pre-release') label += ' - Pre-Release';
+        }
+
+        option.textContent = label;
+        labsVersionDropdown.appendChild(option);
+      });
+
+      // Setup version selection for labs dropdown
+      labsVersionDropdown.addEventListener('change', function () {
+        displayLabsVersion(this.value, releaseData.versions);
+      });
+
+      // Restore from sessionStorage
+      const saved = sessionStorage.getItem('selectedLabsVersion');
+      if (saved && releaseData.versions[saved]) {
+        labsVersionDropdown.value = saved;
+        displayLabsVersion(saved, releaseData.versions);
+      }
+    }
+
+    // Display labs version content
+    function displayLabsVersion(versionKey, versionData) {
+      const labsVersionContent = document.getElementById('labsVersionContent');
+      const labsReleaseDate = document.getElementById('labsReleaseDate');
+      const labsChangesText = document.getElementById('labsChangesText');
+      const labsDownloadContainer = document.getElementById('labsDownloadContainer');
+      const labsVersionDropdown = document.getElementById('labsVersionDropdown');
+
+      if (!labsVersionContent || !labsReleaseDate || !labsChangesText || !labsDownloadContainer) return;
+
+      if (versionKey && versionData[versionKey]) {
+        const version = versionData[versionKey];
+        labsReleaseDate.textContent = version.date;
+
+        // Handle both string and array changes
+        if (Array.isArray(version.changes)) {
+          labsChangesText.innerHTML = version.changes
+            .map(change => `<div>${change}</div>`)
+            .join('');
+        } else {
+          labsChangesText.innerHTML = `<div>${version.changes}</div>`;
+        }
+
+        // Handle multiple downloads or fallback to single download
+        labsDownloadContainer.innerHTML = '';
+
+        if (version.downloads && Array.isArray(version.downloads)) {
+          // Multiple downloads
+          version.downloads.forEach(download => {
+            const btn = document.createElement('a');
+            btn.href = '#';
+            btn.className = 'btn pw-btn btn-2 mt-15';
+            btn.innerHTML = `<i class="fa-solid fa-download"></i>&nbsp; ${download.name}`;
+            btn.onclick = (e) => {
+              e.preventDefault();
+              window.location.href = download.url;
+            };
+            labsDownloadContainer.appendChild(btn);
+          });
+        } else if (version.downloadUrl) {
+          // Single download (backward compatibility)
+          const btn = document.createElement('a');
+          btn.href = '#';
+          btn.className = 'btn pw-btn btn-2 mt-15';
+          btn.innerHTML = `<i class="fa-solid fa-download"></i>&nbsp; Download`;
+          btn.onclick = (e) => {
+            e.preventDefault();
+            window.location.href = version.downloadUrl;
+          };
+          labsDownloadContainer.appendChild(btn);
+        }
+
+        labsVersionContent.style.display = 'block';
+        if (labsVersionDropdown) {
+          labsVersionDropdown.classList.add('expanded');
+        }
+
+        sessionStorage.setItem('selectedLabsVersion', versionKey);
+      } else {
+        labsVersionContent.style.display = 'none';
+        if (labsVersionDropdown) {
+          labsVersionDropdown.classList.remove('expanded');
+        }
+        sessionStorage.removeItem('selectedLabsVersion');
       }
     }
   </script>

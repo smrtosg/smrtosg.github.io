@@ -1,0 +1,170 @@
+   #tab1,
+   #tab2,
+   #tab3,
+   #tab4,
+   #tab5,
+   #tab6,
+   #tab7,
+   #tab8,
+   #tab9 {
+       scroll-margin-top: 10vh;
+   }
+
+   .fleet-table {
+       overflow: hidden;
+       font-size: clamp(0.75rem, 2vw, 0.95rem);
+       width: 100%;
+   }
+
+   .fleet-table th {
+       text-align: center;
+       border: 2px solid #d6d6d6;
+       padding: clamp(0.5rem, 2vw, 0.8rem);
+   }
+
+   .fleet-table td {
+       padding: clamp(0.4rem, 1.5vw, 0.6rem);
+       word-wrap: break-word;
+       overflow-wrap: break-word;
+   }
+
+   .fleet-table .manu,
+   .fleet-table .model,
+   .fleet-table .type,
+   .fleet-table .cat,
+   .fleet-table .dev,
+   .fleet-table .disp,
+   .fleet-table .livery,
+   .fleet-table .rego {
+       font-weight: bold;
+       text-align: center;
+       vertical-align: top;
+   }
+
+   .table-responsive {
+       overflow-x: auto;
+       -webkit-overflow-scrolling: touch;
+       width: 100%;
+       margin: 0;
+       padding: 0;
+   }
+
+   @media (min-width: 900px) and (max-width: 1099px) {
+       .container {
+           max-width: 100% !important;
+       }
+   }
+
+   @media (max-width: 768px) {
+       .fleet-table {
+           font-size: 15px;
+           width: 100%;
+           min-width: 900px;
+       }
+
+       .fleet-table th,
+       .fleet-table td {
+           padding: 0.5rem 0.4rem;
+           word-wrap: break-word;
+           overflow-wrap: break-word;
+       }
+
+       .table-responsive {
+           overflow-x: auto;
+           display: block;
+           width: 100%;
+           margin: 0;
+           padding: 0;
+       }
+   }
+
+   .fleet-table tbody tr:nth-child(odd) {
+       background-color: #dfdfdf !important;
+       border: 2px solid #d6d6d6;
+   }
+
+   .fleet-table tbody tr:nth-child(odd) td {
+       background-color: #dfdfdf !important;
+       border: 2px solid #bebebe;
+   }
+
+   .fleet-table tbody tr:nth-child(even) {
+       background-color: #fff !important;
+       border: 2px solid #d6d6d6;
+   }
+
+   .fleet-table tbody tr:nth-child(even) td {
+       background-color: #fff !important;
+       border: 2px solid #bebebe;
+   }
+
+   #busTable2 tbody tr:nth-child(odd) td,
+   #busTable4 tbody tr:nth-child(odd) td,
+   #busTable6 tbody tr:nth-child(odd) td,
+   #busTable8 tbody tr:nth-child(odd) td {
+       background-color: #dfdfdf !important;
+   }
+
+   #busTable2 tbody tr:nth-child(even) td,
+   #busTable4 tbody tr:nth-child(even) td,
+   #busTable6 tbody tr:nth-child(even) td,
+   #busTable8 tbody tr:nth-child(even) td {
+       background-color: #fff !important;
+   }
+
+   body.dark-mode .fleet-table {
+       border: 1px solid #2b2b2b33;
+       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.233), 0 4px 12px rgba(0, 0, 0, 0.1);
+   }
+
+   body.dark-mode .fleet-table th {
+       background-color: #393e53;
+       border: 2px solid #303444;
+       color: #fff;
+   }
+
+   body.dark-mode .fleet-table .manu,
+   body.dark-mode .fleet-table .model,
+   body.dark-mode .fleet-table .type,
+   body.dark-mode .fleet-table .cat,
+   body.dark-mode .fleet-table .dev,
+   body.dark-mode .fleet-table .disp,
+   body.dark-mode .fleet-table .livery,
+   body.dark-mode .fleet-table .rego {
+       background-color: #1c1f2b;
+       border: 2px solid #393e53;
+       color: #fff;
+   }
+
+   body.dark-mode .fleet-table tbody tr:nth-child(odd) {
+       background-color: #212430 !important;
+       border: 2px solid #d6d6d6;
+   }
+
+   body.dark-mode .fleet-table tbody tr:nth-child(odd) td {
+       background-color: #212430 !important;
+   }
+
+   body.dark-mode .fleet-table tbody tr:nth-child(even) {
+       background-color: #30354b !important;
+       border: 2px solid #242526;
+   }
+
+   body.dark-mode .fleet-table tbody tr:nth-child(even) td {
+       background-color: #30354b !important;
+   }
+
+
+   body.dark-mode #busTable2 tbody tr:nth-child(odd) td,
+   body.dark-mode #busTable4 tbody tr:nth-child(odd) td,
+   body.dark-mode #busTable6 tbody tr:nth-child(odd) td,
+   body.dark-mode #busTable8 tbody tr:nth-child(odd) td {
+       background-color: #212430 !important;
+   }
+
+   body.dark-mode #busTable2 tbody tr:nth-child(even) td,
+   body.dark-mode #busTable4 tbody tr:nth-child(even) td,
+   body.dark-mode #busTable6 tbody tr:nth-child(even) td,
+   body.dark-mode #busTable8 tbody tr:nth-child(even) td {
+       background-color: #30354b !important;
+   }

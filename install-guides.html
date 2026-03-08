@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="57TuruPNu5wqSSia_cUehl5t9Gh1AbxrHNPcMiFx-aQ" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>All Projects | SMRTO</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta property="og:image" content="https://i.imgur.com/i8n9KYs.png" />
+
+    <link rel="icon" href="img/core-img/favicon.png">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.2.0/css/all.css" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-mobNav.css">
+    <link rel="stylesheet" href="css/style-breakpoints.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/glightbox.min.css">
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN76281P3Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WN76281P3Q');
+    </script>
+</head>
+
+<style>
+    #openbve-heading-section,
+    #omsi2-heading-section {
+        margin-top: 3em;
+    }
+
+    .accordion-body {
+        background-color: #ecececea;
+    }
+
+    .accordion-body p {
+        text-align: left;
+    }
+
+    .accordion-item {
+        border-radius: 24px !important;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
+    .accordion-button {
+        border-radius: 24px 24px 0 0 !important;
+    }
+
+    .accordion-button.collapsed {
+        border-radius: 24px !important;
+    }
+
+    .accordion-collapse.show {
+        border-radius: 0 0 24px 24px !important;
+    }
+
+    .pw-btn-accord {
+        position: relative;
+        z-index: 1;
+        min-width: 100px;
+        height: 45px;
+        line-height: 40px;
+        font-size: 19px;
+        font-weight: 500;
+        display: inline-block;
+        padding: 2px 30px;
+        text-align: center;
+        text-transform: capitalize;
+        background-color: #e96060;
+        color: #fff;
+        border-radius: 60px;
+        transition-duration: 500ms;
+        margin: 10px;
+    }
+
+    body.dark-mode .accordion-body {
+        background-color: #292d3d;
+        color: #fff;
+    }
+
+    body.dark-mode .accordion-item {
+        border: 1px solid #292d3d !important;
+        border-color: #292d3d !important;
+        background-color: #292d3d !important;
+    }
+
+    body.dark-mode .accordion-button {
+        background-color: #292d3d;
+        color: #fff;
+        box-shadow: none !important;
+    }
+
+    body.dark-mode .accordion-button:hover {
+        background-color: #5e7a95;
+        color: #fff;
+        transition-duration: 500ms;
+    }
+
+    body.dark-mode .accordion-button:not(.collapsed) {
+        background-color: #9b4218;
+        color: #fff;
+    }
+
+    body.dark-mode .accordion-button::after {
+        filter: invert(1) brightness(2);
+    }
+
+    body.dark-mode .accordion-button:not(.collapsed)::after {
+        filter: invert(1) brightness(2);
+    }
+</style>
+
+<body>
+    <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
+    <div class="breadcrumb-fixed-placeholder">
+        <nav aria-label="breadcrumb" style="margin-bottom:0;">
+            <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="./">
+                        <i class="fa-regular fa-house"></i>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="menu.html"><i class="fa-regular fa-bars"></i>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="install-guides.html"><i class="fa-regular fa-book-open"></i>
+                    </a>
+                </li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar-container">
+        <div class="navbar">
+            <!-- Logo -->
+            <a href="./"><img src="img/core-img/logo.png" alt="logo" class="logo"></a>
+
+            <!-- Navigation Links -->
+            <ul class="navbar-nav" id="navbarNav">
+                <li class="nav-item">
+                    <a href="./" class="nav-link">
+                        <i class="fa-sharp fa-regular fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="openbve.html" class="nav-link">
+                        <i class="fa-regular fa-train"></i>
+                        <span>OpenBVE</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="omsi2.html" class="nav-link">
+                        <i class="fa-regular fa-bus"></i>
+                        <span>OMSI 2</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link active">
+                        <i class="fa-regular fa-bars"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+        <ul>
+            <li>
+                <a href="./">
+                    <span class="icon">
+                        <i class="fa-sharp fa-regular fa-house"></i>
+                    </span>
+                    <span class="label">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="openbve.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-train"></i>
+                    </span>
+                    <span class="label">OpenBVE</span>
+                </a>
+            </li>
+            <li>
+                <a href="omsi2.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-bus"></i>
+                    </span>
+                    <span class="label">OMSI 2</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="menu.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-bars"></i>
+                    </span>
+                    <span class="label">Menu</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!------------------------------------------------------------------------ Start of Sections ------------------------------------------------------------------------>
+    <!-- Breadcrumbs -->
+    <section class="about-me-sum clearfix">
+        <div class="wbnrfz_eicw">
+            <div class="page-header-section">
+                <div class="container container-xxl container-mobile container-mobile-header">
+                    <div class="breadcrumb-wrapper">
+                        <nav aria-label="breadcrumb" class="breadcrumb-desktop" style="display:none;">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="../index.html">
+                                        <i class="fa-regular fa-house"></i>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="menu.html"><i class="fa-regular fa-bars"></i>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="install-guides.html"><i class="fa-regular fa-book-open"></i>
+                                    </a>
+                                </li>
+                            </ol>
+                        </nav>
+                        <div class="page-title-wrapper port-header-row">
+                            <div>
+                                <h1 class="page-title" id="filter-title">Install Guides</h1>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scrollable-tabs-container">
+                    <div class="left-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <a href="#" class="btn-filter active" data-filter="*"><i
+                                    class="fa-regular fa-train"></i>&nbsp; OpenBVE</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="btn-filter" data-filter=".rt"><i class="fa-regular fa-bus"></i>&nbsp;
+                                OMSI 2</a>
+                        </li>
+                    </ul>
+
+                    <div class="right-arrow active">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+
+                    </div>
+                </div>
+
+                <hr>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Section Contents -->
+    <section class="about-me-summ clearfix" style="padding-bottom: 4em;">
+        <div class="container-xxl">
+
+            <!-- Accordion OpenBVE -->
+            <div class="accordion accordion-openbve" id="accordGuideOpenBVE">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingGetStarted">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseGetStarted" aria-expanded="false"
+                            aria-controls="collapseGetStarted">
+                            <i class="fa-solid fa-download"></i>&nbsp; Get Started
+                        </button>
+                    </h2>
+                    <div id="collapseGetStarted" class="accordion-collapse collapse" aria-labelledby="headingGetStarted"
+                        data-bs-parent="#accordGuide">
+                        <div class="accordion-body">
+                            <h4><i class="fa-brands fa-windows"></i>&nbsp; Get openBVE up and running </h1>
+                                <p>If this is your first time installing openBVE, or you are encountering issues, please
+                                    follow
+                                    these install instructions:
+
+                                    Note: This guide is for the installation on Windows 11 only. If you are using
+                                    eariler
+                                    versions of Windows, some steps may differ from the list below.</p>
+
+                                <h6 style="font-size: 13px">System Requirements</h6>
+                                <p style="font-size: 13px">Operating System: Windows 7 or later<br>
+                                    Processor: Pentium 4 @ 2.6GHz or better<br>
+                                    Memory: At least 1GB of RAM<br>
+                                    Storage: At least 500MB</p>
+
+                                <p> Note: You may require a better processor, memory and graphics card to run the game
+                                    with
+                                    better performance.</p>
+                                <br>
+                                <br>
+                                <h4>Step 1 - Download the Main Program</h6>
+                                    <figcaption>
+                                        <a href="./img/tutorials/tutdlop.png" class="portfolio-img"><img
+                                                src="./img/tutorials/tutdlop.png" class="img-fluid accord-img"
+                                                alt="Hero Image Section"></a>
+                                        <div>
+                                            <p>We recommend downloading the latest stable version of the openBVE main
+                                                program.</p>
+                                            <a href="https://openbve-project.net/download/"
+                                                class="btn pw-btn btn-2 mt-15" target="_blank">
+                                                <i class="fa-solid fa-download"></i>&nbsp;&nbsp;OpenBVE</a>
+                                        </div>
+                                    </figcaption>
+                                    <br>
+                                    <br>
+                                    <h4>Step 2 - Installing the Main Program</h4>
+                                    <figcaption>
+                                        <a href="./img/tutorials/tutdlop2.png" class="portfolio-img"><img
+                                                src="./img/tutorials/tutdlop2.png" class="img-fluid accord-img"
+                                                alt="Hero Image Section"></a>
+                                        <p>Follow the installation process as shown in the installer. To facilitate
+                                            easier installation of the program, check both "Create a desktop
+                                            shortcut" and "Create a desktop shortcut to the openBVE Addons folder".
+                                            You may change the installation folder of the main program.
+
+                                            Let openBVE run for the first time after the installation is complete.
+                                        </p>
+                                    </figcaption>
+                                    <br>
+                                    <br>
+                                    <h4>Staying up to date</h6>
+                                        <p class="no-align"> Simply download the main program again and extract it to
+                                            your install directory. You do not have to download the other stuff
+                                            again.
+                                        </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingIGT">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseIGR" aria-expanded="false" aria-controls="collapseIGR">
+                            <i class="fa-solid fa-route"></i>&nbsp; Install Guide - Modified
+                            Routes
+                        </button>
+                    </h2>
+                    <div id="collapseIGR" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordGuide">
+                        <div class="accordion-body">
+                            <h4>Step 1 - Downloading the Routes</h4>
+                            <figcaption>
+                                <a href="./img/tutorials/tutdlr.png" class="portfolio-img"><img
+                                        src="./img/tutorials/tutdlr.png" class="img-fluid accord-img"
+                                        alt="Hero Image Section"></a>
+                                <p>NOTE: This is applicable for all the released routes.
+
+                                    First up, download any route File. We'll be using the North West Line for this
+                                    guide.</p>
+                            </figcaption>
+
+                            <figcaption>
+                                <a href="./img/tutorials/tutdlr2.png" class="portfolio-img"><img
+                                        src="./img/tutorials/tutdlr2.png" class="img-fluid accord-img"
+                                        alt="Hero Image Section"></a>
+                                <p>Ensure the files are together for easier navigation, as shown below. Extract the
+                                    file. <br>
+                                <p>You are now ready to use the route. These steps apply for the KSFs too! Do note that
+                                    we recommend OpenBVE Version 1.9.27 (64-bit) or higher for optimal experience. For
+                                    housekeeping measures, you may remove the Zip file after extraction.</p>
+                                </p>
+                            </figcaption>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion OMSI 2 -->
+            <div class="accordion accordion-omsi2" id="accordGuideOMSI2">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingGetStarted">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseGetStarted" aria-expanded="false"
+                            aria-controls="collapseGetStarted">
+                            <i class="fa-solid fa-download"></i>&nbsp; Get Started
+                        </button>
+                    </h2>
+                    <div id="collapseGetStarted" class="accordion-collapse collapse" aria-labelledby="headingGetStarted"
+                        data-bs-parent="#accordGuide">
+                        <div class="accordion-body">
+                            <h4><i class="fa-brands fa-windows"></i>&nbsp; Get OMSI 2 up and running </h1>
+                                <p>OMSI 2 is a DLC. Simply purchase OMSI 2 from Steam and you're good to go!
+
+                                <h6 style="font-size: 13px">System Requirements</h6>
+                                <p style="font-size: 13px">Operating System: Windows 7 or later<br>
+                                    Processor: Pentium 4 @ 2.6GHz or better<br>
+                                    Memory: 2 GB RAM<br>
+                                    Graphics: GeForce or comparable AMD with minimum 512 MB<br>
+                                    DirectX: Version 9.0c</p>
+
+                                <p> Note: You may require a better processor, memory and graphics card to run the game
+                                    with
+                                    better performance.</p>
+                                <br>
+                                <br>
+                                <h4>Step 1 - Purchase the Program from Steam</h6>
+                                    <figcaption>
+                                        <a href="./img/tutorials/tutom.png" class="portfolio-img"><img
+                                                src="./img/tutorials/tutom.png" class="img-fluid accord-img"
+                                                alt="Hero Image Section"></a>
+                                        <p>
+                                            <a href="https://store.steampowered.com/app/252530/OMSI_2_Steam_Edition/"
+                                                class="btn pw-btn-accord btn-2 mt-15" target="_blank">
+                                                <i class="fa-solid fa-download"></i>&nbsp;&nbsp;OMSI 2</a>
+                                        </p>
+                                    </figcaption>
+                                    <br>
+                                    <br>
+                                    <h4>Step 2 - Familiarizing the OMSI 2 Directory</h4>
+                                    <figcaption>
+                                        <a href="./img/tutorials/tutom2.png" class="portfolio-img"><img
+                                                src="./img/tutorials/tutom2.png" class="img-fluid accord-img"
+                                                alt="Hero Image Section"></a>
+                                        <p>After installing Steam, and purchasing the DLC, navigate to <b>C:\(your
+                                                Directory)\steamapps\common\OMSI 2</b>. All your OMSI 2 stuffs will be
+                                            housed here.
+                                        </p>
+                                    </figcaption>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingIGT">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseIGT" aria-expanded="false" aria-controls="collapseIGT">
+                            <i class="fa-solid fa-train-subway"></i>&nbsp; Install Guide - Modified Buses/Maps
+                        </button>
+                    </h2>
+
+                    <div id="collapseIGT" class="accordion-collapse collapse" aria-labelledby="headingIGT"
+                        data-bs-parent="#accordGuide">
+                        <div class="accordion-body">
+                            <p> Our released buses are a complete package. Hence you would only need to download the
+                                following : <br>
+                                - <a href="releases/omsi-developer-files.html" style="color: #e96060"> Fonts</a> (for
+                                BOTH Bus & Maps)<br>
+                                - <a href="releases/omsi-developer-files.html" style="color: #e96060">
+                                    Sceneryobjects</a> (for Maps)<br>
+                                - <a href="releases/omsi-developer-files.html" style="color: #e96060"> Splines</a> (for
+                                Maps)<br>
+                                - <a href="releases/omsi-developer-files.html" style="color: #e96060"> Krueger EDS
+                                    Scripts</a> (for
+                                Bus)<br>
+                                <br>
+                            <h4>Step 1 - Downloading our Maps/Buses</h4>
+                            <p>NOTE: This is applicable for all released buses. For this
+                                guide, we'll be demonstrating how to do so for the Solaris Urbino 18. <br> First up,
+                                download
+                                the Bus.</p>
+                            <figcaption>
+                                <a href="./img/tutorials/tutom3.png" class="portfolio-img"><img
+                                        src="./img/tutorials/tutom3.png" class="img-fluid accord-img"
+                                        alt="Hero Image Section"></a>
+                                <p>
+                                    <a href="releases/solaris-urbino-18.html" class="btn pw-btn-accord btn-2 mt-15"
+                                        target="_blank">
+                                        <i class="fa-solid fa-download"></i>&nbsp;&nbsp;Bus</a>
+                                </p>
+                            </figcaption>
+                            </p>
+
+                            <hr>
+
+                            <h4>Step 2 - Extracting it into your OMSI 2 Directory</h4>
+                            <p> Open the Fonts & Bus Zip file and extract the folder into the OMSI directory
+                                (<b>C:\(your
+                                    Directory)\steamapps\common\OMSI 2</b>). </p>
+
+                            <p>We recommend using
+                                <a href="https://www.7-zip.org/download.html" style="color: #e96060">7-Zip</a> or
+
+                                <a href="https://apps.microsoft.com/detail/9n8g7tscl18r?hl=en-US&gl=US"
+                                    style="color: #e96060">NanaZip
+                                    (shown in the video)</a> to extract.
+                            </p>
+
+                            <figcaption>
+                                <a href="./img/tutorials/tutom4.png" class="portfolio-img"><img
+                                        src="./img/tutorials/tutom4.png" class="img-fluid accord-img"
+                                        alt="Hero Image Section"></a>
+                                <p>This will be the same for any releases except Repaints.</p>
+                            </figcaption>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <script type="text/javascript" id="cookiebanner" src="js/cookies-banner.js" data-position="bottom" data-bg="#f2f3e5"
+        data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
+        data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
+        </script>
+
+    <script src="js/mob-navtabs.js"></script>
+
+    <script src="js/theme-subPages.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+
+    <script src="js/popper.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/pw.bundle.js"></script>
+
+    <script src="js/default-assets/active.js"></script>
+
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <script src="js/glightbox.min.js"></script>
+
+    <script src="js/isotope.pkgd.min.js"></script>
+
+    <script src="js/dstabs.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterButtons = document.querySelectorAll(".btn-filter");
+            const openBVEAccordion = document.querySelector(".accordion-openbve");
+            const omsi2Accordion = document.querySelector(".accordion-omsi2");
+
+            filterButtons.forEach(button => {
+                button.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    const filter = this.getAttribute("data-filter");
+
+                    // Toggle accordion visibility based on filter
+                    if (filter === "*") {
+                        // Show all (default - show OpenBVE)
+                        openBVEAccordion.style.display = "block";
+                        omsi2Accordion.style.display = "none";
+                    } else if (filter === ".rt") {
+                        // Show OMSI 2
+                        openBVEAccordion.style.display = "none";
+                        omsi2Accordion.style.display = "block";
+                    }
+
+                    // Update active button styling
+                    filterButtons.forEach(btn => btn.classList.remove("active"));
+                    this.classList.add("active");
+                });
+            });
+
+            // Set initial state (OpenBVE visible)
+            openBVEAccordion.style.display = "block";
+            omsi2Accordion.style.display = "none";
+        });
+    </script>
+
+</body>
+
+</html>

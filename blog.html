@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
     <meta charset="UTF-8">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="57TuruPNu5wqSSia_cUehl5t9Gh1AbxrHNPcMiFx-aQ" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Blog | SMRTO</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-    <meta property="og:image" content="https://i.imgur.com/CmtdJvS.png" />
+    <meta property="og:image" content="https://i.imgur.com/i8n9KYs.png" />
 
     <link rel="icon" href="./img/core-img/favicon.png">
 
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.2.0/css/all.css" />
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-mobNav.css">
     <link rel="stylesheet" href="css/style-breakpoints.css">
     <link rel="stylesheet" href="css/dark-mode.css">
 
@@ -33,79 +34,185 @@
 </head>
 
 <body>
-
-    <!-- Preloader Section -->
-    <div id="preloader">
-        <div class="loader"></div>
-        <p id="preloader-text">Just a moment...</p>
+    <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
+    <div class="breadcrumb-fixed-placeholder">
+        <nav aria-label="breadcrumb" style="margin-bottom:0;">
+            <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="./">
+                        <i class="fa-regular fa-house"></i>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="menu.html"><i class="fa-regular fa-bars"></i>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="about.html"><i class="fa-regular fa-circle-user"></i>
+                    </a>
+                </li>
+            </ol>
+        </nav>
     </div>
 
-    <header>
-        <a href="./index.html"><img src="./img/core-img/logo.png" alt="logo" class="logo" /></a>
+    <!-- Navigation Bar -->
+    <nav class="navbar-container">
+        <div class="navbar">
+            <!-- Logo -->
+            <a href="./"><img src="img/core-img/logo.png" alt="logo" class="logo"></a>
 
-        <input type="checkbox" id="check" />
-        <label for="check" class="icons">
-            <i class="fa-solid fa-bars" id="menu-icon"></i>
-            <i class="fa-solid fa-xmark" id="close-icon"></i>
-        </label>
+            <!-- Navigation Links -->
+            <ul class="navbar-nav" id="navbarNav">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">
+                        <i class="fa-sharp fa-regular fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../openbve.html" class="nav-link">
+                        <i class="fa-regular fa-train"></i>
+                        <span>OpenBVE</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../omsi2.html" class="nav-link">
+                        <i class="fa-regular fa-bus"></i>
+                        <span>OMSI 2</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="../menu.html" class="nav-link active">
+                        <i class="fa-regular fa-bars"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-        <nav class="navbar navbar-mobile">
-            <a href="./index.html" class="nav-item">Home</a>
-            <a href="./about.html" class="nav-item">About</a>
-            <a href="./openbve.html" class="nav-item">OpenBVE</a>
-            <a href="./omsi-2.html" class="nav-item">OMSI 2</a>
-            <a href="./blog.html" class="nav-item active">Blog</a>
-            <a href="#" class="nav-item">
-                <button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!">
-                    <i class="fa-solid fa-moon-stars" id="theme-icon"></i>
-                </button>
-            </a>
-        </nav>
-    </header>
+    </nav>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+        <ul>
+            <li>
+                <a href="../index.html">
+                    <span class="icon">
+                        <i class="fa-sharp fa-regular fa-house"></i>
+                    </span>
+                    <span class="label">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="../openbve.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-train"></i>
+                    </span>
+                    <span class="label">OpenBVE</span>
+                </a>
+            </li>
+            <li>
+                <a href="../omsi2.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-bus"></i>
+                    </span>
+                    <span class="label">OMSI 2</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="../menu.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-bars"></i>
+                    </span>
+                    <span class="label">Menu</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
 
-    <section class="wbnrfz-summ breadcrumb-area-eicw-cover bg-img" id="cv-about"
-        style="background-image: url(img/bg-img/hero-about.png); height: 100vh;">
-        <div class="wbnrfz_details_blog">
-            <div class="container">
-                <div class="portfolio-controls d-flex justify-content-between align-items-center">
-                    <!-- Filter Buttons -->
-                    <div class="portfolio-filter mt-3">
-                        <div class="col-lg-12">
-                            <div class="main-title">
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">
-                                                Home</a>
-                                        </li>
-                                        <li class="breadcrumb-item active"><a href="#">
-                                                Blog
-                                            </a>
-                                        </li>
-                                    </ol>
-                                </nav>
-                                <h1 class="brc">Our Blogs</h1>
+
+    <!------------------------------------------------------------------------ Start of Sections ------------------------------------------------------------------------>
+    <!-- Breadcrumbs -->
+    <section class="about-me-sum clearfix">
+        <div class="wbnrfz_eicw">
+            <div class="page-header-section">
+                <div class="container container-xxl container-mobile container-mobile-header">
+                    <div class="breadcrumb-wrapper">
+                        <nav aria-label="breadcrumb" class="breadcrumb-desktop" style="display:none;">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="./">
+                                        <i class="fa-regular fa-house"></i>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="menu.html"><i class="fa-regular fa-bars"></i>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="blog.html"><i class="fa-regular fa-comment-dots"></i>
+                                    </a>
+                                </li>
+                            </ol>
+                        </nav>
+                        <div class="page-title-wrapper">
+                            <div>
+                                <h1 class="page-title-single" id="filter-title">All Posts</h1>
                             </div>
+
                         </div>
-                    </div>
-                    <!-- Collapsible Header -->
-                    <div class="collapsible-header" data-bs-toggle="collapse" data-bs-target="#portfolioFilter"
-                        aria-expanded="false" aria-controls="portfolioFilter" style="cursor: pointer;"
-                        title="Filter/Sort">
-                        <i class="fa-solid fa-chevron-down nav-chev"></i>
                     </div>
                 </div>
-                <!-- Collapsible Content -->
-                <div id="portfolioFilter" class="collapse">
-                    <div class="portfolio-controls">
-                        <!-- Filter Buttons -->
-                        <div class="portfolio-filter">
-                            <button class="btn btn-filter-blog active" data-filter="*">All Posts</button>
-                            <button class="btn btn-filter-blog" data-filter=".ur">Updates & Releases</button>
-                            <button class="btn btn-filter-blog" data-filter=".unc">Uncategorized</button>
-                        </div>
 
-                        <!-- Sort Dropdown -->
+
+                <div class="scrollable-tabs-container">
+                    <div class="left-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <a href="#" class="btn-filter-blog active" data-filter="*"><i
+                                    class="fa-light fa-comment-dots"></i> All Posts</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="btn-filter-blog" data-filter=".ur"><i
+                                    class="fa-regular fa-circle-check"></i>
+                                Updates & Releases</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="btn-filter-blog" data-filter=".unc"><i
+                                    class="fa-regular fa-circle-question"></i> Uncategorized</a>
+                        </li>
+                    </ul>
+
+                    <div class="right-arrow active">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Section Contents -->
+    <section class="about-me-summ clearfix">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-12">
+                    <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 20px;">
                         <div class="portfolio-sort">
                             <label for="sort-options">Sort By:</label>
                             <select id="sort-options">
@@ -117,86 +224,68 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="ftco-section-blog" style="padding-top: 4em; padding-bottom: 3em;">
-        <div class="container-fluid container-blogList">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
-                        <h2 id="filter-title">All Posts</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row pw-portfolio">
-                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item ur mb-30 wow fadeInUp" data-wow-delay="100ms"
-                    data-date="2025-09-07">
-                    <div class="single-portfolio-content">
-                        <img src="img/blog/hbltrain-line2.png" alt>
-                        <div class="hover-content-blog">
-                            <h4>Cumulative Updates - 07/09/25</h4>
-                            <a class="read" href="blog/cumulative-update-07-09.html" class="portfolio-img"><i
+            <div class="container">
+                <div class="wbnrfz-grid">
+                    <div class="card ur" data-date="2026-04-01">
+                        <img src="img/blog/ref.png" alt="Work 1">
+                        <div class="card-content">
+                            <h3>Refreshing the Website Experience (V6)</h3>
+                            <a href="#" class="pw-btn-small btn-2"><i
                                     class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item ur mb-30 wow fadeInUp" data-wow-delay="100ms"
-                    data-date="2025-08-16">
-                    <div class="single-portfolio-content">
-                        <img src="img/blog/ref.png" alt>
-                        <div class="hover-content-blog">
-                            <h4>Refreshing the Website Experience</h4>
-                            <a class="read" href="blog/refresh-main.html" class="portfolio-img"><i
+                    <div class="card ur" data-date="2025-06-01">
+                        <img src="img/blog/hbltrain-line2.png" alt="Work 1">
+                        <div class="card-content">
+                            <h3>Cumulative Updates - 07/09/25</h3>
+                            <a href="blog/cumulative-update-07-09.html" class="pw-btn-small btn-2"><i
                                     class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item ur mb-30 wow fadeInUp" data-wow-delay="100ms"
-                    data-date="2024-12-06">
-                    <div class="single-portfolio-content">
-                        <img src="img/blog/ael-ys.png" alt>
-                        <div class="hover-content-blog">
-                            <h4>Release of Airport Express Line & Yishun LRT 2.0</h4>
-                            <a class="read" href="blog/ael-ys.html" class="portfolio-img"><i
+                    <div class="card ur" data-date="2025-06-01">
+                        <img src="img/blog/ref.png" alt="Work 1">
+                        <div class="card-content">
+                            <h3>Refreshing the Website Experience (V4)</h3>
+                            <a href="blog/refresh-main.html" class="pw-btn-small btn-2"><i
                                     class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item unc mb-30 wow fadeInUp" data-wow-delay="100ms"
-                    data-date="2024-12-05">
-                    <div class="single-portfolio-content">
-                        <img src="img/blog/hcrt5a.png" alt>
-                        <div class="hover-content-blog">
-                            <h4>Harbourvale City - a history</h4>
-                            <a class="read" href="blog/harbourvale-city-a-hist.html" class="portfolio-img"><i
+                    <div class="card ur" data-date="2025-06-01">
+                        <img src="img/blog/ael-ys.png" alt="Work 2">
+                        <div class="card-content">
+                            <h3>Release of Airport Express Line & Yishun LRT 2.0</h3>
+                            <a href="blog/ael-ys.html" class="pw-btn-small btn-2"><i
                                     class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item ur mb-30 wow fadeInUp" data-wow-delay="100ms"
-                    data-date="2024-11-03">
-                    <div class="single-portfolio-content">
-                        <img src="img/blog/hbltrain-line.png" alt>
-                        <div class="hover-content-blog">
-                            <h4>Cumulative Updates - 03/11/24</h4>
-                            <a class="read" href="blog/cumulative-update-03-11.html" class="portfolio-img"><i
+                    <div class="card unc" data-date="2024-10-12">
+                        <img src="img/blog/hcrt5a.png" alt="Work 3">
+                        <div class="card-content">
+                            <h3>Harbourvale City - a history</h3>
+                            <a href="blog/harbourvale-city-a-hist.html" class="pw-btn-small btn-2"><i
                                     class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item ur mb-30 wow fadeInUp" data-wow-delay="100ms"
-                    data-date="2024-09-15">
-                    <div class="single-portfolio-content">
-                        <img src="img/blog/hbltrain-line.png" alt>
-                        <div class="hover-content-blog">
-                            <h4>Release of Retrofitted Harbourvale Line & Trains</h4>
-                            <a class="read" href="blog/hlbf-t.html" class="portfolio-img"><i
+                    <div class="card ur" data-date="2024-10-12">
+                        <img src="img/blog/hbltrain-line.png" alt="Work 4">
+                        <div class="card-content">
+                            <h3>Cumulative Updates - 03/11/24</h3>
+                            <a href="blog/cumulative-update-03-11.html" class="pw-btn-small btn-2"><i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="card ur" data-date="2024-09-01">
+                        <img src="img/blog/hbltrain-line.png" alt="Work 4">
+                        <div class="card-content">
+                            <h3>Release of Retrofitted Harbourvale Line & Trains</h3>
+                            <a href="blog/hlbf-t.html" class="pw-btn-small btn-2"><i
                                     class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -204,33 +293,15 @@
             </div>
         </div>
     </section>
-
-    <footer class="footer-area">
-        <div class="container">
-            <div class="footer-content d-flex flex-column align-items-center text-center">
-                <!-- Social Links -->
-                <div class="social-info">
-                    <a href="https://www.youtube.com/@SMRTOsg"><i class="fa-brands fa-youtube"
-                            aria-hidden="true"></i></a>
-                    <a href="https://www.facebook.com/SMRTVRT"><i class="fa-brands fa-facebook"
-                            aria-hidden="true"></i></a>
-                </div>
-                <!-- Copywrite Text -->
-                <div class="copywrite-text">
-                    <p>&copy;
-                        <script>document.write(new Date().getFullYear());</script> Illustrations belong to SMRT Corp Ltd
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <script type="text/javascript" id="cookiebanner" src="js/cookies-banner.js" data-position="bottom" data-bg="#f2f3e5"
         data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
         data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
         </script>
 
-    <script src="js/theme-aboutPage.js"></script>
+    <script src="js/mob-navtabs.js"></script>
+
+    <script src="js/theme-subPages.js"></script>
 
     <script src="js/jquery.min.js"></script>
 
@@ -246,7 +317,7 @@
 
     <script src="js/blogFunct.js"></script>
 
-    <script src="js/preloader.js"></script>
+    <script src="js/dstabs.js"></script>
 
 </body>
 

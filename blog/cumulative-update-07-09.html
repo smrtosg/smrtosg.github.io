@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="description" content>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,111 +10,220 @@
     <title>Cumulative Updates - 07/09/25 | Blog</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-    <meta property="og:image" content="https://i.imgur.com/CmtdJvS.png" />
+    <meta property="og:image" content="https://i.imgur.com/i8n9KYs.png" />
 
     <link rel="icon" href="../img/core-img/favicon.png">
 
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.2.0/css/all.css" />
 
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-mobNav.css">
     <link rel="stylesheet" href="../css/style-breakpoints.css">
     <link rel="stylesheet" href="../css/dark-mode.css">
 
 </head>
 
-<body>
+<style>
+    .row-blog {
+        margin-top: 3em;
+    }
 
-    <!-- Preloader Section -->
-    <div id="preloader">
-        <div class="loader"></div>
-        <p id="preloader-text">Just a moment...</p>
+    #chg {
+        scroll-margin-top: 3em;
+    }
+</style>
+
+<body>
+    <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
+    <div class="breadcrumb-fixed-placeholder">
+        <nav aria-label="breadcrumb" style="margin-bottom:0;">
+            <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="./">
+                        <i class="fa-regular fa-house"></i>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="menu.html"><i class="fa-regular fa-bars"></i>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="about.html"><i class="fa-regular fa-circle-user"></i>
+                    </a>
+                </li>
+            </ol>
+        </nav>
     </div>
 
+    <!-- Navigation Bar -->
+    <nav class="navbar-container">
+        <div class="navbar">
+            <!-- Logo -->
+            <a href="../index.html"><img src="../img/core-img/logo.png" alt="logo" class="logo"></a>
+
+            <!-- Navigation Links -->
+            <ul class="navbar-nav" id="navbarNav">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">
+                        <i class="fa-sharp fa-regular fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../openbve.html" class="nav-link">
+                        <i class="fa-regular fa-train"></i>
+                        <span>OpenBVE</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../omsi2.html" class="nav-link">
+                        <i class="fa-regular fa-bus"></i>
+                        <span>OMSI 2</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="../menu.html" class="nav-link active">
+                        <i class="fa-regular fa-bars"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+        <ul>
+            <li>
+                <a href="../index.html">
+                    <span class="icon">
+                        <i class="fa-sharp fa-regular fa-house"></i>
+                    </span>
+                    <span class="label">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="../openbve.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-train"></i>
+                    </span>
+                    <span class="label">OpenBVE</span>
+                </a>
+            </li>
+            <li>
+                <a href="../omsi2.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-bus"></i>
+                    </span>
+                    <span class="label">OMSI 2</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="../menu.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-bars"></i>
+                    </span>
+                    <span class="label">Menu</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- Scroll Indicator -->
     <div id="scroll-indicator-container">
         <div id="scroll-indicator"></div>
     </div>
 
-
-    <header>
-        <a href="../index.html"><img src="../img/core-img/logo.png" alt="logo" class="logo" /></a>
-
-        <input type="checkbox" id="check" />
-        <label for="check" class="icons">
-            <i class="fa-solid fa-bars" id="menu-icon"></i>
-            <i class="fa-solid fa-xmark" id="close-icon"></i>
-        </label>
-
-        <nav class="navbar navbar-mobile">
-            <a href="../index.html" class="nav-item">Home</a>
-            <a href="../about.html" class="nav-item">About</a>
-            <a href="../openbve.html" class="nav-item">OpenBVE</a>
-            <a href="../omsi-2.html" class="nav-item">OMSI 2</a>
-            <a href="../blog.html" class="nav-item active">Blog</a>
-            <a href="#" class="nav-item">
-                <button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!">
-                    <i class="fa-solid fa-moon-stars" id="theme-icon"></i>
-                </button>
-            </a>
-        </nav>
-    </header>
-
-    <section class="wbnrfz-summ breadcrumb-area-eicw-cover bg-img parallax" id="cv-cumupd"
-        style="background-image: url(../img/blog/cumulativeUpd2.png); height: 100vh;">
-        <div class="wbnrfz_details_blog">
-            <div class="container">
-                <div class="portfolio-controls d-flex justify-content-between align-items-center">
-                    <!-- Filter Buttons -->
-                    <div class="portfolio-filter mt-3">
-                        <div class="col-lg-12">
-                            <div class="main-title">
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="https://nurafianzulkifli.com/index.html">
-                                                Home</a>
-                                        </li>
-                                        <li class="breadcrumb-item active"><a href="../blog.html">
-                                                Blog
-                                            </a>
-                                        </li>
-                                    </ol>
-                                </nav>
-                                <h1 class="brc">Cumulative Updates - 07/09/25</h1>
+    <!------------------------------------------------------------------------ Start of Sections ------------------------------------------------------------------------>
+    <!-- Title/Breadcrumbs -->
+    <section class="about-me-sum clearfix">
+        <div class="wbnrfz_eicw">
+            <div class="page-header-section">
+                <div class="container container-xxl container-mobile container-mobile-header">
+                    <div class="breadcrumb-wrapper">
+                        <nav aria-label="breadcrumb" class="breadcrumb-desktop" style="display:none;">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="../index.html">
+                                        <i class="fa-regular fa-house"></i>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="../menu.html"><i class="fa-regular fa-bars"></i>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="../blog.html"><i class="fa-regular fa-comment-dots"></i>
+                                    </a>
+                                </li>
+                            </ol>
+                        </nav>
+                        <div class="page-title-wrapper">
+                            <div>
+                                <h1 class="page-title-single">Cumulative Updates - 07/09/25</h1>
+                                <p class="page-subtitle">3 mins read • By SMRTO</p>
                             </div>
+
                         </div>
                     </div>
-                    <!-- Collapsible Header -->
-                    <div class="collapsible-header" data-bs-toggle="collapse" data-bs-target="#portfolioFilter"
-                        aria-controls="portfolioFilter" style="cursor: pointer;" title="Go To">
-                        <i class="fa-solid fa-chevron-down nav-chev"></i>
+                </div>
+
+                <div class="scrollable-tabs-container">
+                    <div class="left-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+
+                    </div>
+
+                    <ul>
+                        <li>
+                            <a href="#chg">Changelogs</a>
+                        </li>
+                    </ul>
+
+                    <div class="right-arrow active">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+
                     </div>
                 </div>
-                <!-- Collapsible Content -->
-                <div id="portfolioFilter" class="collapse">
-                    <div class="portfolio-filter mt-3">
-                        <a href="#changes">
-                            <button class="btn">What was changed?</button>
-                        </a>
-                        <a href="#conclusion">
-                            <button class="btn">Conclusion</button>
-                        </a>
-                    </div>
+                <hr>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Cover Header -->
+    <section class="breadcrumb-area-eicw-cover bg-img bg-overlay" id="cv-pv5"
+        style="background-image: url(../img/blog/cumulativeUpd2.png); height: 72vh;">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Section Contents -->
     <section class="ftco-section ftco-degree-bg">
         <div class="container container-blog">
             <div class="row row-blog">
 
-                <p> Good day, today we are releasing the Cumulative Updates - 07/09/25 to the Files & Releases.
+                <p class="no-align"> Good day, today we are releasing the Cumulative Updates - 07/09/25 to the Files & Releases.
                 </p>
 
-                <p> This update involves the R151s, KSFCs, the North West Line and 2 new Releases - the
+                <p class="no-align">This update involves the R151s, KSFCs, the North West Line and 2 new Releases - the
                     C651A and C651Ds. The Dev Files for STARiS/CDDs have been updated too.
                 </p>
 
-                <h2 class="mb-3" style="font-size: 30px; font-weight:bold ;"><u>Changelogs</u></h2>
+                <h2 class="mb-3" style="font-size: 30px; font-weight:bold ;" id="chg"><u>Changelogs</u></h2>
 
                 <p> NWL: <br>
                     - Improved Announcement Trigger Points <br>
@@ -143,12 +252,12 @@
 
                 <p>
                     <u>Links:</u><br>
-                    <a href="../releases/r151.html">- Alstom Movia R151</a><br>
-                    <a href="../releases/c151c.html">- KSF C151C</a><br>
-                    <a href="../releases/c651a.html">- KSF C651A</a><br>
-                    <a href="../releases/c651d.html">- ALS C651D</a><br>
-                    <a href="../releases/north-west-line.html">- North West Line</a><br>
-                    <a href="../releases/dev-files-staris-cddcld-vfd.html">- Dev Files</a>
+                    <a href="../releases/r151.html" class="hyperlink">- Alstom Movia R151</a><br>
+                    <a href="../releases/c151c.html" class="hyperlink">- KSF C151C</a><br>
+                    <a href="../releases/c651a.html" class="hyperlink">- KSF C651A</a><br>
+                    <a href="../releases/c651d.html" class="hyperlink">- ALS C651D</a><br>
+                    <a href="../releases/north-west-line.html" class="hyperlink">- North West Line</a><br>
+                    <a href="../releases/dev-files-staris-cddcld-vfd.html" class="hyperlink">- Dev Files</a>
                 </p>
 
                 <hr>
@@ -158,35 +267,21 @@
 
     </section>
 
-    <footer class="footer-area">
-        <div class="container">
-            <div class="footer-content d-flex flex-column align-items-center text-center">
-                <!-- Social Links -->
-                <div class="social-info">
-                    <a href="https://www.youtube.com/@SMRTOsg"><i class="fa-brands fa-youtube"
-                            aria-hidden="true"></i></a>
-                    <a href="https://www.facebook.com/SMRTVRT"><i class="fa-brands fa-facebook"
-                            aria-hidden="true"></i></a>
-                </div>
-                <!-- Copywrite Text -->
-                <div class="copywrite-text">
-                    <p>&copy;
-                        <script>document.write(new Date().getFullYear());</script> Illustrations belong to SMRT Corp Ltd
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
     <script type="text/javascript" id="cookiebanner" src="../js/cookies-banner.js" data-position="bottom"
         data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
         data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
         </script>
 
 
+    <script src="../js/mob-navtabs.js"></script>
+
     <script src="js/cumupd.js"></script>
 
     <script src="../js/jquery.min.js"></script>
+
+    <script src='https://unpkg.com/swiper@6.8.1/swiper-bundle.min.js'></script>
+
+    <script src="../js/dstabs.js"></script>
 
     <script src="../js/popper.min.js"></script>
 
@@ -195,10 +290,6 @@
     <script src="../js/pw.bundle.js"></script>
 
     <script src="../js/default-assets/active.js"></script>
-
-    <script src="../js/scroll.js"></script>
-
-    <script src="../js/preloader.js"></script>
 
 </body>
 

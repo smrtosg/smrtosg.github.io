@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta name="description" content>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="57TuruPNu5wqSSia_cUehl5t9Gh1AbxrHNPcMiFx-aQ" />
@@ -10,13 +9,14 @@
     <title>Home | SMRTO</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-    <meta property="og:image" content="https://i.imgur.com/CmtdJvS.png" />
+    <meta property="og:image" content="https://i.imgur.com/i8n9KYs.png" />
 
     <link rel="icon" href="./img/core-img/favicon.png">
 
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.2.0/css/all.css" />
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-mobNav.css">
     <link rel="stylesheet" href="css/style-breakpoints.css">
     <link rel="stylesheet" href="css/dark-mode.css">
 
@@ -39,69 +39,145 @@
 
 </head>
 
+<style>
+</style>
+
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar-container">
+        <div class="navbar">
+            <!-- Logo -->
+            <a href="./"><img src="img/core-img/logo.png" alt="logo" class="logo"></a>
 
-    <!-- Preloader Section -->
-    <div id="preloader">
-        <div class="loader"></div>
-        <p id="preloader-text">Just a moment...</p>
-    </div>
+            <!-- Navigation Links -->
+            <ul class="navbar-nav" id="navbarNav">
+                <li class="nav-item">
+                    <a href="./" class="nav-link active">
+                        <i class="fa-sharp fa-regular fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="openbve.html" class="nav-link">
+                        <i class="fa-regular fa-train"></i>
+                        <span>OpenBVE</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="omsi2.html" class="nav-link">
+                        <i class="fa-regular fa-bus"></i>
+                        <span>OMSI 2</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="menu.html" class="nav-link">
+                        <i class="fa-regular fa-bars"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-    <header>
-        <a href="./index.html"><img src="./img/core-img/logo.png" alt="logo" class="logo" /></a>
+    </nav>
 
-        <input type="checkbox" id="check" />
-        <label for="check" class="icons">
-            <i class="fa-solid fa-bars" id="menu-icon"></i>
-            <i class="fa-solid fa-xmark" id="close-icon"></i>
-        </label>
-
-        <nav class="navbar navbar-mobile">
-            <a href="#" class="nav-item active">Home</a>
-            <a href="./about.html" class="nav-item">About</a>
-            <a href="./openbve.html" class="nav-item">OpenBVE</a>
-            <a href="./omsi-2.html" class="nav-item">OMSI 2</a>
-            <a href="./blog.html" class="nav-item">Blog</a>
-            <a href="#" class="nav-item">
-                <button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!">
-                    <i class="fa-solid fa-moon-stars" id="theme-icon"></i>
-                </button>
-            </a>
-        </nav>
-    </header>
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+        <ul>
+            <li class="active">
+                <a href="./">
+                    <span class="icon">
+                        <i class="fa-sharp fa-regular fa-house"></i>
+                    </span>
+                    <span class="label">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="openbve.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-train"></i>
+                    </span>
+                    <span class="label">OpenBVE</span>
+                </a>
+            </li>
+            <li>
+                <a href="omsi2.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-bus"></i>
+                    </span>
+                    <span class="label">OMSI 2</span>
+                </a>
+            </li>
+            <li>
+                <a href="menu.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-bars"></i>
+                    </span>
+                    <span class="label">Menu</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
 
     <!-- ============================================= Hero Section ============================================= -->
     <section id="hero" class="d-flex flex-column justify-content-center">
-        <picture>
-            <source srcset="img/bg-img/hero-bg-mobile.png" media="(max-width: 768px)">
-            <source srcset="img/bg-img/hero-bg-tablet.png" media="(max-width: 1024px)">
-            <img src="img/bg-img/hero-bg-desktop.png" alt="Hero" class="hero-img">
-        </picture>
     </section><!-- End Hero -->
+
+    <div class="main-content">
+        <section class="wbnrfz-works floating-cards">
+            <div class="container">
+                <div class="wbnrfz-grid wow fadeIn" data-wow-delay="50ms">
+                    <div class="card">
+
+                        <img src="img/core-img/openbvedl.png" alt="Work 1">
+                        <div class="card-content">
+                            <h3>OpenBVE</h3>
+                            <a href="openbve.html" class="pw-btn-small btn-2"><i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="card" style="background-color: #6c6c67;">
+                        <img src="img/releases-ss/devfile-opA.png" alt="Work 2">
+                        <div class="card-content">
+                            <h3>OpenBVE Developer Files</h3>
+                            <a href="releases/dev-files-staris-cddcld-vfd.html" class="pw-btn-small btn-2"><i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/core-img/omsidl.png" alt="Work 3">
+                        <div class="card-content">
+                            <h3>OMSI 2</h3>
+                            <a href="omsi2.html" class="pw-btn-small btn-2"><i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/releases-ss/df.png" alt="Work 4">
+                        <div class="card-content">
+                            <h3>OMSI 2 Developer Files</h3>
+                            <a href="releases/omsi-developer-files.html" class="pw-btn-small btn-2"><i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
     <section class="about-me-area section-padding-80-0 clearfix" id="maps-routes">
         <div class="container container-xxl">
-
-            <!-- Migration Alert -->
-            <div class="migration-alert alert alert-info" role="alert" style="margin-bottom: 4em;">
-                <i class="fa-solid fa-bell" style="margin-right: 10px;"></i>
-                <strong>Coming in April!</strong>&nbsp; We're launching a fresh new website look. Stay tuned for an improved
-                experience.
-            </div>
-            <!-- End Migration Alert -->
-
             <div class="row">
                 <div class="col-12">
-                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms"
+                    <div class="section-heading text-center wow fadeIn" data-wow-delay="100ms"
                         style="margin-bottom: 18px;">
                         <h2>Maps & Routes</h2>
                     </div>
                 </div>
 
                 <div class="col-12">
-                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
+                    <div class="section-heading text-center wow fadeIn">
                         <h1 style="font-size: 20px;">We operate over 7 <u>OMSI 2</u> Maps and 7 <u>OpenBVE</u> Train
                             Routes</h2>
                     </div>
@@ -111,7 +187,7 @@
             <div class="row">
 
                 <div class="col-md-6 col-lg-3"><a href="releases/hillgrove-town.html">
-                        <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="300ms"
+                        <div class="about-me-content text-center  wow fadeIn" data-wow-delay="300ms"
                             style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
                             <div class="wsd-icon">
                                 <i class="fa-solid fa-bus"></i>
@@ -122,7 +198,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3"><a href="releases/woodlands-town.html">
-                        <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="500ms"
+                        <div class="about-me-content text-center  wow fadeIn" data-wow-delay="500ms"
                             style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
                             <div class="wsd-icon">
                                 <i class="fa-solid fa-bus"></i>
@@ -133,7 +209,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3"><a href="info/berlin-brt.html">
-                        <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="700ms"
+                        <div class="about-me-content text-center  wow fadeIn" data-wow-delay="700ms"
                             style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
                             <div class="wsd-icon">
                                 <i class="fa-solid fa-bus"></i>
@@ -144,7 +220,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3"><a href="info/lemmental.html">
-                        <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="900ms"
+                        <div class="about-me-content text-center  wow fadeIn" data-wow-delay="900ms"
                             style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
                             <div class="wsd-icon">
                                 <i class="fa-solid fa-bus"></i>
@@ -155,7 +231,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3"><a href="info/gg2.html">
-                        <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="300ms"
+                        <div class="about-me-content text-center  wow fadeIn" data-wow-delay="300ms"
                             style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
                             <div class="wsd-icon">
                                 <i class="fa-solid fa-bus"></i>
@@ -166,7 +242,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3"><a href="info/hohenkirchen.html">
-                        <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="500ms"
+                        <div class="about-me-content text-center  wow fadeIn" data-wow-delay="500ms"
                             style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
                             <div class="wsd-icon">
                                 <i class="fa-solid fa-bus"></i>
@@ -177,7 +253,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3"><a href="info/szczecin.html">
-                        <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="700ms"
+                        <div class="about-me-content text-center  wow fadeIn" data-wow-delay="700ms"
                             style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
                             <div class="wsd-icon">
                                 <i class="fa-solid fa-bus"></i>
@@ -191,7 +267,7 @@
             <div class="row">
 
                 <div class="col-md-6 col-lg-3"><a href="releases/harbourvale-line.html">
-                        <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="300ms"
+                        <div class="about-me-content text-center  wow fadeIn" data-wow-delay="300ms"
                             style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
                             <div class="ui-icon">
                                 <i class="fa-solid fa-train"></i>
@@ -203,7 +279,7 @@
 
 
                 <div class="col-md-6 col-lg-3"><a href="releases/changi-airport-line.html">
-                        <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="500ms"
+                        <div class="about-me-content text-center  wow fadeIn" data-wow-delay="500ms"
                             style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
                             <div class="ui-icon">
                                 <i class="fa-solid fa-train"></i>
@@ -214,7 +290,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3"><a href="releases/yishun-lrt.html">
-                        <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="700ms"
+                        <div class="about-me-content text-center  wow fadeIn" data-wow-delay="700ms"
                             style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
                             <div class="ui-icon">
                                 <i class="fa-solid fa-train"></i>
@@ -224,7 +300,7 @@
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3"><a href="releases/airport-express-line.html">
-                        <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="700ms"
+                        <div class="about-me-content text-center  wow fadeIn" data-wow-delay="700ms"
                             style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
                             <div class="ui-icon">
                                 <i class="fa-solid fa-train"></i>
@@ -234,7 +310,7 @@
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3"><a href="releases/north-west-line.html">
-                        <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="700ms"
+                        <div class="about-me-content text-center  wow fadeIn" data-wow-delay="700ms"
                             style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
                             <div class="ui-icon">
                                 <i class="fa-solid fa-train"></i>
@@ -244,7 +320,7 @@
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3"><a href="info/woodlands-town-line.html">
-                        <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="700ms"
+                        <div class="about-me-content text-center  wow fadeIn" data-wow-delay="700ms"
                             style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
                             <div class="ui-icon">
                                 <i class="fa-solid fa-train"></i>
@@ -254,7 +330,7 @@
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3"><a href="info/circle-line.html">
-                        <div class="about-me-content text-center  wow fadeInUp" data-wow-delay="700ms"
+                        <div class="about-me-content text-center  wow fadeIn" data-wow-delay="700ms"
                             style="padding-bottom: 1.05em; padding-top: 3.5em; margin-top: 80px;">
                             <div class="ui-icon">
                                 <i class="fa-solid fa-train"></i>
@@ -266,94 +342,14 @@
             </div>
         </div>
     </section>
-
-    <div class="pw-portfolio-area clearfix" id="featured">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
-                        <h2>Get Started</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row pw-portfolio">
-
-                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item ds mb-30 wow fadeInUp" data-wow-delay="100ms"
-                    data-year="2025">
-                    <div class="single-portfolio-content">
-                        <img src="img/core-img/openbvedl.png" alt>
-                        <div class="hover-content-blog">
-                            <h4>OpenBVE</h4>
-                            <a class="info" href="openbve.html" class="portfolio-img"><i
-                                    class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item in mb-30 wow fadeInUp" data-wow-delay="300ms"
-                    data-year="2024">
-                    <div class="single-portfolio-content">
-                        <img src="img/releases-ss/devfile-opA.png" alt="tdc-v3">
-                        <div class="hover-content-blog">
-                            <h4>OpenBVE Developer Files</h4>
-                            <a class="info" href="releases/dev-files-staris-cddcld-vfd.html" class="portfolio-img"><i
-                                    class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item ds mb-30 wow fadeInUp" data-wow-delay="500ms"
-                    data-year="2022">
-                    <div class="single-portfolio-content">
-                        <img src="img/core-img/omsidl.png" alt="bus-rep">
-                        <div class="hover-content-blog">
-                            <h4>OMSI 2</h4>
-                            <a class="info" href="omsi-2.html" class="portfolio-img"><i
-                                    class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item ds mc mb-30 wow fadeInUp"
-                    data-wow-delay="700ms">
-                    <div class="single-portfolio-content">
-                        <img src="img/releases-ss/df.png" alt="bus-stop-pole">
-                        <div class="hover-content-blog">
-                            <h4>OMSI 2 Developer Files</h4>
-                            <a class="info" href="releases/omsi-developer-files.html" class="portfolio-img"><i
-                                    class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-
-
-    <footer class="footer-area">
-        <div class="container">
-            <div class="footer-content d-flex flex-column align-items-center text-center">
-                <!-- Social Links -->
-                <div class="social-info">
-                    <a href="https://www.youtube.com/@SMRTOsg"><i class="fa-brands fa-youtube"
-                            aria-hidden="true"></i></a>
-                    <a href="https://www.facebook.com/SMRTVRT"><i class="fa-brands fa-facebook"
-                            aria-hidden="true"></i></a>
-                </div>
-                <!-- Copywrite Text -->
-                <div class="copywrite-text">
-                    <p>&copy;
-                        <script>document.write(new Date().getFullYear());</script> Illustrations belong to SMRT Corp Ltd
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <script type="text/javascript" id="cookiebanner" src="js/cookies-banner.js" data-position="bottom" data-bg="#f2f3e5"
         data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
         data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
         </script>
+
+    <script src="js/mob-navtabs.js"></script>
 
     <script src="js/theme-index.js"></script>
 
@@ -367,7 +363,7 @@
 
     <script src="js/default-assets/active.js"></script>
 
-    <script src="js/preloader.js"></script>
+
 
 
 </body>

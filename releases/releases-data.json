@@ -1,0 +1,414 @@
+{
+  "harbourvale-line": {
+    "title": "Harbourvale Line",
+    "versions": {
+      "version3": {
+        "version": "3.0",
+        "date": "11/08/25",
+        "label": "latest-release",
+        "changes": [
+          "- Updated RATiS UI",
+          "- Updated PMTPG for all stations"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/Railway-HBL.7z"
+      },
+      "version1": {
+        "version": "1.0",
+        "date": "03/11/24",
+        "label": "legacy",
+        "changes": [
+          "- New Chimes Implemented",
+          "- Backported the Announcement Trigger update from Retrofitted Routes"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/Railway.-.HBL.Legacy.7z"
+      }
+    }
+  },
+  "airport-express-line": {
+    "title": "Airport Express Line",
+    "versions": {
+      "version3": {
+        "version": "3.3",
+        "date": "08/03/2026",
+        "label": "latest-release",
+        "changes": [
+          "- New PMTPG & Announcement Sequence for all stations"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/smrtosg.github.io/releases/download/v6.0.0/Railway-AEL.7z"
+      },
+      "version1": {
+        "version": "1.0",
+        "date": "2022",
+        "label": "legacy",
+        "changes": [
+          "- Initial Release"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/Railway.-.AEL.Legacy.7z"
+      }
+    }
+  },
+  "c651d": {
+    "title": "Alstom Movia C651D",
+    "versions": {
+      "version1": {
+        "version": "1.0",
+        "date": "07/09/25",
+        "label": "latest-release",
+        "changes": [
+          "- Full train file provided. <a href=\"https://smrtosg.github.io/blog/refresh-main.html#ul\" class=\"hyperlink\">Learn More</a> about this change.",
+          "- Initial Release"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1020/SMRTO.Alstom.MOVIA.C651D.303-304.303F.7z"
+      }
+    }
+  },
+  "north-west-line": {
+    "title": "North-West Line",
+    "versions": {
+      "version3": {
+        "version": "3.8",
+        "date": "08/03/26",
+        "label": "latest-release",
+        "changes": [
+          "- Fixed mismatched PMTPG announcements for some stations"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/smrtosg.github.io/releases/download/v6.0.0/Railway-NWL.7z"
+      },
+      "version1": {
+        "version": "0.8",
+        "date": "2010",
+        "label": "legacy",
+        "changes": [
+          "- Initial Release"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/North.West.Line.v0.8.zip"
+      }
+    }
+  },
+  "c651a": {
+    "title": "Alstom Movia C651A",
+    "versions": {
+      "version1": {
+        "version": "1.0",
+        "date": "07/09/25",
+        "label": "latest-release",
+        "changes": [
+          "- Full train file provided. <a href=\"https://smrtosg.github.io/blog/refresh-main.html#ul\" class=\"hyperlink\">Learn More</a> about this change.",
+          "- Initial Release"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1020/SMRTO.KSF.C651A.239-240.240F.7z"
+      }
+    }
+  },
+  "r151": {
+    "title": "Alstom Movia R151",
+    "versions": {
+      "version1": {
+        "version": "1.7",
+        "date": "07/09/25",
+        "label": "latest-release",
+        "changes": [
+          "- Full train file provided. <a href=\"https://smrtosg.github.io/blog/refresh-main.html#ul\" class=\"hyperlink\">Learn More</a> about this change.",
+          "- CDD: Improved Doors Closing Animation, Emergency Brakes Message",
+          "- Fixed missing texture near the Grabpoles support",
+          "- Added Door Grabpoles on the Interior textures"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/SMRT.Alstom.MOVIA.R151.825-826.825F.7z"
+      }
+    }
+  },
+  "c151c": {
+    "title": "Kawasaki Heavy Industries & CRRC Qingdao Sifang C151C",
+    "versions": {
+      "version2": {
+        "version": "2.7",
+        "date": "07/09/25",
+        "label": "latest-release",
+        "changes": [
+          "- Full train file provided. <a href=\"https://smrtosg.github.io/blog/refresh-main.html#ul\" class=\"hyperlink\">Learn More</a> about this change.",
+          "- Revamped STARiS 2 Interface for ALL Lines",
+          "- Improved Doors Closing Animation, Emergency Brakes Message",
+          "- Added VFD Support for AEL & NWL Reversed"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1020/SMRT.KSF.C151C.701-702.701F.7z"
+      }
+    }
+  },
+  "c151b": {
+    "title": "Kawasaki Heavy Industries & CRRC Qingdao Sifang C151B",
+    "versions": {
+      "version2": {
+        "version": "2.5",
+        "date": "18/08/25",
+        "label": "latest-release",
+        "changes": [
+          "- Full train file provided. <a href=\"https://smrtosg.github.io/blog/refresh-main.html#ul\" class=\"hyperlink\">Learn More</a> about this change.",
+          "- Added support for Reverse Driving (EHB to STD)",
+          "- Added support for Reverse Driving (CTS to STC)"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/SMRT.KSF.C151B.651-652.651F.7z"
+      }
+    }
+  },
+  "c151a": {
+    "title": "Kawasaki Heavy Industries & CRRC Qingdao Sifang C151A",
+    "versions": {
+      "version2": {
+        "version": "2.5",
+        "date": "18/08/25",
+        "label": "latest-release",
+        "changes": [
+          "- Full train file provided. <a href=\"https://smrtosg.github.io/blog/refresh-main.html#ul\" class=\"hyperlink\">Learn More</a> about this change.",
+          "- Added support for Reverse Driving (EHB to STD)",
+          "- Added support for Reverse Driving (CTS to STC)"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/SMRT.KSF.C151A.569-570.569F.7z"
+      }
+    }
+  },
+  "651-leg": {
+    "title": "C651/A/B/C/D (Legacy)",
+    "versions": {
+      "version2": {
+        "version": "1.0.2",
+        "date": "03/11/24",
+        "label": "latest-release",
+        "changes": [
+          "- Compatibility for new Announcement Trigger update"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/Train.-.HLCG.Legacy.7z"
+      }
+    }
+  },
+  "ryl150": {
+    "title": "Alstom Movia RYL150",
+    "versions": {
+      "version1": {
+        "version": "1.1",
+        "date": "16/08/25",
+        "label": "latest-release",
+        "changes": [
+          "- Full train file provided. <a href=\"https://smrtosg.github.io/blog/refresh-main.html#ul\" class=\"hyperlink\">Learn More</a> about this change.",
+          "- Updated Loop Sound"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/Alstom.MOVIA.RYL150.3001.7z"
+      }
+    }
+  },
+  "yishun-lrt": {
+    "title": "Yishun LRT",
+    "versions": {
+      "version2": {
+        "version": "2.3",
+        "date": "08/03/26",
+        "label": "latest-release",
+        "changes": [
+          "- Updated RATiS UI",
+          "- New Announcements to match with the rest of HCRT's Lines"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/Railway-YSLRT_2.1.7z"
+      },
+      "version1": {
+        "version": "1.0",
+        "date": "2022",
+        "label": "legacy",
+        "changes": [
+          "- Initial Release"
+        ],
+        "downloadUrl": "https://mega.nz/file/hZlUQRrK#W1iemIcylCStUrtl4J0oWlYV476hep7vj-81eGlUXiY"
+      }
+    }
+  },
+  "yl150a-b": {
+    "title": "Alstom (Bombardier) Movia YL150/A/B (Legacy)",
+    "versions": {
+      "version1": {
+        "version": "1.1",
+        "date": "17/03/24",
+        "label": "latest-release",
+        "changes": [
+          "- Initial Release"
+        ],
+        "downloadUrl": "https://mega.nz/file/cUc2zD5a#rxKU9FlesTWqAKJR3_js9P--f9A1ZcuDo_7KrVIij-I"
+      }
+    }
+  },
+  "dev-files-staris-cddcld-vfd": {
+    "title": "Dev Files (STARiS/CDD-CLD/VFD)",
+    "versions": {
+      "version1": {
+        "version": "1.8",
+        "date": "07/09/25",
+        "label": "latest-release",
+        "changes": [
+          "- Updated SVG Files for new STARIS 2 designs for KSFC, files for C651A"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1020/STARiS-CDDCLD.Dev.Files.7z"
+      }
+    }
+  },
+  "changi-airport-line": {
+    "title": "Changi Airport Line",
+    "versions": {
+      "version2": {
+        "version": "2.1",
+        "date": "18/08/2025",
+        "label": "latest-release",
+        "changes": [
+          "- New PMTPG announcements"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/Railway-CGL_2.1.7z"
+      },
+      "version1": {
+        "version": "1.0.1",
+        "date": "01/06/24",
+        "label": "legacy",
+        "changes": [
+          "- New Chimes Implemented"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/Railway.-.CGL.Legacy.7z"
+      }
+    }
+  },
+  "woodlands-town": {
+    "title": "Woodlands Town",
+    "versions": {
+      "version2": {
+        "version": "2.0",
+        "date": "25/03/2024",
+        "label": "latest-release",
+        "changes": [
+          "- New Balmoral, Woodlands Int & International Airport Terminal",
+          "- New Services 881 and 886. Renumbered IKEA Shuttle to 407.",
+          "- EDS formatting switched to SMRT's Mobitec format."
+        ],
+        "downloads": [
+          {
+            "name": "Map",
+            "url": "https://github.com/smrtosg/main/releases/download/v2508.1001/Map_WT.7z"
+          },
+          {
+            "name": "Fonts",
+            "url": "https://smrtosg.github.io/releases/omsi-developer-files.html"
+          },
+          {
+            "name": "Sceneryobjects",
+            "url": "https://github.com/smrtosg/main/releases/download/v2508.1001/Sceneryobjects_WT.7z"
+          },
+          {
+            "name": "Splines",
+            "url": "https://github.com/smrtosg/main/releases/download/v2508.1001/Splines_WT.7z"
+          },
+          {
+            "name": "Vehicles (For Announcements/EDS)",
+            "url": "https://github.com/smrtosg/main/releases/download/v2508.1001/Vehicles_WT.7z"
+          }
+        ]
+      }
+    }
+  },
+  "su18": {
+    "title": "Solaris Urbino 18",
+    "versions": {
+      "version1": {
+        "version": "1.0",
+        "date": "15/09/2024",
+        "label": "latest-release",
+        "changes": [
+          "- Initial Release"
+        ],
+        "downloads": [
+          {
+            "name": "Fonts",
+            "url": "https://smrtosg.github.io/releases/omsi-developer-files.html"
+          },
+          {
+            "name": "Bus",
+            "url": "https://github.com/smrtosg/main/releases/download/v2508.1001/Solaris.BVG.7z"
+          }
+        ]
+      }
+    }
+  },
+  "vdl-clle": {
+    "title": "VDL Citea LLE",
+    "versions": {
+      "version1": {
+        "version": "1.0",
+        "date": "15/09/2024",
+        "label": "latest-release",
+        "changes": [
+          "- Initial Release"
+        ],
+        "downloads": [
+          {
+            "name": "Fonts",
+            "url": "https://smrtosg.github.io/releases/omsi-developer-files.html"
+          },
+          {
+            "name": "Bus",
+            "url": "https://github.com/smrtosg/main/releases/download/v2508.1001/VDL.Citea.LLE.Release.2.7z"
+          }
+        ]
+      }
+    }
+  },
+  "jw-b9tl": {
+    "title": "SMRT JW B9TL Ad",
+    "versions": {
+      "version1": {
+        "version": "1.0",
+        "date": "20/09/2024",
+        "label": "latest-release",
+        "changes": [
+          "- Initial Release"
+        ],
+        "downloads": [
+          {
+            "name": "Original Bus",
+            "url": "https://gx7767.wixsite.com/studio/kmb-avbwu"
+          },
+          {
+            "name": "Repaints",
+            "url": "https://github.com/smrtosg/main/releases/download/v2508.1001/SMRT.JW.B9TL.7z"
+          }
+        ]
+      }
+    }
+  },
+  "omsi-dev": {
+    "title": "OMSI Developer Files",
+    "versions": {
+      "version1": {
+        "version": "1.3",
+        "date": "16/08/2025",
+        "label": "latest-release",
+        "changes": [
+          "- Re-based to 2025 File Versions"
+        ],
+        "downloads": [
+          {
+            "name": "Fonts Files",
+            "url": "https://github.com/smrtosg/main/releases/download/v2508.1001/Fonts.7z"
+          },
+          {
+            "name": "Humans Files",
+            "url": "https://github.com/smrtosg/main/releases/download/v2508.1001/Humans.7z"
+          },
+          {
+            "name": "Sceneryobjects Files",
+            "url": "https://mega.nz/file/90hQiA4T#GwiW9ygKllAUMWLBUAX1239TQ6vy7AoT0Q41hWIXEEU"
+          },
+          {
+            "name": "Splines Files",
+            "url": "https://mega.nz/file/tJUwQIZR#rkxL9yS9lrrS6dPCD7MsbAg2K9ELWVmxQh_KBELpPm4"
+          },
+          {
+            "name": "K++ Files",
+            "url": "https://mega.nz/file/RIcymA5T#msKbuxNnYe3Si5VNSZuKk1rZibpc9Ju4RrIRIn1k_5I"
+          }
+        ]
+      }
+    }
+  }
+}

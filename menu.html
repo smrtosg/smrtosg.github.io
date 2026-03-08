@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        window._themePreference = localStorage.getItem('theme-preference') || 'system';
+        window._prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const _shouldBeDark = window._themePreference === 'dark' || (window._themePreference === 'system' && window._prefersDark);
+
+        if (_shouldBeDark) {
+            document.documentElement.classList.add('dark-mode');
+            document.documentElement.style.background = '#121521';
+        }
+    </script>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="57TuruPNu5wqSSia_cUehl5t9Gh1AbxrHNPcMiFx-aQ" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Menu | SMRTO</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta property="og:image" content="https://i.imgur.com/i8n9KYs.png" />
+
+    <link rel="icon" href="img/core-img/favicon.png">
+
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.2.0/css/all.css" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-mobNav.css">
+    <link rel="stylesheet" href="css/style-breakpoints.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN76281P3Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WN76281P3Q');
+    </script>
+
+</head>
+
+<style>
+    #cv-bat-subp {
+        height: 10vh;
+    }
+
+    .alert-warning p {
+        color: #000;
+        font-size: 16px;
+        overflow-wrap: break-word;
+        line-height: 1.7;
+        margin-bottom: 0rem !important;
+    }
+
+    .list-group-item {
+        padding-top: 0.7em;
+        padding-bottom: 0.7em;
+    }
+
+
+    body.dark-mode .alert-warning p {
+        color: #ffda6a;
+        font-size: 16px;
+        overflow-wrap: break-word;
+        line-height: 1.7;
+        margin-bottom: 0rem !important;
+    }
+
+
+    .footer {
+        display: none;
+    }
+
+    .apps-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .app-card {
+        background: #ffffff;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        height: 100%;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .app-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        transform: translateY(-6px);
+    }
+
+    .app-thumbnail {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        cursor: pointer;
+        display: block;
+    }
+
+    .app-thumbnail-link {
+        display: block;
+        overflow: hidden;
+        border-radius: 24px;
+        margin: 12px;
+    }
+
+    .app-content {
+        padding: 24px;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .app-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin: 0 0 12px 0;
+    }
+
+    body.dark-mode .app-card {
+        background: #1c1f2b;
+        border: 1px solid #2b2b2b33;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.233), 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark-mode .app-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    body.dark-mode .app-name {
+        color: #e0e0e0;
+    }
+
+    @media (max-width: 768px) {
+        .apps-grid {
+            max-width: 50%;
+        }
+
+        .app-thumbnail {
+            height: 120px;
+        }
+
+        .app-content {
+            padding: 16px;
+            padding-bottom: 10px;
+        }
+
+        .app-name {
+            font-size: 1rem;
+        }
+
+        .app-thumbnail-link {
+            margin: 8px;
+        }
+    }
+
+    @media (max-width: 380px) {
+        .apps-grid {
+            max-width: 100%;
+        }
+    }
+</style>
+
+
+
+<body>
+     <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
+    <div class="breadcrumb-fixed-placeholder">
+        <nav aria-label="breadcrumb" style="margin-bottom:0;">
+            <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="./">
+                        <i class="fa-regular fa-house"></i>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="menu.html"><i class="fa-regular fa-bars"></i>
+                    </a>
+                </li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar-container">
+        <div class="navbar">
+            <!-- Logo -->
+            <a href="./"><img src="img/core-img/logo.png" alt="logo" class="logo"></a>
+
+            <!-- Navigation Links -->
+            <ul class="navbar-nav" id="navbarNav">
+                <li class="nav-item">
+                    <a href="./" class="nav-link">
+                        <i class="fa-sharp fa-regular fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="openbve.html" class="nav-link">
+                        <i class="fa-regular fa-train"></i>
+                        <span>OpenBVE</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="omsi2.html" class="nav-link">
+                        <i class="fa-regular fa-bus"></i>
+                        <span>OMSI 2</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="menu.html" class="nav-link active">
+                        <i class="fa-regular fa-bars"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+        <ul>
+            <li>
+                <a href="./">
+                    <span class="icon">
+                        <i class="fa-sharp fa-regular fa-house"></i>
+                    </span>
+                    <span class="label">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="openbve.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-train"></i>
+                    </span>
+                    <span class="label">OpenBVE</span>
+                </a>
+            </li>
+            <li>
+                <a href="omsi2.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-bus"></i>
+                    </span>
+                    <span class="label">OMSI 2</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="menu.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-bars"></i>
+                    </span>
+                    <span class="label">Menu</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <!------------------------------------------------------------------------ Start of Sections ------------------------------------------------------------------------>
+
+
+    <!-- Title/Breadcrumbs -->
+    <section class="about-me-sum clearfix">
+        <div class="wbnrfz_eicw">
+            <div class="page-header-section">
+                <div class="container container-xxl container-mobile container-mobile-header">
+                    <div class="breadcrumb-wrapper">
+                        <nav aria-label="breadcrumb" class="breadcrumb-desktop" style="display:none;">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="./">
+                                        <i class="fa-regular fa-house"></i>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="menu.html"><i class="fa-regular fa-bars"></i>
+                                    </a>
+                                </li>
+                            </ol>
+                        </nav>
+                        <div class="page-title-wrapper">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                                <div>
+                                    <h1 class="page-title" id="filter-title">Menu</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Section Contents -->
+    <section class="about-me-summ clearfix" style="padding-bottom: 5em;">
+        <div class="container">
+            <div class="list-group">
+                <a href="about.html"
+                    class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex">
+                        <div>
+                            <h5 class="lg-menu"><i class="fa-regular fa-circle-user"></i>&nbsp; About Us</h5>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="blog.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex">
+                        <div>
+                            <h5 class="lg-menu"><i class="fa-regular fa-comment-dots"></i>&nbsp; Blog</h5>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="labs.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex">
+                        <div>
+                            <h5 class="lg-menu"><i class="fa-regular fa-flask"></i>&nbsp; Labs</h5>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="install-guides.html"
+                    class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex">
+                        <div>
+                            <h5 class="lg-menu"><i class="fa-regular fa-book-open"></i>&nbsp; Install Guides</h5>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="" class="list-group-item list-group-item-action flex-column align-items-start"
+                    id="theme-toggle-desktop">
+                    <div class="d-flex">
+                        <div>
+                            <h5 class="lg-menu"><i class="fa-regular fa-sun-bright" id="theme-icon-desktop"></i>&nbsp;
+                                <span id="theme-text-desktop">Display: Light</span>
+                            </h5>
+                        </div>
+                    </div>
+                </a>
+
+                <hr>
+
+                <div class="footer-social">
+                    <a href="https://www.youtube.com/@SMRTOsg" class="social-link">
+                        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.facebook.com/SMRTVRT" class="social-link">
+                        <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="footer-copy">
+                    © 2026 Illustrations belong to SMRT Corp Ltd
+                </div>
+            </div>
+    </section>
+
+
+    <script type="text/javascript" id="cookiebanner" src="../js/cookies-banner.js" data-position="bottom"
+        data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
+        data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
+        </script>
+
+
+    <script src="js/mob-navtabs.js"></script>
+
+    <script src="js/theme-index.js"></script>
+
+    <script src="../js/jquery.min.js"></script>
+
+    <script src="../js/popper.min.js"></script>
+
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/pw.bundle.js"></script>
+
+    <script src="../js/default-assets/active.js"></script>
+
+    <script src="../js/isotope.pkgd.min.js"></script>
+
+    <script src="../js/dstabs.js"></script>
+
+    <script src="../js/utils.js"></script>
+
+    <script src="js/menu.js"></script>
+
+
+
+</body>
+
+</html>

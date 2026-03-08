@@ -1,0 +1,413 @@
+  .line-diagram {
+      flex: 1;
+      padding: 30px 20px;
+      transition-duration: 800ms;
+      background-color: #fff;
+      border-radius: 25px;
+      box-shadow: 3px 0 15px -1px rgba(0, 0, 0, 0.15);
+      margin-bottom: 40px;
+      padding-right: 4em;
+  }
+
+  .line-content-wrapper {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 40px;
+  }
+
+  .line-description {
+      flex: 1;
+      padding: 30px 20px;
+      transition-duration: 800ms;
+      background-color: #fff;
+      border-radius: 25px;
+      box-shadow: 3px 0 15px -1px rgba(0, 0, 0, 0.15);
+      margin-bottom: 40px;
+      height: fit-content;
+  }
+
+  .line-description h3 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: #000;
+      font-size: 16px;
+      font-weight: 600;
+  }
+
+  .line-description p {
+      margin: 0 0 0px 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #000;
+  }
+
+  .line-description ul {
+      margin: 12px 0;
+      padding-left: 20px;
+      list-style: disc;
+  }
+
+  .line-description li {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #000;
+      margin-bottom: 8px;
+  }
+
+  .line-stat {
+      display: flex;
+      justify-content: space-between;
+      margin: 12px 0;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+  }
+
+  .line-stat-label {
+      font-weight: 500;
+      color: #666;
+  }
+
+  .line-stat-value {
+      font-weight: 600;
+      color: #000;
+  }
+
+  #hidden-stations {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      padding-left: 0px;
+      margin-top: 5px;
+  }
+
+
+
+  /* Adjust first station in hidden section */
+  #hidden-stations .station:first-child {
+      padding-top: 0;
+  }
+
+  #hidden-stations.show {
+      display: flex;
+  }
+
+  .show-more-button {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+  }
+
+  .show-more-button button {
+      background: #051ad7;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 24px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background 0.3s ease;
+      width: 100%;
+  }
+
+  .show-more-button button:hover {
+      background: #061386;
+  }
+
+  .line-controls {
+      margin-bottom: 25px;
+  }
+
+  .line-control-dropdown {
+      display: inline-block;
+      background: #3d4556;
+      border: 1px solid #555;
+      border-radius: 8px;
+      padding: 8px 15px;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      min-width: 200px;
+  }
+
+  .line-control-dropdown:hover {
+      background: #4a5264;
+  }
+
+  .line-status {
+      color: #4ade80;
+      font-size: 12px;
+      margin-top: 5px;
+  }
+
+  .line-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      padding-left: 30px;
+  }
+
+  /* Vertical line connecting all stations */
+  .line-container::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 22px;
+      bottom: 99px;
+      width: 3px;
+      background: #051ad7;
+      z-index: 1;
+  }
+
+  .station {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 8px 0;
+      min-height: 45px;
+  }
+
+  .station-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #fff;
+      border: 3px solid #051ad7;
+      position: absolute;
+      left: -31px;
+      z-index: 10;
+      flex-shrink: 0;
+  }
+
+
+  .station-content {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+  }
+
+  .station-codes {
+      display: flex;
+      gap: 0;
+      align-items: center;
+      flex-shrink: 0;
+  }
+
+  .station-code {
+      background: #051ad7;
+      color: #fff !important;
+      font-weight: bold;
+      border-radius: 13.6px / 19.2px;
+      padding: 5px 10px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      margin-right: 0px;
+      border: 2px solid #fff;
+      cursor: default;
+  }
+
+  /* When station-code is followed by an interchange badge, flatten right side */
+  .station-code:has(~ .interchange-badge) {
+      border-radius: 13.6px 0 0 13.6px / 19.2px 0 0 19.2px;
+      border-right: none;
+  }
+
+  .interchange-badge {
+      font-size: 11px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 0;
+      white-space: nowrap;
+      color: white;
+      letter-spacing: 1px;
+      border: 2px solid #fff;
+      border-left: none;
+      cursor: default;
+  }
+
+  /* Remove border between multiple interchange badges */
+  .interchange-badge:not(:last-child) {
+      border-right: none;
+  }
+
+  /* Last interchange badge gets rounded right side */
+  .interchange-badge:last-child {
+      border-radius: 0 13.6px 13.6px 0 / 0 19.2px 19.2px 0;
+  }
+
+  /* Solo station code (no interchange) keeps full rounding */
+  .station-code:only-child {
+      border-radius: 13.6px / 19.2px;
+      border-right: 2px solid #fff;
+  }
+
+  /* Newton connector style - separate capsules with connector */
+  .station-connector .station-code:has(~ .interchange-badge) {
+      border-radius: 13.6px / 19.2px;
+      border-right: 2px solid #fff;
+      position: relative;
+      z-index: 2;
+  }
+
+  /* Right-side connector nub from station-code */
+  .station-connector .station-code:has(~ .interchange-badge)::after {
+      content: '';
+      position: absolute;
+      right: -9px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      background: #ff3b3b;
+      border-radius: 2px;
+      z-index: -1;
+  }
+
+  .station-connector .interchange-badge {
+      border-radius: 13.6px / 19.2px;
+      border: 2px solid #fff;
+      border-left: 2px solid #fff;
+      margin-left: 14px;
+      position: relative;
+      z-index: 2;
+  }
+
+  /* Left-side connector nub from interchange badge */
+  .station-connector .interchange-badge::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 19px;
+      height: 10px;
+      background: #005ec8;
+      border-radius: 2px;
+      z-index: -1;
+  }
+
+  /* Line colors for interchanges */
+  .mrt-hbl {
+      background: #051ad7;
+  }
+
+  .mrt-tel {
+      background: #874c25;
+  }
+
+  .mrt-nsl {
+      background: #ff0606;
+  }
+
+  .station-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #000;
+      white-space: normal;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      cursor: default;
+  }
+
+  .logo-operator {
+      width: 100px;
+      margin-top: 10px;
+  }
+
+  .details-section {
+      padding-left: 4em;
+      padding-right: 4em;
+  }
+
+  .caplet {
+      height: 1.05em;
+      width: auto;
+      margin-right: 0.3em;
+      vertical-align: middle;
+  }
+
+  .filter-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+  }
+
+  body.dark-mode .line-description {
+      flex: 1;
+      padding: 30px 20px;
+      background: #3d4556;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      height: fit-content;
+  }
+
+  body.dark-mode .line-description h3 {
+      color: #fff;
+  }
+
+  body.dark-mode .line-description p {
+      color: #fff;
+  }
+
+  body.dark-mode .line-description li {
+      color: #ccc;
+  }
+
+  body.dark-mode .line-stat {
+      border-bottom-color: #555;
+  }
+
+  body.dark-mode .line-stat-label {
+      color: #ccc;
+  }
+
+  body.dark-mode .line-diagram {
+      transition: all 0.5s ease;
+      background-color: #1c1f2b;
+      border: 1px solid #2b2b2b33;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.233), 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  body.dark-mode .line-description {
+      transition: all 0.5s ease;
+      background-color: #1c1f2b;
+      border: 1px solid #2b2b2b33;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.233), 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  body.dark-mode .station-name {
+      color: #fff;
+  }
+
+  body.dark-mode .port-summary {
+      color: #fff;
+      transition: all 0.5s ease;
+      background-color: #1c1f2b;
+      border: 1px solid #2b2b2b33;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.233), 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+      .line-content-wrapper {
+          flex-direction: column;
+          gap: 0;
+      }
+
+      .line-diagram {
+          max-width: 100%;
+      }
+
+      .line-description {
+          max-width: 100%;
+      }
+
+      .details-section {
+          padding-left: 1em;
+          padding-right: 1em;
+      }
+  }

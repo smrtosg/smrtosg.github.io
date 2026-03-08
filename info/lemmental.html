@@ -2,456 +2,704 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="google-site-verification" content="57TuruPNu5wqSSia_cUehl5t9Gh1AbxrHNPcMiFx-aQ" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="description" content>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="57TuruPNu5wqSSia_cUehl5t9Gh1AbxrHNPcMiFx-aQ" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Lemmental | SMRTO</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-  <meta property="og:image" content="https://i.imgur.com/CmtdJvS.png" />
+    <title>Lemmental | OMSI 2</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta property="og:image" content="https://i.imgur.com/i8n9KYs.png" />
 
-  <link rel="icon" href="../img/core-img/favicon.png">
+    <link rel="icon" href="../img/core-img/favicon.png">
 
-  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.2.0/css/all.css" />
 
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/style-breakpoints.css">
-  <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-mobNav.css">
+    <link rel="stylesheet" href="../css/style-breakpoints.css">
+    <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="../info/css/info-table.css">
 
-  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="../css/glightbox.min.css">
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css'>
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/portfolio-img.min.css">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN76281P3Q"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN76281P3Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-WN76281P3Q');
-  </script>
+        gtag('config', 'G-WN76281P3Q');
+    </script>
 </head>
 
+<style>
+    #cv-tdc {
+        background-image: url('https://i.imgur.com/t1fx4Uj.jpeg');
+        height: 75vh;
+        position: relative;
+    }
+
+    #cv-tdc::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(245, 245, 245, 0.4);
+        z-index: 1;
+    }
+
+    body.dark-mode #cv-tdc::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+    }
+
+    #changesText,
+    .version-details p {
+        text-align: left !important;
+    }
+
+    .port-summary {
+        min-height: 130px;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
 <body>
+    <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
+    <div class="breadcrumb-fixed-placeholder">
+        <nav aria-label="breadcrumb" style="margin-bottom:0;">
+            <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="../index.html">
+                        <i class="fa-regular fa-house"></i>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="../omsi2.html"><i class="fa-regular fa-bus"></i>
+                    </a>
+                </li>
+            </ol>
+        </nav>
+    </div>
 
-  <!-- Preloader Section -->
-  <div id="preloader">
-    <div class="loader"></div>
-    <p id="preloader-text">Just a moment...</p>
-  </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar-container">
+        <div class="navbar">
+            <!-- Logo -->
+            <a href="../index.html"><img src="../img/core-img/logo.png" alt="logo" class="logo"></a>
 
+            <!-- Navigation Links -->
+            <ul class="navbar-nav" id="navbarNav">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">
+                        <i class="fa-sharp fa-regular fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../openbve.html" class="nav-link">
+                        <i class="fa-regular fa-train"></i>
+                        <span>OpenBVE</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../omsi2.html" class="nav-link active">
+                        <i class="fa-regular fa-bus"></i>
+                        <span>OMSI 2</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="../menu.html" class="nav-link">
+                        <i class="fa-regular fa-bars"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-
-  <header>
-    <a href="../index.html"><img src="../img/core-img/logo.png" alt="logo" class="logo" /></a>
-
-    <input type="checkbox" id="check" />
-    <label for="check" class="icons">
-      <i class="fa-solid fa-bars" id="menu-icon"></i>
-      <i class="fa-solid fa-xmark" id="close-icon"></i>
-    </label>
-
-    <nav class="navbar navbar-mobile">
-      <a href="../index.html" class="nav-item">Home</a>
-      <a href="../about.html" class="nav-item">About</a>
-      <a href="../openbve.html" class="nav-item">OpenBVE</a>
-      <a href="../omsi-2.html" class="nav-item active">OMSI 2</a>
-      <a href="../blog.html" class="nav-item">Blog</a>
-      <a href="#" class="nav-item">
-        <button class="wbnrfz_btn_theme" id="dark-mode-toggle" title="Toggle Dark/Light Mode!">
-          <i class="fa-solid fa-moon-stars" id="theme-icon"></i>
-        </button>
-      </a>
     </nav>
-  </header>
 
-  <section class="wbnrfz-summ breadcrumb-area-eicw-cover bg-img parallax" id="cv-tdc"
-    style="background-image: url(https://i.imgur.com/t1fx4Uj.jpeg); height: 100vh;">
-    <div class="wbnrfz_details_blog">
-      <div class="container">
-        <div class="portfolio-controls d-flex justify-content-between align-items-center">
-          <!-- Filter Buttons -->
-          <div class="portfolio-filter mt-3">
-            <div class="col-lg-12">
-              <div class="main-title">
-                <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../index.html#maps-routes"> Info</a>
-                    </li>
-                    <li class="breadcrumb-item active"><a href="#">Maps
-                      </a>
-                    </li>
-                  </ol>
-                </nav>
-                <h1 class="brc">Lemmental</h1>
-              </div>
-            </div>
-          </div>
-          <!-- Collapsible Header -->
-          <div class="collapsible-header" data-bs-toggle="collapse" data-bs-target="#portfolioFilter"
-            aria-expanded="false" aria-controls="portfolioFilter" style="cursor: pointer;" title="More Details">
-            <i class="fa-solid fa-chevron-down nav-chev"></i>
-          </div>
-        </div>
-        <!-- Collapsible Content -->
-        <div id="portfolioFilter" class="collapse">
-          <div class="details_catagory_wrap">
-            <div class="col-sm-4 single_catagory ">
-              <span>Developer(s)</span>
-              <h4><i class="fa-solid fa-circle-user"></i> Schleswig-Holstein</h4>
-            </div>
-
-            <div class="col-sm-4 single_catagory">
-              <span>Owned By</span>
-              <h4>Lemmental Transport Authority</h4>
-            </div>
-
-            <div class="col-sm-4 single_catagory">
-              <span>Share Project</span>
-              <div class="social_links">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://smrtosg.github.io/main/info/lemmental.html"
-                  title="Facebook">
-                  <i class="fa-brands fa-facebook"></i> </a>
-                <a href="https://x.com/intent/post?url=https://smrtosg.github.io/main/info/lemmental.html&text=Lemmental"
-                  title="X (Twitter)">
-                  <i class="fa-brands fa-youtube"></i></a>
-                <a href="#" class="clipboard" onclick="copyToClipboard()" title="Copy Link"><i
-                    class="fa-solid fa-link"></i>
-                  <p class="clipboard-copied" style="font-size: 12px;"></p>
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+        <ul>
+            <li>
+                <a href="../index.html">
+                    <span class="icon">
+                        <i class="fa-sharp fa-regular fa-house"></i>
+                    </span>
+                    <span class="label">Home</span>
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style="background-color: #6ac144; width: 100%; height: 10px;"></div>
-  </section>
+            </li>
+            <li class="active">
+                <a href="../openbve.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-train"></i>
+                    </span>
+                    <span class="label">OpenBVE</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="../omsi2.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-bus"></i>
+                    </span>
+                    <span class="label">OMSI 2</span>
+                </a>
+            </li>
+            <li>
+                <a href="../menu.html">
+                    <span class="icon">
+                        <i class="fa-regular fa-bars"></i>
+                    </span>
+                    <span class="label">Menu</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
 
-
-  <section class="about-me-summ clearfix">
-    <div class="wbnrfz_details_section wow fadeIn" data-wow-delay="100ms">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12">
-            <div class="details_info">
-              <div class="row justify-content-center">
-                <div class="col-lg-12">
-                  <div class="info justify-content-center">
-                    <p style="text-align: center; padding-bottom: 3em; padding-top: 3em;">The Lemmental Bus Package is
-                      one of seven bus packages under the SMRTO (SMV).</p>
-                  </div>
+    <!------------------------------------------------------------------------ Start of Sections ------------------------------------------------------------------------>
+    <!-- Title/Breadcrumbs -->
+    <section class="about-me-sum clearfix">
+        <div class="wbnrfz_eicw">
+            <div class="page-header-section">
+                <div class="container-xxl container-mobile container-mobile-header">
+                    <div class="breadcrumb-wrapper">
+                        <nav aria-label="breadcrumb" class="breadcrumb-desktop" style="display:none;">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="../index.html">
+                                        <i class="fa-regular fa-house"></i>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="../omsi2.html"><i class="fa-regular fa-bus"></i>
+                                    </a>
+                                </li>
+                            </ol>
+                        </nav>
+                        <div class="page-title-wrapper">
+                            <h1 class="page-title-single">Lemmental</h1>
+                        </div>
+                    </div>
                 </div>
-              </div>
+
             </div>
-          </div>
+        </div>
+        <hr>
         </div>
 
-
-        <div class="banner text-center wow fadeInUp" data-wow-delay="150ms">
-          <a href="https://i.imgur.com/V0oA9ZE.jpeg" class="portfolio-img"><img src="https://i.imgur.com/V0oA9ZE.jpeg"
-              class="img-fluid" alt="LEM-1"></a>
         </div>
 
-        <div class="details_single_img wow fadeInUp" data-wow-delay="150ms">
-          <div class="row">
-            <div class="col-lg-6 col-md-6">
-              <div class="thumb">
-                <a href="https://i.imgur.com/yTeHkPO.jpeg" class="portfolio-img"><img
-                    src="https://i.imgur.com/yTeHkPO.jpeg" class="img-fluid" alt="LEM-2"></a>
-              </div>
+    </section>
+
+    <!-- Cover Header -->
+    <section class="breadcrumb-area-eicw-cover bg-img bg-overlay" id="cv-tdc">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                </div>
             </div>
-            <div class="col-lg-6 col-md-6">
-              <div class="thumb">
-                <a href="https://i.imgur.com/dPGLgvs.jpeg" class="portfolio-img"><img
-                    src="https://i.imgur.com/dPGLgvs.jpeg" class="img-fluid" alt="LEM-3"></a>
-              </div>
+        </div>
+    </section>
+
+    <!-- Details/Contents Section -->
+    <section class="about-me-summ clearfix">
+        <div class="wbnrfz_details_section wow fadeIn">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <!-- Summary -->
+                        <div class="container container-xxl container-mobile">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4 box-indiv">
+                                    <div class="port-summary port-cat text-center mb-80  ">
+                                        <div class="summ-icon">
+                                            <i class="fa-regular fa-circle-user"></i>
+                                        </div>
+                                        <h3 style="font-size: 18px; font-weight: bolder;">Developer</h3>
+                                        <h4 style="font-size: 13px;">Schleswig-Holstein</h4>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-4 box-indiv">
+                                    <div class="port-summary port-year text-center mb-80">
+                                        <div class="summ-icon">
+                                            <i class="fa-regular fa-bus"></i>
+                                        </div>
+                                        <h3 style="font-size: 18px; font-weight: bolder;">Operated By</h3>
+                                        <h4 style="font-size: 13px;">Lemmental Transport Authority</h4>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-4 box-indiv">
+                                    <div class="port-summary port-year text-center mb-80">
+                                        <div class="summ-icon">
+                                            <i class="fa-regular fa-share-nodes"></i>
+                                        </div>
+                                        <h3 style="font-size: 18px; font-weight: bolder;">Share Project</h3>
+                                        <div class="social_links">
+                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://smrtosg.github.io/main/releases/lemmental.html"
+                                                title="Facebook">
+                                                <i class="fa-brands fa-facebook"></i> </a>
+                                            <a href="https://x.com/intent/post?url=https://smrtosg.github.io/main/releases/lemmental.html&text=Lemmental"
+                                                title="X (Twitter)">
+                                                <i class="fa-brands fa-x-twitter"></i></a>
+                                            <a href="#" class="clipboard" onclick="copyToClipboard(this); return false;"
+                                                title="Copy Link"><i class="fa-solid fa-link-horizontal"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6 col-md-6">
-              <div class="thumb">
-                <a href="https://i.imgur.com/t1fx4Uj.jpeg" class="portfolio-img"><img
-                    src="https://i.imgur.com/t1fx4Uj.jpeg" class="img-fluid" alt="LEM-4"></a>
-              </div>
+        </div>
+    </section>
+
+    <!-- Bus Services Section -->
+    <section class="details-section">
+        <div class="container container-xxl container-mobile">
+            <div class="line-content-wrapper">
+
+                <!-- Line Description Box -->
+                <div class="line-description">
+                    <p>The Lemmental Bus Package is one of seven bus packages under the SMRTO (SMV).
+                    </p>
+
+                    <br>
+
+                    <div class="about-me-stations text-center">
+                        <table class="info-table table">
+                            <tbody>
+                                <tr class="info-det">
+                                    <td class="first">Incumbent Operator</td>
+                                    <td class="second"><img src="../img/core-img/smb.png" id="ops-smrtb" alt="smrt"
+                                            class="logo"></td>
+                                </tr>
+                                <tr class="info-det">
+                                    <td class="first">Present Contract Term</td>
+                                    <td class="second"><u>Tendered Package 2nd Term (Contract PT240-2)</u> <br> Aug 2025
+                                        - 2030</td>
+                                </tr>
+                                <tr class="info-det">
+                                    <td class="first">Bus Services</td>
+                                    <td class="second">100, SB51, SB52, 450, 451, 452, 453, 454, 455, 456, 457, 458,
+                                        459, NE40, N41,
+                                        N42, N43, N44, N45 & N46. <br> [20
+                                        bus routes]</td>
+                                </tr>
+                                <tr class="info-det">
+                                    <td class="first">Bus Depot</td>
+                                    <td class="second">Franz-Puhl-Strasse Bus Depot, Wupperstrasse Bus Depot, Persick
+                                        Bus Depot</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- Bus Services -->
+                <div class="line-diagram">
+                    <div class="about-me-stations text-center">
+                        <div class="row justify-content-center">
+                            <table class="info-table table">
+                                <thead>
+                                    <tr>
+                                        <th class="first" scope="col">Service</th>
+                                        <th class="second" scope="col">Route</th>
+                                        <th class="first" scope="col">Type</th>
+                                    </tr>
+                                <tbody>
+                                    <tr class="info-det">
+                                        <td class="first">100</td>
+                                        <td class="second">Lemmental P1 ⇔ Lemmental Bonner Gürtel/ Theater</td>
+                                        <td class="first">Feeder</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">SB51</td>
+                                        <td class="second">Lemmental Hbf. ⇔ Schatenburg
+                                        </td>
+                                        <td class="first">Trunk</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">SB52</td>
+                                        <td class="second">Lemmental Hbf. ⇔ Königsrath</td>
+                                        <td class="first">Trunk</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">450</td>
+                                        <td class="second">Lemmental ZOB ⇔ Oberesch/ Adlersbruch</td>
+                                        <td class="first">Trunk</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">451</td>
+                                        <td class="second">Lemmental ZOB ⇔ Trehnbach</td>
+                                        <td class="first">Trunk</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">452</td>
+                                        <td class="second">Klein-Steinburg ⇔ Lemmental Birkenforst</td>
+                                        <td class="first">Trunk</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">453</td>
+                                        <td class="second">Lemmental Hbf. ↺ Lemmental Leibnizplatz</td>
+                                        <td class="first">Trunk</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">454</td>
+                                        <td class="second">Lemmental Hbf. ⇔ Ketzheide</td>
+                                        <td class="first">Trunk</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">455</td>
+                                        <td class="second">Lemmental ZOB ⇔ Hoheneck</td>
+                                        <td class="first">Trunk</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">456</td>
+                                        <td class="second">Lemmental ZOB ⇔ Frankenberg/ Neu-Weiberg</td>
+                                        <td class="first">Trunk</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">457</td>
+                                        <td class="second">Lemmental Hbf. ⇔ Lemmental Bahnhof-Ost</td>
+                                        <td class="first">Trunk</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">458</td>
+                                        <td class="second">Lemmental Bahnhof-Ost ⇔ Klein-Klefe</td>
+                                        <td class="first">Trunk</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">459</td>
+                                        <td class="second">Lemmental ZOB ⇔ Grünhöfchen</td>
+                                        <td class="first">Trunk</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">NE40</td>
+                                        <td class="second">Lemmental Bahnhof-Ost ⇔ Lemmental Bahnhof-Wes</td>
+                                        <td class="first">Night Service</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">N41</td>
+                                        <td class="second">Lemmental Hbf. ⇔ Königsrath</td>
+                                        <td class="first">Night Service</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">N42</td>
+                                        <td class="second">Lemmental Hbf. ⇔ Lemmental Bahnhof-Ost</td>
+                                        <td class="first">Night Service</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">N43</td>
+                                        <td class="second">Lemmental Hbf. ⇔ Lemmental ZOB</td>
+                                        <td class="first">Night Service</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">N44</td>
+                                        <td class="second">Lemmental ZOB ⇔ Lemmental Birkenforst</td>
+                                        <td class="first">Night Service</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">N45</td>
+                                        <td class="second">Lemmental Hbf. ⇔ Lemmental Stümp</td>
+                                        <td class="first">Night Service</td>
+                                    </tr>
+                                    <tr class="info-det">
+                                        <td class="first">N46</td>
+                                        <td class="second">Lemmental Hbf. ⇔ Schatenburg</td>
+                                        <td class="first">Night Service</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-          </div>
+    </section>
+
+    <!-- Contents -->
+    <div class="wrapper">
+        <div class="carousel" id="delays-carousel">
+            <div class="carousel-cell">
+                <a href="https://i.imgur.com/yTeHkPO.jpeg" class="portfolio-img" data-gallery="carousel"
+                    id="lemmental1">
+                    <img class="img-fluid" src="https://i.imgur.com/yTeHkPO.jpeg" alt="lemmental1-img" draggable="false"
+                        id="lemmental1-img">
+                </a>
+            </div>
+            <div class="carousel-cell">
+                <a href="https://i.imgur.com/dPGLgvs.jpeg" class="portfolio-img" data-gallery="carousel"
+                    id="lemmental2">
+                    <img class="img-fluid" src="https://i.imgur.com/dPGLgvs.jpeg" alt="lemmental2-img" draggable="false"
+                        id="lemmental2-img">
+                </a>
+            </div>
+            <div class="carousel-cell">
+                <a href="https://i.imgur.com/t1fx4Uj.jpeg" class="portfolio-img" data-gallery="carousel"
+                    id="lemmental3">
+                    <img class="img-fluid" src="https://i.imgur.com/t1fx4Uj.jpeg" alt="lemmental3-img" draggable="false"
+                        id="lemmental3-img">
+                </a>
+            </div>
         </div>
-      </div>
     </div>
 
+    <script type="text/javascript" id="cookiebanner" src="../js/cookies-banner.js" data-position="bottom"
+        data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
+        data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
+        </script>
 
-    <!-- Operational Info -->
-    <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="300ms">
-      <h3 class="ld-s-title">Operational Info</h3>
-      <table class="info-table table">
-        <tbody>
-          <tr class="info-det">
-            <td class="first">Incumbent Operator</td>
-            <td class="second"><img src="../img/core-img/smb.png" id="ops-smrtb" alt="smrt" class="logo"></td>
-          </tr>
-          <tr class="info-det">
-            <td class="first">Present Contract Term</td>
-            <td class="second"><u>Tendered Package 2nd Term (Contract PT240-2)</u> <br> Aug 2025 - 2030</td>
-          </tr>
-          <tr class="info-det">
-            <td class="first">Bus Services</td>
-            <td class="second">100, SB51, SB52, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459, NE40, N41,
-              N42, N43, N44, N45 & N46. <br> [20
-              bus routes]</td>
-          </tr>
-          <tr class="info-det">
-            <td class="first">Bus Depot</td>
-            <td class="second">Franz-Puhl-Strasse Bus Depot, Wupperstrasse Bus Depot, Persick Bus Depot</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <script src="../js/mob-navtabs.js"></script>
 
-    <!-- Bus Services -->
-    <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="500ms">
-      <h3 class="ld-s-title">Bus Services</h3>
-      <div class="row justify-content-center">
-        <table class="info-table table">
-          <thead>
-            <tr>
-              <th class="first" scope="col">Service</th>
-              <th class="second" scope="col">Route</th>
-              <th class="first" scope="col">Type</th>
-            </tr>
-          <tbody>
-            <tr class="info-det">
-              <td class="first">100</td>
-              <td class="second">Lemmental P1 ⇔ Lemmental Bonner Gürtel/ Theater</td>
-              <td class="first">Feeder</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">SB51</td>
-              <td class="second">Lemmental Hbf. ⇔ Schatenburg
-              </td>
-              <td class="first">Trunk</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">SB52</td>
-              <td class="second">Lemmental Hbf. ⇔ Königsrath</td>
-              <td class="first">Trunk</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">450</td>
-              <td class="second">Lemmental ZOB ⇔ Oberesch/ Adlersbruch</td>
-              <td class="first">Trunk</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">451</td>
-              <td class="second">Lemmental ZOB ⇔ Trehnbach</td>
-              <td class="first">Trunk</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">452</td>
-              <td class="second">Klein-Steinburg ⇔ Lemmental Birkenforst</td>
-              <td class="first">Trunk</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">453</td>
-              <td class="second">Lemmental Hbf. ↺ Lemmental Leibnizplatz</td>
-              <td class="first">Trunk</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">454</td>
-              <td class="second">Lemmental Hbf. ⇔ Ketzheide</td>
-              <td class="first">Trunk</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">455</td>
-              <td class="second">Lemmental ZOB ⇔ Hoheneck</td>
-              <td class="first">Trunk</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">456</td>
-              <td class="second">Lemmental ZOB ⇔ Frankenberg/ Neu-Weiberg</td>
-              <td class="first">Trunk</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">457</td>
-              <td class="second">Lemmental Hbf. ⇔ Lemmental Bahnhof-Ost</td>
-              <td class="first">Trunk</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">458</td>
-              <td class="second">Lemmental Bahnhof-Ost ⇔ Klein-Klefe</td>
-              <td class="first">Trunk</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">459</td>
-              <td class="second">Lemmental ZOB ⇔ Grünhöfchen</td>
-              <td class="first">Trunk</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">NE40</td>
-              <td class="second">Lemmental Bahnhof-Ost ⇔ Lemmental Bahnhof-Wes</td>
-              <td class="first">Night Service</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">N41</td>
-              <td class="second">Lemmental Hbf. ⇔ Königsrath</td>
-              <td class="first">Night Service</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">N42</td>
-              <td class="second">Lemmental Hbf. ⇔ Lemmental Bahnhof-Ost</td>
-              <td class="first">Night Service</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">N43</td>
-              <td class="second">Lemmental Hbf. ⇔ Lemmental ZOB</td>
-              <td class="first">Night Service</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">N44</td>
-              <td class="second">Lemmental ZOB ⇔ Lemmental Birkenforst</td>
-              <td class="first">Night Service</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">N45</td>
-              <td class="second">Lemmental Hbf. ⇔ Lemmental Stümp</td>
-              <td class="first">Night Service</td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">N46</td>
-              <td class="second">Lemmental Hbf. ⇔ Schatenburg</td>
-              <td class="first">Night Service</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <script src="../js/jquery.min.js"></script>
+
+    <script src="../js/popper.min.js"></script>
+
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/pw.bundle.js"></script>
+
+    <script src="../js/default-assets/active.js"></script>
+
+    <script src="../js/swiper-bundle.min.js"></script>
+
+    <script src="../js/isotope.pkgd.min.js"></script>
+
+    <script src="../js/copy-to-clipboard.js"></script>
+
+    <script src='//cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js'></script>
+
+    <script src="../js/dis.js"></script>
+
+    <script src="../js/dstabs.js"></script>
+
+    <script src="../js/releases-loader.js"></script>
+
+    <!-- Script for Indiv Page - Modes -->
+    <script>
+        /* Dark Mode Functionality for Individual Pages */
+
+        // Check for theme parameter in URL (for cross-domain sync from worksbynrfz.com)
+        (function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const themeParam = urlParams.get('theme');
+            if (themeParam && ['light', 'dark', 'system'].includes(themeParam)) {
+                localStorage.setItem('theme-preference', themeParam);
+            }
+        })();
+
+        // Use window properties if they exist from initial script, otherwise create them
+        if (typeof window._themePreference === 'undefined') {
+            window._themePreference = localStorage.getItem('theme-preference') || 'system';
+        }
+        if (typeof window._prefersDark === 'undefined') {
+            window._prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        }
+
+        // Determine if dark mode should be active
+        function shouldBeDark() {
+            if (window._themePreference === 'dark') return true;
+            if (window._themePreference === 'light') return false;
+            if (window._themePreference === 'system') return window._prefersDark;
+            return window._prefersDark; // Default to system preference
+        }
+
+        // Apply theme on page load
+        if (shouldBeDark()) {
+            document.body.classList.add('dark-mode');
+            updateThemeIcon('dark');
+            updateHrefForDarkMode();
+        } else {
+            updateThemeIcon('light');
+        }
+
+        // Listen to theme toggle clicks
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+            const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+
+            function cycleTheme() {
+                const themes = ['light', 'dark', 'system'];
+                const currentTheme = window._themePreference || 'system';
+                const currentIndex = themes.indexOf(currentTheme);
+                const nextTheme = themes[(currentIndex + 1) % themes.length];
+                applyTheme(nextTheme);
+            }
+
+            function applyTheme(preference) {
+                localStorage.setItem('theme-preference', preference);
+                window._themePreference = preference;
+
+                if (preference === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    updateThemeIcon('dark');
+                } else if (preference === 'light') {
+                    document.body.classList.remove('dark-mode');
+                    updateThemeIcon('light');
+                } else if (preference === 'system') {
+                    if (window._prefersDark) {
+                        document.body.classList.add('dark-mode');
+                        updateThemeIcon('dark');
+                    } else {
+                        document.body.classList.remove('dark-mode');
+                        updateThemeIcon('light');
+                    }
+                }
+            }
+
+            if (themeToggleDesktop) {
+                themeToggleDesktop.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    cycleTheme();
+                });
+            }
+
+            if (themeToggleMobile) {
+                themeToggleMobile.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    cycleTheme();
+                });
+            }
+        });
+
+        // Follow system theme changes when set to 'system' preference
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            window._prefersDark = e.matches;
+            if (localStorage.getItem('theme-preference') === 'system' || localStorage.getItem('theme-preference') === null) {
+                if (e.matches) {
+                    document.body.classList.add('dark-mode');
+                    updateThemeIcon('dark');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                    updateThemeIcon('light');
+                }
+            }
+        });
+
+        // Get both toggle buttons (for backward compatibility with mobile views)
+        const toggleButtonDesktop = document.getElementById('dark-mode-toggle-desktop');
+        const toggleButtonMobile = document.getElementById('dark-mode-toggle-mobile');
+
+        // Function to update the theme icon and text with animation
+        function updateThemeIcon(theme) {
+            const themeIconDesktop = document.getElementById('theme-icon-desktop');
+            const themeIconMobile = document.getElementById('theme-icon-mobile');
+            const themeTextDesktop = document.getElementById('theme-text-desktop');
+            const themeTextMobile = document.getElementById('theme-text-mobile');
+            const preference = window._themePreference || 'system';
+
+            // Add animation class to both icons
+            if (themeIconDesktop) themeIconDesktop.classList.add('animate');
+            if (themeIconMobile) themeIconMobile.classList.add('animate');
+
+            // Update the icon based on the theme
+            if (theme === 'dark') {
+                if (themeIconDesktop) {
+                    themeIconDesktop.classList.remove('fa-sun-bright');
+                    themeIconDesktop.classList.add('fa-moon-stars');
+                }
+                if (themeIconMobile) {
+                    themeIconMobile.classList.remove('fa-sun-bright');
+                    themeIconMobile.classList.add('fa-moon-stars');
+                }
+            } else {
+                if (themeIconDesktop) {
+                    themeIconDesktop.classList.remove('fa-moon-stars');
+                    themeIconDesktop.classList.add('fa-sun-bright');
+                }
+                if (themeIconMobile) {
+                    themeIconMobile.classList.remove('fa-moon-stars');
+                    themeIconMobile.classList.add('fa-sun-bright');
+                }
+            }
+
+            // Update display text
+            let displayText = 'Display: ';
+            if (preference === 'light') {
+                displayText += 'Light';
+            } else if (preference === 'dark') {
+                displayText += 'Dark';
+            } else if (preference === 'system') {
+                displayText += 'Follow System';
+            }
+
+            if (themeTextDesktop) themeTextDesktop.textContent = displayText;
+            if (themeTextMobile) themeTextMobile.textContent = displayText;
+
+            // Remove the animation class after the animation ends
+            setTimeout(() => {
+                if (themeIconDesktop) themeIconDesktop.classList.remove('animate');
+                if (themeIconMobile) themeIconMobile.classList.remove('animate');
+            }, 300); // Match the duration of the CSS transition
+        }
 
 
-    <!-- Bus Models -->
-    <div class="about-me-stations text-center mb-80 wow fadeInUp" data-wow-delay="700ms">
-      <h3 class="ld-s-title">Bus Models</h3>
-      <div class="row justify-content-center">
-        <table class="info-table table">
-          <thead>
-            <tr>
-              <th class="first" scope="col">Bus Type</th>
-              <th class="second" scope="col">Model</th>
-            </tr>
-          <tbody>
-            <tr class="info-det">
-              <td class="first">Single Deck Buses</td>
-              <td class="second">
-                MAN NL323F A22 (LHD)<br>
-                MAN NL323F A22 Euro 6 (LHD) <br>
-              </td>
-            </tr>
-            <tr class="info-det">
-              <td class="first">Articulated Buses</td>
-              <td class="second">
-                MAN Lion's City NG313F A23<br>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
+        function updateHrefForDarkMode() {
+            /* Banners */
+            const tdcPage = document.getElementById('cv-tdc');
 
+            const isDarkMode = document.body.classList.contains('dark-mode');
 
-  <footer class="footer-area">
-    <div class="container">
-      <div class="footer-content d-flex flex-column align-items-center text-center">
-        <!-- Social Links -->
-        <div class="social-info">
-          <a href="https://www.youtube.com/@SMRTOsg"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-          <a href="https://www.facebook.com/SMRTVRT"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
-        </div>
-        <!-- Copywrite Text -->
-        <div class="copywrite-text">
-          <p>&copy;
-            <script>document.write(new Date().getFullYear());</script> Illustrations belong to SMRT Corp Ltd
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
+            if (isDarkMode) {
+                /* Banners */
+                tdcPage.style.backgroundImage = "url('https://i.imgur.com/t1fx4Uj.jpeg')";
 
-  <script type="text/javascript" id="cookiebanner" src="../js/cookies-banner.js" data-position="bottom"
-    data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
-    data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
+            } else {
+                /* Banners */
+                tdcPage.style.backgroundImage = "url('https://i.imgur.com/t1fx4Uj.jpeg')";
+            }
+        }
+
     </script>
 
-  <script src="../js/jquery.min.js"></script>
+    <script>
+        function toggleStations() {
+            const hiddenStations = document.getElementById('hidden-stations');
+            const toggleBtn = document.getElementById('toggleBtn');
 
-  <script src="../js/popper.min.js"></script>
-
-  <script src="../js/bootstrap.min.js"></script>
-
-  <script src="../js/pw.bundle.js"></script>
-
-  <script src="../js/default-assets/active.js"></script>
-
-  <script src="../js/swiper-bundle.min.js"></script>
-
-  <script src="../js/glightbox.min.js"></script>
-
-  <script src="../js/isotope.pkgd.min.js"></script>
-
-  <script src="../js/portfolio-comp.js"></script>
-
-  <script src="../js/copy-to-clipboard.js"></script>
-
-  <script src="../js/preloader.js"></script>
-
-  <!-- Script for Indiv Page - Modes -->
-  <script>
-    /* Dark Mode Functionality for Individual Pages */
-
-    // Check localStorage for dark mode preference
-    if (localStorage.getItem('dark-mode') === 'enabled') {
-      document.body.classList.add('dark-mode');
-      updateThemeIcon('dark');
-    } else {
-      updateThemeIcon('light');
-    }
-
-    const toggleButton = document.getElementById('dark-mode-toggle');
-    toggleButton.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      // Save the preference in localStorage
-      if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('dark-mode', 'enabled');
-        updateThemeIcon('dark');
-      } else {
-        localStorage.setItem('dark-mode', 'disabled');
-        updateThemeIcon('light');
-      }
-    });
-
-    // Function to update the theme icon with animation
-    function updateThemeIcon(theme) {
-      const themeIcon = document.getElementById('theme-icon');
-
-      // Add animation class
-      themeIcon.classList.add('animate');
-
-      // Update the icon based on the theme
-      if (theme === 'dark') {
-        themeIcon.classList.remove('fa-sun-bright');
-        themeIcon.classList.add('fa-moon-stars');
-      } else {
-        themeIcon.classList.remove('fa-moon-stars');
-        themeIcon.classList.add('fa-sun-bright');
-      }
-
-      // Remove the animation class after the animation ends
-      setTimeout(() => {
-        themeIcon.classList.remove('animate');
-      }, 300); // Match the duration of the CSS transition
-    }
-  </script>
+            if (hiddenStations.classList.contains('show')) {
+                hiddenStations.classList.remove('show');
+                toggleBtn.innerHTML = '<i class="fa-regular fa-chevron-down"></i> Show More';
+            } else {
+                hiddenStations.classList.add('show');
+                toggleBtn.innerHTML = '<i class="fa-regular fa-chevron-up"></i> Show Less';
+            }
+        }
+    </script>
 
 </body>
 
