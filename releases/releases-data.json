@@ -12,8 +12,8 @@
         ],
         "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/Railway-HBL.7z"
       },
-      "version1": {
-        "version": "1.0",
+      "version1a": {
+        "version": "1.0.2",
         "date": "03/11/24",
         "label": "legacy",
         "changes": [
@@ -21,6 +21,15 @@
           "- Backported the Announcement Trigger update from Retrofitted Routes"
         ],
         "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/Railway.-.HBL.Legacy.7z"
+      },
+      "version1b": {
+        "version": "1.0.1",
+        "date": "12/03/22",
+        "label": "legacy",
+        "changes": [
+          "- Initial Release (Undocumented)"
+        ],
+        "downloadUrl": "https://github.com/smrtosg/smv-releases/releases/download/1.0.1/LegacyContent.7z"
       }
     }
   },
