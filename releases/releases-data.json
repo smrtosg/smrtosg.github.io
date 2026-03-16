@@ -98,14 +98,14 @@
     "title": "Alstom Movia C651A",
     "versions": {
       "version1": {
-        "version": "1.0",
-        "date": "07/09/25",
+        "version": "1.1",
+        "date": "16/03/26",
         "label": "latest-release",
         "changes": [
           "- Full train file provided. <a href=\"https://smrtosg.github.io/blog/refresh-main.html#ul\" class=\"hyperlink\">Learn More</a> about this change.",
           "- Initial Release"
         ],
-        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1020/SMRTO.KSF.C651A.239-240.240F.7z"
+        "downloadUrl": "https://github.com/smrtosg/smrtosg.github.io/releases/download/v6.0.0/SMRTO.KSF.C651A.239-240.240F.7z"
       }
     }
   },
