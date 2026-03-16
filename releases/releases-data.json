@@ -130,16 +130,14 @@
     "title": "Kawasaki Heavy Industries & CRRC Qingdao Sifang C151C",
     "versions": {
       "version2": {
-        "version": "2.7",
-        "date": "07/09/25",
+        "version": "2.8",
+        "date": "16/03/26",
         "label": "latest-release",
         "changes": [
           "- Full train file provided. <a href=\"https://smrtosg.github.io/blog/refresh-main.html#ul\" class=\"hyperlink\">Learn More</a> about this change.",
-          "- Revamped STARiS 2 Interface for ALL Lines",
-          "- Improved Doors Closing Animation, Emergency Brakes Message",
-          "- Added VFD Support for AEL & NWL Reversed"
+          "- Added the new 'Offer Your Seat' stickers"
         ],
-        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1020/SMRT.KSF.C151C.701-702.701F.7z"
+        "downloadUrl": "https://github.com/smrtosg/smrtosg.github.io/releases/download/v6.0.0/SMRTO.KSF.C151C.701-702.701F.7z"
       }
     }
   },
@@ -147,15 +145,14 @@
     "title": "Kawasaki Heavy Industries & CRRC Qingdao Sifang C151B",
     "versions": {
       "version2": {
-        "version": "2.5",
-        "date": "18/08/25",
+        "version": "2.6",
+        "date": "16/03/26",
         "label": "latest-release",
         "changes": [
           "- Full train file provided. <a href=\"https://smrtosg.github.io/blog/refresh-main.html#ul\" class=\"hyperlink\">Learn More</a> about this change.",
-          "- Added support for Reverse Driving (EHB to STD)",
-          "- Added support for Reverse Driving (CTS to STC)"
+          "- Added the new 'Offer Your Seat' stickers"
         ],
-        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/SMRT.KSF.C151B.651-652.651F.7z"
+        "downloadUrl": "https://github.com/smrtosg/smrtosg.github.io/releases/download/v6.0.0/SMRT.KSF.C151B.651-652.651F.7z"
       }
     }
   },
@@ -163,15 +160,14 @@
     "title": "Kawasaki Heavy Industries & CRRC Qingdao Sifang C151A",
     "versions": {
       "version2": {
-        "version": "2.5",
-        "date": "18/08/25",
+        "version": "2.6",
+        "date": "16/03/26",
         "label": "latest-release",
         "changes": [
           "- Full train file provided. <a href=\"https://smrtosg.github.io/blog/refresh-main.html#ul\" class=\"hyperlink\">Learn More</a> about this change.",
-          "- Added support for Reverse Driving (EHB to STD)",
-          "- Added support for Reverse Driving (CTS to STC)"
+          "- Added the new 'Offer Your Seat' stickers"
         ],
-        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/SMRT.KSF.C151A.569-570.569F.7z"
+        "downloadUrl": "https://github.com/smrtosg/smrtosg.github.io/releases/download/v6.0.0/SMRTO.KSF.C151A.569-570.569F.7z"
       }
     }
   },
