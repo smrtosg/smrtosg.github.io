@@ -103,7 +103,7 @@
         "label": "latest-release",
         "changes": [
           "- Full train file provided. <a href=\"https://smrtosg.github.io/blog/refresh-main.html#ul\" class=\"hyperlink\">Learn More</a> about this change.",
-          "- Initial Release"
+          "- Added the new 'Offer Your Seat' stickers"
         ],
         "downloadUrl": "https://github.com/smrtosg/smrtosg.github.io/releases/download/v6.0.0/SMRTO.KSF.C651A.239-240.240F.7z"
       }
