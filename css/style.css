@@ -3515,3 +3515,26 @@ img.mfp-img {
 .carousel-cell-count-1 .flickity-prev-next-button {
     display: none !important;
 }
+
+/* Update Indicator Dot */
+.update-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #ff4444;
+    border-radius: 50%;
+    margin-left: 4px;
+    animation: pulse-indicator 2s infinite;
+    vertical-align: middle;
+}
+
+@keyframes pulse-indicator {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
+}
