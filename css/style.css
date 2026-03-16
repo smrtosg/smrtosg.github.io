@@ -3528,6 +3528,18 @@ img.mfp-img {
     vertical-align: middle;
 }
 
+/* Mobile nav indicator positioning */
+.mobile-bottom-nav .icon .update-indicator {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    margin: 0;
+}
+
+.mobile-bottom-nav .icon {
+    position: relative;
+}
+
 @keyframes pulse-indicator {
     0%, 100% {
         opacity: 1;

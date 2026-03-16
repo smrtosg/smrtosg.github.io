@@ -29,22 +29,28 @@ document.addEventListener('DOMContentLoaded', function () {
         return href.split('/').pop();
     }
 
-    function findNavLink(pageHref) {
-        // Try to find link by exact href first
-        let link = document.querySelector(`a[href="${pageHref}"]`);
-        if (link) return link;
+    function findAllNavLinks(pageHref) {
+        // Find all links matching the href pattern (for both desktop and mobile nav)
+        const links = [];
+        
+        // Try exact match
+        links.push(...document.querySelectorAll(`a[href="${pageHref}"]`));
         
         // Try with relative path prefix
-        link = document.querySelector(`a[href="../${pageHref}"]`);
-        if (link) return link;
+        links.push(...document.querySelectorAll(`a[href="../${pageHref}"]`));
         
         // Try with ./ prefix
-        link = document.querySelector(`a[href="./${pageHref}"]`);
-        if (link) return link;
+        links.push(...document.querySelectorAll(`a[href="./${pageHref}"]`));
         
-        // Fallback: find by matching the normalized filename
-        const allLinks = document.querySelectorAll('a[href*="' + pageHref + '"]');
-        return allLinks.length > 0 ? allLinks[0] : null;
+        // Try wildcard match by filename
+        const allLinks = document.querySelectorAll(`a[href*="${pageHref}"]`);
+        allLinks.forEach(link => {
+            if (!links.includes(link)) {
+                links.push(link);
+            }
+        });
+        
+        return links;
     }
 
     function checkForUpdates() {
@@ -78,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             });
 
                             if (mostRecentDate && isRecentUpdate(mostRecentDate)) {
-                                addUpdateIndicator(page.href, mostRecentDate);
+                                addUpdateIndicators(page.href);
                             }
                         })
                         .catch(err => {
@@ -92,21 +98,37 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function addUpdateIndicator(pageHref, mostRecentDate) {
-        const navLink = findNavLink(pageHref);
-        if (navLink && !navLink.querySelector('.update-indicator')) {
-            const indicator = document.createElement('span');
-            indicator.className = 'update-indicator';
-            indicator.setAttribute('title', 'New updates available');
-            
-            // Store the page on click to trigger highlighting
-            navLink.addEventListener('click', function(e) {
-                // Store in sessionStorage so we can access it on the target page
-                sessionStorage.setItem('highlightRecentUpdates', 'true');
-            });
-            
-            navLink.appendChild(indicator);
-        }
+    function addUpdateIndicators(pageHref) {
+        const navLinks = findAllNavLinks(pageHref);
+        navLinks.forEach(navLink => {
+            if (navLink && !navLink.querySelector('.update-indicator')) {
+                const indicator = document.createElement('span');
+                indicator.className = 'update-indicator';
+                indicator.setAttribute('title', 'New updates available');
+                
+                // Store the page on click to trigger highlighting
+                navLink.addEventListener('click', function(e) {
+                    // Store in sessionStorage so we can access it on the target page
+                    sessionStorage.setItem('highlightRecentUpdates', 'true');
+                });
+                
+                // Check if this link is in mobile-bottom-nav
+                const isMobileNav = navLink.closest('.mobile-bottom-nav');
+                
+                if (isMobileNav) {
+                    // For mobile nav, append to the icon span
+                    const iconSpan = navLink.querySelector('.icon');
+                    if (iconSpan) {
+                        iconSpan.appendChild(indicator);
+                    } else {
+                        navLink.appendChild(indicator);
+                    }
+                } else {
+                    // For desktop nav, append to the link
+                    navLink.appendChild(indicator);
+                }
+            }
+        });
     }
 
     // Highlight all cards updated in the last 7 days on current page
