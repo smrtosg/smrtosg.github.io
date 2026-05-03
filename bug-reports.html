@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="57TuruPNu5wqSSia_cUehl5t9Gh1AbxrHNPcMiFx-aQ" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Bug Reports | SMRTO</title>
+    <title>Bug Reporting | SMRTO</title>
     <meta content="Report bugs and track issues for SMRTO releases." name="description">
     <meta content="bug reports, issues, SMRTO" name="keywords">
     <meta property="og:image" content="https://i.imgur.com/s46uTOc.png" />
@@ -39,8 +39,6 @@
 </head>
 
 <style>
-    /* ---- Bug Reports Page Styles ---- */
-
     .br-split-layout {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -114,7 +112,6 @@
         padding: 12px 16px;
         border: 1px solid #ddd;
         border-radius: 8px;
-        font-family: "Onest", sans-serif;
         font-size: 14px;
         color: #252525;
         background: #fafafa;
@@ -159,7 +156,6 @@
         height: 48px;
         background-color: #a24c28;
         color: #fff;
-        font-family: "Onest", sans-serif;
         font-size: 14px;
         font-weight: 600;
         border: none;
@@ -223,12 +219,12 @@
         border-radius: 30px;
         font-size: 13px;
         font-weight: 600;
-        font-family: "Onest", sans-serif;
         border: 1px solid #ddd;
         background: #fff;
         color: #636363;
         cursor: pointer;
         transition: all 0.25s ease;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     }
 
     .tracker-filter-btn .count {
@@ -355,8 +351,11 @@
         align-items: center;
         justify-content: center;
         gap: 12px;
-        padding: 40px 20px;
         color: #888;
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     }
 
     .tracker-state i {
@@ -376,7 +375,7 @@
         align-items: center;
         gap: 6px;
         margin-left: auto;
-        background: none;
+        background: #fff;
         border: 1px solid #ddd;
         border-radius: 8px;
         padding: 6px 14px;
@@ -386,6 +385,7 @@
         color: #636363;
         cursor: pointer;
         transition: all 0.2s ease;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     }
 
     .tracker-refresh:hover {
@@ -536,8 +536,10 @@
                         <i class="fa-regular fa-house"></i>
                     </a>
                 </li>
-                <li class="breadcrumb-item active">
-                    <i class="fa-regular fa-bug"></i>
+                <li class="breadcrumb-item">
+                    <a href="#">
+                        <i class="fa-regular fa-bug"></i>
+                    </a>
                 </li>
             </ol>
         </nav>
@@ -651,7 +653,8 @@
                         <div class="br-info-box">
                             <i class="fa-solid fa-circle-info"></i>
                             <p>
-                                Submitting a report will open a new GitHub issue with your reports pre-filled. You'll need a
+                                Submitting a report will open a new GitHub issue with your reports pre-filled. You'll
+                                need a
                                 <a href="https://github.com/signup" target="_blank" rel="noopener noreferrer">free
                                     GitHub account</a>
                                 to complete the submission. Check the <a href="#tracker">tracker</a> first to
