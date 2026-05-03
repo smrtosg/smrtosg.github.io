@@ -179,10 +179,6 @@ body.dark-mode #check {
     display: none;
 }
 
-body.dark-mode .cookiebanner span {
-    color: #000;
-}
-
 /* ---- Progress Bar */
 body.dark-mode .single-skill .progress {
     transition: all 0.5s ease;
