@@ -204,14 +204,14 @@
     "title": "Yishun LRT",
     "versions": {
       "version2": {
-        "version": "2.3",
-        "date": "08/03/26",
+        "version": "2.4",
+        "date": "03/05/26",
         "label": "latest-release",
         "changes": [
-          "- Updated RATiS UI",
-          "- New Announcements to match with the rest of HCRT's Lines"
+          "- Fixed PSD bugs in KTB_YSH and YSH",
+          "- Fixed System Map's missing texts in KTB"
         ],
-        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/Railway-YSLRT_2.1.7z"
+        "downloadUrl": "https://github.com/smrtosg/smrtosg.github.io/releases/download/v6.0.0/Railway-YSLRT.7z"
       },
       "version1": {
         "version": "1.0",
