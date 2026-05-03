@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script>
+    window._themePreference = localStorage.getItem('theme-preference') || 'system';
+    window._prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const _shouldBeDark = window._themePreference === 'dark' || (window._themePreference === 'system' && window._prefersDark);
+    if (_shouldBeDark) {
+      document.documentElement.classList.add('dark-mode');
+      document.documentElement.style.background = '#121521';
+    }
+  </script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="google-site-verification" content="57TuruPNu5wqSSia_cUehl5t9Gh1AbxrHNPcMiFx-aQ" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Bug Reports | SMRTO</title>
+  <meta content="Report bugs and track issues for SMRTO releases." name="description">
+  <meta content="bug reports, issues, SMRTO" name="keywords">
+  <meta property="og:image" content="https://i.imgur.com/s46uTOc.png" />
+
+  <link rel="icon" href="img/core-img/favicon.png">
+  <script src="https://kit.fontawesome.com/965e82ac01.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-mobNav.css">
+  <link rel="stylesheet" href="css/style-breakpoints.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN76281P3Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-WN76281P3Q');
+  </script>
+</head>
+
+<style>
+  /* ---- Bug Reports Page Styles ---- */
+
+  .br-split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .br-split-col {
+    min-width: 0;
+  }
+
+  .br-tracker-scroll {
+    max-height: 700px;
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+
+  .br-tracker-scroll::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .br-tracker-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .br-tracker-scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+  }
+
+  body.dark-mode .br-tracker-scroll::-webkit-scrollbar-thumb {
+    background: #3a4060;
+  }
+
+  @media (max-width: 900px) {
+    .br-split-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .br-tracker-scroll {
+      max-height: none;
+    }
+  }
+
+  .bug-form-wrapper {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  }
+
+  .br-form-group {
+    margin-bottom: 22px;
+  }
+
+  .br-label {
+    display: block;
+    font-weight: 600;
+    color: #252525;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .br-label span.required {
+    color: #a24c28;
+    margin-left: 3px;
+  }
+
+  .br-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: "Onest", sans-serif;
+    font-size: 14px;
+    color: #252525;
+    background: #fafafa;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .br-control:focus {
+    border-color: #a24c28;
+    box-shadow: 0 0 0 3px rgba(162, 76, 40, 0.12);
+    background: #fff;
+  }
+
+  textarea.br-control {
+    resize: vertical;
+    min-height: 130px;
+    line-height: 1.65;
+  }
+
+  select.br-control {
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23636363' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 42px;
+  }
+
+  .br-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .br-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 32px;
+    height: 48px;
+    background-color: #a24c28;
+    color: #fff;
+    font-family: "Onest", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .br-submit-btn:hover {
+    background-color: #6d99c0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Info box */
+  .br-info-box {
+    background: #fff8f5;
+    border: 1px solid #f0d8cc;
+    border-radius: 10px;
+    padding: 14px 18px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 28px;
+  }
+
+  .br-info-box i {
+    color: #a24c28;
+    margin-top: 3px;
+    flex-shrink: 0;
+    font-size: 14px;
+  }
+
+  .br-info-box p {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.65;
+    color: #636363;
+  }
+
+  .br-info-box a {
+    color: #a24c28;
+    text-decoration: underline;
+  }
+
+  /* Issue tracker */
+  .tracker-filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .tracker-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Onest", sans-serif;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #636363;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .tracker-filter-btn .count {
+    background: #ebebeb;
+    color: #636363;
+    border-radius: 20px;
+    padding: 1px 7px;
+    font-size: 11px;
+  }
+
+  .tracker-filter-btn.active,
+  .tracker-filter-btn:hover {
+    background: #a24c28;
+    color: #fff;
+    border-color: #a24c28;
+  }
+
+  .tracker-filter-btn.active .count,
+  .tracker-filter-btn:hover .count {
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+  }
+
+  .issue-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px 22px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    margin-bottom: 14px;
+    border-left: 4px solid #a24c28;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .issue-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+  }
+
+  .issue-card.is-closed {
+    border-left-color: #6d99c0;
+  }
+
+  .issue-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+
+  .issue-card-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #252525;
+    text-decoration: none;
+    flex: 1;
+    line-height: 1.4;
+  }
+
+  .issue-card-title:hover {
+    color: #a24c28;
+  }
+
+  .issue-state-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+
+  .badge-open {
+    background: #d4f0d6;
+    color: #1a7f37;
+  }
+
+  .badge-closed {
+    background: #dde4ef;
+    color: #4d5566;
+  }
+
+  .issue-card-meta {
+    font-size: 12px;
+    color: #888;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 4px;
+  }
+
+  .issue-card-meta a {
+    color: #888;
+    font-size: 12px;
+  }
+
+  .issue-card-meta a:hover {
+    color: #a24c28;
+  }
+
+  .issue-labels {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .gh-label {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid transparent;
+  }
+
+  .tracker-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 40px 20px;
+    color: #888;
+  }
+
+  .tracker-state i {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    color: #fff;
+  }
+
+  .tracker-state p {
+    font-size: 14px;
+    margin: 0;
+    color: #888;
+  }
+
+  .tracker-refresh {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-family: "Onest", sans-serif;
+    font-weight: 500;
+    color: #636363;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .tracker-refresh:hover {
+    border-color: #a24c28;
+    color: #a24c28;
+  }
+
+  .tracker-header-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+
+  .tracker-header-row .tracker-filters {
+    margin-bottom: 0;
+  }
+
+
+  body.dark-mode .bug-form-wrapper {
+    background: #1c2035;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  body.dark-mode .br-label {
+    color: #e0e0e0;
+  }
+
+  body.dark-mode .br-control {
+    background: #252b42;
+    border-color: #3a4060;
+    color: #e0e0e0;
+  }
+
+  body.dark-mode .br-control:focus {
+    border-color: #a24c28;
+    background: #2a3050;
+  }
+
+  body.dark-mode select.br-control option {
+    background: #252b42;
+    color: #e0e0e0;
+  }
+
+  body.dark-mode .br-info-box {
+    background: #211a17;
+    border-color: #4a3020;
+  }
+
+  body.dark-mode .br-info-box p {
+    color: #bbb;
+  }
+
+  body.dark-mode .issue-card {
+    background: #1c2035;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  body.dark-mode .issue-card-title {
+    color: #e0e0e0;
+  }
+
+  body.dark-mode .issue-card-title:hover {
+    color: #df7d4d;
+  }
+
+  body.dark-mode .issue-card-meta,
+  body.dark-mode .issue-card-meta a {
+    color: #888;
+  }
+
+  body.dark-mode .tracker-filter-btn {
+    background: #1c2035;
+    border-color: #3a4060;
+    color: #aaa;
+  }
+
+  body.dark-mode .tracker-filter-btn .count {
+    background: #2a3050;
+    color: #aaa;
+  }
+
+  body.dark-mode .tracker-filter-btn.active,
+  body.dark-mode .tracker-filter-btn:hover {
+    background: #a24c28;
+    color: #fff;
+    border-color: #a24c28;
+  }
+
+  body.dark-mode .tracker-filter-btn.active .count,
+  body.dark-mode .tracker-filter-btn:hover .count {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+
+  body.dark-mode .badge-open {
+    background: #1a3f22;
+    color: #4caf69;
+  }
+
+  body.dark-mode .badge-closed {
+    background: #2a3050;
+    color: #8899b5;
+  }
+
+  body.dark-mode .tracker-refresh {
+    background: #1c2035;
+    border-color: #3a4060;
+    color: #aaa;
+  }
+
+  body.dark-mode .tracker-refresh:hover {
+    border-color: #a24c28;
+    color: #df7d4d;
+  }
+
+  @media (max-width: 600px) {
+    .br-form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .bug-form-wrapper {
+      padding: 24px 18px;
+    }
+
+    .issue-card-top {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+</style>
+
+<body>
+  <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
+  <div class="breadcrumb-fixed-placeholder">
+    <nav aria-label="breadcrumb" style="margin-bottom:0;">
+      <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="./">
+            <i class="fa-regular fa-house"></i>
+          </a>
+        </li>
+        <li class="breadcrumb-item active">
+          <i class="fa-regular fa-bug"></i>
+        </li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar-container">
+    <div class="navbar">
+      <a href="./"><img src="img/core-img/logo.png" alt="logo" class="logo"></a>
+      <ul class="navbar-nav" id="navbarNav">
+        <li class="nav-item">
+          <a href="./" class="nav-link">
+            <i class="fa-sharp fa-regular fa-house"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="openbve.html" class="nav-link">
+            <i class="fa-regular fa-train"></i>
+            <span>OpenBVE</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="omsi2.html" class="nav-link">
+            <i class="fa-regular fa-bus"></i>
+            <span>OMSI 2</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="menu.html" class="nav-link">
+            <i class="fa-regular fa-bars"></i>
+            <span>Menu</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav class="mobile-bottom-nav">
+    <ul>
+      <li>
+        <a href="./">
+          <span class="icon"><i class="fa-sharp fa-regular fa-house"></i></span>
+          <span class="label">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="openbve.html">
+          <span class="icon"><i class="fa-regular fa-train"></i></span>
+          <span class="label">OpenBVE</span>
+        </a>
+      </li>
+      <li>
+        <a href="omsi2.html">
+          <span class="icon"><i class="fa-regular fa-bus"></i></span>
+          <span class="label">OMSI 2</span>
+        </a>
+      </li>
+      <li>
+        <a href="menu.html">
+          <span class="icon"><i class="fa-regular fa-bars"></i></span>
+          <span class="label">Menu</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!------------------------------------------------------------------------ Start of Sections ------------------------------------------------------------------------>
+
+  <!-- Page Header -->
+  <section class="about-me-sum clearfix">
+    <div class="wbnrfz_eicw">
+      <div class="page-header-section">
+        <div class="container container-xxl container-mobile container-mobile-header">
+          <div class="breadcrumb-wrapper">
+            <nav aria-label="breadcrumb" class="breadcrumb-desktop" style="display:none;">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="./"><i class="fa-regular fa-house"></i></a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a href="#"><i class="fa-regular fa-bug"></i></a>
+                </li>
+              </ol>
+            </nav>
+            <div class="page-title-wrapper">
+              <h1 class="page-title">Bug Reporting</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- Submit + Tracker side by side -->
+  <section style="padding: 30px 0 80px;">
+    <div class="container-xxl">
+      <div class="br-split-layout">
+
+        <!-- LEFT: Form -->
+        <div class="br-split-col">
+          <div class="section-heading" style="margin-bottom: 28px;">
+            <h2>Submit a Report</h2>
+          </div>
+
+      <div class="bug-form-wrapper" style="max-width:none;">
+
+        <div class="br-info-box">
+          <i class="fa-solid fa-circle-info"></i>
+          <p>
+            Submitting will open a new GitHub issue with your report pre-filled. You'll need a
+            <a href="https://github.com/signup" target="_blank" rel="noopener noreferrer">free GitHub account</a>
+            to complete the submission. Check the <a href="#tracker">tracker below</a> first to avoid duplicates.
+          </p>
+        </div>
+
+        <form id="bug-report-form" novalidate>
+
+          <div class="br-form-row">
+            <div class="br-form-group">
+              <label class="br-label" for="br-release">Release <span class="required">*</span></label>
+              <select id="br-release" class="br-control" required>
+                <option value="">Loading releases…</option>
+              </select>
+            </div>
+
+            <div class="br-form-group">
+              <label class="br-label" for="br-type">Issue Type <span class="required">*</span></label>
+              <select id="br-type" class="br-control" required>
+                <option value="">Select a type…</option>
+                <option value="bug">Bug / Crash</option>
+                <option value="visual">Visual / Texture Issue</option>
+                <option value="audio">Audio Issue</option>
+                <option value="performance">Performance Issue</option>
+                <option value="feature">Feature Request</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="br-form-group">
+            <label class="br-label" for="br-title">Title <span class="required">*</span></label>
+            <input type="text" id="br-title" class="br-control" placeholder="Short summary of the issue" required maxlength="200">
+          </div>
+
+          <div class="br-form-group">
+            <label class="br-label" for="br-desc">Description <span class="required">*</span></label>
+            <textarea id="br-desc" class="br-control" rows="5" placeholder="Describe what happened…" required></textarea>
+          </div>
+
+          <div class="br-form-group">
+            <label class="br-label" for="br-steps">Steps to Reproduce</label>
+            <textarea id="br-steps" class="br-control" rows="4" placeholder="1. Open the route&#10;2. Proceed to station X&#10;3. …"></textarea>
+          </div>
+
+          <div class="br-form-row">
+            <div class="br-form-group">
+              <label class="br-label" for="br-expected">Expected Behavior</label>
+              <textarea id="br-expected" class="br-control" rows="3" placeholder="What should have happened?"></textarea>
+            </div>
+            <div class="br-form-group">
+              <label class="br-label" for="br-actual">Actual Behavior</label>
+              <textarea id="br-actual" class="br-control" rows="3" placeholder="What actually happened?"></textarea>
+            </div>
+          </div>
+
+          <div class="br-form-group" style="margin-bottom: 0;">
+            <button type="submit" class="br-submit-btn">
+              <i class="fa-brands fa-github"></i>
+              Submit on GitHub
+            </button>
+          </div>
+
+        </form>
+      </div>
+        </div><!-- /br-split-col (form) -->
+
+        <!-- RIGHT: Tracker -->
+        <div class="br-split-col" id="tracker">
+          <div class="section-heading" style="margin-bottom: 28px;">
+            <h2>Issues Tracker</h2>
+          </div>
+
+          <div class="tracker-header-row">
+            <div class="tracker-filters" id="tracker-filters">
+              <button class="tracker-filter-btn active" data-filter="open">
+                <i class="fa-regular fa-circle-dot"></i> Open
+                <span class="count" id="count-open">—</span>
+              </button>
+              <button class="tracker-filter-btn" data-filter="closed">
+                <i class="fa-regular fa-circle-check"></i> Closed
+                <span class="count" id="count-closed">—</span>
+              </button>
+              <button class="tracker-filter-btn" data-filter="all">
+                <i class="fa-regular fa-list"></i> All
+                <span class="count" id="count-all">—</span>
+              </button>
+            </div>
+            <button class="tracker-refresh" id="tracker-refresh" title="Refresh issues">
+              <i class="fa-regular fa-arrows-rotate"></i> Refresh
+            </button>
+          </div>
+
+          <div id="tracker-list" class="br-tracker-scroll">
+            <div class="tracker-state">
+              <i class="fa-regular fa-spinner fa-spin"></i>
+              <p>Loading issues…</p>
+            </div>
+          </div>
+        </div><!-- /br-split-col (tracker) -->
+
+      </div><!-- /br-split-layout -->
+    </div>
+  </section>
+
+  <script type="text/javascript" id="cookiebanner" src="js/cookies-banner.js" data-position="bottom"
+    data-bg="#f2f3e5" data-fg="#000" data-font-family="Onest, sans-serif" data-zindex="12345111111"
+    data-message="This website uses cookies to provide necessary site functionality and to improve your experience. By using this website, you agree to our use of cookies.">
+  </script>
+
+  <script src="js/mob-navtabs.js"></script>
+  <script src="js/theme-subPages.js"></script>
+  <script src="js/cookies-theme-sync.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/pw.bundle.js"></script>
+  <script src="js/default-assets/active.js"></script>
+  <script src="js/update-indicator.js"></script>
+
+  <script>
+    const GITHUB_REPO = 'smrtosg/smrtosg.github.io';
+    const CACHE_KEY = 'br_issues_cache';
+    const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+
+    // ---- Populate releases dropdown ----
+    fetch('releases/releases-data.json')
+      .then(r => r.json())
+      .then(data => {
+        const select = document.getElementById('br-release');
+        select.innerHTML = '<option value="">Select a release…</option>';
+        const entries = Object.entries(data);
+        // Sort alphabetically by title
+        entries.sort((a, b) => a[1].title.localeCompare(b[1].title));
+        entries.forEach(([, value]) => {
+          const opt = document.createElement('option');
+          opt.value = value.title;
+          opt.textContent = value.title;
+          select.appendChild(opt);
+        });
+        // Add a generic option at the end
+        const other = document.createElement('option');
+        other.value = 'General / Not Release-Specific';
+        other.textContent = 'General / Not Release-Specific';
+        select.appendChild(other);
+      })
+      .catch(() => {
+        const select = document.getElementById('br-release');
+        select.innerHTML = '<option value="">Unable to load — type manually below</option>';
+      });
+
+    // ---- Form submission → GitHub Issues URL ----
+    document.getElementById('bug-report-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const release = document.getElementById('br-release').value.trim();
+      const type = document.getElementById('br-type').value.trim();
+      const title = document.getElementById('br-title').value.trim();
+      const desc = document.getElementById('br-desc').value.trim();
+      const steps = document.getElementById('br-steps').value.trim();
+      const expected = document.getElementById('br-expected').value.trim();
+      const actual = document.getElementById('br-actual').value.trim();
+
+      if (!release || !type || !title || !desc) {
+        alert('Please fill in all required fields (marked with *).');
+        return;
+      }
+
+      const typeLabels = {
+        bug: 'bug',
+        visual: 'visual issue',
+        audio: 'audio issue',
+        performance: 'performance',
+        feature: 'enhancement',
+        other: 'question'
+      };
+      const labelStr = 'bug-report,' + (typeLabels[type] || 'question');
+
+      const typeNames = {
+        bug: 'Bug / Crash',
+        visual: 'Visual / Texture Issue',
+        audio: 'Audio Issue',
+        performance: 'Performance Issue',
+        feature: 'Feature Request',
+        other: 'Other'
+      };
+
+      let body = `**Release:** ${release}\n**Issue Type:** ${typeNames[type] || type}\n\n`;
+      body += `## Description\n${desc}\n\n`;
+      if (steps) body += `## Steps to Reproduce\n${steps}\n\n`;
+      if (expected) body += `## Expected Behavior\n${expected}\n\n`;
+      if (actual) body += `## Actual Behavior\n${actual}\n`;
+
+      const url = `https://github.com/${GITHUB_REPO}/issues/new`
+        + `?title=${encodeURIComponent(title)}`
+        + `&body=${encodeURIComponent(body)}`
+        + `&labels=${encodeURIComponent(labelStr)}`;
+
+      window.open(url, '_blank', 'noopener,noreferrer');
+    });
+
+    // ---- Issue Tracker ----
+    let allIssues = [];
+    let activeFilter = 'open';
+
+    function formatDate(iso) {
+      const d = new Date(iso);
+      return d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+    }
+
+    function renderLabel(label) {
+      // GitHub labels have a color property (hex without #)
+      const bg = '#' + label.color;
+      // Compute luminance to decide text color
+      const r = parseInt(label.color.substr(0, 2), 16);
+      const g = parseInt(label.color.substr(2, 2), 16);
+      const b = parseInt(label.color.substr(4, 2), 16);
+      const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+      const fg = lum > 0.55 ? '#1a1a1a' : '#ffffff';
+      return `<span class="gh-label" style="background:${bg};color:${fg};border-color:${bg}20;">${escapeHtml(label.name)}</span>`;
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function renderIssues(filter) {
+      const list = document.getElementById('tracker-list');
+      const filtered = filter === 'all'
+        ? allIssues
+        : allIssues.filter(i => i.state === filter);
+
+      if (filtered.length === 0) {
+        list.innerHTML = `<div class="tracker-state">
+          <i class="fa-regular fa-inbox"></i>
+          <p>No ${filter === 'all' ? '' : filter + ' '}issues found.</p>
+        </div>`;
+        return;
+      }
+
+      list.innerHTML = filtered.map(issue => {
+        const isPR = !!issue.pull_request;
+        if (isPR) return '';
+        const labels = (issue.labels || []).map(renderLabel).join('');
+        const labelsHtml = labels ? `<div class="issue-labels">${labels}</div>` : '';
+        const badgeClass = issue.state === 'open' ? 'badge-open' : 'badge-closed';
+        const badgeIcon = issue.state === 'open' ? 'fa-circle-dot' : 'fa-circle-check';
+        return `<div class="issue-card ${issue.state === 'closed' ? 'is-closed' : ''}">
+          <div class="issue-card-top">
+            <a class="issue-card-title" href="${escapeHtml(issue.html_url)}" target="_blank" rel="noopener noreferrer">
+              ${escapeHtml(issue.title)}
+            </a>
+            <span class="issue-state-badge ${badgeClass}">
+              <i class="fa-regular ${badgeIcon}"></i> ${issue.state}
+            </span>
+          </div>
+          ${labelsHtml}
+          <div class="issue-card-meta">
+            <span><i class="fa-regular fa-hashtag"></i> ${issue.number}</span>
+            <span><i class="fa-regular fa-calendar"></i> ${formatDate(issue.created_at)}</span>
+            <span><i class="fa-regular fa-user"></i> ${escapeHtml(issue.user.login)}</span>
+            <a href="${escapeHtml(issue.html_url)}" target="_blank" rel="noopener noreferrer">
+              View on GitHub <i class="fa-regular fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>`;
+      }).join('');
+
+      // Hide if all were PRs
+      if (list.innerHTML.trim() === '') {
+        list.innerHTML = `<div class="tracker-state">
+          <i class="fa-regular fa-inbox"></i>
+          <p>No issues found.</p>
+        </div>`;
+      }
+    }
+
+    function updateCounts() {
+      const nonPR = allIssues.filter(i => !i.pull_request);
+      const open = nonPR.filter(i => i.state === 'open').length;
+      const closed = nonPR.filter(i => i.state === 'closed').length;
+      document.getElementById('count-open').textContent = open;
+      document.getElementById('count-closed').textContent = closed;
+      document.getElementById('count-all').textContent = nonPR.length;
+    }
+
+    async function loadIssues(force) {
+      const list = document.getElementById('tracker-list');
+
+      // Try cache first
+      if (!force) {
+        try {
+          const cached = JSON.parse(sessionStorage.getItem(CACHE_KEY));
+          if (cached && Date.now() - cached.ts < CACHE_TTL) {
+            allIssues = cached.data;
+            updateCounts();
+            renderIssues(activeFilter);
+            return;
+          }
+        } catch (_) { /* ignore */ }
+      }
+
+      list.innerHTML = `<div class="tracker-state">
+        <i class="fa-regular fa-spinner fa-spin"></i>
+        <p>Loading issues…</p>
+      </div>`;
+
+      try {
+        // Fetch both open and closed issues (up to 60 each)
+        const [openRes, closedRes] = await Promise.all([
+          fetch(`https://api.github.com/repos/${GITHUB_REPO}/issues?state=open&per_page=60`, {
+            headers: { 'Accept': 'application/vnd.github+json' }
+          }),
+          fetch(`https://api.github.com/repos/${GITHUB_REPO}/issues?state=closed&per_page=60`, {
+            headers: { 'Accept': 'application/vnd.github+json' }
+          })
+        ]);
+
+        if (!openRes.ok || !closedRes.ok) throw new Error('GitHub API error');
+
+        const [openData, closedData] = await Promise.all([openRes.json(), closedRes.json()]);
+        allIssues = [...openData, ...closedData];
+
+        // Cache
+        sessionStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data: allIssues }));
+
+        updateCounts();
+        renderIssues(activeFilter);
+      } catch (err) {
+        list.innerHTML = `<div class="tracker-state">
+          <i class="fa-regular fa-triangle-exclamation"></i>
+          <p>Unable to load issues. <a href="https://github.com/${GITHUB_REPO}/issues" target="_blank" rel="noopener noreferrer">View on GitHub</a> instead.</p>
+        </div>`;
+      }
+    }
+
+    // Filter button click
+    document.getElementById('tracker-filters').addEventListener('click', function (e) {
+      const btn = e.target.closest('.tracker-filter-btn');
+      if (!btn) return;
+      document.querySelectorAll('.tracker-filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.dataset.filter;
+      renderIssues(activeFilter);
+    });
+
+    // Refresh button
+    document.getElementById('tracker-refresh').addEventListener('click', () => loadIssues(true));
+
+    // Initial load
+    loadIssues(false);
+  </script>
+
+</body>
+
+</html>
