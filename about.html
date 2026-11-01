@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/style-mobNav.css">
     <link rel="stylesheet" href="css/style-breakpoints.css">
     <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/style-projects.css">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN76281P3Q"></script>
@@ -41,19 +42,11 @@
 <body>
     <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
     <div class="breadcrumb-fixed-placeholder">
-        <nav aria-label="breadcrumb" style="margin-bottom:0;">
-            <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb">
+        <nav aria-label="Back" style="margin-bottom:0;">
+            <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb" data-back-href="./">
                 <li class="breadcrumb-item">
-                    <a href="./">
-                        <i class="fa-regular fa-house"></i>
-                    </a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a href="menu.html"><i class="fa-regular fa-bars"></i>
-                    </a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a href="about.html"><i class="fa-regular fa-circle-user"></i>
+                    <a href="./" aria-label="Back home">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                     </a>
                 </li>
             </ol>
@@ -143,19 +136,11 @@
             <div class="page-header-section">
                 <div class="container container-xxl container-mobile container-mobile-header">
                     <div class="breadcrumb-wrapper">
-                        <nav aria-label="breadcrumb" class="breadcrumb-desktop" style="display:none;">
-                            <ol class="breadcrumb">
+                        <nav aria-label="Back" class="breadcrumb-desktop" style="display:none;">
+                            <ol class="breadcrumb" data-back-href="./">
                                 <li class="breadcrumb-item">
-                                    <a href="./">
-                                        <i class="fa-regular fa-house"></i>
-                                    </a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <a href="menu.html"><i class="fa-regular fa-bars"></i>
-                                    </a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <a href="about.html"><i class="fa-regular fa-circle-user"></i>
+                                    <a href="./" aria-label="Back home">
+                                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                                     </a>
                                 </li>
                             </ol>
@@ -169,7 +154,7 @@
                     </div>
                 </div>
 
-                <div class="scrollable-tabs-container">
+                <div class="scrollable-tabs-container" hidden>
                     <div class="left-arrow">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6">
@@ -204,12 +189,28 @@
 
                     </div>
                 </div>
-                <hr>
+                <hr hidden>
             </div>
 
         </div>
 
     </section>
+
+    <div class="sticky-nav-wrap">
+        <div class="eicw-nav-dropdown" id="filterDropdown">
+            <button class="eicw-nav-btn" type="button" aria-haspopup="true" aria-expanded="false">
+                <span class="eicw-nav-label"><i class="fa-regular fa-clipboard-list"></i> Summary</span>
+                <i class="fa-regular fa-chevron-down eicw-nav-chevron"></i>
+            </button>
+            <ul class="eicw-nav-menu" role="menu">
+                <li><a href="#summary" class="btn-filter active" data-filter="#summary"><i class="fa-regular fa-clipboard-list"></i> Summary</a></li>
+                <li><a href="#tm" class="btn-filter" data-filter="#tm"><i class="fa-regular fa-timeline"></i> Timelines & Milestones</a></li>
+                <li><a href="#orp" class="btn-filter" data-filter="#orp"><i class="fa-regular fa-train"></i> Our Rail Performance</a></li>
+                <li><a href="#obf" class="btn-filter" data-filter="#obf"><i class="fa-regular fa-bus"></i> Our Bus Fleets</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr class="filter-divider" style="margin: 0;">
 
     <!-- Summary -->
     <section class="about-me-summ clearfix" style="padding-top: 2em; padding-bottom: 5em;" id="summary">
@@ -381,6 +382,8 @@
     <script src="js/default-assets/active.js"></script>
 
     <script src="js/update-indicator.js"></script>
+
+    <script src="js/filter-nav.js"></script>
 
     <script src="js/dstabs.js"></script>
 

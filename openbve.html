@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/style-mobNav.css">
   <link rel="stylesheet" href="css/style-breakpoints.css">
   <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/style-projects.css">
 
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/glightbox.min.css">
@@ -38,7 +39,7 @@
   </script>
 </head>
 
-<body>
+<body class="project-listing-page">
   <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
   <div class="breadcrumb-fixed-placeholder">
     <nav aria-label="breadcrumb" style="margin-bottom:0;">
@@ -139,15 +140,11 @@
       <div class="page-header-section">
         <div class="container container-xxl container-mobile container-mobile-header">
           <div class="breadcrumb-wrapper">
-            <nav aria-label="breadcrumb" class="breadcrumb-desktop" style="display:none;">
-              <ol class="breadcrumb">
+            <nav aria-label="Back" class="breadcrumb-desktop" style="display:none;">
+              <ol class="breadcrumb" data-back-href="./">
                 <li class="breadcrumb-item">
-                  <a href="../index.html">
-                    <i class="fa-regular fa-house"></i>
-                  </a>
-                </li>
-                <li class="breadcrumb-item">
-                  <a href="openbve.html"><i class="fa-regular fa-train"></i>
+                  <a href="./" aria-label="Back home">
+                    <i class="fa-solid fa-arrow-left"></i>
                   </a>
                 </li>
               </ol>
@@ -169,52 +166,28 @@
         </div>
 
 
-        <div class="scrollable-tabs-container">
-          <div class="left-arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-            </svg>
-          </div>
-
-          <ul>
-            <li>
-              <a href="#" class="btn-filter active" data-filter="*"><i class="fa-regular fa-download"></i> All
-                Releases</a>
-            </li>
-
-            <li>
-              <a href="#" class="btn-filter" data-filter=".rt"><i class="fa-regular fa-route"></i> Routes</a>
-            </li>
-
-            <li>
-              <a href="#" class="btn-filter" data-filter=".tr"><i class="fa-regular fa-train"></i> Trains</a>
-            </li>
-
-            <li>
-              <a href="#" class="btn-filter" data-filter=".lg"><i class="fa-regular fa-box-archive"></i> Legacy</a>
-            </li>
-
-            <li>
-              <a href="#" class="btn-filter" data-filter=".df"><i class="fa-regular fa-paint-brush"></i> Developer
-                Files</a>
-            </li>
-          </ul>
-
-          <div class="right-arrow active">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-            </svg>
-
-          </div>
-        </div>
-        <hr>
       </div>
 
     </div>
 
   </section>
+
+  <div class="sticky-nav-wrap">
+    <div class="eicw-nav-dropdown" id="filterDropdown">
+      <button class="eicw-nav-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        <span class="eicw-nav-label"><i class="fa-regular fa-download"></i> All Releases</span>
+        <i class="fa-regular fa-chevron-down eicw-nav-chevron"></i>
+      </button>
+      <ul class="eicw-nav-menu" role="menu">
+        <li><a href="#" class="btn-filter active" data-filter="*"><i class="fa-regular fa-download"></i> All Releases</a></li>
+        <li><a href="#" class="btn-filter" data-filter=".rt"><i class="fa-regular fa-route"></i> Routes</a></li>
+        <li><a href="#" class="btn-filter" data-filter=".tr"><i class="fa-regular fa-train"></i> Trains</a></li>
+        <li><a href="#" class="btn-filter" data-filter=".lg"><i class="fa-regular fa-box-archive"></i> Legacy</a></li>
+        <li><a href="#" class="btn-filter" data-filter=".df"><i class="fa-regular fa-paint-brush"></i> Developer Files</a></li>
+      </ul>
+    </div>
+  </div>
+  <hr class="filter-divider" style="margin: 0;">
 
   <!-- Section Contents -->
   <section class="about-me-summ clearfix">
@@ -436,6 +409,7 @@
   <script src="js/dstabs.js"></script>
 
   <script src="js/portFunct.js"></script>
+  <script src="js/filter-nav.js"></script>
 
   <script src="js/copy-to-clipboard.js"></script>
 
@@ -448,6 +422,15 @@
         { gridId: 'devfiles-grid', headingId: 'devfilesop-heading-section' }
       ];
 
+      const activeFilter = document.querySelector('.btn-filter.active');
+      if (activeFilter && activeFilter.dataset.filter !== '*') {
+        sections.forEach(({ headingId }) => {
+          const heading = document.getElementById(headingId);
+          if (heading) heading.style.display = 'none';
+        });
+        return;
+      }
+
       sections.forEach(({ gridId, headingId }) => {
         const grid = document.getElementById(gridId);
         const heading = document.getElementById(headingId);
@@ -455,7 +438,7 @@
         if (grid && heading) {
           const cards = grid.querySelectorAll('.card');
           const visibleCards = Array.from(cards).filter(card => {
-            return card.offsetParent !== null;
+            return card.offsetParent !== null && !card.classList.contains('fade-out');
           });
 
           if (visibleCards.length === 0) {

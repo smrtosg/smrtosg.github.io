@@ -10,6 +10,8 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta property="og:image" content="https://i.imgur.com/s46uTOc.png" />
+    <meta name="theme-color" content="#ececea" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121521" media="(prefers-color-scheme: dark)">
 
     <link rel="icon" href="./img/core-img/favicon.png">
 
@@ -40,14 +42,49 @@
 </head>
 
 <style>
+    .revamp-notice {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        max-width: 1100px;
+        margin: 0 auto 28px;
+        padding: 14px 18px;
+        border: 1px solid #ffe08a;
+        border-radius: 14px;
+        background: #fff3cd;
+        color: #664d03;
+        text-align: left;
+        position: relative;
+        z-index: 1;
+    }
+
+    .revamp-notice i {
+        flex: 0 0 auto;
+        font-size: 19px;
+    }
+
+    body.dark-mode .revamp-notice {
+        border-color: #997404;
+        background: #332701;
+        color: #ffda6a;
+    }
+
+    @media (max-width: 576px) {
+        .revamp-notice {
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 12px 14px;
+            font-size: 14px;
+        }
+    }
 </style>
 
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar-container">
+    <nav class="navbar-container logo-only">
         <div class="navbar">
             <!-- Logo -->
-            <a href="./"><img src="img/core-img/logo.png" alt="logo" class="logo"></a>
+            <a href="./"><img src="img/core-img/logo.png" alt="logo" class="logo" loading="lazy"></a>
 
             <!-- Navigation Links -->
             <ul class="navbar-nav" id="navbarNav">
@@ -126,10 +163,15 @@
     <div class="main-content">
         <section class="wbnrfz-works floating-cards">
             <div class="container">
+                <div class="revamp-notice" role="status">
+                    <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                    <div><strong>Site revamp in progress.</strong> We're refreshing the website, so some pages and
+                        features may change while updates are underway. Thanks for your patience.</div>
+                </div>
                 <div class="wbnrfz-grid wow fadeIn" data-wow-delay="50ms">
                     <div class="card">
 
-                        <img src="img/core-img/openbvedl.png" alt="Work 1">
+                        <img src="img/core-img/openbvedl.png" alt="Work 1" loading="lazy">
                         <div class="card-content">
                             <h3>OpenBVE</h3>
                             <a href="openbve.html" class="pw-btn-small btn-2"><i
@@ -138,7 +180,7 @@
 
                     </div>
                     <div class="card" style="background-color: #6c6c67;">
-                        <img src="img/releases-ss/devfile-opA.png" alt="Work 2">
+                        <img src="img/releases-ss/devfile-opA.png" alt="Work 2" loading="lazy">
                         <div class="card-content">
                             <h3>OpenBVE Developer Files</h3>
                             <a href="releases/dev-files-staris-cddcld-vfd.html" class="pw-btn-small btn-2"><i
@@ -146,7 +188,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="img/core-img/omsidl.png" alt="Work 3">
+                        <img src="img/core-img/omsidl.png" alt="Work 3" loading="lazy">
                         <div class="card-content">
                             <h3>OMSI 2</h3>
                             <a href="omsi2.html" class="pw-btn-small btn-2"><i
@@ -154,7 +196,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="img/releases-ss/df.png" alt="Work 4">
+                        <img src="img/releases-ss/df.png" alt="Work 4" loading="lazy">
                         <div class="card-content">
                             <h3>OMSI 2 Developer Files</h3>
                             <a href="releases/omsi-developer-files.html" class="pw-btn-small btn-2"><i

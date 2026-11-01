@@ -130,7 +130,7 @@
 /* ---- 1.0.4a Min Width: 992px */
 @media (min-width: 995px) {
     #hero {
-        height: 90vh;
+        height: 100vh;
     }
 }
 
@@ -171,7 +171,7 @@
 
 @media (max-width: 994px) {
     #hero {
-        height: 70vh;
+        height: 100vh;
     }
 }
 
@@ -1567,23 +1567,59 @@
 
 @media (max-width: 992px) {
     .wbnrfz-works.floating-cards {
-        margin-top: -250px;
+        margin-top: -21em;
     }
 }
 
 @media (max-width: 768px) {
     .wbnrfz-works.floating-cards {
-        margin-top: -200px;
+        margin-top: -38em;
     }
 }
 
 @media (max-width: 580px) {
     .wbnrfz-works.floating-cards {
-        margin-top: -265px;
+        margin-top: -30em;
+    }
+}
+
+@media (max-width: 768px) {
+    .wbnrfz-works.floating-cards {
+        padding-right: 0;
+        padding-left: 0;
     }
 
-    .wbnrfz-works.floating-cards::before {
-        margin-top: -3em;
+    .wbnrfz-works.floating-cards .wbnrfz-grid {
+        gap: 18px 14px;
+    }
+
+    .wbnrfz-works.floating-cards .card,
+    body.dark-mode .wbnrfz-works.floating-cards .card {
+        padding: 6px 6px 14px;
+        border-radius: 20px;
+    }
+
+    .wbnrfz-works.floating-cards .card img {
+        border-radius: 14px;
+    }
+
+    .wbnrfz-works.floating-cards .card .card-content,
+    body.dark-mode .wbnrfz-works.floating-cards .card .card-content {
+        padding: 10px 2px 0;
+        gap: 8px;
+    }
+
+    .wbnrfz-works.floating-cards .card .card-content h3,
+    body.dark-mode .wbnrfz-works.floating-cards .card .card-content h3 {
+        font-size: 15px;
+        line-height: 1.25;
+    }
+
+    .wbnrfz-works.floating-cards .card .pw-btn-small {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 11px;
     }
 }
 

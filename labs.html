@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/style-mobNav.css">
   <link rel="stylesheet" href="css/style-breakpoints.css">
   <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/style-projects.css">
 
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/glightbox.min.css">
@@ -58,7 +59,7 @@
   }
 </style>
 
-<body>
+<body class="project-listing-page">
   <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
   <div class="breadcrumb-fixed-placeholder">
     <nav aria-label="breadcrumb" style="margin-bottom:0;">
@@ -157,25 +158,17 @@
 
 
   <!------------------------------------------------------------------------ Start of Sections ------------------------------------------------------------------------>
-  <!-- Breadcrumbs -->
+  <!-- Back button -->
   <section class="about-me-sum clearfix">
     <div class="wbnrfz_eicw">
       <div class="page-header-section">
         <div class="container container-xxl container-mobile container-mobile-header">
           <div class="breadcrumb-wrapper">
-            <nav aria-label="breadcrumb" class="breadcrumb-desktop" style="display:none;">
-              <ol class="breadcrumb">
+            <nav aria-label="Back" class="breadcrumb-desktop" style="display:none;">
+              <ol class="breadcrumb" data-back-href="menu.html">
                 <li class="breadcrumb-item">
-                  <a href="../index.html">
-                    <i class="fa-regular fa-house"></i>
-                  </a>
-                </li>
-                <li class="breadcrumb-item">
-                  <a href="menu.html"><i class="fa-regular fa-bars"></i>
-                  </a>
-                </li>
-                <li class="breadcrumb-item">
-                  <a href="labs.html"><i class="fa-regular fa-flask"></i>
+                  <a href="menu.html" aria-label="Back to menu">
+                    <i class="fa-solid fa-arrow-left"></i>
                   </a>
                 </li>
               </ol>
@@ -191,60 +184,33 @@
                 <input type="text" id="search-input" class="form-control" placeholder=" Search Releases"
                   style="padding-left: 35px; width: 100%;">
               </div>
-
             </div>
           </div>
         </div>
-
-
-        <div class="scrollable-tabs-container">
-          <div class="left-arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-            </svg>
-          </div>
-
-          <ul>
-            <li>
-              <a href="#" class="btn-filter active" data-filter="*"><i class="fa-regular fa-download"></i> All
-                Releases</a>
-            </li>
-
-            <li>
-              <a href="#" class="btn-filter" data-filter=".rt"><i class="fa-regular fa-route"></i> Routes</a>
-            </li>
-
-            <li>
-              <a href="#" class="btn-filter" data-filter=".tr"><i class="fa-regular fa-train"></i> Trains</a>
-            </li>
-
-            <!-- <li>
-              <a href="#" class="btn-filter" data-filter=".bs"><i class="fa-regular fa-bus"></i> Buses</a>
-            </li> -->
-
-            <li>
-              <a href="#" class="btn-filter" data-filter=".mp"><i class="fa-regular fa-map"></i> Maps</a>
-            </li>
-          </ul>
-
-          <div class="right-arrow active">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-            </svg>
-
-          </div>
-        </div>
-        <hr>
       </div>
 
     </div>
 
   </section>
 
+  <div class="sticky-nav-wrap">
+    <div class="eicw-nav-dropdown" id="filterDropdown">
+      <button class="eicw-nav-btn" type="button" aria-haspopup="true" aria-expanded="false">
+        <span class="eicw-nav-label"><i class="fa-regular fa-download"></i> All Releases</span>
+        <i class="fa-regular fa-chevron-down eicw-nav-chevron"></i>
+      </button>
+      <ul class="eicw-nav-menu" role="menu">
+        <li><a href="#" class="btn-filter active" data-filter="*"><i class="fa-regular fa-download"></i> All Releases</a></li>
+        <li><a href="#" class="btn-filter" data-filter=".rt"><i class="fa-regular fa-route"></i> Routes</a></li>
+        <li><a href="#" class="btn-filter" data-filter=".tr"><i class="fa-regular fa-train"></i> Trains</a></li>
+        <li><a href="#" class="btn-filter" data-filter=".mp"><i class="fa-regular fa-map"></i> Maps</a></li>
+      </ul>
+    </div>
+  </div>
+  <hr class="filter-divider" style="margin: 0;">
+
   <!-- Section Contents -->
-  <section class="about-me-summ clearfix">
+  <section class="about-me-summ clearfix labs-release-content">
     <div class="container-xxl">
       <div class="row">
         <div class="col-12">
@@ -271,18 +237,7 @@
         </div>
       </div>
 
-      <!-- Routes Section Heading -->
-      <div class="row" id="routes-heading-section">
-        <div class="col-12">
-          <div class="section-heading text-center wow fadeIn">
-            <h2>Routes</h2>
-          </div>
-        </div>
-      </div>
-
-      <!-- Routes & Trains Combined Grid -->
-      <div class="container">
-        <div class="wbnrfz-grid">
+      <div class="wbnrfz-grid" id="labs-grid">
           <div class="card rt" data-date="2025-08-11">
             <img src="img/releases-ss/hbl.png" alt="hbl">
             <div class="card-content">
@@ -291,136 +246,6 @@
                   class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
-
-          <!-- <div class="card rt" data-date="2025-09-07T11:30:00">
-            <img src="img/releases-ss/nwl2.0.png" alt="nwl2.0">
-            <div class="card-content">
-              <h3>North West Line</h3>
-              <a href="releases/north-west-line.html" class="pw-btn-small btn-2"><i
-                  class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="card rt" data-date="2025-08-18">
-            <img src="img/releases-ss/ael2.0.png" alt="ael2.0">
-            <div class="card-content">
-              <h3>Airport Express Line</h3>
-              <a href="releases/airport-express-line.html" class="pw-btn-small btn-2"><i
-                  class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="card rt" data-date="2024-08-16">
-            <img src="img/releases-ss/ys2.0.png" alt="ys2.0">
-            <div class="card-content">
-              <h3>Yishun LRT</h3>
-              <a href="releases/yishun-lrt.html" class="pw-btn-small btn-2"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="card rt" data-date="2025-08-16">
-            <img src="img/releases-ss/cgl.png" alt="cgl">
-            <div class="card-content">
-              <h3>Changi Airport Line</h3>
-              <a href="releases/changi-airport-line.html" class="pw-btn-small btn-2"><i
-                  class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div> -->
-        </div>
-      </div>
-
-      <!-- Trains Section Heading -->
-      <!-- <div class="row" id="trains-heading-section">
-        <div class="col-12">
-          <div class="section-heading text-center wow fadeIn">
-            <h2>Trains</h2>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- Trains Grid -->
-      <!-- <div class="container">
-        <div class="wbnrfz-grid">
-          <div class="card tr" data-date="2025-09-07T11:53:00">
-            <img src="img/releases-ss2/c651d.png" alt="c651d">
-            <div class="card-content">
-              <h3>Alstom Movia C651D</h3>
-              <a href="releases/c651d.html" class="pw-btn-small btn-2"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="card tr" data-date="2025-09-07T11:40:00">
-            <img src="img/releases-ss/c651a.png" alt="c651a">
-            <div class="card-content">
-              <h3>Kawasaki-CRRC Qingdao Sifang C651A</h3>
-              <a href="releases/c651a.html" class="pw-btn-small btn-2"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="card tr" data-date="2025-09-07">
-            <img src="img/releases-ss/r151.png" alt="r151">
-            <div class="card-content">
-              <h3>Alstom Movia R151</h3>
-              <a href="releases/r151.html" class="pw-btn-small btn-2"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="card tr" data-date="2025-09-07T11:45:00">
-            <img src="img/releases-ss/c151c.png" alt="c151c">
-            <div class="card-content">
-              <h3>Kawasaki-CRRC Qingdao Sifang C151C</h3>
-              <a href="releases/c151c.html" class="pw-btn-small btn-2"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="card tr" data-date="2025-08-16">
-            <img src="img/releases-ss/c151b.png" alt="c151b">
-            <div class="card-content">
-              <h3>Kawasaki-CRRC Qingdao Sifang C151B</h3>
-              <a href="releases/c151b.html" class="pw-btn-small btn-2"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="card tr" data-date="2025-08-16">
-            <img src="img/releases-ss/c151a.png" alt="c151a">
-            <div class="card-content">
-              <h3>Kawasaki-CRRC Qingdao Sifang C151A</h3>
-              <a href="releases/c151a.html" class="pw-btn-small btn-2"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="card tr" data-date="2025-08-16">
-            <img src="img/releases-ss/ryl150.png" alt="ryl150">
-            <div class="card-content">
-              <h3>Alstom Movia RYL150</h3>
-              <a href="releases/ryl150.html" class="pw-btn-small btn-2"><i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-        </div>
-      </div> -->
-
-      <!-- Buses Section Heading -->
-      <!-- <div class="row" id="buses-heading-section">
-        <div class="col-12">
-          <div class="section-heading text-center wow fadeIn">
-            <h2>Buses</h2>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- Maps Section Heading -->
-      <div class="row" id="maps-heading-section">
-        <div class="col-12">
-          <div class="section-heading text-center wow fadeIn">
-            <h2>Maps</h2>
-          </div>
-        </div>
-      </div>
-
-      <!-- Maps & Buses Combined Grid -->
-      <div class="container">
-        <div class="wbnrfz-grid" id="maps-grid">
           <div class="card mp" data-date="2025-08-16">
             <img src="img/releases-ss/ht.png" alt="ht">
             <div class="card-content">
@@ -429,8 +254,6 @@
                   class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
-
-        </div>
       </div>
 
     </div>
@@ -470,6 +293,7 @@
   <script src="js/dstabs.js"></script>
 
   <script src="js/portFunct.js"></script>
+  <script src="js/filter-nav.js"></script>
 
   <script src="js/copy-to-clipboard.js"></script>
 

@@ -194,9 +194,8 @@ body.dark-mode .pw-portfolio-area {
     background-color: #1c1f2b;
     transition: all 0.5s ease;
 }
-
 body.dark-mode .pw-portfolio-area-featured {
-    background-color: #18191a;
+    background-color: #1a0b05;
 }
 
 body.dark-mode .pw-portfolio-area .container-fluid {
@@ -233,7 +232,7 @@ body.dark-mode .about-me-area {
 }
 
 body.dark-mode .about-me-content {
-    background-color: #292d3d;
+    background-color: #492e29;
     transition: all 0.5s ease;
     border: 1px solid #2b2b2b33;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.233), 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -269,7 +268,7 @@ body.dark-mode .profile-desc {
 
 /* ------------------------------------------ 2.0 About Page ------------------------------------------ */
 body.dark-mode .about-me-summ {
-    background-color: #18191a;
+    background-color: #1a0b05;
     transition: all 0.5s ease;
 }
 
@@ -300,7 +299,7 @@ body.dark-mode .port-summary:hover {
 }
 
 body.dark-mode .about-me-area {
-    background-color: #1c1f2b !important;
+    background-color: #251b19 !important;
     transition: all 0.5s ease;
 }
 
@@ -312,6 +311,13 @@ body.dark-mode .timeline-content {
 body.dark-mode .timeline-content:hover {
     background-color: #4784c5;
     transform: translateY(-2px);
+}
+
+@media (min-width: 995px) {
+    body.dark-mode .breadcrumb-desktop li.breadcrumb-item a {
+        background: #492e29a4;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.233), 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 }
 
 /* ------------------------------------------ */
@@ -439,12 +445,12 @@ body.dark-mode h2.page-title {
 
 body.dark-mode .ftco-section-otb {
     padding: 5em 0;
-    background-color: #18191a;
+    background-color: #1a0b05;
     transition: all 0.5s ease;
 }
 
 body.dark-mode .page-header-section {
-    background: #18191a;
+    background: #1a0b05;
 }
 
 body.dark-mode li.breadcrumb-item a {
@@ -576,11 +582,11 @@ body.dark-mode .form-control {
     width: 100%;
     color: #fff;
     appearance: none;
-    background: #1c1f2b;
+    background: #1a1210;
     background-clip: padding-box;
     border-radius: 25px;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    border: 2px solid #393e53;
+    border: 2px solid #47312d;
 }
 
 body.dark-mode .form-control::placeholder {
@@ -795,4 +801,10 @@ body.dark-mode .flickity-prev-next-button svg {
 
 body.dark-mode .flickity-prev-next-button .arrow {
     fill: #fff !important;
+}
+
+@media (max-width: 994px) {
+    body.dark-mode {
+        padding-bottom: max(80px, calc(80px + env(safe-area-inset-bottom)));
+    }
 }
