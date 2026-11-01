@@ -45,22 +45,23 @@
     .revamp-notice {
         display: flex;
         align-items: center;
-        gap: 12px;
-        max-width: 1100px;
-        margin: 0 auto 28px;
-        padding: 14px 18px;
+        flex: 1;
+        min-width: 0;
+        gap: 10px;
+        margin: 0 20px;
+        padding: 8px 14px;
         border: 1px solid #ffe08a;
-        border-radius: 14px;
+        border-radius: 12px;
         background: #fff3cd;
         color: #664d03;
         text-align: left;
-        position: relative;
-        z-index: 1;
+        font-size: 13px;
+        line-height: 1.35;
     }
 
     .revamp-notice i {
         flex: 0 0 auto;
-        font-size: 19px;
+        font-size: 16px;
     }
 
     body.dark-mode .revamp-notice {
@@ -69,11 +70,32 @@
         color: #ffda6a;
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 994px) {
+        .navbar-container.logo-only {
+            left: 20px;
+            transform: none;
+            width: calc(100% - 40px);
+        }
+
+        .navbar-container.logo-only .navbar,
+        body.dark-mode .navbar-container.logo-only .navbar {
+            width: 100%;
+            height: auto;
+            min-height: 46px;
+            padding: 6px 10px;
+            justify-content: flex-start;
+            gap: 8px;
+        }
+
         .revamp-notice {
-            align-items: flex-start;
-            margin-bottom: 20px;
-            padding: 12px 14px;
+            gap: 7px;
+            margin: 0;
+            padding: 7px 9px;
+            font-size: 11px;
+            line-height: 1.25;
+        }
+
+        .revamp-notice i {
             font-size: 14px;
         }
     }
@@ -85,6 +107,11 @@
         <div class="navbar">
             <!-- Logo -->
             <a href="./"><img src="img/core-img/logo.png" alt="logo" class="logo" loading="lazy"></a>
+
+            <div class="revamp-notice" role="status">
+                <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+                <div><strong>Site revamp in progress.</strong> Pages may change during updates.</div>
+            </div>
 
             <!-- Navigation Links -->
             <ul class="navbar-nav" id="navbarNav">
@@ -163,11 +190,6 @@
     <div class="main-content">
         <section class="wbnrfz-works floating-cards">
             <div class="container">
-                <div class="revamp-notice" role="status">
-                    <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
-                    <div><strong>Site revamp in progress.</strong> We're refreshing the website, so some pages and
-                        features may change while updates are underway. Thanks for your patience.</div>
-                </div>
                 <div class="wbnrfz-grid wow fadeIn" data-wow-delay="50ms">
                     <div class="card">
 
