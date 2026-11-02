@@ -340,7 +340,7 @@
       flex: 1;
       padding: 30px 20px;
       background: #3d4556;
-      border-radius: 12px;
+      border-radius: 24px;
       margin-bottom: 40px;
       height: fit-content;
   }
@@ -367,14 +367,14 @@
 
   body.dark-mode .line-diagram {
       transition: all 0.5s ease;
-      background-color: #1c1f2b;
+      background-color: #492e29;
       border: 1px solid #2b2b2b33;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.233), 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   body.dark-mode .line-description {
       transition: all 0.5s ease;
-      background-color: #1c1f2b;
+      background-color: #492e29;
       border: 1px solid #2b2b2b33;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.233), 0 4px 12px rgba(0, 0, 0, 0.1);
   }
@@ -386,7 +386,7 @@
   body.dark-mode .port-summary {
       color: #fff;
       transition: all 0.5s ease;
-      background-color: #1c1f2b;
+      background-color: #492e29;
       border: 1px solid #2b2b2b33;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.233), 0 4px 12px rgba(0, 0, 0, 0.1);
   }

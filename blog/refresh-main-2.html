@@ -11,6 +11,8 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta property="og:image" content="https://i.imgur.com/s46uTOc.png" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f1419" media="(prefers-color-scheme: dark)">
 
     <link rel="icon" href="../img/core-img/favicon.png">
 
@@ -20,6 +22,7 @@
     <link rel="stylesheet" href="../css/style-mobNav.css">
     <link rel="stylesheet" href="../css/style-breakpoints.css">
     <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="../css/style-projects.css">
 
 </head>
 
@@ -37,19 +40,11 @@
 <body>
     <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
     <div class="breadcrumb-fixed-placeholder">
-        <nav aria-label="breadcrumb" style="margin-bottom:0;">
-            <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb">
+        <nav aria-label="Back" style="margin-bottom:0;">
+            <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb" data-back-href="../blog.html">
                 <li class="breadcrumb-item">
-                    <a href="../index.html">
-                        <i class="fa-regular fa-house"></i>
-                    </a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a href="../menu.html"><i class="fa-regular fa-bars"></i>
-                    </a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a href="../blog.html"><i class="fa-regular fa-comment-dots"></i>
+                    <a href="../blog.html" aria-label="Back to Blog">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                     </a>
                 </li>
             </ol>
@@ -60,7 +55,7 @@
     <nav class="navbar-container">
         <div class="navbar">
             <!-- Logo -->
-            <a href="../index.html"><img src="../img/core-img/logo.png" alt="logo" class="logo"></a>
+            <a href="../index.html"><img src="../img/core-img/logo.png" alt="logo" class="logo" loading="lazy"></a>
 
             <!-- Navigation Links -->
             <ul class="navbar-nav" id="navbarNav">
@@ -144,19 +139,11 @@
             <div class="page-header-section">
                 <div class="container container-xxl container-mobile container-mobile-header">
                     <div class="breadcrumb-wrapper">
-                        <nav aria-label="breadcrumb" class="breadcrumb-desktop" style="display:none;">
-                            <ol class="breadcrumb">
+                        <nav aria-label="Back" class="breadcrumb-desktop" style="display:none;">
+                            <ol class="breadcrumb" data-back-href="../blog.html">
                                 <li class="breadcrumb-item">
-                                    <a href="../index.html">
-                                        <i class="fa-regular fa-house"></i>
-                                    </a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <a href="../menu.html"><i class="fa-regular fa-bars"></i>
-                                    </a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <a href="../blog.html"><i class="fa-regular fa-comment-dots"></i>
+                                    <a href="../blog.html" aria-label="Back to Blog">
+                                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                                     </a>
                                 </li>
                             </ol>
@@ -171,42 +158,28 @@
                     </div>
                 </div>
 
-                <div class="scrollable-tabs-container">
-                    <div class="left-arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                        </svg>
 
-                    </div>
-
-                    <ul>
-                        <li>
-                            <a href="#dc">Design Changes</a>
-                        </li>
-                        <li>
-                            <a href="#il">Integrated Link Area</a>
-                        </li>
-                        <li>
-                            <a href="#ui">Update Indicator</a>
-                        </li>
-                    </ul>
-
-                    <div class="right-arrow active">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                        </svg>
-
-                    </div>
-                </div>
-                <hr>
             </div>
 
         </div>
 
     </section>
 
+    <!-- Sticky Section Nav -->
+    <div class="sticky-nav-wrap">
+        <div class="eicw-nav-dropdown" id="filterDropdown">
+            <button class="eicw-nav-btn" type="button" aria-haspopup="true" aria-expanded="false">
+                <span class="eicw-nav-label"><i class="fa-regular fa-palette"></i> Design Changes</span>
+                <i class="fa-regular fa-chevron-down eicw-nav-chevron"></i>
+            </button>
+            <ul class="eicw-nav-menu" role="menu">
+                <li><a href="#dc" class="btn-filter active" data-filter="#dc"><i class="fa-regular fa-palette"></i> Design Changes</a></li>
+                <li><a href="#il" class="btn-filter" data-filter="#il"><i class="fa-regular fa-link"></i> Integrated Link Area</a></li>
+                <li><a href="#ui" class="btn-filter" data-filter="#ui"><i class="fa-regular fa-bell"></i> Update Indicator</a></li>
+            </ul>
+        </div>
+        <hr style="margin: 0;">
+    </div>
     <!-- Cover Header -->
     <section class="breadcrumb-area-eicw-cover bg-img bg-overlay" id="cv-pv5"
         style="background-image: url(../img/blog/rfheader2.png); height: 72vh;">
@@ -245,7 +218,7 @@
                 <div class="column column-pic">
                     <figcaption>
                         <a href="../img/blog/rm21a.png" class="portfolio-img"><img src="../img/blog/rm21a.png"
-                                class="img-fluid" alt="Hero Image Section"></a>
+                                class="img-fluid" alt="Hero Image Section" loading="lazy"></a>
                         <p>Main Page - Light</p>
                     </figcaption>
                 </div>
@@ -253,7 +226,7 @@
                 <div class="column column-pic">
                     <figcaption>
                         <a href="../img/blog/rm22a.png" class="portfolio-img"><img src="../img/blog/rm22a.png"
-                                class="img-fluid" alt="About Me Landing Section"></a>
+                                class="img-fluid" alt="About Me Landing Section" loading="lazy"></a>
                         <p>Main Page - Dark</p>
                     </figcaption>
                 </div>
@@ -261,7 +234,7 @@
                 <div class="column column-pic">
                     <figcaption>
                         <a href="../img/blog/rm23a.png" class="portfolio-img"><img src="../img/blog/rm23a.png"
-                                class="img-fluid" alt="Hero Image Section"></a>
+                                class="img-fluid" alt="Hero Image Section" loading="lazy"></a>
                         <p>New Menu Page</p>
                     </figcaption>
                 </div>
@@ -282,7 +255,7 @@
                 <div class="column column-pic">
                     <figcaption>
                         <a href="../img/blog/rm24a.jpeg" class="portfolio-img"><img src="../img/blog/rm24a.jpeg"
-                                class="img-fluid" alt="Release Links JSON - Stable Releases"></a>
+                                class="img-fluid" alt="Release Links JSON - Stable Releases" loading="lazy"></a>
                         <p>Release Links JSON - Stable Releases</p>
                     </figcaption>
                 </div>
@@ -290,7 +263,7 @@
                 <div class="column column-pic">
                     <figcaption>
                         <a href="../img/blog/rm24b.jpeg" class="portfolio-img"><img src="../img/blog/rm24b.jpeg"
-                                class="img-fluid" alt="Release Links JSON - Pre-Releases"></a>
+                                class="img-fluid" alt="Release Links JSON - Pre-Releases" loading="lazy"></a>
                         <p>Release Links JSON - Pre-Releases</p>
                     </figcaption>
                 </div>
@@ -298,7 +271,7 @@
                 <div class="column column-pic">
                     <figcaption>
                         <a href="../img/blog/rm25a.png" class="portfolio-img"><img src="../img/blog/rm25a.png"
-                                class="img-fluid" alt="Release Links JSON - Stable Releases"></a>
+                                class="img-fluid" alt="Release Links JSON - Stable Releases" loading="lazy"></a>
                         <p>OpenBVE/OMSI 2 - Stable Releases</p>
                     </figcaption>
                 </div>
@@ -306,7 +279,7 @@
                 <div class="column column-pic">
                     <figcaption>
                         <a href="../img/blog/rm25b.png" class="portfolio-img"><img src="../img/blog/rm25b.png"
-                                class="img-fluid" alt="Labs Page - Pre-Releases"></a>
+                                class="img-fluid" alt="Labs Page - Pre-Releases" loading="lazy"></a>
                         <p>Labs Page - Pre-Releases</p>
                     </figcaption>
                 </div>
@@ -322,7 +295,7 @@
                 <div class="column column-pic">
                     <figcaption>
                         <a href="../img/blog/update-indicator-preview.png" class="portfolio-img"><img src="../img/blog/update-indicator-preview.png"
-                                class="img-fluid" alt="Update Indicator on Navbar"></a>
+                                class="img-fluid" alt="Update Indicator on Navbar" loading="lazy"></a>
                         <p>Update Indicator - Red pulsing dot on navbar</p>
                     </figcaption>
                 </div>
@@ -351,6 +324,10 @@
 
 
     <script src="../js/mob-navtabs.js"></script>
+
+    <script src="../js/theme-subPages.js"></script>
+
+    <script src="../js/filter-nav.js"></script>
 
     <script src="../js/cookies-theme-sync.js"></script>
 

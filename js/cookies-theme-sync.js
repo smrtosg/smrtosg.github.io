@@ -13,7 +13,7 @@ function updateCookieBannerTheme() {
     
     if (isDarkMode) {
         // Dark mode colors
-        cookieBanner.style.background = '#1c1f2b';
+        cookieBanner.style.background = '#492e29';
         cookieBanner.style.color = '#ffffff';
         cookieBanner.style.borderTop = '1px solid #2b2b2b33';
         
