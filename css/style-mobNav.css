@@ -373,7 +373,7 @@ body.dark-mode .list-group-item:hover {
     }
 
     .mobile-bottom-nav ul {
-        padding-bottom: max(4px, env(safe-area-inset-bottom));
+        padding-bottom: max(0px, env(safe-area-inset-bottom));
     }
 
     body {
