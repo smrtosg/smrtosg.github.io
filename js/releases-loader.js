@@ -16,7 +16,13 @@ async function initializeVersionDropdown(lineKey) {
   const versionDropdown = document.getElementById('versionDropdown');
   const releaseData = await loadReleaseData(lineKey);
   
-  if (!releaseData || !versionDropdown) return;
+  if (!versionDropdown) return;
+  
+  if (!releaseData || !releaseData.versions || Object.keys(releaseData.versions).length === 0) {
+    versionDropdown.innerHTML = '<option value="">No Releases Available</option>';
+    versionDropdown.disabled = true;
+    return;
+  }
   
   // Clear default options first
   versionDropdown.innerHTML = '<option value="">Select a version...</option>';

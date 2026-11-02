@@ -629,7 +629,13 @@
             const labsVersionDropdown = document.getElementById('labsVersionDropdown');
             const releaseData = await loadLabsReleaseData(lineKey);
 
-            if (!releaseData || !labsVersionDropdown) return;
+            if (!labsVersionDropdown) return;
+
+            if (!releaseData || !releaseData.versions || Object.keys(releaseData.versions).length === 0) {
+                labsVersionDropdown.innerHTML = '<option value="">No Releases Available</option>';
+                labsVersionDropdown.disabled = true;
+                return;
+            }
 
             // Clear default options first
             labsVersionDropdown.innerHTML = '<option value="">Select a pre-release version...</option>';

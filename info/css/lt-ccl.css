@@ -182,6 +182,12 @@
       flex-shrink: 0;
   }
 
+   body.dark-mode .station-dot {
+      background: #492e29;
+      border: 3px solid #fa9e0d;
+  }
+
+
 
   .station-content {
       display: flex;

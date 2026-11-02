@@ -176,7 +176,7 @@
         padding: 8px 12px;
         background: #fff;
         color: #000;
-        border-radius: 6px;
+        border-radius: 24px;
         cursor: pointer;
         font-weight: bold;
         font-size: 14px;
@@ -239,6 +239,11 @@
         left: -31px;
         z-index: 10;
         flex-shrink: 0;
+    }
+
+    body.dark-mode .station-dot {
+        background: #492e29;
+        border: 3px solid #708472;
     }
 
 
@@ -395,9 +400,8 @@
 
     body.dark-mode .branch-selector select {
         padding: 8px 12px;
-        background: #393e53;
+        background: #6e463fcc;
         color: #fff;
-        border-radius: 6px;
         cursor: pointer;
         font-weight: bold;
         font-size: 14px;
