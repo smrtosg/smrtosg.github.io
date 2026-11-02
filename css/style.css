@@ -32,7 +32,7 @@
 --------------------------------------------- */
 
 /* ------------------------------------------ Import ------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url(bootstrap.min.css);
 @import url(animate.css);
 @import url(owl.carousel.min.css);
@@ -56,7 +56,7 @@ body {
 
 
 body {
-    font-family: "Onest", sans-serif;
+    font-family: "Outfit", sans-serif;
     background: #ececea;
     min-height: 100vh;
     padding: 0;
@@ -71,7 +71,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Onest", sans-serif;
+    font-family: "Outfit", sans-serif;
     color: #252525;
     line-height: 1.3;
     font-weight: 600;
@@ -836,7 +836,7 @@ body:not(.dark-mode) #hero:before {
     color: #45505b;
     margin: 15px 0 0 0;
     font-size: 26px;
-    font-family: 'Onest', sans-serif;
+    font-family: 'Outfit', sans-serif;
     cursor: default;
 }
 
@@ -1718,7 +1718,7 @@ img.profile-pic {
     font-size: 16px;
     color: #828793;
     font-weight: 400;
-    font-family: "Onest", sans-serif;
+    font-family: "Outfit", sans-serif;
     display: block;
     margin-bottom: 6px;
 }

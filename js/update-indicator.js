@@ -1,4 +1,7 @@
 // Update Indicator - Shows a dot on navbar if there's a recent update
+(function () {
+const scriptSrc = document.currentScript ? document.currentScript.src : null;
+
 document.addEventListener('DOMContentLoaded', function () {
     const DAYS_THRESHOLD = 7; // Show indicator if update is within last 7 days
     const pages = [
@@ -58,8 +61,10 @@ document.addEventListener('DOMContentLoaded', function () {
             // Only check the update if we're not on that page
             const pageFilename = window.location.pathname.split('/').pop() || 'index.html';
             if (pageFilename !== page.href) {
-                // Try multiple fetch paths (relative and absolute)
-                const fetchPaths = [page.href, '../' + page.href];
+                // Resolve from the site root (the parent of /js/) so subpages don't request missing files
+                const fetchPaths = scriptSrc
+                    ? [new URL('../' + page.href, scriptSrc).href]
+                    : [page.href, '../' + page.href];
                 
                 function tryFetch(paths, index) {
                     if (index >= paths.length) return;
@@ -166,3 +171,4 @@ document.addEventListener('DOMContentLoaded', function () {
     checkForUpdates();
     highlightRecentUpdates();
 });
+})();
