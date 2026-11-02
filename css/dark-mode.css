@@ -47,7 +47,7 @@ body.dark-mode .portfolio-filter .btn {
 
 body.dark-mode .portfolio-filter .btn.active,
 body.dark-mode .portfolio-filter .btn:hover {
-    background: #52718d;
+    background: #83584e;
 }
 
 body.dark-mode .wbnrfz_btn_theme:hover {
@@ -244,7 +244,7 @@ body.dark-mode .about-me-content p {
 }
 
 body.dark-mode .about-me-content:hover {
-    background-color: #52718d;
+    background-color: #83584e;
 }
 
 body.dark-mode .follow-area {
@@ -308,7 +308,7 @@ body.dark-mode .port-summary {
 }
 
 body.dark-mode .port-summary:hover {
-    background-color: #52718d;
+    background-color: #83584e;
     transform: translateY(-2px);
 }
 
@@ -435,7 +435,7 @@ body.dark-mode li.breadcrumb-item a:hover {
     border-radius: 25px;
     color: #fff;
     transform: translateY(-2px);
-    background-color: #5f7c95;
+    background-color: #83584e;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.082);
 }
 
@@ -626,7 +626,7 @@ body.dark-mode .scrollable-tabs-container a {
 }
 
 body.dark-mode .scrollable-tabs-container a:hover {
-    background-color: #52718d;
+    background-color: #83584e;
     color: #fff;
 }
 
@@ -676,7 +676,7 @@ body.dark-mode .nav-link {
 body.dark-mode .nav-link:hover {
     color: #fff;
     transform: translateY(-2px);
-    background-color: #52718d;
+    background-color: #83584e;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 

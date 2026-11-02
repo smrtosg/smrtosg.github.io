@@ -94,7 +94,7 @@ body.dark-mode li.breadcrumb-item a {
 }
 
 .list-group-item:hover {
-    background-color: #d8e6f3;
+    background-color: #c7aaa3;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
@@ -126,7 +126,7 @@ body.dark-mode .list-group-item {
 }
 
 body.dark-mode .list-group-item:hover {
-    background-color: #334250;
+    background-color: #83584e;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }

@@ -9,7 +9,7 @@
         const _shouldBeDark = window._themePreference === 'dark' || (window._themePreference === 'system' && window._prefersDark);
         if (_shouldBeDark) {
             document.documentElement.classList.add('dark-mode');
-            document.documentElement.style.background = '#121521';
+            document.documentElement.style.background = '#251b19';
         }
     </script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -70,7 +70,7 @@
     }
 
     body.dark-mode .br-tracker-scroll::-webkit-scrollbar-thumb {
-        background: #3a4060;
+        background: #3f2b27;
     }
 
     @media (max-width: 900px) {
@@ -407,8 +407,16 @@
 
 
     body.dark-mode .bug-form-wrapper {
-        background: #1c2035;
+        background: #492e29;
         box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    body.dark-mode .br-submit-btn:hover {
+        background-color: #c56e3c;
+    }
+
+    body.dark-mode .issue-card.is-closed {
+        border-left-color: #7d534b;
     }
 
     body.dark-mode .br-label {
@@ -416,24 +424,24 @@
     }
 
     body.dark-mode .br-control {
-        background: #252b42;
-        border-color: #3a4060;
+        background: #3b2a26;
+        border-color: #3f2b27;
         color: #e0e0e0;
     }
 
     body.dark-mode .br-control:focus {
         border-color: #a24c28;
-        background: #2a3050;
+        background: #5a3a33;
     }
 
     body.dark-mode select.br-control option {
-        background: #252b42;
+        background: #3b2a26;
         color: #e0e0e0;
     }
 
     body.dark-mode .br-info-box {
-        background: #211a17;
-        border-color: #4a3020;
+        background: #2e211e;
+        border-color: #5a3a33;
     }
 
     body.dark-mode .br-info-box p {
@@ -441,7 +449,7 @@
     }
 
     body.dark-mode .issue-card {
-        background: #1c2035;
+        background: #492e29;
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
     }
 
@@ -459,13 +467,13 @@
     }
 
     body.dark-mode .tracker-filter-btn {
-        background: #1c2035;
-        border-color: #3a4060;
+        background: #492e29;
+        border-color: #3f2b27;
         color: #aaa;
     }
 
     body.dark-mode .tracker-filter-btn .count {
-        background: #2a3050;
+        background: #5a3a33;
         color: #aaa;
     }
 
@@ -488,12 +496,12 @@
     }
 
     body.dark-mode .badge-closed {
-        background: #2a3050;
-        color: #8899b5;
+        background: #5a3a33;
+        color: #c9a89f;
     }
 
     body.dark-mode .tracker-state {
-        background: #1c2035;
+        background: #492e29;
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     }
 
@@ -506,8 +514,8 @@
 
 
     body.dark-mode .tracker-refresh {
-        background: #1c2035;
-        border-color: #3a4060;
+        background: #492e29;
+        border-color: #3f2b27;
         color: #aaa;
     }
 

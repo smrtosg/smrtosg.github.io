@@ -530,7 +530,8 @@ input:required {
 #scroll-indicator {
     height: 100%;
     width: 0;
-    background-image: linear-gradient(to right, #8f1211, #962f14, #9c4519, #a15722, #a6692e);;
+    background-image: linear-gradient(to right, #8f1211, #962f14, #9c4519, #a15722, #a6692e);
+    ;
     transition: width 0.1s ease;
 }
 
@@ -604,7 +605,7 @@ input:required {
 .pw-btn-small:focus,
 .pw-btn-small:hover {
     font-weight: 500;
-    background-color: #6d99c0 !important;
+    background-color: #a37166 !important;
     color: #fff;
     transform: translateY(-2px);
 }
@@ -1024,7 +1025,7 @@ body:not(.dark-mode) #hero:before {
 
 .about-me-content:hover,
 .about-me-content:focus {
-    background-color: #c7e3fb;
+    background-color: #c7aaa3;
 }
 
 .about-me-content:hover .chosse-us-icon,
@@ -1077,7 +1078,7 @@ body:not(.dark-mode) #hero:before {
 }
 
 .timeline-item:hover {
-    background-color: #c7e3fb;
+    background-color: #c7aaa3;
     transform: translateY(-2px);
 }
 
@@ -1120,7 +1121,7 @@ h4.timeline-date-aa {
     text-align: center;
 }
 
-{
+    {
     margin-top: 48px;
 }
 
@@ -1313,7 +1314,7 @@ h4.timeline-date-aa {
 }
 
 .about-me-summary:hover {
-    background-color: #c7e3fb;
+    background-color: #c7aaa3;
     transform: translateY(-2px);
 }
 
@@ -1350,7 +1351,7 @@ h4.timeline-date-aa {
 }
 
 .port-summary:hover {
-    background-color: #c7e3fb;
+    background-color: #c7aaa3;
 }
 
 .port-summary .summ-icon {
@@ -1488,6 +1489,7 @@ h4.timeline-date-aa {
         font-size: 14px;
     }
 }
+
 /* ------------------------------------------ Home: Maps & Routes label + value cards ------------------------------------------ */
 #maps-routes .box-indiv {
     margin-bottom: 24px;
@@ -1551,6 +1553,7 @@ h4.timeline-date-aa {
         font-size: 14px;
     }
 }
+
 /* ------------------------------------------ */
 
 /* ------------------------------------------ 11.0 Works By NRFZ/Blogs (Featured/Main) ------------------------------------------ */
@@ -1995,7 +1998,8 @@ img.profile-pic {
 
 .skill-ara .single-skill .progress-bar {
     background: #87bee8;
-    background-image: linear-gradient(to right, #8f1211, #962f14, #9c4519, #a15722, #a6692e);;
+    background-image: linear-gradient(to right, #8f1211, #962f14, #9c4519, #a15722, #a6692e);
+    ;
     width: 0%;
     border-radius: 15px;
 }
@@ -2796,7 +2800,7 @@ h2.page-title {
 
 .portfolio-filter .btn.active,
 .portfolio-filter .btn:hover {
-    background: #c7e3fb;
+    background: #c7aaa3;
     color: #000;
     border-radius: 25px;
     transform: translateY(-2px);
@@ -3113,7 +3117,8 @@ li.breadcrumb-item a:hover {
     margin-top: 3em;
 }
 
-#ops-smrtt, #ops-smrtb {
+#ops-smrtt,
+#ops-smrtb {
     width: 180px;
     height: auto;
 }
@@ -3345,13 +3350,14 @@ li.breadcrumb-item a:hover {
 }
 
 .scrollable-tabs-container a:hover {
-    background-color: #c7e3fb;
+    background-color: #c7aaa3;
     color: #000;
     transform: translateY(-2px);
 }
 
 .scrollable-tabs-container a.active {
-    background-image: linear-gradient(to right, #8f1211, #962f14, #9c4519, #a15722, #a6692e);;
+    background-image: linear-gradient(to right, #8f1211, #962f14, #9c4519, #a15722, #a6692e);
+    ;
     color: #fff;
 }
 
@@ -3586,14 +3592,14 @@ li.breadcrumb-item a:hover {
 .nav-link:hover {
     color: #000;
     transform: translateY(-2px);
-    background-color: #c7e3fb;
+    background-color: #c7aaa3;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .nav-link-toggle:hover {
     color: #000 !important;
     transform: translateY(-2px);
-    background-color: #c7e3fb;
+    background-color: #c7aaa3;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -3640,7 +3646,7 @@ li.breadcrumb-item a:hover {
 .nav-link:hover {
     color: #000;
     transform: translateY(-2px);
-    background-color: #c7e3fb;
+    background-color: #c7aaa3;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -3993,7 +3999,7 @@ img.mfp-img {
 
 .flickity-prev-next-button:hover {
     transform: translateY(-2px) !important;
-    background-color: #c7e3fb !important;
+    background-color: #c7aaa3 !important;
 }
 
 .flickity-prev-next-button:focus {
@@ -4050,10 +4056,13 @@ img.mfp-img {
 }
 
 @keyframes pulse-indicator {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
         transform: scale(1);
     }
+
     50% {
         opacity: 0.6;
         transform: scale(1.2);
@@ -4071,10 +4080,34 @@ img.mfp-img {
     0% {
         box-shadow: 0 0 20px rgba(255, 68, 68, 0.8), inset 0 0 20px rgba(255, 68, 68, 0.2);
     }
+
     50% {
         box-shadow: 0 0 30px rgba(255, 68, 68, 0.5), inset 0 0 10px rgba(255, 68, 68, 0.1);
     }
+
     100% {
         box-shadow: 0 0 20px rgba(255, 68, 68, 0.5), inset 0 0 20px rgba(255, 68, 68, 0.2);
+    }
+}
+
+@media (min-width: 995px) {
+    .breadcrumb-desktop li.breadcrumb-item a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        border-radius: 50%;
+        background: rgba(253, 253, 253, 0.635);
+        -webkit-backdrop-filter: blur(25px);
+        backdrop-filter: blur(25px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 1.5px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .breadcrumb-desktop li.breadcrumb-item a:hover {
+        padding: 0;
+        background: #c7aaa3;
+        transform: translateY(-2px);
     }
 }
