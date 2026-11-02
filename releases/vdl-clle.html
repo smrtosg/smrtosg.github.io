@@ -228,18 +228,14 @@
 <body>
     <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
     <div class="breadcrumb-fixed-placeholder">
-        <nav aria-label="breadcrumb" style="margin-bottom:0;">
-            <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="../index.html">
-                        <i class="fa-regular fa-house"></i>
-                    </a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a href="../omsi2.html"><i class="fa-regular fa-bus"></i>
-                    </a>
-                </li>
-            </ol>
+        <nav aria-label="Back" style="margin-bottom:0;">
+          <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb" data-back-href="../omsi2.html">
+            <li class="breadcrumb-item">
+              <a href="../omsi2.html" aria-label="Back">
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ol>
         </nav>
     </div>
 
@@ -327,18 +323,14 @@
             <div class="page-header-section">
                 <div class="container-xxl container-mobile container-mobile-header">
                     <div class="breadcrumb-wrapper">
-                        <nav aria-label="breadcrumb" class="breadcrumb-desktop" style="display:none;">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item">
-                                    <a href="../index.html">
-                                        <i class="fa-regular fa-house"></i>
-                                    </a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <a href="../omsi2.html"><i class="fa-regular fa-bus "></i>
-                                    </a>
-                                </li>
-                            </ol>
+                        <nav aria-label="Back" class="breadcrumb-desktop" style="display:none;">
+                          <ol class="breadcrumb" data-back-href="../omsi2.html">
+                            <li class="breadcrumb-item">
+                              <a href="../omsi2.html" aria-label="Back">
+                                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                              </a>
+                            </li>
+                          </ol>
                         </nav>
                         <div class="page-title-wrapper">
                             <h1 class="page-title-single">VDL Citea LLE</h1>

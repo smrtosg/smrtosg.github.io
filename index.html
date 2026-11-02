@@ -41,77 +41,12 @@
 
 </head>
 
-<style>
-    .revamp-notice {
-        display: flex;
-        align-items: center;
-        flex: 1;
-        min-width: 0;
-        gap: 10px;
-        margin: 0 20px;
-        padding: 8px 14px;
-        border: 1px solid #ffe08a;
-        border-radius: 12px;
-        background: #fff3cd;
-        color: #664d03;
-        text-align: left;
-        font-size: 13px;
-        line-height: 1.35;
-    }
-
-    .revamp-notice i {
-        flex: 0 0 auto;
-        font-size: 16px;
-    }
-
-    body.dark-mode .revamp-notice {
-        border-color: #997404;
-        background: #332701;
-        color: #ffda6a;
-    }
-
-    @media (max-width: 994px) {
-        .navbar-container.logo-only {
-            left: 20px;
-            transform: none;
-            width: calc(100% - 40px);
-        }
-
-        .navbar-container.logo-only .navbar,
-        body.dark-mode .navbar-container.logo-only .navbar {
-            width: 100%;
-            height: auto;
-            min-height: 46px;
-            padding: 6px 10px;
-            justify-content: flex-start;
-            gap: 8px;
-        }
-
-        .revamp-notice {
-            gap: 7px;
-            margin: 0;
-            padding: 7px 9px;
-            font-size: 11px;
-            line-height: 1.25;
-        }
-
-        .revamp-notice i {
-            font-size: 14px;
-        }
-    }
-</style>
-
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar-container logo-only">
         <div class="navbar">
             <!-- Logo -->
             <a href="./"><img src="img/core-img/logo.png" alt="logo" class="logo" loading="lazy"></a>
-
-            <div class="revamp-notice" role="status">
-                <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
-                <div><strong>Site revamp in progress.</strong> Pages may change during updates.</div>
-            </div>
 
             <!-- Navigation Links -->
             <ul class="navbar-nav" id="navbarNav">

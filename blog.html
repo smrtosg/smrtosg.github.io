@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/style-mobNav.css">
     <link rel="stylesheet" href="css/style-breakpoints.css">
     <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/style-projects.css">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN76281P3Q"></script>
@@ -33,7 +34,7 @@
 
 </head>
 
-<body>
+<body class="project-listing-page">
     <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
     <div class="breadcrumb-fixed-placeholder">
         <nav aria-label="Back" style="margin-bottom:0;">
@@ -150,46 +151,28 @@
                 </div>
 
 
-                <div class="scrollable-tabs-container">
-                    <div class="left-arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                        </svg>
-                    </div>
-
-                    <ul>
-                        <li>
-                            <a href="#" class="btn-filter-blog active" data-filter="*"><i
-                                    class="fa-light fa-comment-dots"></i> All Posts</a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="btn-filter-blog" data-filter=".ur"><i
-                                    class="fa-regular fa-circle-check"></i>
-                                Updates & Releases</a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="btn-filter-blog" data-filter=".unc"><i
-                                    class="fa-regular fa-circle-question"></i> Uncategorized</a>
-                        </li>
-                    </ul>
-
-                    <div class="right-arrow active">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                        </svg>
-
-                    </div>
-                </div>
-                <hr>
             </div>
 
         </div>
 
     </section>
+
+    <!-- Sticky Filter Dropdown Nav -->
+    <div class="sticky-nav-wrap">
+        <div class="eicw-nav-dropdown" id="filterDropdown">
+            <button class="eicw-nav-btn" type="button" aria-haspopup="true" aria-expanded="false">
+                <span class="eicw-nav-label"><i class="fa-light fa-comment-dots"></i> All Posts</span>
+                <i class="fa-regular fa-chevron-down eicw-nav-chevron"></i>
+            </button>
+            <ul class="eicw-nav-menu" role="menu">
+                <li><a href="#" class="btn-filter btn-filter-blog active" data-filter="*"><i class="fa-light fa-comment-dots"></i> All Posts</a></li>
+                <li><a href="#" class="btn-filter btn-filter-blog" data-filter=".ur"><i class="fa-regular fa-circle-check"></i> Updates & Releases</a></li>
+                <li><a href="#" class="btn-filter btn-filter-blog" data-filter=".unc"><i class="fa-regular fa-circle-question"></i> Uncategorized</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="filter-divider" style="margin: 0;">
 
     <!-- Section Contents -->
     <section class="about-me-summ clearfix">
@@ -210,9 +193,9 @@
             </div>
 
             <div class="container">
-                <div class="wbnrfz-grid">
+                <div class="wbnrfz-grid featured-cards">
                     <div class="card ur" data-date="2026-03-10">
-                        <img src="img/blog/ref2.png" alt="Work 1">
+                        <img src="img/blog/ref2.png" alt="Work 1" loading="lazy">
                         <div class="card-content">
                             <h3>Refreshing the Website Experience (V6)</h3>
                             <a href="blog/refresh-main-2.html" class="pw-btn-small btn-2"><i
@@ -221,7 +204,7 @@
                     </div>
 
                     <div class="card ur" data-date="2025-06-01">
-                        <img src="img/blog/ref.png" alt="Work 2">
+                        <img src="img/blog/ref.png" alt="Work 2" loading="lazy">
                         <div class="card-content">
                             <h3>Cumulative Updates - 07/09/25</h3>
                             <a href="blog/cumulative-update-07-09.html" class="pw-btn-small btn-2"><i
@@ -230,7 +213,7 @@
                     </div>
 
                     <div class="card ur" data-date="2025-06-01">
-                        <img src="img/blog/ref.png" alt="Work 3">
+                        <img src="img/blog/ref.png" alt="Work 3" loading="lazy">
                         <div class="card-content">
                             <h3>Refreshing the Website Experience (V4)</h3>
                             <a href="blog/refresh-main.html" class="pw-btn-small btn-2"><i
@@ -239,7 +222,7 @@
                     </div>
 
                     <div class="card ur" data-date="2025-06-01">
-                        <img src="img/blog/ael-ys.png" alt="Work 4">
+                        <img src="img/blog/ael-ys.png" alt="Work 4" loading="lazy">
                         <div class="card-content">
                             <h3>Release of Airport Express Line & Yishun LRT 2.0</h3>
                             <a href="blog/ael-ys.html" class="pw-btn-small btn-2"><i
@@ -248,7 +231,7 @@
                     </div>
 
                     <div class="card unc" data-date="2024-10-12">
-                        <img src="img/blog/hcrt5a.png" alt="Work 5">
+                        <img src="img/blog/hcrt5a.png" alt="Work 5" loading="lazy">
                         <div class="card-content">
                             <h3>Harbourvale City - a history</h3>
                             <a href="blog/harbourvale-city-a-hist.html" class="pw-btn-small btn-2"><i
@@ -257,7 +240,7 @@
                     </div>
 
                     <div class="card ur" data-date="2024-10-12">
-                        <img src="img/blog/hbltrain-line.png" alt="Work 6">
+                        <img src="img/blog/hbltrain-line.png" alt="Work 6" loading="lazy">
                         <div class="card-content">
                             <h3>Cumulative Updates - 03/11/24</h3>
                             <a href="blog/cumulative-update-03-11.html" class="pw-btn-small btn-2"><i
@@ -266,7 +249,7 @@
                     </div>
 
                     <div class="card ur" data-date="2024-09-01">
-                        <img src="img/blog/hbltrain-line.png" alt="Work 7">
+                        <img src="img/blog/hbltrain-line.png" alt="Work 7" loading="lazy">
                         <div class="card-content">
                             <h3>Release of Retrofitted Harbourvale Line & Trains</h3>
                             <a href="blog/hlbf-t.html" class="pw-btn-small btn-2"><i
@@ -306,6 +289,8 @@
     <script src="js/blogFunct.js"></script>
 
     <script src="js/dstabs.js"></script>
+
+    <script src="js/filter-nav.js"></script>
 
 </body>
 

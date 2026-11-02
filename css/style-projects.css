@@ -268,7 +268,7 @@ body:not(.dark-mode).project-listing-page .wbnrfz-grid .card .card-content h3 {
 
 body.dark-mode .eicw-nav-btn,
 body.dark-mode .eicw-nav-dropdown.navbar-merged .eicw-nav-btn {
-    background: #393e536b;
+    background: #492e29cc;
     color: #fff;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 4px 12px rgba(0, 0, 0, 0.3);
 }
@@ -308,13 +308,12 @@ body.dark-mode .eicw-nav-menu a:hover {
     }
 
     .project-listing-page .page-header-section {
-        padding-bottom: 0;
+        padding-bottom: 14px;
     }
 
     .project-listing-page .about-me-summ {
-        margin-top: 32px;
-        padding: 40px 0 20px;
-        border-top: 1px solid rgba(255, 255, 255, 0.18);
+        margin-top: 0;
+        padding: 26px 0 20px;
     }
 
     .sticky-nav-wrap,
@@ -335,8 +334,7 @@ body.dark-mode .eicw-nav-menu a:hover {
     }
 
     .sticky-nav-wrap::before,
-    .sticky-nav-wrap.is-sticky::before,
-    .filter-divider {
+    .sticky-nav-wrap.is-sticky::before {
         display: none;
     }
 
