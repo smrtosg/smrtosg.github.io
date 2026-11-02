@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="57TuruPNu5wqSSia_cUehl5t9Gh1AbxrHNPcMiFx-aQ" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f1419" media="(prefers-color-scheme: dark)">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Fleet List (Double Decker) | SMRTO</title>
     <meta content="" name="description">
@@ -19,6 +21,7 @@
     <link rel="stylesheet" href="../css/style-mobNav.css">
     <link rel="stylesheet" href="../css/style-breakpoints.css">
     <link rel="stylesheet" href="../css/dark-mode.css">
+    <link rel="stylesheet" href="../css/style-projects.css">
 
     <link rel="stylesheet" href="css/fleet-table.css">
 
@@ -37,23 +40,11 @@
 <body>
     <!-- Fixed Breadcrumb at very top (mobile/tablet only) -->
     <div class="breadcrumb-fixed-placeholder">
-        <nav aria-label="breadcrumb" style="margin-bottom:0;">
-            <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb">
+        <nav aria-label="Back" style="margin-bottom:0;">
+            <ol class="breadcrumb breadcrumb-fixed" id="floating-breadcrumb" data-back-href="../about.html">
                 <li class="breadcrumb-item">
-                    <a href="../index.html">
-                        <i class="fa-regular fa-house"></i>
-                    </a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a href="../menu.html"><i class="fa-regular fa-bars"></i>
-                    </a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a href="../about.html"><i class="fa-regular fa-circle-user"></i>
-                    </a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a href="dd-bus.html"><i class="fa-regular fa-bus"></i>
+                    <a href="../about.html" aria-label="Back to About">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                     </a>
                 </li>
             </ol>
@@ -143,23 +134,11 @@
             <div class="page-header-section">
                 <div class="container container-xxl container-mobile container-mobile-header">
                     <div class="breadcrumb-wrapper">
-                        <nav aria-label="breadcrumb" class="breadcrumb-desktop" style="display:none;">
-                            <ol class="breadcrumb">
+                        <nav aria-label="Back" class="breadcrumb-desktop" style="display:none;">
+                            <ol class="breadcrumb" data-back-href="../about.html">
                                 <li class="breadcrumb-item">
-                                    <a href="./">
-                                        <i class="fa-regular fa-house"></i>
-                                    </a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <a href="../menu.html"><i class="fa-regular fa-bars"></i>
-                                    </a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <a href="../about.html"><i class="fa-regular fa-circle-user"></i>
-                                    </a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <a href="sd-bus.html"><i class="fa-regular fa-bus"></i>
+                                    <a href="../about.html" aria-label="Back to About">
+                                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                                     </a>
                                 </li>
                             </ol>
@@ -173,47 +152,26 @@
                     </div>
                 </div>
 
-                <div class="scrollable-tabs-container">
-                    <div class="left-arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                        </svg>
-
-                    </div>
-
-                    <ul>
-                        <li>
-                            <a href="#tab1">ADL E500 MMC FL</a>
-                        </li>
-
-                        <li>
-                            <a href="#tab2">ADL E500 MMC Non-FL</a>
-                        </li>
-
-                        <li>
-                            <a href="#tab3">Volvo B5LH</a>
-                        </li>
-
-                        <li>
-                            <a href="#tab4">Volvo B9TL</a>
-                        </li>
-                    </ul>
-
-                    <div class="right-arrow active">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                        </svg>
-
-                    </div>
-                </div>
-                <hr>
             </div>
-
         </div>
-
     </section>
+
+    <!-- Sticky Section Nav -->
+    <div class="sticky-nav-wrap">
+        <div class="eicw-nav-dropdown" id="filterDropdown">
+            <button class="eicw-nav-btn" type="button" aria-haspopup="true" aria-expanded="false">
+                <span class="eicw-nav-label"><i class="fa-regular fa-bus"></i> ADL E500 MMC FL</span>
+                <i class="fa-regular fa-chevron-down eicw-nav-chevron"></i>
+            </button>
+            <ul class="eicw-nav-menu" role="menu">
+                <li><a href="#tab1" class="btn-filter active" data-filter="#tab1"><i class="fa-regular fa-bus"></i> ADL E500 MMC FL</a></li>
+                <li><a href="#tab2" class="btn-filter" data-filter="#tab2"><i class="fa-regular fa-bus"></i> ADL E500 MMC Non-FL</a></li>
+                <li><a href="#tab3" class="btn-filter" data-filter="#tab3"><i class="fa-regular fa-bus"></i> Volvo B5LH</a></li>
+                <li><a href="#tab4" class="btn-filter" data-filter="#tab4"><i class="fa-regular fa-bus"></i> Volvo B9TL</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr class="filter-divider" style="margin: 0;">
 
     <!-- Summary -->
     <section class="about-me-summ clearfix" style="padding-top: 2em; padding-bottom: 5em;">
@@ -1012,11 +970,12 @@
 
     <script src="../js/dstabs.js"></script>
     <script src="../js/update-indicator.js"></script>
+    <script src="../js/filter-nav.js"></script>
 
     <script>
         // Handle tab navigation from scrollable tabs
         document.addEventListener('DOMContentLoaded', function () {
-            const tabLinks = document.querySelectorAll('.scrollable-tabs-container a');
+            const tabLinks = document.querySelectorAll('.btn-filter');
 
             tabLinks.forEach(link => {
                 link.addEventListener('click', function (e) {

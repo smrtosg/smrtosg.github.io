@@ -272,12 +272,12 @@ body.dark-mode .eicw-nav-dropdown.navbar-merged .eicw-nav-btn {
 }
 
 body.dark-mode .eicw-nav-btn:hover {
-    background: #52718d;
+    background: #7d534b;
 }
 
 body.dark-mode .eicw-nav-menu {
-    background: #1e2235;
-    border-color: #393e53;
+    background: #2e211e;
+    border-color: #3f2b27;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
@@ -286,7 +286,12 @@ body.dark-mode .eicw-nav-menu a {
 }
 
 body.dark-mode .eicw-nav-menu a:hover {
-    background: #52718d;
+    background: #5a3a33;
+    color: #fff;
+}
+
+body.dark-mode .eicw-nav-menu a.active {
+    background: linear-gradient(to right, #8f1211, #962f14, #9c4519, #a15722, #a6692e);
     color: #fff;
 }
 
@@ -390,6 +395,125 @@ body.dark-mode .eicw-nav-menu a:hover {
     .project-listing-page .wbnrfz-grid.filtered,
     .project-listing-page .wbnrfz-grid.two-cards,
     .project-listing-page .wbnrfz-grid.one-card {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+    }
+}
+
+/* About page: Our Bus Fleets cards share the project listing card design */
+body.dark-mode #obf {
+    background-color: #251b19;
+}
+
+#obf {
+    padding-bottom: 0;
+}
+
+#obf .container-fluid {
+    padding-top: 3em;
+}
+
+#obf .wbnrfz-grid,
+#obf .wbnrfz-grid.filtered,
+#obf .wbnrfz-grid.two-cards,
+#obf .wbnrfz-grid.one-card {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 20px;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 0 2em;
+}
+
+#obf .wbnrfz-grid .card {
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: auto;
+    overflow: hidden;
+    padding: 10px 10px 20px;
+    background: #492e29;
+    border: 1px solid #2b2b2b33;
+    border-radius: 26px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 8px 24px rgba(0, 0, 0, 0.18);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+#obf .wbnrfz-grid .card:hover {
+    transform: translateY(-4px);
+}
+
+#obf .wbnrfz-grid .card::before {
+    display: none;
+}
+
+#obf .wbnrfz-grid .card img {
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: none;
+}
+
+#obf .wbnrfz-grid .card .card-content {
+    position: static !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 0;
+    padding: 12px 6px 4px;
+    background: none;
+    backdrop-filter: none;
+    opacity: 1;
+    visibility: visible;
+}
+
+#obf .wbnrfz-grid .card .card-content h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+#obf .wbnrfz-grid .card .pw-btn-small {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    min-width: 0;
+    padding: 0;
+    border-radius: 50%;
+    line-height: 40px;
+}
+
+body:not(.dark-mode) #obf .wbnrfz-grid .card {
+    background: rgba(255, 255, 255, 0.72);
+    border-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 12px 32px rgba(40, 60, 90, 0.16);
+}
+
+body:not(.dark-mode) #obf .wbnrfz-grid .card:hover {
+    border-color: #fff;
+    box-shadow: 0 18px 44px rgba(40, 60, 90, 0.24);
+}
+
+body:not(.dark-mode) #obf .wbnrfz-grid .card .card-content h3 {
+    color: #1c2233;
+    text-shadow: none;
+}
+
+@media (max-width: 994px) {
+    #obf .wbnrfz-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 14px;
+    }
+}
+
+@media (max-width: 499px) {
+    #obf .wbnrfz-grid {
         grid-template-columns: 1fr;
         max-width: 360px;
     }

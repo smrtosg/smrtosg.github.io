@@ -157,7 +157,7 @@
       top: 22px;
       bottom: 25px;
       width: 3px;
-      background: #27279d;
+      background: #3636b1;
       z-index: 1;
   }
 
@@ -174,7 +174,7 @@
       height: 18px;
       border-radius: 50%;
       background: #fff;
-      border: 3px solid #27279d;
+      border: 3px solid #3636b1;
       position: absolute;
       left: -31px;
       z-index: 10;
@@ -183,7 +183,7 @@
 
   body.dark-mode .station-dot {
       background: #492e29;
-      border: 3px solid #27279d;
+      border: 3px solid #3636b1;
   }
 
 
@@ -202,7 +202,7 @@
   }
 
   .station-code {
-      background: #27279d;
+      background: #3636b1;
       color: #fff !important;
       font-weight: bold;
       border-radius: 13.6px / 19.2px;
@@ -300,7 +300,7 @@
   }
 
   .mrt-ael {
-      background: #27279d;
+      background: #3636b1;
   }
 
   .mrt-nwl {

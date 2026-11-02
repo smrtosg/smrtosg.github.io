@@ -10,6 +10,8 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta property="og:image" content="https://i.imgur.com/s46uTOc.png" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f1419" media="(prefers-color-scheme: dark)">
 
     <link rel="icon" href="./img/core-img/favicon.png">
 
@@ -57,7 +59,7 @@
     <nav class="navbar-container">
         <div class="navbar">
             <!-- Logo -->
-            <a href="./"><img src="img/core-img/logo.png" alt="logo" class="logo"></a>
+            <a href="./"><img src="img/core-img/logo.png" alt="logo" class="logo" loading="lazy"></a>
 
             <!-- Navigation Links -->
             <ul class="navbar-nav" id="navbarNav">
@@ -216,13 +218,22 @@
     <section class="about-me-summ clearfix" style="padding-top: 2em; padding-bottom: 5em;" id="summary">
         <div class="container container-xxl">
             <div class="row">
+                <div class="col-12 sect-title">
+                    <div class="section-heading text-center wow fadeIn" data-wow-delay="100ms">
+                        <h2 style="font-size: 35px">Summary</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-6 col-lg-4 box-indiv">
                     <div class="about-me-summary text-center mb-80 wow fadeIn">
                         <div class="summ-icon">
                             <i class="fa-solid fa-cake-candles"></i>
                         </div>
-                        <h3 style="font-size: 18px; font-weight: bolder;">Established</h3>
-                        <h4 style="font-size: 15px;">March 2011 (as GCRT Corp)</h4>
+                        <h3>Established</h3>
+                    </div>
+                    <div class="summary-value wow fadeIn" data-wow-delay="100ms">
+                        <h4>March 2011 (as GCRT Corp)</h4>
                     </div>
                 </div>
 
@@ -231,8 +242,10 @@
                         <div class="summ-icon">
                             <i class="fa-solid fa-earth-asia"></i>
                         </div>
-                        <h3 style="font-size: 18px; font-weight: bolder;">Based In</h3>
-                        <h4 style="font-size: 15px;">Singapore</h4>
+                        <h3>Based In</h3>
+                    </div>
+                    <div class="summary-value wow fadeIn" data-wow-delay="100ms">
+                        <h4>Singapore</h4>
                     </div>
                 </div>
 
@@ -241,8 +254,10 @@
                         <div class="summ-icon">
                             <i class="fa-solid fa-lightbulb"></i>
                         </div>
-                        <h3 style="font-size: 18px; font-weight: bolder;">Speciality</h3>
-                        <h4 style="font-size: 15px;">Replicating as close to the real-life</h4>
+                        <h3>Speciality</h3>
+                    </div>
+                    <div class="summary-value wow fadeIn" data-wow-delay="100ms">
+                        <h4>Replicating as close to the real-life</h4>
                     </div>
                 </div>
 
@@ -384,6 +399,8 @@
     <script src="js/update-indicator.js"></script>
 
     <script src="js/filter-nav.js"></script>
+
+    <script src="js/timeline-interactive.js"></script>
 
     <script src="js/dstabs.js"></script>
 

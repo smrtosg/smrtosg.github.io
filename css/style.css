@@ -986,7 +986,7 @@ body:not(.dark-mode) #hero:before {
     transition-duration: 800ms;
     height: 76px;
     width: 76px;
-    background: linear-gradient(58deg, rgba(164, 185, 215, 1) 0%, rgba(41, 99, 161, 1) 100%);
+    background: linear-gradient(58deg, rgba(214, 160, 120, 1) 0%, rgba(160, 80, 40, 1) 100%);
     display: inline-block;
     text-align: center;
     line-height: 76px;
@@ -1095,7 +1095,7 @@ body:not(.dark-mode) #hero:before {
 
 h4.timeline-date-edu {
     font-size: 18px;
-    background: linear-gradient(58deg, rgba(164, 185, 215, 1) 0%, rgba(41, 99, 161, 1) 100%);
+    background: linear-gradient(58deg, rgba(214, 160, 120, 1) 0%, rgba(160, 80, 40, 1) 100%);
     color: #fff;
     border-radius: 20px;
     padding: 5px 15px;
@@ -1118,6 +1118,184 @@ h4.timeline-date-aa {
     border-radius: 20px;
     padding: 5px 15px;
     text-align: center;
+}
+
+{
+    margin-top: 48px;
+}
+
+
+/* (part of Version 7 Redesign) Interactive timeline cards */
+.timeline-horizontal {
+    align-items: start;
+}
+
+.timeline-item {
+    --tl-accent: 197, 110, 60;
+    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.timeline-item[data-type="exp"] {
+    --tl-accent: 197, 110, 60;
+}
+
+.timeline-item[data-type="aa"] {
+    --tl-accent: 220, 147, 25;
+}
+
+.timeline-item:hover {
+    border-color: rgba(var(--tl-accent), 0.7);
+    box-shadow: 0 10px 28px rgba(var(--tl-accent), 0.25);
+    transform: translateY(-4px);
+}
+
+.timeline-item h4 {
+    transition: transform 0.35s ease;
+}
+
+.timeline-item:hover h4 {
+    transform: scale(1.04);
+}
+
+.timeline-item.is-expandable {
+    cursor: pointer;
+    padding-bottom: 12px;
+}
+
+.timeline-item.is-expandable:focus-visible {
+    outline: 2px solid rgba(var(--tl-accent), 0.9);
+    outline-offset: 3px;
+}
+
+.timeline-details {
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 0.4s ease, opacity 0.3s ease;
+}
+
+.timeline-details-inner {
+    overflow: hidden;
+}
+
+.timeline-item.is-expandable:not(.is-open) .timeline-details {
+    grid-template-rows: 0fr;
+    opacity: 0;
+}
+
+.timeline-item.is-expandable.is-open {
+    border-color: rgba(var(--tl-accent), 0.9);
+    box-shadow: 0 10px 28px rgba(var(--tl-accent), 0.3);
+}
+
+.timeline-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgb(var(--tl-accent));
+}
+
+.timeline-toggle i {
+    font-size: 11px;
+    transition: transform 0.35s ease;
+}
+
+.timeline-item.is-open .timeline-toggle i {
+    transform: rotate(180deg);
+}
+
+.timeline-item.is-expandable.is-open .timeline-details-inner p {
+    padding-top: 6px;
+}
+
+/* (part of Version 7 Redesign) Timeline track: each card carries its own line segment, dot and stem so wrapped rows stay connected */
+.about-me-area .timeline-horizontal {
+    --tl-accent: 197, 110, 60;
+    padding-top: 44px;
+    row-gap: 64px;
+}
+
+.about-me-area .timeline-horizontal[data-type="exp"] {
+    --tl-accent: 197, 110, 60;
+}
+
+.about-me-area .timeline-horizontal[data-type="aa"] {
+    --tl-accent: 220, 147, 25;
+}
+
+.about-me-area .timeline-item {
+    --tl-ring: 0.25;
+}
+
+.about-me-area .timeline-item::before {
+    content: "";
+    position: absolute;
+    top: -46px;
+    left: -11px;
+    right: -11px;
+    height: 28px;
+    background:
+        radial-gradient(circle at center, rgb(var(--tl-accent)) 0 8px, rgba(var(--tl-accent), var(--tl-ring)) 8px 12px, transparent 12.5px),
+        linear-gradient(rgba(var(--tl-accent), 0.6), rgba(var(--tl-accent), 0.6)) center / 100% 3px no-repeat;
+    pointer-events: none;
+}
+
+.about-me-area .timeline-item::after {
+    content: "";
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    width: 2px;
+    height: 24px;
+    margin-left: -1px;
+    background: rgba(var(--tl-accent), 0.5);
+}
+
+/* No lift on hover: the card (and its timeline track) stays put */
+.about-me-area .timeline-item {
+    transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.about-me-area .timeline-item:hover {
+    transform: none !important;
+}
+
+@media (max-width: 768px) {
+    .about-me-area .timeline-horizontal {
+        grid-template-columns: 1fr;
+        padding-top: 0;
+        padding-left: 34px;
+        gap: 16px;
+    }
+
+    .about-me-area .timeline-item {
+        margin: 0;
+    }
+
+    .about-me-area .timeline-item::before {
+        top: -10px;
+        bottom: -10px;
+        left: -40px;
+        right: auto;
+        width: 28px;
+        height: auto;
+        background:
+            radial-gradient(circle at 50% 32px, rgb(var(--tl-accent)) 0 8px, rgba(var(--tl-accent), var(--tl-ring)) 8px 12px, transparent 12.5px),
+            linear-gradient(rgba(var(--tl-accent), 0.6), rgba(var(--tl-accent), 0.6)) center / 3px 100% no-repeat;
+    }
+
+    .about-me-area .timeline-item::after {
+        top: 21px;
+        left: -18px;
+        width: 18px;
+        height: 2px;
+        margin-left: 0;
+    }
 }
 
 .about-me-summary {
@@ -1181,7 +1359,7 @@ h4.timeline-date-aa {
     transition-duration: 800ms;
     height: 76px;
     width: 76px;
-    background: linear-gradient(58deg, rgba(164, 185, 215, 1) 0%, rgba(41, 99, 161, 1) 100%);
+    background: linear-gradient(58deg, rgba(214, 160, 120, 1) 0%, rgba(160, 80, 40, 1) 100%);
     display: inline-block;
     text-align: center;
     line-height: 76px;
@@ -1238,6 +1416,141 @@ h4.timeline-date-aa {
     z-index: 0;
 }
 
+/* About summary: icon + label card joined to a value card */
+.about-me-summ .box-indiv {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 24px;
+}
+
+.about-me-summ .about-me-summary {
+    margin: 0;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    border-radius: 25px 25px 8px 8px;
+}
+
+.about-me-summ .about-me-summary .summ-icon {
+    position: static;
+    margin: 0;
+    flex-shrink: 0;
+    height: 48px;
+    width: 48px;
+    line-height: 48px;
+    font-size: 20px;
+}
+
+.about-me-summ .about-me-summary h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.about-me-summ .summary-value {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 22px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #2b2b2b33;
+    border-radius: 8px 8px 25px 25px;
+    box-shadow: 3px 0 15px -1px rgba(0, 0, 0, 0.15);
+}
+
+.about-me-summ .summary-value h4 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .about-me-summ .about-me-summary {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .about-me-summ .about-me-summary .summ-icon {
+        height: 36px;
+        width: 36px;
+        line-height: 36px;
+        font-size: 15px;
+    }
+
+    .about-me-summ .about-me-summary h3 {
+        font-size: 14px;
+    }
+}
+/* ------------------------------------------ Home: Maps & Routes label + value cards ------------------------------------------ */
+#maps-routes .box-indiv {
+    margin-bottom: 24px;
+}
+
+#maps-routes .route-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+#maps-routes .route-label {
+    margin: 0;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    border-radius: 25px;
+}
+
+#maps-routes .route-label .summ-icon {
+    position: static;
+    margin: 0;
+    flex-shrink: 0;
+    height: 48px;
+    width: 48px;
+    line-height: 48px;
+    font-size: 20px;
+}
+
+#maps-routes .route-label .ui-icon {
+    background: linear-gradient(58deg, rgba(190, 62, 48, 1) 0%, rgba(220, 147, 25, 1) 100%);
+}
+
+#maps-routes .route-label h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    #maps-routes .route-label {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    #maps-routes .route-label .summ-icon {
+        height: 36px;
+        width: 36px;
+        line-height: 36px;
+        font-size: 15px;
+    }
+
+    #maps-routes .route-label h3 {
+        font-size: 14px;
+    }
+}
 /* ------------------------------------------ */
 
 /* ------------------------------------------ 11.0 Works By NRFZ/Blogs (Featured/Main) ------------------------------------------ */
