@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return releaseDataPromise;
     }
 
-    async function updateOpenBveDates(doc) {
+    async function updateReleaseDates(doc) {
         const data = await loadReleaseDates();
         if (!data) return;
 
@@ -119,8 +119,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         .then(async html => {
                             const parser = new DOMParser();
                             const doc = parser.parseFromString(html, 'text/html');
-                            if (page.href === 'openbve.html') {
-                                await updateOpenBveDates(doc);
+                            if (page.href === 'openbve.html' || page.href === 'omsi2.html') {
+                                await updateReleaseDates(doc);
                             }
                             const cards = doc.querySelectorAll(`[${page.dataAttr}]`);
                             
@@ -208,8 +208,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Run checks on page load
     checkForUpdates();
-    if ((window.location.pathname.split('/').pop() || 'index.html') === 'openbve.html') {
-        updateOpenBveDates(document).then(() => {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    if (currentPage === 'openbve.html' || currentPage === 'omsi2.html') {
+        updateReleaseDates(document).then(() => {
             document.dispatchEvent(new Event('release-dates-updated'));
             highlightRecentUpdates();
         });
