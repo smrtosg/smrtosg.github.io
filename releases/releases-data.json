@@ -8,7 +8,8 @@
         "label": "latest-release",
         "changes": [
           "- New PA with improved Chimes",
-          "- Additional RATiS Screens"
+          "- Additional RATiS Screens",
+          "- Removed HL11's floating signages"
         ],
         "downloadUrl": "https://github.com/smrtosg/smrtosg.github.io/releases/download/v6.1.0/Railway-HBL.7z"
       },
