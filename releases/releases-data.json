@@ -386,11 +386,11 @@
     "title": "OMSI Developer Files",
     "versions": {
       "version1": {
-        "version": "1.3",
-        "date": "16/08/2025",
+        "version": "1.3a",
+        "date": "17/11/2026",
         "label": "latest-release",
         "changes": [
-          "- Re-based to 2025 File Versions",
+          "- Fixed Broken Splines/K++ Files",
           "- Note: K++ Files are strictly for advanced users only. Do not modify them unless you know what you're doing."
         ],
         "downloads": [
