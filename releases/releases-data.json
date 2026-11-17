@@ -3,14 +3,14 @@
     "title": "Harbourvale Line",
     "versions": {
       "version3": {
-        "version": "3.0",
-        "date": "11/08/25",
+        "version": "3.5",
+        "date": "17/11/26",
         "label": "latest-release",
         "changes": [
-          "- Updated RATiS UI",
-          "- Updated PMTPG for all stations"
+          "- New PA with improved Chimes",
+          "- Additional RATiS Screens"
         ],
-        "downloadUrl": "https://github.com/smrtosg/main/releases/download/v2508.1000/Railway-HBL.7z"
+        "downloadUrl": "https://github.com/smrtosg/smrtosg.github.io/releases/download/v6.1.0/Railway-HBL.7z"
       },
       "version1a": {
         "version": "1.0.2",
@@ -75,13 +75,14 @@
     "title": "North-West Line",
     "versions": {
       "version3": {
-        "version": "3.8",
-        "date": "08/03/26",
+        "version": "3.9",
+        "date": "17/11/26",
         "label": "latest-release",
         "changes": [
-          "- Fixed mismatched PMTPG announcements for some stations"
+          "- New PA with improved Chimes",
+          "- Fixed incorrect Platform announcements"
         ],
-        "downloadUrl": "https://github.com/smrtosg/smrtosg.github.io/releases/download/v6.0.0/Railway-NWL.7z"
+        "downloadUrl": "https://github.com/smrtosg/smrtosg.github.io/releases/download/v6.1.0/Railway-NWL.7z"
       },
       "version1": {
         "version": "0.8",
@@ -389,7 +390,8 @@
         "date": "16/08/2025",
         "label": "latest-release",
         "changes": [
-          "- Re-based to 2025 File Versions"
+          "- Re-based to 2025 File Versions",
+          "- Note: K++ Files are strictly for advanced users only. Do not modify them unless you know what you're doing."
         ],
         "downloads": [
           {
@@ -406,11 +408,11 @@
           },
           {
             "name": "Splines Files",
-            "url": "https://mega.nz/file/tJUwQIZR#rkxL9yS9lrrS6dPCD7MsbAg2K9ELWVmxQh_KBELpPm4"
+            "url": "https://mega.nz/file/x94z0QQQ#VwCNEOcmd3ddOlKv_Q6MWkjlr9UTBh7EgdbLUHBcYts"
           },
           {
             "name": "K++ Files",
-            "url": "https://mega.nz/file/RIcymA5T#msKbuxNnYe3Si5VNSZuKk1rZibpc9Ju4RrIRIn1k_5I"
+            "url": "https://mega.nz/file/d1oCTD7Z#yPcmBARaEpNUNVYyKg-0FJGJ2zJep91TgZ2KqxC9Xmg"
           }
         ]
       }

@@ -4,6 +4,7 @@ const scriptSrc = document.currentScript ? document.currentScript.src : null;
 
 document.addEventListener('DOMContentLoaded', function () {
     const DAYS_THRESHOLD = 7; // Show indicator if update is within last 7 days
+    let releaseDataPromise;
     const pages = [
         { href: 'openbve.html', dataAttr: 'data-date' },
         { href: 'omsi2.html', dataAttr: 'data-date' },
@@ -16,20 +17,61 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function isRecentUpdate(dateString) {
-        try {
-            const updateDate = parseDate(dateString);
-            const currentDate = new Date();
-            const diffTime = Math.abs(currentDate - updateDate);
-            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-            return diffDays <= DAYS_THRESHOLD;
-        } catch (e) {
-            return false;
-        }
+        const diffTime = new Date() - parseDate(dateString);
+        return diffTime >= 0 && diffTime <= DAYS_THRESHOLD * 24 * 60 * 60 * 1000;
     }
 
-    function getNormalizedPath(href) {
-        // Extract just the filename from various path formats
-        return href.split('/').pop();
+    function parseReleaseDate(value) {
+        const match = /^(\d{1,2})\/(\d{1,2})\/(\d{2}|\d{4})$/.exec(value);
+        if (!match) return null;
+        const year = Number(match[3]) + (match[3].length === 2 ? 2000 : 0);
+        const month = Number(match[2]);
+        const day = Number(match[1]);
+        const date = new Date(Date.UTC(year, month - 1, day));
+        if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month - 1 || date.getUTCDate() !== day) {
+            return null;
+        }
+        return date.toISOString().slice(0, 10);
+    }
+
+    function loadReleaseDates() {
+        if (!releaseDataPromise) {
+            const url = scriptSrc ? new URL('../releases/releases-data.json', scriptSrc).href : 'releases/releases-data.json';
+            releaseDataPromise = fetch(url).then(response => {
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                return response.json();
+            }).catch(error => {
+                console.error('Unable to load release dates:', error);
+                return null;
+            });
+        }
+        return releaseDataPromise;
+    }
+
+    async function updateOpenBveDates(doc) {
+        const data = await loadReleaseDates();
+        if (!data) return;
+
+        doc.querySelectorAll('.wbnrfz-grid .card[data-date]').forEach(card => {
+            const link = card.querySelector('a[href^="releases/"]');
+            if (!link) return;
+            const key = card.dataset.releaseKey || link.getAttribute('href').split('/').pop().replace(/\.html$/, '');
+            const release = data[key];
+            if (!release || !release.versions) {
+                console.warn(`No release data for ${key}`);
+                return;
+            }
+            const dates = Object.values(release.versions).map(version => {
+                if (/^\d{4}$/.test(version.date)) return `${version.date}-01-01`;
+                const date = parseReleaseDate(version.date);
+                if (!date) console.warn(`Invalid release date for ${key}: ${version.date}`);
+                return date;
+            }).filter(Boolean).sort();
+            const latest = dates[dates.length - 1];
+            if (latest && card.dataset.date.slice(0, 10) !== latest) {
+                card.dataset.date = latest;
+            }
+        });
     }
 
     function findAllNavLinks(pageHref) {
@@ -53,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
         
-        return links;
+        return links.filter(link => !link.closest('nav[aria-label="Back"]'));
     }
 
     function checkForUpdates() {
@@ -74,27 +116,24 @@ document.addEventListener('DOMContentLoaded', function () {
                             if (!response.ok) throw new Error('Not found');
                             return response.text();
                         })
-                        .then(html => {
+                        .then(async html => {
                             const parser = new DOMParser();
                             const doc = parser.parseFromString(html, 'text/html');
+                            if (page.href === 'openbve.html') {
+                                await updateOpenBveDates(doc);
+                            }
                             const cards = doc.querySelectorAll(`[${page.dataAttr}]`);
                             
-                            // Find the most recent date
-                            let mostRecentDate = null;
-                            cards.forEach(card => {
-                                const dateStr = card.getAttribute(page.dataAttr);
-                                if (dateStr && (!mostRecentDate || new Date(dateStr) > new Date(mostRecentDate))) {
-                                    mostRecentDate = dateStr;
-                                }
-                            });
-
-                            if (mostRecentDate && isRecentUpdate(mostRecentDate)) {
+                            if (Array.from(cards).some(card => isRecentUpdate(card.getAttribute(page.dataAttr)))) {
                                 addUpdateIndicators(page.href);
                             }
                         })
                         .catch(err => {
-                            // Try next path
-                            tryFetch(paths, index + 1);
+                            if (index + 1 < paths.length) {
+                                tryFetch(paths, index + 1);
+                            } else {
+                                console.error(`Unable to check updates for ${page.href}:`, err);
+                            }
                         });
                 }
                 
@@ -169,6 +208,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Run checks on page load
     checkForUpdates();
-    highlightRecentUpdates();
+    if ((window.location.pathname.split('/').pop() || 'index.html') === 'openbve.html') {
+        updateOpenBveDates(document).then(() => {
+            document.dispatchEvent(new Event('release-dates-updated'));
+            highlightRecentUpdates();
+        });
+    } else {
+        highlightRecentUpdates();
+    }
 });
 })();

@@ -176,5 +176,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (sortDropdown) {
         sortDropdown.value = "newest";
         sortDropdown.dispatchEvent(new Event("change"));
+        document.addEventListener("release-dates-updated", function () {
+            sortDropdown.dispatchEvent(new Event("change"));
+        });
     }
 });
